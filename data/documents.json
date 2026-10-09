@@ -1,0 +1,1798 @@
+[
+  {
+    "id": "2025-09-30_quantia_lost_deal.md",
+    "type": "email",
+    "date": "2025-09-30",
+    "title": "Quantia Analytics — closing the loop",
+    "from": "James Whitfield <james@quantia.co.uk>",
+    "to": "Bhavin <bhavin@atliq.com>",
+    "text": "# Email Thread: Quantia Analytics — closing the loop\n**From:** James Whitfield <james@quantia.co.uk>\n**To:** Bhavin <bhavin@atliq.com>\n**Date:** 2025-09-30\n**Subject:** RE: Next steps\n\nBhavin,\n\nAppreciate the effort you put into the discovery sessions. We've decided not to proceed right now — honestly it's a timing problem, not a fit problem. We're mid-acquisition and nothing new gets signed until that closes, likely Q2 2026.\n\nPlease do check back with us around then. I mean that.\n\nJames",
+    "messages": [
+      {
+        "from_name": "James Whitfield",
+        "from_email": "james@quantia.co.uk",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": null,
+        "date": "2025-09-30"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1035"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1035",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "Quantia Analytics"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-01-15_vertex_ooo_stall.md",
+    "type": "email",
+    "date": "2026-01-15",
+    "title": "Vertex Constructions — stalled by out-of-office",
+    "from": "Jay <jay@atliq.com>",
+    "to": "P. Naidu <naidu@vertexcon.in>",
+    "text": "# Email Thread: Vertex Constructions — stalled by out-of-office\n**From:** Jay <jay@atliq.com>\n**To:** P. Naidu <naidu@vertexcon.in>\n**Date:** 2026-01-15\n**Subject:** Site progress tracking app — following up\n\nMr. Naidu, following up on our December conversation about a mobile app for site progress tracking across your projects. We've sketched an approach — happy to walk you through it.\n\nJay\n\n---\n**From:** P. Naidu <naidu@vertexcon.in>\n**To:** Jay <jay@atliq.com>\n**Date:** 2026-01-15\n\nAUTOMATIC REPLY: I am out of the office until 2 February 2026 with limited email access. For urgent matters contact the site office.\n\n---\n**From:** Jay <jay@atliq.com>\n**To:** P. Naidu <naidu@vertexcon.in>\n**Date:** 2026-01-20\n\nNo problem — will reconnect in February. Safe travels.",
+    "messages": [
+      {
+        "from_name": "Jay",
+        "from_email": "jay@atliq.com",
+        "to": "P. Naidu <naidu@vertexcon.in>",
+        "cc": null,
+        "date": "2026-01-15"
+      },
+      {
+        "from_name": "P. Naidu",
+        "from_email": "naidu@vertexcon.in",
+        "to": "Jay <jay@atliq.com>",
+        "cc": null,
+        "date": "2026-01-15"
+      },
+      {
+        "from_name": "Jay",
+        "from_email": "jay@atliq.com",
+        "to": "P. Naidu <naidu@vertexcon.in>",
+        "cc": null,
+        "date": "2026-01-20"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1037"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1037",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "Vertex Constructions"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-02-05_steelcore_pricing_objection.md",
+    "type": "email",
+    "date": "2026-02-05",
+    "title": "SteelCore Industries — pricing objection",
+    "from": "Jay <jay@atliq.com>",
+    "to": "B.K. Verma <bkverma@steelcore.in>",
+    "text": "# Email Thread: SteelCore Industries — pricing objection\n**From:** Jay <jay@atliq.com>\n**To:** B.K. Verma <bkverma@steelcore.in>\n**Date:** 2026-02-05\n**Subject:** Power BI dashboards for plant operations — overview\n\nMr. Verma, good speaking with you last week. As discussed, attaching an overview of the production and dispatch dashboards we'd propose, with an indicative estimate of 14–16k depending on data source complexity.\n\nJay\n\n---\n**From:** B.K. Verma <bkverma@steelcore.in>\n**To:** Jay <jay@atliq.com>\n**Date:** 2026-02-10\n\nJay — frankly the number is a problem. A local freelancer has quoted us less than a third of this for \"the same dashboards\". Why should we pay AtliQ rates?\n\n---\n**From:** Jay <jay@atliq.com>\n**To:** B.K. Verma <bkverma@steelcore.in>\n**Date:** 2026-02-14\n\nFair question. The difference is usually in the data plumbing — connecting your ERP and weighbridge systems properly so the dashboards stay accurate without manual uploads, plus documentation and handover. A freelancer building on top of Excel exports will look identical for the first month. Happy to get on a call and walk through exactly what's included.",
+    "messages": [
+      {
+        "from_name": "Jay",
+        "from_email": "jay@atliq.com",
+        "to": "B.K. Verma <bkverma@steelcore.in>",
+        "cc": null,
+        "date": "2026-02-05"
+      },
+      {
+        "from_name": "B.K. Verma",
+        "from_email": "bkverma@steelcore.in",
+        "to": "Jay <jay@atliq.com>",
+        "cc": null,
+        "date": "2026-02-10"
+      },
+      {
+        "from_name": "Jay",
+        "from_email": "jay@atliq.com",
+        "to": "B.K. Verma <bkverma@steelcore.in>",
+        "cc": null,
+        "date": "2026-02-14"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1021"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1021",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "SteelCore Industries"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-03-04_apexauto_cold_outreach.md",
+    "type": "email",
+    "date": "2026-03-04",
+    "title": "ApexAuto Parts — cold outreach, no response",
+    "from": "Jay <jay@atliq.com>",
+    "to": "Ravi Shankar <ravi@apexauto.in>",
+    "text": "# Email Thread: ApexAuto Parts — cold outreach, no response\n**From:** Jay <jay@atliq.com>\n**To:** Ravi Shankar <ravi@apexauto.in>\n**Date:** 2026-03-04\n**Subject:** Inventory visibility for parts distribution\n\nMr. Shankar, reaching out cold — AtliQ builds Power BI dashboards and data platforms for distribution businesses. For auto parts distributors we've seen big wins in dead-stock identification and branch-level fill rates. Worth a 20-minute conversation?\n\nJay\n\n---\n**From:** Jay <jay@atliq.com>\n**To:** Ravi Shankar <ravi@apexauto.in>\n**Date:** 2026-03-20\n\nMr. Shankar — bumping this in case it got buried. Happy to share a two-page sample dashboard spec for a parts distributor, no strings attached.",
+    "messages": [
+      {
+        "from_name": "Jay",
+        "from_email": "jay@atliq.com",
+        "to": "Ravi Shankar <ravi@apexauto.in>",
+        "cc": null,
+        "date": "2026-03-04"
+      },
+      {
+        "from_name": "Jay",
+        "from_email": "jay@atliq.com",
+        "to": "Ravi Shankar <ravi@apexauto.in>",
+        "cc": null,
+        "date": "2026-03-20"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1028"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1028",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "ApexAuto Parts"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-03-26_finedge_compliance_docs.md",
+    "type": "email",
+    "date": "2026-03-26",
+    "title": "FinEdge Bank — compliance review",
+    "from": "Suresh Menon <suresh.menon@finedge.com>",
+    "to": "Bhavin <bhavin@atliq.com>",
+    "text": "# Email Thread: FinEdge Bank — compliance review\n**From:** Suresh Menon <suresh.menon@finedge.com>\n**To:** Bhavin <bhavin@atliq.com>\n**Date:** 2026-03-26\n**Subject:** RE: Data platform proposal — compliance requirements\n\nBhavin,\n\nOur compliance team has started reviewing the engagement. They need from you: ISO 27001 certificate, your data residency confirmation (everything must stay in-country), and your subcontractor policy. Once they clear it, commercials should move quickly.\n\nSuresh\n\n---\n**From:** Bhavin <bhavin@atliq.com>\n**To:** Suresh Menon <suresh.menon@finedge.com>\n**Date:** 2026-03-30\n\nSuresh — all three documents attached. Data residency confirmed: all environments hosted in-region, no offshore replication. Let me know if compliance needs anything else.\n\n---\n**From:** Suresh Menon <suresh.menon@finedge.com>\n**To:** Bhavin <bhavin@atliq.com>\n**Date:** 2026-06-19\n\nBhavin — good news, compliance has cleared AtliQ. We can move to the commercial discussion now. My assistant will find a slot the week of 29 June — please confirm your availability. This is our largest data initiative this year, so let's not lose momentum.",
+    "messages": [
+      {
+        "from_name": "Suresh Menon",
+        "from_email": "suresh.menon@finedge.com",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": null,
+        "date": "2026-03-26"
+      },
+      {
+        "from_name": "Bhavin",
+        "from_email": "bhavin@atliq.com",
+        "to": "Suresh Menon <suresh.menon@finedge.com>",
+        "cc": null,
+        "date": "2026-03-30"
+      },
+      {
+        "from_name": "Suresh Menon",
+        "from_email": "suresh.menon@finedge.com",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": null,
+        "date": "2026-06-19"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1023"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1023",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "FinEdge Bank"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-04-05_smartserve_intro_call.md",
+    "type": "note",
+    "date": "2026-04-05",
+    "title": "Meeting Notes — SmartServe Hospitality, intro call",
+    "from": null,
+    "to": null,
+    "text": "# Meeting Notes — SmartServe Hospitality, intro call\n**Date:** 2026-04-05 · **Attendees:** Pooja Reddy, Arvind (their ops manager), Jay\n**Type:** Intro / discovery · **Duration:** 40 min\n\n## Notes\n- They run catering + banquet ops for corporate clients; booking and billing currently on spreadsheets + phone calls.\n- Want a custom web app: banquet booking, menu selection, invoicing. Pooja estimated 25k budget \"if the scope is right\".\n- Arvind sceptical — burned by a previous vendor who disappeared mid-project. Wants milestone-based payments.\n- Showed screenshots of the Sunrise Foods distributor portal — landed well.\n\n## Actions\n- [ ] Send call recap + indicative pricing — Jay — by 8 Apr\n- [ ] Reference call with a past client for Arvind — Jay",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1026",
+      "L-1034"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1026",
+        "via": "company_name"
+      },
+      {
+        "lead_id": "L-1034",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "Sunrise Foods",
+      "SmartServe Hospitality"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-04-20_healthfirst_board_update.md",
+    "type": "email",
+    "date": "2026-04-20",
+    "title": "HealthFirst Clinics — board decision delayed",
+    "from": "Dr. Anita Rao <anita.rao@healthfirst.in>",
+    "to": "Karandeep <karandeep@atliq.com>",
+    "text": "# Email Thread: HealthFirst Clinics — board decision delayed\n**From:** Dr. Anita Rao <anita.rao@healthfirst.in>\n**To:** Karandeep <karandeep@atliq.com>\n**Date:** 2026-04-20\n**Subject:** RE: Patient portal proposal — board update\n\nKarandeep,\n\nSmall setback — our board meeting got pushed and the portal decision has been deferred to the next sitting, now scheduled for 14 July. Not a rejection, just timing.\n\nOne request that would help me champion this internally: can you split the pricing into two phases so the initial approval amount is smaller? Board is more comfortable clearing under 20k in one go.\n\nAnita\n\n---\n**From:** Karandeep <karandeep@atliq.com>\n**To:** Dr. Anita Rao <anita.rao@healthfirst.in>\n**Date:** 2026-04-22\n\nAnita, understood — attached is a re-phased version: Phase 1 (patient registration + appointments) at 18k, Phase 2 (records + billing integration) at 12k. Good luck with the board, and do keep me posted.",
+    "messages": [
+      {
+        "from_name": "Dr. Anita Rao",
+        "from_email": "anita.rao@healthfirst.in",
+        "to": "Karandeep <karandeep@atliq.com>",
+        "cc": null,
+        "date": "2026-04-20"
+      },
+      {
+        "from_name": "Karandeep",
+        "from_email": "karandeep@atliq.com",
+        "to": "Dr. Anita Rao <anita.rao@healthfirst.in>",
+        "cc": null,
+        "date": "2026-04-22"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1009"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1009",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "HealthFirst Clinics"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-05-04_urbannest_no_response.md",
+    "type": "email",
+    "date": "2026-05-04",
+    "title": "UrbanNest Realty — gone quiet",
+    "from": "Jay <jay@atliq.com>",
+    "to": "Kunal Kapoor <kunal@urbannest.com>",
+    "text": "# Email Thread: UrbanNest Realty — gone quiet\n**From:** Jay <jay@atliq.com>\n**To:** Kunal Kapoor <kunal@urbannest.com>\n**Date:** 2026-05-04\n**Subject:** Following up — site visit app\n\nHi Kunal, following up on our call last week about the site-visit booking app. Attaching a rough approach note. Happy to do a short demo whenever suits.",
+    "messages": [
+      {
+        "from_name": "Jay",
+        "from_email": "jay@atliq.com",
+        "to": "Kunal Kapoor <kunal@urbannest.com>",
+        "cc": null,
+        "date": "2026-05-04"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1012"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1012",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "UrbanNest Realty"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-05-10_bytebridge_competitor.md",
+    "type": "email",
+    "date": "2026-05-10",
+    "title": "ByteBridge — competitor pressure",
+    "from": "Fatima Al-Rashid <fatima@bytebridge.com>",
+    "to": "Karandeep <karandeep@atliq.com>",
+    "text": "# Email Thread: ByteBridge — competitor pressure\n**From:** Fatima Al-Rashid <fatima@bytebridge.com>\n**To:** Karandeep <karandeep@atliq.com>\n**Date:** 2026-05-10\n**Subject:** RE: Augmented team proposal\n\nKarandeep,\n\nBeing transparent with you: TalentGrid has quoted us roughly 15% below your rates for the same three profiles. I'd still prefer to work with a referred partner, but I need something to justify the difference to my CFO — case studies, retention numbers, references, anything concrete.\n\nFatima\n\n---\n**From:** Karandeep <karandeep@atliq.com>\n**To:** Fatima Al-Rashid <fatima@bytebridge.com>\n**Date:** 2026-05-12\n\nFatima, appreciate the candour. Our engineer retention on client engagements is well above industry norms and I have two case studies that speak to it directly — I'll send both, plus a reference, by Friday.",
+    "messages": [
+      {
+        "from_name": "Fatima Al-Rashid",
+        "from_email": "fatima@bytebridge.com",
+        "to": "Karandeep <karandeep@atliq.com>",
+        "cc": null,
+        "date": "2026-05-10"
+      },
+      {
+        "from_name": "Karandeep",
+        "from_email": "karandeep@atliq.com",
+        "to": "Fatima Al-Rashid <fatima@bytebridge.com>",
+        "cc": null,
+        "date": "2026-05-12"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1031"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1031",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "ByteBridge"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-05-18_freshcart_referral_followup.md",
+    "type": "email",
+    "date": "2026-05-18",
+    "title": "FreshCart — a referral going cold",
+    "from": "Ananya Desai <ananya@freshcart.in>",
+    "to": "Dhaval <dhaval@atliq.com>",
+    "text": "# Email Thread: FreshCart — a referral going cold\n**From:** Ananya Desai <ananya@freshcart.in>\n**To:** Dhaval <dhaval@atliq.com>\n**Date:** 2026-05-18\n**Subject:** Priya Raman suggested I reach out\n\nHi Dhaval,\n\nPriya at Acme Retail said you'd be in touch about our customer portal project — thought I'd save you the trouble and write first. We're an online grocery startup, 3 cities, and need a proper customer account portal (orders, subscriptions, wallet). When can we talk?\n\nAnanya\n\n---\n**From:** Dhaval <dhaval@atliq.com>\n**To:** Ananya Desai <ananya@freshcart.in>\n**Date:** 2026-05-20\n\nAnanya, thanks for reaching out — any referral from Priya gets our full attention! Slightly swamped this week; I'll call you early next week to set things up.\n\n---\n**From:** Ananya Desai <ananya@freshcart.in>\n**To:** Dhaval <dhaval@atliq.com>\n**Date:** 2026-06-16\n\nDhaval — never got that call. We're now in conversations with two other vendors and want to decide by mid-July. I'd still like AtliQ in the mix given Priya's recommendation, but the window is closing.",
+    "messages": [
+      {
+        "from_name": "Ananya Desai",
+        "from_email": "ananya@freshcart.in",
+        "to": "Dhaval <dhaval@atliq.com>",
+        "cc": null,
+        "date": "2026-05-18"
+      },
+      {
+        "from_name": "Dhaval",
+        "from_email": "dhaval@atliq.com",
+        "to": "Ananya Desai <ananya@freshcart.in>",
+        "cc": null,
+        "date": "2026-05-20"
+      },
+      {
+        "from_name": "Ananya Desai",
+        "from_email": "ananya@freshcart.in",
+        "to": "Dhaval <dhaval@atliq.com>",
+        "cc": null,
+        "date": "2026-06-16"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1020",
+      "L-1001"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1020",
+        "via": "contact_email"
+      },
+      {
+        "lead_id": "L-1001",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "FreshCart",
+      "Acme Retail Group"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-05-19_globalmart_demo.md",
+    "type": "note",
+    "date": "2026-05-19",
+    "title": "GlobalMart demo — 19 May",
+    "from": null,
+    "to": null,
+    "text": "# GlobalMart demo — 19 May\nNeha + 3 from procurement/IT. Karandeep led, Pranav drove the demo.\nShowed the clickable vendor-portal prototype Pranav built for the proposal — went down well, questions on SSO and audit logs\nNeha wants proposal by end of May —\n(rest of notes not written up)",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1004",
+      "L-1040"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1004",
+        "via": "company_name"
+      },
+      {
+        "lead_id": "L-1040",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "GlobalMart"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-03_trustline_negotiation.md",
+    "type": "note",
+    "date": "2026-06-03",
+    "title": "Trustline NBFC — call notes 3 Jun (Dhaval)",
+    "from": null,
+    "to": null,
+    "text": "# Trustline NBFC — call notes 3 Jun (Dhaval)\n- Mohan says proposal approved by ops head, stuck with CFO\n- CFO wants ROI framing: hours saved per loan file\n- we quoted per-document pricing, he wants annual license framing instead\n- Mohan friendly, says push in July after their board meet\n- NOTE: their board meet is first week of July → this is NOW (crm L-1032, next_followup empty)",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1032"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1032",
+        "via": "lead_id"
+      }
+    ],
+    "linked_companies": [
+      "Trustline NBFC"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-03_zenlytics_intro_call.md",
+    "type": "email",
+    "date": "2026-06-03",
+    "title": "Zenlytics — intro call scheduling",
+    "from": "Bhavin <bhavin@atliq.com>",
+    "to": "Maya Fernandes <maya@zenlytics.io>",
+    "text": "# Email Thread: Zenlytics — intro call scheduling\n**From:** Bhavin <bhavin@atliq.com>\n**To:** Maya Fernandes <maya@zenlytics.io>\n**Date:** 2026-06-03\n**Subject:** Staff augmentation — quick intro call?\n\nHi Maya, thanks for connecting on LinkedIn. Happy to walk you through how our staff augmentation engagements work — typically a 30-min call to understand your stack and team gaps. Any time this week or next?\n\nBhavin\n\n---\n**From:** Maya Fernandes <maya@zenlytics.io>\n**To:** Bhavin <bhavin@atliq.com>\n**Date:** 2026-06-04\n\nHi Bhavin — sure. Tuesday or Wednesday next week works, anytime 2–5pm IST. We're looking for 2 data engineers with dbt + Snowflake experience, ideally starting August.\n\n---\n**From:** Bhavin <bhavin@atliq.com>\n**To:** Maya Fernandes <maya@zenlytics.io>\n**Date:** 2026-06-05\n\nWednesday 3pm it is. I'll send a calendar invite shortly.",
+    "messages": [
+      {
+        "from_name": "Bhavin",
+        "from_email": "bhavin@atliq.com",
+        "to": "Maya Fernandes <maya@zenlytics.io>",
+        "cc": null,
+        "date": "2026-06-03"
+      },
+      {
+        "from_name": "Maya Fernandes",
+        "from_email": "maya@zenlytics.io",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": null,
+        "date": "2026-06-04"
+      },
+      {
+        "from_name": "Bhavin",
+        "from_email": "bhavin@atliq.com",
+        "to": "Maya Fernandes <maya@zenlytics.io>",
+        "cc": null,
+        "date": "2026-06-05"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1008"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1008",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "Zenlytics"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-09_clearpath_budget_unfrozen.md",
+    "type": "email",
+    "date": "2026-06-09",
+    "title": "ClearPath Insurance — lost deal knocks again",
+    "from": "Deepa Nair <deepa.nair@clearpathins.com>",
+    "to": "Dhaval <dhaval@atliq.com>",
+    "text": "# Email: ClearPath Insurance — lost deal knocks again\n**From:** Deepa Nair <deepa.nair@clearpathins.com>\n**To:** Dhaval <dhaval@atliq.com>\n**Date:** 2026-06-09\n**Subject:** Picking up where we left off?\n\nDhaval,\n\nYou may remember our claims data warehouse discussion from last year — we had to shelve it when the budget freeze hit. The freeze lifted with the new financial year and the project is back on our roadmap for Q3.\n\nYour proposal was the strongest of the three we saw. Is AtliQ still interested, and does the 40k estimate still hold?\n\nDeepa",
+    "messages": [
+      {
+        "from_name": "Deepa Nair",
+        "from_email": "deepa.nair@clearpathins.com",
+        "to": "Dhaval <dhaval@atliq.com>",
+        "cc": null,
+        "date": "2026-06-09"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1015"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1015",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "ClearPath Insurance"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-10_sunrise_foods_reactivation.md",
+    "type": "email",
+    "date": "2026-06-10",
+    "title": "Sunrise Foods — old client returns",
+    "from": "Meera Pillai <meera@sunrisefoods.in>",
+    "to": "Dhaval <dhaval@atliq.com>",
+    "text": "# Email Thread: Sunrise Foods — old client returns\n**From:** Meera Pillai <meera@sunrisefoods.in>\n**To:** Dhaval <dhaval@atliq.com>\n**Date:** 2026-06-10\n**Subject:** Portal v2?\n\nHi Dhaval! The distributor portal you built has held up beautifully. We've grown from 40 to 110 distributors and it's starting to creak — mostly around order reconciliation. Before we go to anyone else: would AtliQ want to do a v2? Also our CFO keeps asking if the portal data can feed into some kind of sales dashboard.\n\nMeera\n\n---\n**From:** Dhaval <dhaval@atliq.com>\n**To:** Meera Pillai <meera@sunrisefoods.in>\n**Date:** 2026-06-14\n\nMeera, lovely to hear from you. Yes, absolutely interested. Travelling this week — let me set up a call when I'm back.",
+    "messages": [
+      {
+        "from_name": "Meera Pillai",
+        "from_email": "meera@sunrisefoods.in",
+        "to": "Dhaval <dhaval@atliq.com>",
+        "cc": null,
+        "date": "2026-06-10"
+      },
+      {
+        "from_name": "Dhaval",
+        "from_email": "dhaval@atliq.com",
+        "to": "Meera Pillai <meera@sunrisefoods.in>",
+        "cc": null,
+        "date": "2026-06-14"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1026"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1026",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "Sunrise Foods"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-11_northwind_crosssell.md",
+    "type": "email",
+    "date": "2026-06-11",
+    "title": "Northwind Logistics — praise and a cross-sell hint",
+    "from": "Tom Beckett <tbeckett@northwindlog.com>",
+    "to": "Dhaval <dhaval@atliq.com>",
+    "text": "# Email Thread: Northwind Logistics — praise and a cross-sell hint\n**From:** Tom Beckett <tbeckett@northwindlog.com>\n**To:** Dhaval <dhaval@atliq.com>\n**Date:** 2026-06-11\n**Subject:** Pipeline running like clockwork — one question\n\nDhaval,\n\nEight months in and the data pipeline hasn't missed a beat — our ops team checks the freight margin numbers every morning now. Credit where due.\n\nQuestion: those numbers currently land in spreadsheets. Does AtliQ also do the dashboard layer on top? Our CEO saw a competitor's Power BI setup at an industry event and now wants \"something like that\".\n\nTom\n\n---\n**From:** Dhaval <dhaval@atliq.com>\n**To:** Tom Beckett <tbeckett@northwindlog.com>\n**Date:** 2026-06-13\n\nTom, music to my ears — and yes, dashboards on top of your existing warehouse would be a small, fast project since the hard part (clean data) is already done. Let me send you a few sample dashboard concepts next week to react to.",
+    "messages": [
+      {
+        "from_name": "Tom Beckett",
+        "from_email": "tbeckett@northwindlog.com",
+        "to": "Dhaval <dhaval@atliq.com>",
+        "cc": null,
+        "date": "2026-06-11"
+      },
+      {
+        "from_name": "Dhaval",
+        "from_email": "dhaval@atliq.com",
+        "to": "Tom Beckett <tbeckett@northwindlog.com>",
+        "cc": null,
+        "date": "2026-06-13"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1005"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1005",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "Northwind Logistics"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-13_medtrack_scribble.md",
+    "type": "note",
+    "date": "2026-06-13",
+    "title": "MedTrack — techsummit",
+    "from": null,
+    "to": null,
+    "text": "# MedTrack — techsummit\nRohit (MedTrack Labs) — lab ops dashboards? or was it LIMS integration. both?\nasked for our intro deck + healthcare case studies\nsend this week",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1016"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1016",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "MEDTRACK LABS"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-14_techsummit_debrief.md",
+    "type": "note",
+    "date": "2026-06-14",
+    "title": "TechSummit Mumbai — debrief (informal)",
+    "from": null,
+    "to": null,
+    "text": "# TechSummit Mumbai — debrief (informal)\n**Date:** 2026-06-14 · Present: Karandeep, Jay\n\nCards collected: roughly 15. Best conversations:\n- BlueOrchid Hotels (Farah) — guest review analytics, seemed serious (entered as L-1006)\n- AgroLink (Harpreet) — mandi price data pipelines, Dhaval spoke to him, need his notes (L-1011)\n- Meridian booth conversation — SAME hospital group we already have an open deal with?? Sanjay was at the booth, talked to Jay who didn't realise Bhavin already has a proposal with him. Awkward. (Now sitting in CRM twice: L-1003 and L-1027.)\n- TravelHub (Nadia) — itinerary personalization, early stage (L-1022)\n- LoopMart (Sania) — retail analytics, asked for pricing ballpark (L-1036)\n- 8–10 more cards in the drawer, not yet gone through\n\nKarandeep: half of these will go cold before we get to them. Happens every conference.",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1006",
+      "L-1011",
+      "L-1003",
+      "L-1027",
+      "L-1022",
+      "L-1036"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1006",
+        "via": "lead_id"
+      },
+      {
+        "lead_id": "L-1011",
+        "via": "lead_id"
+      },
+      {
+        "lead_id": "L-1003",
+        "via": "lead_id"
+      },
+      {
+        "lead_id": "L-1027",
+        "via": "lead_id"
+      },
+      {
+        "lead_id": "L-1022",
+        "via": "lead_id"
+      },
+      {
+        "lead_id": "L-1036",
+        "via": "lead_id"
+      }
+    ],
+    "linked_companies": [
+      "BlueOrchid Hotels",
+      "AgroLink",
+      "Meridian Healthcare",
+      "Meridian Health LLC",
+      "TravelHub",
+      "LoopMart"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-15_voltenergy_competitor.md",
+    "type": "email",
+    "date": "2026-06-15",
+    "title": "VoltEnergy — competitor comparison",
+    "from": "Marcus Chen <m.chen@voltenergy.com>",
+    "to": "Karandeep <karandeep@atliq.com>",
+    "text": "# Email Thread: VoltEnergy — competitor comparison\n**From:** Marcus Chen <m.chen@voltenergy.com>\n**To:** Karandeep <karandeep@atliq.com>\n**Date:** 2026-06-15\n**Subject:** RE: Proposal — energy trading dashboards\n\nKarandeep,\n\nStraight question: we're also evaluating a Tableau consultancy for this. Their pitch is that Tableau handles our real-time trading feeds better. Give me your honest counter — why Power BI, and why AtliQ?\n\nMarcus\n\n---\n**From:** Karandeep <karandeep@atliq.com>\n**To:** Marcus Chen <m.chen@voltenergy.com>\n**Date:** 2026-06-17\n\nMarcus, honest answer: for sub-second streaming both tools need an intermediate layer, so the real-time argument is mostly marketing. Where Power BI wins for you is cost at your user count (you're already on Microsoft E5) and our proposal includes the data model build, not just the visuals. Happy to put both TCOs side by side if useful.\n\n---\n**From:** Marcus Chen <m.chen@voltenergy.com>\n**To:** Karandeep <karandeep@atliq.com>\n**Date:** 2026-07-01\n\nThat TCO comparison would actually help a lot — board asks for 3-year numbers. Can you send it this week?",
+    "messages": [
+      {
+        "from_name": "Marcus Chen",
+        "from_email": "m.chen@voltenergy.com",
+        "to": "Karandeep <karandeep@atliq.com>",
+        "cc": null,
+        "date": "2026-06-15"
+      },
+      {
+        "from_name": "Karandeep",
+        "from_email": "karandeep@atliq.com",
+        "to": "Marcus Chen <m.chen@voltenergy.com>",
+        "cc": null,
+        "date": "2026-06-17"
+      },
+      {
+        "from_name": "Marcus Chen",
+        "from_email": "m.chen@voltenergy.com",
+        "to": "Karandeep <karandeep@atliq.com>",
+        "cc": null,
+        "date": "2026-07-01"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1014"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1014",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "VoltEnergy"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-16_meridian_proposal_questions.md",
+    "type": "email",
+    "date": "2026-06-16",
+    "title": "Meridian Healthcare — proposal questions",
+    "from": "Dr. Sanjay Kulkarni <sanjay.k@meridianhealth.com>",
+    "to": "Bhavin <bhavin@atliq.com>",
+    "text": "# Email Thread: Meridian Healthcare — proposal questions\n**From:** Dr. Sanjay Kulkarni <sanjay.k@meridianhealth.com>\n**To:** Bhavin <bhavin@atliq.com>\n**Date:** 2026-06-16\n**Subject:** RE: AtliQ Proposal — Clinical Data Platform\n\nBhavin,\n\nThanks for the proposal. It looks solid overall. Two questions from our IT director before we can move ahead:\n\n1. Can the ingestion layer handle HL7 feeds from our older lab systems, or only the FHIR APIs mentioned in section 3?\n2. The proposal quotes a 14-week timeline — does that include UAT with our clinicians, or is that on top?\n\nWe'd like to close this out before our Q2 budget review in mid-July.\n\nRegards,\nSanjay",
+    "messages": [
+      {
+        "from_name": "Dr. Sanjay Kulkarni",
+        "from_email": "sanjay.k@meridianhealth.com",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": null,
+        "date": "2026-06-16"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1003",
+      "L-1027"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1003",
+        "via": "contact_email"
+      },
+      {
+        "lead_id": "L-1027",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "Meridian Healthcare",
+      "Meridian Health LLC"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-18_acme_retail_monthly_reports.md",
+    "type": "email",
+    "date": "2026-06-18",
+    "title": "Acme Retail Group — monthly reporting",
+    "from": "Priya Raman <priya.raman@acmeretail.com>",
+    "to": "Dhaval <dhaval@atliq.com>",
+    "text": "# Email Thread: Acme Retail Group — monthly reporting\n**From:** Priya Raman <priya.raman@acmeretail.com>\n**To:** Dhaval <dhaval@atliq.com>\n**Date:** 2026-06-18\n**Subject:** Monthly reports + a thought\n\nHi Dhaval,\n\nThe Phase 1 dashboards are getting good use across our category teams. Two things:\n\n1. Our analysts still spend the first week of every month manually assembling the board reporting pack from the dashboards. Is that something you folks could automate?\n2. Separately — our ops team has been struggling with inventory forecasting for seasonal SKUs. We keep either overstocking or running out. Not sure if that's your area, but thought I'd mention it.\n\nAlso, I passed your details to Ananya Desai at FreshCart — she's looking for someone to build a customer portal.\n\nBest,\nPriya\n\n---\n**From:** Dhaval <dhaval@atliq.com>\n**To:** Priya Raman <priya.raman@acmeretail.com>\n**Cc:** Ayush <ayush@atliq.com>\n**Date:** 2026-06-19\n\nHi Priya, great to hear! Yes, report automation is very doable — copying Ayush who scoped the Phase 1 work; we'll send you a short scope note this week. And thanks so much for the FreshCart intro!",
+    "messages": [
+      {
+        "from_name": "Priya Raman",
+        "from_email": "priya.raman@acmeretail.com",
+        "to": "Dhaval <dhaval@atliq.com>",
+        "cc": null,
+        "date": "2026-06-18"
+      },
+      {
+        "from_name": "Dhaval",
+        "from_email": "dhaval@atliq.com",
+        "to": "Priya Raman <priya.raman@acmeretail.com>",
+        "cc": "Ayush <ayush@atliq.com>",
+        "date": "2026-06-19"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1001",
+      "L-1020"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1001",
+        "via": "contact_email"
+      },
+      {
+        "lead_id": "L-1020",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "Acme Retail Group",
+      "FreshCart"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-19_blueorchid_call.md",
+    "type": "note",
+    "date": "2026-06-19",
+    "title": "BlueOrchid — call w/ Farah 19/6 (Jay)",
+    "from": null,
+    "to": null,
+    "text": "# BlueOrchid — call w/ Farah 19/6 (Jay)\nguest review analytics — 12 properties, reviews scattered across TripAdvisor / Booking / Google, GM reads them \"when he has time\"\nwants sentiment + theme dashboards, maybe alerts for bad reviews\nseemed serious, asked what a pilot would cost\nsaid I'd send an approach note — need her email first, it's on her card. which card. which drawer",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1006"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1006",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "BlueOrchid Hotels"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-20_lumino_fitness_case_study.md",
+    "type": "email",
+    "date": "2026-06-20",
+    "title": "Lumino Fitness — conference follow-up",
+    "from": "Carlos Mendes <carlos@luminofitness.com>",
+    "to": "Jay <jay@atliq.com>",
+    "text": "# Email Thread: Lumino Fitness — conference follow-up\n**From:** Carlos Mendes <carlos@luminofitness.com>\n**To:** Jay <jay@atliq.com>\n**Date:** 2026-06-20\n**Subject:** TechSummit follow-up — case study?\n\nHi Jay — good meeting you at TechSummit Mumbai last week. You mentioned you'd send over the case study about the member-churn prediction work you did for a fitness chain. Still interested — we're budgeting for next quarter right now.\n\nCarlos",
+    "messages": [
+      {
+        "from_name": "Carlos Mendes",
+        "from_email": "carlos@luminofitness.com",
+        "to": "Jay <jay@atliq.com>",
+        "cc": null,
+        "date": "2026-06-20"
+      }
+    ],
+    "linked_lead_ids": [],
+    "links": [],
+    "linked_companies": [
+      "Lumino Fitness"
+    ],
+    "unmatched_companies": [
+      "Lumino Fitness"
+    ]
+  },
+  {
+    "id": "2026-06-21_cloudnine_rates_references.md",
+    "type": "email",
+    "date": "2026-06-21",
+    "title": "CloudNine SaaS — rate card and references",
+    "from": "Dev Malhotra <dev@cloudnine.io>",
+    "to": "Karandeep <karandeep@atliq.com>",
+    "text": "# Email Thread: CloudNine SaaS — rate card and references\n**From:** Dev Malhotra <dev@cloudnine.io>\n**To:** Karandeep <karandeep@atliq.com>\n**Date:** 2026-06-21\n**Subject:** RE: Staff augmentation — next steps\n\nKarandeep,\n\nFollowing our call: can you send (a) your rate card for senior backend and DevOps profiles, and (b) two references we can speak to — ideally SaaS companies where your engineers embedded into an existing team?\n\nDev\n\n---\n**From:** Karandeep <karandeep@atliq.com>\n**To:** Dev Malhotra <dev@cloudnine.io>\n**Date:** 2026-06-22\n\nDev — rate card attached. References: let me check with two clients that they're happy to take a call, will revert with names in a day or two.\n\n---\n**From:** Dev Malhotra <dev@cloudnine.io>\n**To:** Karandeep <karandeep@atliq.com>\n**Date:** 2026-07-06\n\nKarandeep — any update on the references? We're comparing you with one other vendor and want to close this out by mid-July.",
+    "messages": [
+      {
+        "from_name": "Dev Malhotra",
+        "from_email": "dev@cloudnine.io",
+        "to": "Karandeep <karandeep@atliq.com>",
+        "cc": null,
+        "date": "2026-06-21"
+      },
+      {
+        "from_name": "Karandeep",
+        "from_email": "karandeep@atliq.com",
+        "to": "Dev Malhotra <dev@cloudnine.io>",
+        "cc": null,
+        "date": "2026-06-22"
+      },
+      {
+        "from_name": "Dev Malhotra",
+        "from_email": "dev@cloudnine.io",
+        "to": "Karandeep <karandeep@atliq.com>",
+        "cc": null,
+        "date": "2026-07-06"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1025"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1025",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "CloudNine SaaS"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-23_kaveri_vendor_failed.md",
+    "type": "email",
+    "date": "2026-06-23",
+    "title": "Kaveri Textiles — the local vendor didn't work out",
+    "from": "R. Subramaniam <subbu@kaveritextiles.in>",
+    "to": "Jay <jay@atliq.com>",
+    "text": "# Email Thread: Kaveri Textiles — the local vendor didn't work out\n**From:** R. Subramaniam <subbu@kaveritextiles.in>\n**To:** Jay <jay@atliq.com>\n**Date:** 2026-06-23\n**Subject:** Reopening our dashboard discussion\n\nJay,\n\nI'll be honest — the local vendor we chose over AtliQ last year has not delivered. Six months in, the dashboards still don't reconcile with our tally sheets and he has stopped responding. Lesson learnt about buying on price.\n\nIs your quote from November still valid? We'd want to move quickly this time.\n\nSubramaniam\n\n---\n**From:** Jay <jay@atliq.com>\n**To:** R. Subramaniam <subbu@kaveritextiles.in>\n**Cc:** Pranav <pranav@atliq.com>\n**Date:** 2026-06-25\n\nMr. Subramaniam, sorry to hear that — happens more often than you'd think. The scope may have drifted since November so let's do a fresh demo and re-quote rather than dust off the old number. Pranav (copied) can show you our current textile dashboard template. Would 8 July work?\n\n---\n**From:** R. Subramaniam <subbu@kaveritextiles.in>\n**To:** Jay <jay@atliq.com>\n**Date:** 2026-06-26\n\n8 July confirmed. Bring the template.",
+    "messages": [
+      {
+        "from_name": "R. Subramaniam",
+        "from_email": "subbu@kaveritextiles.in",
+        "to": "Jay <jay@atliq.com>",
+        "cc": null,
+        "date": "2026-06-23"
+      },
+      {
+        "from_name": "Jay",
+        "from_email": "jay@atliq.com",
+        "to": "R. Subramaniam <subbu@kaveritextiles.in>",
+        "cc": "Pranav <pranav@atliq.com>",
+        "date": "2026-06-25"
+      },
+      {
+        "from_name": "R. Subramaniam",
+        "from_email": "subbu@kaveritextiles.in",
+        "to": "Jay <jay@atliq.com>",
+        "cc": null,
+        "date": "2026-06-26"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1007"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1007",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "Kaveri Textiles"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-24_acme_quarterly_review.md",
+    "type": "note",
+    "date": "2026-06-24",
+    "title": "Meeting Notes — Acme Retail Group, Quarterly Review",
+    "from": null,
+    "to": null,
+    "text": "# Meeting Notes — Acme Retail Group, Quarterly Review\n**Date:** 2026-06-24 · **Attendees:** Priya Raman, Vikas (Acme analytics lead), Dhaval, Ayush\n**Type:** Client QBR · **Duration:** 60 min\n\n## Notes\n- Dashboard adoption strong: 40+ weekly active users across category teams.\n- Pain point raised (again): monthly board pack is assembled manually from dashboard screenshots. ~5 person-days/month. Priya asked directly if we can automate. ACTION: Ayush to send scope note. (Also raised in her email 18 Jun.)\n- Vikas mentioned ops side struggles with seasonal inventory forecasting — overstock on festive SKUs, stockouts on staples. Worth a separate conversation with their COO. New opportunity, not logged anywhere.\n- Priya has referred us to FreshCart (Ananya Desai) — she confirmed Ananya is expecting our call. CRM has FreshCart as L-1020, owner Dhaval.\n- Renewal of support contract due September. Priya signalled no issues.\n\n## Actions\n- [ ] Scope note for report automation — Ayush — by 27 Jun\n- [ ] Call Ananya @ FreshCart — ?\n- [ ] Intro convo re: forecasting with Acme COO — ?",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1020",
+      "L-1001"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1020",
+        "via": "lead_id"
+      },
+      {
+        "lead_id": "L-1001",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "FreshCart",
+      "Acme Retail Group"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-24_globalmart_pricing.md",
+    "type": "email",
+    "date": "2026-06-24",
+    "title": "GlobalMart — proposal negotiation",
+    "from": "Neha Shah <neha.shah@globalmart.com>",
+    "to": "Karandeep <karandeep@atliq.com>",
+    "text": "# Email Thread: GlobalMart — proposal negotiation\n**From:** Neha Shah <neha.shah@globalmart.com>\n**To:** Karandeep <karandeep@atliq.com>\n**Date:** 2026-06-24\n**Subject:** RE: Proposal — Vendor Portal\n\nKarandeep,\n\nWe reviewed internally. The clickable prototype Pranav showed in the demo landed well — procurement liked seeing something real. The scope is right but the number is about 20% above what they will clear this year. Two options from our side: trim the analytics module to Phase 2, or hold the full scope at a lower figure. Which works better for you?\n\nAlso — completely separate — my colleague in supply chain asked whether you do demand forecasting. Do you?\n\nNeha\n\n---\n**From:** Karandeep <karandeep@atliq.com>\n**To:** Neha Shah <neha.shah@globalmart.com>\n**Cc:** Pranav <pranav@atliq.com>\n**Date:** 2026-06-26\n\nNeha, let me discuss with the team and come back on the phasing. (Will respond by Friday.)",
+    "messages": [
+      {
+        "from_name": "Neha Shah",
+        "from_email": "neha.shah@globalmart.com",
+        "to": "Karandeep <karandeep@atliq.com>",
+        "cc": null,
+        "date": "2026-06-24"
+      },
+      {
+        "from_name": "Karandeep",
+        "from_email": "karandeep@atliq.com",
+        "to": "Neha Shah <neha.shah@globalmart.com>",
+        "cc": "Pranav <pranav@atliq.com>",
+        "date": "2026-06-26"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1004",
+      "L-1040"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1004",
+        "via": "contact_email"
+      },
+      {
+        "lead_id": "L-1040",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "GlobalMart"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-25_novapharma_stakeholders.md",
+    "type": "email",
+    "date": "2026-06-25",
+    "title": "NovaPharma — multiple stakeholders",
+    "from": "Dr. Lisa Wong <lwong@novapharma.com>",
+    "to": "Bhavin <bhavin@atliq.com>",
+    "text": "# Email Thread: NovaPharma — multiple stakeholders\n**From:** Dr. Lisa Wong <lwong@novapharma.com>\n**To:** Bhavin <bhavin@atliq.com>, CC: Rajesh Patel <rpatel@novapharma.com>, Emma Stone <estone@novapharma.com>\n**Date:** 2026-06-25\n**Subject:** RE: Trial document processing — next steps\n\nBhavin,\n\nCopying Rajesh (IT security) and Emma (procurement). Rajesh needs your data-handling and hosting details before we proceed — he'll send a questionnaire. Emma will need three references from healthcare/pharma clients.\n\nOn our side the science team is sold — the small extraction demo you showed alongside the proposal did a lot of the convincing. It's now about clearing IT and procurement. Realistically we need everything wrapped by end of July to make this year's budget.\n\nLisa",
+    "messages": [
+      {
+        "from_name": "Dr. Lisa Wong",
+        "from_email": "lwong@novapharma.com",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": "Rajesh Patel <rpatel@novapharma.com>, Emma Stone <estone@novapharma.com>",
+        "date": "2026-06-25"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1029"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1029",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "NovaPharma"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-26_loopmart_pricing_call.md",
+    "type": "note",
+    "date": "2026-06-26",
+    "title": "LoopMart — pricing call 26/6 (Karandeep)",
+    "from": null,
+    "to": null,
+    "text": "# LoopMart — pricing call 26/6 (Karandeep)\nSania + her finance person. 3 physical stores + online storefront, data in POS + Shopify\ngave ballpark 18–22k for retail analytics dashboards, phase-able\nshe said",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1036"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1036",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "LoopMart"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-27_harborfinch_referral_intro.md",
+    "type": "email",
+    "date": "2026-06-27",
+    "title": "Harbor & Finch Advisory — referral introduction",
+    "from": "Suresh Menon <suresh.menon@finedge.com>",
+    "to": "Bhavin <bhavin@atliq.com>",
+    "text": "# Email Thread: Harbor & Finch Advisory — referral introduction\n**From:** Suresh Menon <suresh.menon@finedge.com>\n**To:** Bhavin <bhavin@atliq.com>, CC: David Harbor <david@harborfinch.com>\n**Date:** 2026-06-27\n**Subject:** Intro: AtliQ <> Harbor & Finch\n\nBhavin — meet David. David runs Harbor & Finch, a boutique advisory firm; they're evaluating options for automating their client reporting and could use your help. (Your team is doing great work on our data platform, by the way.)\n\nOver to you both.\n\n---\n**From:** David Harbor <david@harborfinch.com>\n**To:** Bhavin <bhavin@atliq.com>\n**Date:** 2026-06-27\n\nThanks Suresh. Bhavin — keen to talk. We produce ~120 client reports a quarter, all manual. Do you have time in the next couple of weeks?",
+    "messages": [
+      {
+        "from_name": "Suresh Menon",
+        "from_email": "suresh.menon@finedge.com",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": "David Harbor <david@harborfinch.com>",
+        "date": "2026-06-27"
+      },
+      {
+        "from_name": "David Harbor",
+        "from_email": "david@harborfinch.com",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": null,
+        "date": "2026-06-27"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1023"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1023",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "FinEdge Bank",
+      "Harbor & Finch Advisory"
+    ],
+    "unmatched_companies": [
+      "Harbor & Finch Advisory"
+    ]
+  },
+  {
+    "id": "2026-06-28_oceanfreight_timezones.md",
+    "type": "email",
+    "date": "2026-06-28",
+    "title": "OceanFreight — scheduling across timezones",
+    "from": "Karl Nilsen <karl@oceanfreight.no>",
+    "to": "Jay <jay@atliq.com>",
+    "text": "# Email Thread: OceanFreight — scheduling across timezones\n**From:** Karl Nilsen <karl@oceanfreight.no>\n**To:** Jay <jay@atliq.com>\n**Date:** 2026-06-28\n**Subject:** Data engineering enquiry — from your website\n\nHello Jay,\n\nI run operations at OceanFreight, a mid-size shipping company based in Oslo. We have vessel telemetry and port-call data scattered across four systems and no unified pipeline. Your data engineering page came up in my research. Can we set up a call? Note I'm on CET.\n\nKarl Nilsen\n\n---\n**From:** Jay <jay@atliq.com>\n**To:** Karl Nilsen <karl@oceanfreight.no>\n**Date:** 2026-06-30\n\nHi Karl, thanks for reaching out. Would 2pm IST / 10:30am CET on 2 or 3 July work?\n\n---\n**From:** Karl Nilsen <karl@oceanfreight.no>\n**To:** Jay <jay@atliq.com>\n**Date:** 2026-07-02\n\nApologies, I was at sea trials this week. Those slots are gone — I'm free the morning of 14 July, 8:00 CET. Early for you I know.\n\n---\n**From:** Jay <jay@atliq.com>\n**To:** Karl Nilsen <karl@oceanfreight.no>\n**Date:** 2026-07-03\n\n14 July 8:00 CET / 11:30 IST confirmed — invite sent.",
+    "messages": [
+      {
+        "from_name": "Karl Nilsen",
+        "from_email": "karl@oceanfreight.no",
+        "to": "Jay <jay@atliq.com>",
+        "cc": null,
+        "date": "2026-06-28"
+      },
+      {
+        "from_name": "Jay",
+        "from_email": "jay@atliq.com",
+        "to": "Karl Nilsen <karl@oceanfreight.no>",
+        "cc": null,
+        "date": "2026-06-30"
+      },
+      {
+        "from_name": "Karl Nilsen",
+        "from_email": "karl@oceanfreight.no",
+        "to": "Jay <jay@atliq.com>",
+        "cc": null,
+        "date": "2026-07-02"
+      },
+      {
+        "from_name": "Jay",
+        "from_email": "jay@atliq.com",
+        "to": "Karl Nilsen <karl@oceanfreight.no>",
+        "cc": null,
+        "date": "2026-07-03"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1033"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1033",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "OceanFreight"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-29_pixelworks_partnership.md",
+    "type": "email",
+    "date": "2026-06-29",
+    "title": "PixelWorks Agency — white-label partnership",
+    "from": "Tara Bose <tara@pixelworks.agency>",
+    "to": "Jay <jay@atliq.com>",
+    "text": "# Email Thread: PixelWorks Agency — white-label partnership\n**From:** Tara Bose <tara@pixelworks.agency>\n**To:** Jay <jay@atliq.com>\n**Date:** 2026-06-29\n**Subject:** Partnership — overflow dev work\n\nHi Jay — we're a 30-person design agency. Our clients increasingly ask for data dashboards and AI features that we can't build in-house. Rather than one project, we're looking for a standing partner we can white-label. Potentially 3–4 projects a quarter. Who's the right person to speak with?\n\nTara",
+    "messages": [
+      {
+        "from_name": "Tara Bose",
+        "from_email": "tara@pixelworks.agency",
+        "to": "Jay <jay@atliq.com>",
+        "cc": null,
+        "date": "2026-06-29"
+      }
+    ],
+    "linked_lead_ids": [],
+    "links": [],
+    "linked_companies": [
+      "PixelWorks Agency"
+    ],
+    "unmatched_companies": [
+      "PixelWorks Agency"
+    ]
+  },
+  {
+    "id": "2026-06-29_shopswift_budget_confirmed.md",
+    "type": "email",
+    "date": "2026-06-29",
+    "title": "ShopSwift — budget confirmed, clock ticking",
+    "from": "Elena Petrova <elena@shopswift.com>",
+    "to": "Bhavin <bhavin@atliq.com>",
+    "text": "# Email: ShopSwift — budget confirmed, clock ticking\n**From:** Elena Petrova <elena@shopswift.com>\n**To:** Bhavin <bhavin@atliq.com>\n**Date:** 2026-06-29\n**Subject:** Recommendation engine — we have budget\n\nBhavin,\n\nFollowing up on yesterday's call with the good news I hinted at: leadership has formally approved 55k for the recommendation engine this fiscal year. That was the last blocker.\n\nWhat I need from you: a statement of work by 15 July so I can push it through procurement before our finance team closes the quarter's commitments. If we miss that window it slips to next quarter and I can't guarantee the budget survives.\n\nElena",
+    "messages": [
+      {
+        "from_name": "Elena Petrova",
+        "from_email": "elena@shopswift.com",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": null,
+        "date": "2026-06-29"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1017"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1017",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "ShopSwift"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-30_datanest_renewal.md",
+    "type": "email",
+    "date": "2026-06-30",
+    "title": "DataNest — renewal and a third engineer",
+    "from": "Sameer Kulkarni <sameer@datanest.io>",
+    "to": "Karandeep <karandeep@atliq.com>",
+    "text": "# Email Thread: DataNest — renewal and a third engineer\n**From:** Sameer Kulkarni <sameer@datanest.io>\n**To:** Karandeep <karandeep@atliq.com>\n**Date:** 2026-06-30\n**Subject:** Contract renewal + team expansion\n\nKarandeep,\n\nBoth engineers have been excellent — genuinely part of the team now. Two things:\n\n1. Our contract runs out end of September. Can we sort the renewal early so there's no gap?\n2. We've raised a Series A and want to add a third engineer, ideally someone strong on Kafka. Same arrangement?\n\nSameer\n\n---\n**From:** Karandeep <karandeep@atliq.com>\n**To:** Sameer Kulkarni <sameer@datanest.io>\n**Date:** 2026-07-02\n\nSameer, that's great to hear on both counts — congratulations on the raise. Let's do a call Wednesday 8 July to lock the renewal and discuss the Kafka profile. Invite coming.",
+    "messages": [
+      {
+        "from_name": "Sameer Kulkarni",
+        "from_email": "sameer@datanest.io",
+        "to": "Karandeep <karandeep@atliq.com>",
+        "cc": null,
+        "date": "2026-06-30"
+      },
+      {
+        "from_name": "Karandeep",
+        "from_email": "karandeep@atliq.com",
+        "to": "Sameer Kulkarni <sameer@datanest.io>",
+        "cc": null,
+        "date": "2026-07-02"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1018"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1018",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "DataNest"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-30_finserve_intro_call.md",
+    "type": "note",
+    "date": "2026-06-30",
+    "title": "Notes — FinServe intro call (Karandeep)",
+    "from": null,
+    "to": null,
+    "text": "# Notes — FinServe intro call (Karandeep)\n30/6, Arjun + colleague (didn't catch name, risk team?)\n- want ML for credit scoring on thin-file customers\n- data: 4 yrs loan perf, bureau pulls, bank statements (PDFs!)\n- regulator explainability requirement — big deal for them\n- budget not discussed\n- arjun travelling first 2 wks of july, said ping him after 15th\n- crm entry exists? check with jay (L-1002?)",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1002"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1002",
+        "via": "lead_id"
+      }
+    ],
+    "linked_companies": [
+      "FinServe Capital"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-06-30_novapharma_security_questionnaire.md",
+    "type": "email",
+    "date": "2026-06-30",
+    "title": "NovaPharma — the security questionnaire",
+    "from": "Rajesh Patel <rpatel@novapharma.com>",
+    "to": "Bhavin <bhavin@atliq.com>",
+    "text": "# Email Thread: NovaPharma — the security questionnaire\n**From:** Rajesh Patel <rpatel@novapharma.com>\n**To:** Bhavin <bhavin@atliq.com>\n**Cc:** Dr. Lisa Wong <lwong@novapharma.com>\n**Date:** 2026-06-30\n**Subject:** Vendor security assessment — AtliQ\n\nBhavin,\n\nAs Lisa flagged, attached is our vendor security questionnaire — 78 questions covering data handling, hosting, access control and incident response. We need the completed document back by 24 July to keep the procurement timeline. Partial answers are fine for a first pass; gaps we can discuss on a call.\n\nRajesh Patel\nIT Security, NovaPharma\n\n---\n**From:** Bhavin <bhavin@atliq.com>\n**To:** Pranav <pranav@atliq.com>\n**Date:** 2026-07-01\n**Subject:** FW: Vendor security assessment — AtliQ\n\nPranav — can you take a first pass at this? Half the questions are about hosting and access control, more your territory than mine. It gates the entire 80k NovaPharma deal. Need it back to them by 24 July.",
+    "messages": [
+      {
+        "from_name": "Rajesh Patel",
+        "from_email": "rpatel@novapharma.com",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": "Dr. Lisa Wong <lwong@novapharma.com>",
+        "date": "2026-06-30"
+      },
+      {
+        "from_name": "Bhavin",
+        "from_email": "bhavin@atliq.com",
+        "to": "Pranav <pranav@atliq.com>",
+        "cc": null,
+        "date": "2026-07-01"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1029"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1029",
+        "via": "email_domain"
+      }
+    ],
+    "linked_companies": [
+      "NovaPharma"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-07-01_agrolink_budget_call.md",
+    "type": "note",
+    "date": "2026-07-01",
+    "title": "AgroLink — Dhaval call w/ Harpreet 1/7",
+    "from": null,
+    "to": null,
+    "text": "# AgroLink — Dhaval call w/ Harpreet 1/7\n- finally connected after techsummit (2.5 weeks!)\n- mandi price data: they aggregate from 40+ mandis manually, want automated pipelines + price alerts for their trader network\n- BUDGET FINALLY REVEALED: ~35-40k approved for this FY, he called it \"the data project\" — it's real money\n- decision: him + their CEO, no committee\n- wants proposal before 10 July, he goes on leave 14th\n\naction: proposal — Dhaval — by 10 Jul",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1011"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1011",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "AgroLink"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-07-02_internal_pipeline_review.md",
+    "type": "note",
+    "date": "2026-07-02",
+    "title": "Internal — Pipeline Review (monthly)",
+    "from": null,
+    "to": null,
+    "text": "# Internal — Pipeline Review (monthly)\n**Date:** 2026-07-02 · **Attendees:** Bhavin, Dhaval, Karandeep, Jay\n\n- Reviewed CRM export before meeting. Numbers don't feel right — several deals everyone \"knows about\" aren't in there, or are stale.\n- Jay spent ~2 hours before this meeting reconciling CRM against inboxes and still found gaps (Meridian proposal Q&A sitting unanswered, the Harbor & Finch intro from Suresh, TechSummit leads only half-entered).\n- Karandeep: \"I answer emails on my phone between meetings and it never gets into the system. By the time I'm at a laptop it's gone.\"\n- Bhavin: NovaPharma security questionnaire deadline is real — end of July or we slip a year. Who owns it? (Unresolved in meeting.)\n- Dhaval: Sunrise Foods came back wanting a v2 three weeks ago. Still no call scheduled. \"That one's on me.\"\n- Agreed (again) that everyone updates CRM same-day. Same agreement as April's meeting.\n- TechSummit: ~15 business cards collected. 4 entered in CRM so far (Jay).",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1003",
+      "L-1026",
+      "L-1027",
+      "L-1029"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1003",
+        "via": "company_name"
+      },
+      {
+        "lead_id": "L-1026",
+        "via": "company_name"
+      },
+      {
+        "lead_id": "L-1027",
+        "via": "company_name"
+      },
+      {
+        "lead_id": "L-1029",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "Meridian Healthcare",
+      "Sunrise Foods",
+      "Meridian Health LLC",
+      "NovaPharma"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-07-02_paytrack_phase2.md",
+    "type": "email",
+    "date": "2026-07-02",
+    "title": "PayTrack — phase 2 hints",
+    "from": "Shreya Iyer <shreya@paytrack.io>",
+    "to": "Bhavin <bhavin@atliq.com>",
+    "text": "# Email Thread: PayTrack — phase 2 hints\n**From:** Shreya Iyer <shreya@paytrack.io>\n**To:** Bhavin <bhavin@atliq.com>\n**Cc:** Ayush <ayush@atliq.com>\n**Date:** 2026-07-02\n**Subject:** Fraud model — quarterly review notes\n\nBhavin, Ayush,\n\nSharing notes from our quarterly model review. Detection precision is holding up well. One thing that came up repeatedly: the ops team wants the same scoring applied to merchant onboarding, not just transactions. Leadership seemed warm to it. Nothing formal yet, but if you sent us a one-pager on what a merchant-risk module would look like, I could circulate it before our August planning cycle.\n\nShreya",
+    "messages": [
+      {
+        "from_name": "Shreya Iyer",
+        "from_email": "shreya@paytrack.io",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": "Ayush <ayush@atliq.com>",
+        "date": "2026-07-02"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1013"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1013",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "PayTrack"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-07-03_greengrid_new_lead.md",
+    "type": "email",
+    "date": "2026-07-03",
+    "title": "GreenGrid Solar — new website lead",
+    "from": "Aditya Kulkarni <aditya@greengrid.in>",
+    "to": "Jay <jay@atliq.com>",
+    "text": "# Email Thread: GreenGrid Solar — new website lead\n**From:** Aditya Kulkarni <aditya@greengrid.in>\n**To:** Jay <jay@atliq.com>\n**Date:** 2026-07-03\n**Subject:** Dashboards for solar plant performance\n\nHi Jay,\n\nWe operate three solar farms in Karnataka and are drowning in inverter and SCADA data that nobody looks at. Saw AtliQ's Power BI work on your site. What would a performance monitoring dashboard engagement look like?\n\nAditya\n\n---\n**From:** Jay <jay@atliq.com>\n**To:** Aditya Kulkarni <aditya@greengrid.in>\n**Date:** 2026-07-04\n\nHi Aditya, great use case — generation vs. forecast, inverter uptime, soiling loss are all very dashboard-able. Shall we do a 45-min discovery call? I have Thursday 9 July open.\n\n---\n**From:** Aditya Kulkarni <aditya@greengrid.in>\n**To:** Jay <jay@atliq.com>\n**Date:** 2026-07-04\n\nThursday works. Sending our data landscape doc beforehand.",
+    "messages": [
+      {
+        "from_name": "Aditya Kulkarni",
+        "from_email": "aditya@greengrid.in",
+        "to": "Jay <jay@atliq.com>",
+        "cc": null,
+        "date": "2026-07-03"
+      },
+      {
+        "from_name": "Jay",
+        "from_email": "jay@atliq.com",
+        "to": "Aditya Kulkarni <aditya@greengrid.in>",
+        "cc": null,
+        "date": "2026-07-04"
+      },
+      {
+        "from_name": "Aditya Kulkarni",
+        "from_email": "aditya@greengrid.in",
+        "to": "Jay <jay@atliq.com>",
+        "cc": null,
+        "date": "2026-07-04"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1030"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1030",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "GreenGrid Solar"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-07-03_ridgeline_scribble.md",
+    "type": "note",
+    "date": "2026-07-03",
+    "title": "call — Ridgeline Foods?? 3/7",
+    "from": null,
+    "to": null,
+    "text": "# call — Ridgeline Foods?? 3/7\nops head rang the office no. — Prakash? Prashant? — heard about the Sunrise Foods portal from a distributor they share\nwants same thing, distributor ordering portal, ~200 distributors\ntook no number, no email — he said \"I'll email you\" — to which address??",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1026"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1026",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "Sunrise Foods",
+      "Ridgeline Foods"
+    ],
+    "unmatched_companies": [
+      "Ridgeline Foods"
+    ]
+  },
+  {
+    "id": "2026-07-03_trustline_approved.md",
+    "type": "email",
+    "date": "2026-07-03",
+    "title": "Trustline NBFC — board approval comes through",
+    "from": "Mohan Krishnan <mohan.k@trustline.in>",
+    "to": "Dhaval <dhaval@atliq.com>",
+    "text": "# Email Thread: Trustline NBFC — board approval comes through\n**From:** Mohan Krishnan <mohan.k@trustline.in>\n**To:** Dhaval <dhaval@atliq.com>\n**Date:** 2026-07-03\n**Subject:** Good news — loan doc automation approved\n\nDhaval,\n\nBoard met this week — the loan document automation project is approved. The annual-license framing did the trick with our CFO, exactly as you suggested. Please send the revised contract reflecting that structure and we can sign this month.\n\nMohan\n\n---\n**From:** Dhaval <dhaval@atliq.com>\n**To:** Mohan Krishnan <mohan.k@trustline.in>\n**Date:** 2026-07-06\n\nMohan — excellent news, and thank you for pushing it through. Revised contract will be with you this week; let's do a short call Thursday 9 July to walk through the terms together.",
+    "messages": [
+      {
+        "from_name": "Mohan Krishnan",
+        "from_email": "mohan.k@trustline.in",
+        "to": "Dhaval <dhaval@atliq.com>",
+        "cc": null,
+        "date": "2026-07-03"
+      },
+      {
+        "from_name": "Dhaval",
+        "from_email": "dhaval@atliq.com",
+        "to": "Mohan Krishnan <mohan.k@trustline.in>",
+        "cc": null,
+        "date": "2026-07-06"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1032"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1032",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "Trustline NBFC"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-07-05_nimbus_lending_intro.md",
+    "type": "email",
+    "date": "2026-07-05",
+    "title": "Nimbus Lending — referral from PayTrack",
+    "from": "Shreya Iyer <shreya@paytrack.io>",
+    "to": "Bhavin <bhavin@atliq.com>",
+    "text": "# Email Thread: Nimbus Lending — referral from PayTrack\n**From:** Shreya Iyer <shreya@paytrack.io>\n**To:** Bhavin <bhavin@atliq.com>, CC: Rhea Sharma <rhea@nimbuslending.in>\n**Date:** 2026-07-05\n**Subject:** Intro: AtliQ <> Nimbus Lending\n\nBhavin — meet Rhea, who heads risk at Nimbus Lending. They're wrestling with exactly the kind of document-heavy underwriting problem you solved for us. Rhea, Bhavin's team built our fraud detection stack — they're the real deal.\n\nShreya\n\n---\n**From:** Rhea Sharma <rhea@nimbuslending.in>\n**To:** Bhavin <bhavin@atliq.com>\n**Date:** 2026-07-06\n\nThanks Shreya. Bhavin — we process ~4,000 loan applications a month, all manually reviewed. Shreya says you can help. I have budget conversations happening the week of 20 July, so a call before then would be ideal.",
+    "messages": [
+      {
+        "from_name": "Shreya Iyer",
+        "from_email": "shreya@paytrack.io",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": "Rhea Sharma <rhea@nimbuslending.in>",
+        "date": "2026-07-05"
+      },
+      {
+        "from_name": "Rhea Sharma",
+        "from_email": "rhea@nimbuslending.in",
+        "to": "Bhavin <bhavin@atliq.com>",
+        "cc": null,
+        "date": "2026-07-06"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1013"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1013",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "PayTrack",
+      "Nimbus Lending"
+    ],
+    "unmatched_companies": [
+      "Nimbus Lending"
+    ]
+  },
+  {
+    "id": "2026-07-06_citywide_referral.md",
+    "type": "email",
+    "date": "2026-07-06",
+    "title": "Citywide Diagnostics — referral from HealthFirst",
+    "from": "Rakesh Gupta <rakesh@citywidediag.in>",
+    "to": "Karandeep <karandeep@atliq.com>",
+    "text": "# Email Thread: Citywide Diagnostics — referral from HealthFirst\n**From:** Rakesh Gupta <rakesh@citywidediag.in>\n**To:** Karandeep <karandeep@atliq.com>\n**Date:** 2026-07-06\n**Subject:** Introduction — via Dr. Anita Rao\n\nKarandeep,\n\nDr. Anita Rao at HealthFirst spoke highly of your team. We run 22 diagnostic centres and our lab results, billing and referral data live in three separate systems that don't talk to each other. Anita mentioned data engineering is your strength. Could we talk this month?\n\nRakesh Gupta\n\n---\n**From:** Karandeep <karandeep@atliq.com>\n**To:** Rakesh Gupta <rakesh@citywidediag.in>\n**Cc:** Dr. Anita Rao <anita.rao@healthfirst.in>\n**Date:** 2026-07-07\n\nRakesh, delighted to connect — this is exactly the kind of problem we solve. How about Monday 13 July, 11am? Copying Anita to say thank you for the kind introduction.\n\n---\n**From:** Rakesh Gupta <rakesh@citywidediag.in>\n**To:** Karandeep <karandeep@atliq.com>\n**Date:** 2026-07-07\n\nMonday 13th, 11am works. See you then.",
+    "messages": [
+      {
+        "from_name": "Rakesh Gupta",
+        "from_email": "rakesh@citywidediag.in",
+        "to": "Karandeep <karandeep@atliq.com>",
+        "cc": null,
+        "date": "2026-07-06"
+      },
+      {
+        "from_name": "Karandeep",
+        "from_email": "karandeep@atliq.com",
+        "to": "Rakesh Gupta <rakesh@citywidediag.in>",
+        "cc": "Dr. Anita Rao <anita.rao@healthfirst.in>",
+        "date": "2026-07-07"
+      },
+      {
+        "from_name": "Rakesh Gupta",
+        "from_email": "rakesh@citywidediag.in",
+        "to": "Karandeep <karandeep@atliq.com>",
+        "cc": null,
+        "date": "2026-07-07"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1039",
+      "L-1009"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1039",
+        "via": "contact_email"
+      },
+      {
+        "lead_id": "L-1009",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "Citywide Diagnostics",
+      "HealthFirst Clinics"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-07-06_meridian_check.md",
+    "type": "note",
+    "date": "2026-07-06",
+    "title": "Meridian — status?",
+    "from": null,
+    "to": null,
+    "text": "# Meridian — status?\n6/7 — Bhavin asked Jay where the Meridian deal (L-1003) stands. Nobody sure if we replied to Sanjay's proposal questions from 16 Jun. Check inbox.",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1003",
+      "L-1027"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1003",
+        "via": "lead_id"
+      },
+      {
+        "lead_id": "L-1027",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "Meridian Healthcare",
+      "Meridian Health LLC"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-07-07_internal_prioritization.md",
+    "type": "note",
+    "date": "2026-07-07",
+    "title": "Internal — which deals first? (7 Jul, ad-hoc)",
+    "from": null,
+    "to": null,
+    "text": "# Internal — which deals first? (7 Jul, ad-hoc)\nPresent: Bhavin, Karandeep, Jay (Dhaval travelling)\n\nArgument about where the week goes. On the table:\n- FinEdge (L-1023, 95k) — compliance cleared 19 Jun, they asked for a commercial call, nobody confirmed. Bhavin: \"biggest deal we have and it's been sitting three weeks.\"\n- NovaPharma (L-1029, 80k) — security questionnaire due 24 Jul, still untouched, Pranav hasn't responded to the forward.\n- ShopSwift (L-1017, 55k) — Elena needs SOW by 15 Jul or budget slips a quarter.\n- Meridian (L-1003) — Sanjay's proposal questions from 16 Jun still unanswered. Their budget review is mid-July.\n- HealthFirst board meets 14 Jul — should we ping Anita before? Nobody had this date until Karandeep searched his inbox during the meeting.\n\nJay pointed out the CRM says none of this — statuses stale, next_followup mostly empty, half the urgency lives in inboxes. Karandeep: \"we find out what's urgent by accident.\"\n\nNo owners assigned by end of meeting. Bhavin took FinEdge \"probably\".",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1023",
+      "L-1029",
+      "L-1017",
+      "L-1003",
+      "L-1009",
+      "L-1027"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1023",
+        "via": "lead_id"
+      },
+      {
+        "lead_id": "L-1029",
+        "via": "lead_id"
+      },
+      {
+        "lead_id": "L-1017",
+        "via": "lead_id"
+      },
+      {
+        "lead_id": "L-1003",
+        "via": "lead_id"
+      },
+      {
+        "lead_id": "L-1009",
+        "via": "company_name"
+      },
+      {
+        "lead_id": "L-1027",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "FinEdge Bank",
+      "NovaPharma",
+      "ShopSwift",
+      "Meridian Healthcare",
+      "HealthFirst Clinics",
+      "Meridian Health LLC"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-07-07_mirahealth_quick_summary.md",
+    "type": "email",
+    "date": "2026-07-07",
+    "title": "MiraHealth — internal forward",
+    "from": "Dhaval <dhaval@atliq.com>",
+    "to": "Jay <jay@atliq.com>",
+    "text": "# Email: MiraHealth — internal forward\n**From:** Dhaval <dhaval@atliq.com>\n**To:** Jay <jay@atliq.com>\n**Date:** 2026-07-07\n**Subject:** FW: MiraHealth call\n\nJay — had the second call with Sophie at MiraHealth yesterday while at the airport — good one. They want the triage assistant scoped for UK ops first, not India. Budget ~35k confirmed verbally. She mentioned their CTO is ex-NHS and very particular about clinical safety docs. Can you put this in the CRM? I'll forget half of it by next week.",
+    "messages": [
+      {
+        "from_name": "Dhaval",
+        "from_email": "dhaval@atliq.com",
+        "to": "Jay <jay@atliq.com>",
+        "cc": null,
+        "date": "2026-07-07"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1038"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1038",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "MiraHealth"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-07-08_eduspark_website_enquiry.md",
+    "type": "email",
+    "date": "2026-07-08",
+    "title": "EduSpark — unanswered website enquiry",
+    "from": "Vikram Joshi <vikram@eduspark.com>",
+    "to": "Jay <jay@atliq.com>",
+    "text": "# Email: EduSpark — unanswered website enquiry\n**From:** Vikram Joshi <vikram@eduspark.com>\n**To:** Jay <jay@atliq.com>\n**Date:** 2026-07-08\n**Subject:** Following up on my website enquiry (25 June)\n\nHi Jay,\n\nI submitted an enquiry through your website on 25 June about an AI assistant for student queries and haven't heard back — found your email via LinkedIn, hope you don't mind the direct note.\n\nTwo clarifications since my original enquiry, as I probably explained it badly in the form:\n\n1. The immediate need is actually for our admissions season (queries spike 10x in Aug–Sep), so timing matters — our budget window closes mid-August.\n2. I should also mention I'm not the final decision-maker — that's Prof. Meenakshi Iyer, our Dean of Digital Learning. Happy to set up a joint call.\n\nStill interested if you are.\n\nVikram",
+    "messages": [
+      {
+        "from_name": "Vikram Joshi",
+        "from_email": "vikram@eduspark.com",
+        "to": "Jay <jay@atliq.com>",
+        "cc": null,
+        "date": "2026-07-08"
+      }
+    ],
+    "linked_lead_ids": [
+      "L-1010"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1010",
+        "via": "contact_email"
+      }
+    ],
+    "linked_companies": [
+      "EduSpark"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-07-08_kaveri_demo_round2.md",
+    "type": "note",
+    "date": "2026-07-08",
+    "title": "Meeting Notes — Kaveri Textiles, demo (round 2)",
+    "from": null,
+    "to": null,
+    "text": "# Meeting Notes — Kaveri Textiles, demo (round 2)\n**Date:** 2026-07-08 · **Attendees:** R. Subramaniam, their IT-in-charge (Senthil), Jay, Pranav\n**Type:** Pre-sales demo · **Duration:** 50 min\n\n## Notes\n- Pranav demoed the textile ops dashboard template — production, dispatch, yarn inventory. Subbu visibly relieved vs. what the local vendor gave them.\n- Scope grew since Nov: they've added a second unit, want both plants in one view.\n- Senthil confirmed data sits in Tally + a legacy Access DB. Extraction is the risky bit.\n- Subbu asked for revised quote by 15 July. Signalled budget flexibility this time — \"just make it work\".\n\n## Actions\n- [ ] Revised quote (2-plant scope) — Jay — by 15 Jul\n- [ ] Update CRM — L-1007 still shows \"Lost\" — Jay",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1007"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1007",
+        "via": "lead_id"
+      }
+    ],
+    "linked_companies": [
+      "Kaveri Textiles"
+    ],
+    "unmatched_companies": []
+  },
+  {
+    "id": "2026-07-09_greengrid_discovery.md",
+    "type": "note",
+    "date": "2026-07-09",
+    "title": "Meeting Notes — GreenGrid Solar, discovery call",
+    "from": null,
+    "to": null,
+    "text": "# Meeting Notes — GreenGrid Solar, discovery call\n**Date:** 2026-07-09 · **Attendees:** Aditya Kulkarni, GreenGrid plant head (Ramesh), Jay\n**Type:** Discovery · **Duration:** 45 min\n\n## Notes\n- 3 solar farms (Karnataka), ~180 MW combined. SCADA + inverter data lands in vendor portals, monthly Excel exports only.\n- Want: generation vs. forecast, inverter uptime, soiling loss tracking, one view across farms.\n- Data access is the open question — two different SCADA vendors, one has an API, other is \"CSV over email\".\n- Budget: Aditya indicated 20–25k comfortable for phase 1.\n- Timeline driver: board review of plant performance in September.\n\n## Actions\n- [ ] Proposal — Jay — by 17 Jul\n- [ ] Pranav to sanity-check SCADA API feasibility before quote — by 14 Jul",
+    "messages": [],
+    "linked_lead_ids": [
+      "L-1030"
+    ],
+    "links": [
+      {
+        "lead_id": "L-1030",
+        "via": "company_name"
+      }
+    ],
+    "linked_companies": [
+      "GreenGrid Solar"
+    ],
+    "unmatched_companies": []
+  }
+]

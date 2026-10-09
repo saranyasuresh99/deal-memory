@@ -1,0 +1,250 @@
+{
+  "2025-09-30_quantia_lost_deal.md": [
+    {
+      "note": "No revisit was scheduled. CRM status: Lost.",
+      "context": null
+    }
+  ],
+  "2026-01-15_vertex_ooo_stall.md": [
+    {
+      "note": "No one reconnected in February. No activity on L-1037 since 2026-01-20.",
+      "context": null
+    }
+  ],
+  "2026-02-05_steelcore_pricing_objection.md": [
+    {
+      "note": "No response from Verma, and no further nudge from AtliQ. No activity on L-1021 since 2026-02-14.",
+      "context": null
+    }
+  ],
+  "2026-03-04_apexauto_cold_outreach.md": [
+    {
+      "note": "No response ever received. L-1028 sits in CRM as \"New\" with no owner and no service_interest.",
+      "context": null
+    }
+  ],
+  "2026-03-26_finedge_compliance_docs.md": [
+    {
+      "note": "No confirmation sent as of 2026-07-10. The 95k deal — L-1023, largest in the pipeline — has had no AtliQ activity since March. CRM last_contact_date still shows 2026-03-30.",
+      "context": null
+    }
+  ],
+  "2026-04-20_healthfirst_board_update.md": [
+    {
+      "note": "Board meets 2026-07-14 — four days from now. No reminder set, no contact since April. CRM next_followup_date for L-1009 is empty.",
+      "context": null
+    }
+  ],
+  "2026-05-04_urbannest_no_response.md": [
+    {
+      "note": "No response. No further follow-up sent.",
+      "context": null
+    }
+  ],
+  "2026-05-10_bytebridge_competitor.md": [
+    {
+      "note": "Nothing was sent. No contact with ByteBridge since 2026-05-12. L-1031 still \"Contacted\".",
+      "context": null
+    }
+  ],
+  "2026-05-18_freshcart_referral_followup.md": [
+    {
+      "note": "No reply sent as of 2026-07-10. A warm referral from AtliQ's happiest client, going cold. CRM last_contact_date for L-1020 still shows 2026-05-20.",
+      "context": null
+    }
+  ],
+  "2026-06-03_zenlytics_intro_call.md": [
+    {
+      "note": "No invite was ever sent. No contact since 2026-06-05. CRM status for L-1008 still says \"Contacted\", next_followup_date empty.",
+      "context": null
+    }
+  ],
+  "2026-06-09_clearpath_budget_unfrozen.md": [
+    {
+      "note": "No reply sent as of 2026-07-10. CRM status for L-1015 still says \"Lost\" — the original notes even said \"check back later\".",
+      "context": null
+    }
+  ],
+  "2026-06-10_sunrise_foods_reactivation.md": [
+    {
+      "note": "No call was scheduled. CRM last_contact_date for Sunrise Foods still shows 2025-10-30.",
+      "context": null
+    }
+  ],
+  "2026-06-11_northwind_crosssell.md": [
+    {
+      "note": "No samples sent as of 2026-07-10. CRM for L-1005 still shows last_contact_date 2026-01-10 and no new opportunity logged.",
+      "context": null
+    }
+  ],
+  "2026-06-15_voltenergy_competitor.md": [
+    {
+      "note": "No reply sent as of 2026-07-10. CRM last_contact_date for L-1014 still shows 2026-06-17.",
+      "context": null
+    }
+  ],
+  "2026-06-16_meridian_proposal_questions.md": [
+    {
+      "note": "No reply from AtliQ as of 2026-07-10. CRM status for lead L-1003 still says \"Contacted\".",
+      "context": null
+    }
+  ],
+  "2026-06-18_acme_retail_monthly_reports.md": [
+    {
+      "note": "No scope note sent as of 2026-07-10.",
+      "context": null
+    }
+  ],
+  "2026-06-20_lumino_fitness_case_study.md": [
+    {
+      "note": "No reply sent. Lumino Fitness does not appear in the CRM.",
+      "context": null
+    }
+  ],
+  "2026-06-21_cloudnine_rates_references.md": [
+    {
+      "note": "No reply sent as of 2026-07-10. References never shared. CRM last_contact_date for L-1025 still shows 2026-06-22.",
+      "context": null
+    }
+  ],
+  "2026-06-23_kaveri_vendor_failed.md": [
+    {
+      "note": "Demo held 2026-07-08 — see meeting notes. CRM status for L-1007 still says \"Lost\".",
+      "context": null
+    }
+  ],
+  "2026-06-24_globalmart_pricing.md": [
+    {
+      "note": "No further reply sent as of 2026-07-10. The forecasting question was never answered.",
+      "context": null
+    }
+  ],
+  "2026-06-25_novapharma_stakeholders.md": [
+    {
+      "note": "Rajesh's security questionnaire arrived 2026-06-30. Not yet answered.",
+      "context": null
+    }
+  ],
+  "2026-06-27_harborfinch_referral_intro.md": [
+    {
+      "note": "No reply from AtliQ as of 2026-07-10. Harbor & Finch does not appear in the CRM.",
+      "context": null
+    }
+  ],
+  "2026-06-28_oceanfreight_timezones.md": [
+    {
+      "note": "Call scheduled. CRM entry L-1033 has no owner assigned — Jay took it by default but it hasn't been discussed.",
+      "context": null
+    }
+  ],
+  "2026-06-29_pixelworks_partnership.md": [
+    {
+      "note": "No reply sent as of 2026-07-10. PixelWorks does not appear in the CRM.",
+      "context": null
+    }
+  ],
+  "2026-06-29_shopswift_budget_confirmed.md": [
+    {
+      "note": "No reply and no SOW sent as of 2026-07-10 — five days to the deadline. CRM for L-1017 still says \"Contacted\".",
+      "context": null
+    }
+  ],
+  "2026-06-30_datanest_renewal.md": [
+    {
+      "note": "Call held 2026-07-08 — renewal verbally agreed, third engineer profile to be shared by mid-July. CRM for L-1018 still shows last_contact_date 2026-03-05 and nothing about the expansion.",
+      "context": null
+    }
+  ],
+  "2026-06-30_novapharma_security_questionnaire.md": [
+    {
+      "note": "No response from Pranav and no work started on the questionnaire as of 2026-07-10. Lisa's email of 25 June said everything must be wrapped by end of July.",
+      "context": null
+    }
+  ],
+  "2026-07-03_greengrid_new_lead.md": [
+    {
+      "note": "Discovery call held 2026-07-09 — see meeting notes. Proposal promised by 17 July.",
+      "context": null
+    }
+  ],
+  "2026-07-03_trustline_approved.md": [
+    {
+      "note": "Call held 2026-07-09 with verbal go-ahead; contract out for signature. CRM status for L-1032 still says \"Proposal Sent\".",
+      "context": null
+    }
+  ],
+  "2026-07-05_nimbus_lending_intro.md": [
+    {
+      "note": "No reply sent as of 2026-07-10. Nimbus Lending does not appear in the CRM.",
+      "context": null
+    }
+  ],
+  "2026-07-06_citywide_referral.md": [
+    {
+      "note": "Call scheduled for 2026-07-13. CRM entry L-1039 exists but the owner column is blank.",
+      "context": null
+    }
+  ],
+  "2026-07-07_mirahealth_quick_summary.md": [
+    {
+      "note": "CRM notes for MiraHealth (L-1038) were never updated beyond \"second call done\".",
+      "context": null
+    }
+  ],
+  "2026-07-08_eduspark_website_enquiry.md": [
+    {
+      "note": "No reply sent as of 2026-07-10. CRM entry L-1010 has no owner assigned and still says \"chatbot for student queries maybe\".",
+      "context": null
+    }
+  ],
+  "2026-04-05_smartserve_intro_call.md": [
+    {
+      "note": "sent 8 Apr",
+      "context": "- [ ] Send call recap + indicative pricing — Jay — by 8 Apr"
+    },
+    {
+      "note": "not arranged",
+      "context": "- [ ] Reference call with a past client for Arvind — Jay"
+    },
+    {
+      "note": "No response from SmartServe after the 8 Apr email, and no further follow-up from our side. L-1034 untouched since.",
+      "context": null
+    }
+  ],
+  "2026-06-13_medtrack_scribble.md": [
+    {
+      "note": "Nothing sent. L-1016 still \"New\", service_interest blank.",
+      "context": null
+    }
+  ],
+  "2026-06-19_blueorchid_call.md": [
+    {
+      "note": "L-1006 contact_email is still blank in the CRM. No approach note sent.",
+      "context": null
+    }
+  ],
+  "2026-06-24_acme_quarterly_review.md": [
+    {
+      "note": "not done",
+      "context": "- [ ] Scope note for report automation — Ayush — by 27 Jun"
+    }
+  ],
+  "2026-07-01_agrolink_budget_call.md": [
+    {
+      "note": "not started as of 10 Jul. CRM L-1011 still has empty status and no est_value.",
+      "context": "action: proposal — Dhaval — by 10 Jul"
+    }
+  ],
+  "2026-07-03_ridgeline_scribble.md": [
+    {
+      "note": "No email ever arrived, or nobody recognised it. Ridgeline Foods is not in the CRM.",
+      "context": null
+    }
+  ],
+  "2026-07-08_kaveri_demo_round2.md": [
+    {
+      "note": "Quote not started as of 2026-07-10.",
+      "context": null
+    }
+  ]
+}
