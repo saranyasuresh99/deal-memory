@@ -8,12 +8,15 @@
     "start": "next start",
     "lint": "eslint",
     "build-data": "tsx scripts/build-data.ts",
-    "verify": "tsx scripts/verify-quotes.ts"
+    "verify": "tsx scripts/verify-quotes.ts",
+    "radar": "tsx scripts/radar.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.133.0",
     "next": "15.5.27",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

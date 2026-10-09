@@ -1,0 +1,1094 @@
+{
+  "generated_by": "Claude Code (Demo mode) — written during the build by following RADAR_SYSTEM in lib/prompts.ts",
+  "mode": "demo",
+  "today": "2026-07-10",
+  "note": "Editorial notes were removed before analysis. Every quote is checked by `npm run verify`.",
+  "bundles": [
+    {
+      "bundle_id": "L-1001",
+      "account": "Acme Retail Group",
+      "lead_id": "L-1001",
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "Acme Retail Group",
+          "lead_id": "L-1001",
+          "summary": "Ayush owes Priya a scope note for automating Acme's monthly board pack (due 27 Jun); nothing later shows it was sent.",
+          "quote": "Scope note for report automation — Ayush — by 27 Jun",
+          "file": "2026-06-24_acme_quarterly_review.md",
+          "owner": "Ayush",
+          "due_date": "2026-06-27",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Ayush to send Priya the report-automation scope note; Dhaval to check it went out."
+        },
+        {
+          "type": "promise_overdue",
+          "account": "Acme Retail Group",
+          "lead_id": "L-1001",
+          "summary": "On 19 Jun Dhaval told Priya a short scope note would follow 'this week'.",
+          "quote": "we'll send you a short scope note this week",
+          "file": "2026-06-18_acme_retail_monthly_reports.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Ayush to send Priya the report-automation scope note; Dhaval to check it went out."
+        },
+        {
+          "type": "cross_sell",
+          "account": "Acme Retail Group",
+          "lead_id": "L-1001",
+          "summary": "Acme's ops team struggles with seasonal inventory forecasting — a new opportunity that is not logged anywhere.",
+          "quote": "our ops team has been struggling with inventory forecasting for seasonal SKUs",
+          "file": "2026-06-18_acme_retail_monthly_reports.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Dhaval to propose an intro conversation with Acme's COO about forecasting."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1002",
+      "account": "FinServe Capital",
+      "lead_id": "L-1002",
+      "signals": [
+        {
+          "type": "revisit_due",
+          "account": "FinServe Capital",
+          "lead_id": "L-1002",
+          "summary": "Arjun is travelling and asked to be pinged after 15 Jul; budget has not been discussed yet.",
+          "quote": "arjun travelling first 2 wks of july, said ping him after 15th",
+          "file": "2026-06-30_finserve_intro_call.md",
+          "owner": "Karandeep",
+          "due_date": "2026-07-15",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Karandeep to call Arjun on 16 Jul about thin-file credit scoring and ask about budget."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1003",
+      "account": "Meridian Healthcare",
+      "lead_id": "L-1003",
+      "signals": [
+        {
+          "type": "client_deadline",
+          "account": "Meridian Healthcare",
+          "lead_id": "L-1003",
+          "summary": "Sanjay wants to close before Meridian's mid-July budget review, but his two proposal questions (HL7 feeds, UAT in the timeline) have no answer in the record.",
+          "quote": "We'd like to close this out before our Q2 budget review in mid-July.",
+          "file": "2026-06-16_meridian_proposal_questions.md",
+          "owner": "Bhavin",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Bhavin to answer the HL7 and UAT questions this week, with Pranav's input."
+        },
+        {
+          "type": "contradiction",
+          "account": "Meridian Healthcare",
+          "lead_id": "L-1003",
+          "summary": "CRM status says 'Contacted' but Meridian has already received and reviewed a proposal.",
+          "quote": "Thanks for the proposal. It looks solid overall.",
+          "file": "2026-06-16_meridian_proposal_questions.md",
+          "owner": "Bhavin",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Update L-1003 status to 'Proposal Sent' (needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1004",
+      "account": "GlobalMart",
+      "lead_id": "L-1004",
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "GlobalMart",
+          "lead_id": "L-1004",
+          "summary": "Karandeep promised to come back on the phasing 'by Friday' — written on Friday 26 Jun, so which Friday is unclear; no later reply in the thread.",
+          "quote": "Will respond by Friday.",
+          "file": "2026-06-24_globalmart_pricing.md",
+          "owner": "Karandeep",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Karandeep to pick an option (analytics to Phase 2, or a lower figure) and reply to Neha."
+        },
+        {
+          "type": "cross_sell",
+          "account": "GlobalMart",
+          "lead_id": "L-1004",
+          "summary": "GlobalMart's supply-chain team asked whether AtliQ does demand forecasting; the question is unanswered.",
+          "quote": "my colleague in supply chain asked whether you do demand forecasting",
+          "file": "2026-06-24_globalmart_pricing.md",
+          "owner": "Karandeep",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Answer Neha's forecasting question and offer a short call with supply chain."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1005",
+      "account": "Northwind Logistics",
+      "lead_id": "L-1005",
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "Northwind Logistics",
+          "lead_id": "L-1005",
+          "summary": "Dhaval promised sample dashboard concepts 'next week' (written Sat 13 Jun, so by 19 Jun); nothing later shows they were sent.",
+          "quote": "Let me send you a few sample dashboard concepts next week to react to.",
+          "file": "2026-06-11_northwind_crosssell.md",
+          "owner": "Dhaval",
+          "due_date": "2026-06-19",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Dhaval to send Tom the sample dashboard concepts."
+        },
+        {
+          "type": "cross_sell",
+          "account": "Northwind Logistics",
+          "lead_id": "L-1005",
+          "summary": "Northwind's CEO wants Power BI dashboards on top of the pipeline AtliQ built — a small, fast follow-on project.",
+          "quote": "Does AtliQ also do the dashboard layer on top?",
+          "file": "2026-06-11_northwind_crosssell.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Log a new dashboard opportunity for Northwind in the CRM."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1006",
+      "account": "BlueOrchid Hotels",
+      "lead_id": "L-1006",
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "BlueOrchid Hotels",
+          "lead_id": "L-1006",
+          "summary": "Jay promised Farah an approach note for guest-review analytics on 19 Jun but has no email for her (CRM email is blank).",
+          "quote": "said I'd send an approach note",
+          "file": "2026-06-19_blueorchid_call.md",
+          "owner": "Jay",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Jay to find Farah's business card, add her email to the CRM and send the approach note."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1007",
+      "account": "Kaveri Textiles",
+      "lead_id": "L-1007",
+      "signals": [
+        {
+          "type": "client_deadline",
+          "account": "Kaveri Textiles",
+          "lead_id": "L-1007",
+          "summary": "Kaveri wants a revised quote for both plants by 15 Jul and signalled budget flexibility.",
+          "quote": "Subbu asked for revised quote by 15 July.",
+          "file": "2026-07-08_kaveri_demo_round2.md",
+          "owner": "Jay",
+          "due_date": "2026-07-15",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Jay to prepare the 2-plant quote, with Pranav sizing the Tally/Access extraction."
+        },
+        {
+          "type": "contradiction",
+          "account": "Kaveri Textiles",
+          "lead_id": "L-1007",
+          "summary": "CRM still says 'Lost', but Kaveri re-opened the deal and attended a second demo on 8 Jul.",
+          "quote": "Update CRM — L-1007 still shows \"Lost\"",
+          "file": "2026-07-08_kaveri_demo_round2.md",
+          "owner": "Jay",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Change L-1007 from Lost to an open stage (needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1008",
+      "account": "Zenlytics",
+      "lead_id": "L-1008",
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "Zenlytics",
+          "lead_id": "L-1008",
+          "summary": "Bhavin agreed a Wednesday 3pm intro call (10 Jun) and promised an invite; nothing later shows the invite or the call.",
+          "quote": "Wednesday 3pm it is. I'll send a calendar invite shortly.",
+          "file": "2026-06-03_zenlytics_intro_call.md",
+          "owner": "Bhavin",
+          "due_date": "2026-06-10",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Bhavin to apologise and offer new slots — Maya needs 2 dbt + Snowflake engineers from August."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1009",
+      "account": "HealthFirst Clinics",
+      "lead_id": "L-1009",
+      "signals": [
+        {
+          "type": "client_deadline",
+          "account": "HealthFirst Clinics",
+          "lead_id": "L-1009",
+          "summary": "HealthFirst's board decides on the patient portal on 14 Jul; AtliQ sent re-phased pricing in April and the record shows no contact since.",
+          "quote": "now scheduled for 14 July",
+          "file": "2026-04-20_healthfirst_board_update.md",
+          "owner": "Karandeep",
+          "due_date": "2026-07-14",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Karandeep to check in with Anita before 14 Jul in case the board needs anything."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1010",
+      "account": "EduSpark",
+      "lead_id": "L-1010",
+      "signals": [
+        {
+          "type": "client_deadline",
+          "account": "EduSpark",
+          "lead_id": "L-1010",
+          "summary": "EduSpark needs a student-query assistant for admissions season; the budget window closes mid-August.",
+          "quote": "our budget window closes mid-August",
+          "file": "2026-07-08_eduspark_website_enquiry.md",
+          "owner": null,
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Assign an owner and offer Vikram a joint call with Prof. Meenakshi Iyer."
+        },
+        {
+          "type": "contradiction",
+          "account": "EduSpark",
+          "lead_id": "L-1010",
+          "summary": "CRM calls this a vague 'maybe' with no owner, but Vikram has a clear need, a timeline and has chased AtliQ directly.",
+          "quote": "I submitted an enquiry through your website on 25 June about an AI assistant for student queries and haven't heard back",
+          "file": "2026-07-08_eduspark_website_enquiry.md",
+          "owner": null,
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Update L-1010 notes and owner (needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1011",
+      "account": "AgroLink",
+      "lead_id": "L-1011",
+      "signals": [
+        {
+          "type": "client_deadline",
+          "account": "AgroLink",
+          "lead_id": "L-1011",
+          "summary": "Harpreet wants the proposal before 10 Jul (today) and goes on leave on the 14th; ~35–40k is approved.",
+          "quote": "wants proposal before 10 July, he goes on leave 14th",
+          "file": "2026-07-01_agrolink_budget_call.md",
+          "owner": "Dhaval",
+          "due_date": "2026-07-10",
+          "date_clear": true,
+          "value_usd": 35000,
+          "suggested_next_action": "Dhaval to send the mandi-price pipeline proposal today or call Harpreet before the 14th."
+        },
+        {
+          "type": "contradiction",
+          "account": "AgroLink",
+          "lead_id": "L-1011",
+          "summary": "CRM has no status and no value, but AgroLink revealed ~35–40k approved for this project.",
+          "quote": "BUDGET FINALLY REVEALED: ~35-40k approved for this FY",
+          "file": "2026-07-01_agrolink_budget_call.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": 35000,
+          "suggested_next_action": "Set L-1011 status and est. value (needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1012",
+      "account": "UrbanNest Realty",
+      "lead_id": "L-1012",
+      "signals": []
+    },
+    {
+      "bundle_id": "L-1013",
+      "account": "PayTrack",
+      "lead_id": "L-1013",
+      "signals": [
+        {
+          "type": "cross_sell",
+          "account": "PayTrack",
+          "lead_id": "L-1013",
+          "summary": "PayTrack wants the fraud scoring extended to merchant onboarding; Shreya asked for a one-pager before their August planning cycle.",
+          "quote": "the ops team wants the same scoring applied to merchant onboarding, not just transactions",
+          "file": "2026-07-02_paytrack_phase2.md",
+          "owner": "Bhavin",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Bhavin and Ayush to send Shreya a one-pager on a merchant-risk module."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1014",
+      "account": "VoltEnergy",
+      "lead_id": "L-1014",
+      "signals": [
+        {
+          "type": "client_deadline",
+          "account": "VoltEnergy",
+          "lead_id": "L-1014",
+          "summary": "Marcus asked on Wed 1 Jul for the 3-year TCO comparison Karandeep offered, 'this week' (by 3 Jul); no reply in the thread.",
+          "quote": "Can you send it this week?",
+          "file": "2026-06-15_voltenergy_competitor.md",
+          "owner": "Karandeep",
+          "due_date": "2026-07-03",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Karandeep to send the Power BI vs Tableau 3-year TCO comparison."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1015",
+      "account": "ClearPath Insurance",
+      "lead_id": "L-1015",
+      "signals": [
+        {
+          "type": "contradiction",
+          "account": "ClearPath Insurance",
+          "lead_id": "L-1015",
+          "summary": "CRM says Lost (budget freeze), but Deepa says the freeze lifted and the project is back for Q3 — AtliQ's proposal was the strongest of three.",
+          "quote": "The freeze lifted with the new financial year and the project is back on our roadmap for Q3.",
+          "file": "2026-06-09_clearpath_budget_unfrozen.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Dhaval to reply to Deepa and confirm whether the 40k estimate holds."
+        },
+        {
+          "type": "revisit_due",
+          "account": "ClearPath Insurance",
+          "lead_id": "L-1015",
+          "summary": "The CRM note itself said to check back later; no revisit was scheduled.",
+          "quote": "budget freeze. said check back later",
+          "file": "crm_export.csv",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Re-open L-1015 and set a follow-up date (needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1016",
+      "account": "MEDTRACK LABS",
+      "lead_id": "L-1016",
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "MEDTRACK LABS",
+          "lead_id": "L-1016",
+          "summary": "At TechSummit, AtliQ promised Rohit an intro deck and healthcare case studies 'this week' (note written Sat 13 Jun — date unclear; who promised is not recorded).",
+          "quote": "send this week",
+          "file": "2026-06-13_medtrack_scribble.md",
+          "owner": null,
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Jay (CRM owner) to send the deck and case studies and confirm Rohit's actual need."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1017",
+      "account": "ShopSwift",
+      "lead_id": "L-1017",
+      "signals": [
+        {
+          "type": "client_deadline",
+          "account": "ShopSwift",
+          "lead_id": "L-1017",
+          "summary": "Elena needs a statement of work by 15 Jul or the approved budget slips a quarter; no reply from AtliQ in the record.",
+          "quote": "a statement of work by 15 July",
+          "file": "2026-06-29_shopswift_budget_confirmed.md",
+          "owner": "Bhavin",
+          "due_date": "2026-07-15",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Bhavin to draft the recommendation-engine SOW now."
+        },
+        {
+          "type": "contradiction",
+          "account": "ShopSwift",
+          "lead_id": "L-1017",
+          "summary": "CRM says 'Contacted', but the 55k budget is formally approved and the client is waiting for a SOW.",
+          "quote": "leadership has formally approved 55k for the recommendation engine this fiscal year",
+          "file": "2026-06-29_shopswift_budget_confirmed.md",
+          "owner": "Bhavin",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": 55000,
+          "suggested_next_action": "Move L-1017 to a later stage (needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1018",
+      "account": "DataNest",
+      "lead_id": "L-1018",
+      "signals": [
+        {
+          "type": "cross_sell",
+          "account": "DataNest",
+          "lead_id": "L-1018",
+          "summary": "DataNest raised a Series A and wants a third engineer, ideally strong on Kafka.",
+          "quote": "want to add a third engineer, ideally someone strong on Kafka",
+          "file": "2026-06-30_datanest_renewal.md",
+          "owner": "Karandeep",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Karandeep to share a Kafka engineer profile and log the expansion in the CRM."
+        },
+        {
+          "type": "client_deadline",
+          "account": "DataNest",
+          "lead_id": "L-1018",
+          "summary": "DataNest's contract runs out at the end of September and they asked to renew early.",
+          "quote": "Our contract runs out end of September.",
+          "file": "2026-06-30_datanest_renewal.md",
+          "owner": "Karandeep",
+          "due_date": "2026-09-30",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Record the renewal terms agreed on the 8 Jul call."
+        },
+        {
+          "type": "contradiction",
+          "account": "DataNest",
+          "lead_id": "L-1018",
+          "summary": "CRM last contact is 5 Mar, but a renewal call was set for 8 Jul — the renewal and expansion are not in the CRM.",
+          "quote": "Let's do a call Wednesday 8 July to lock the renewal and discuss the Kafka profile.",
+          "file": "2026-06-30_datanest_renewal.md",
+          "owner": "Karandeep",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Update L-1018 last contact and notes (needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1019",
+      "account": "CargoLine",
+      "lead_id": "L-1019",
+      "signals": []
+    },
+    {
+      "bundle_id": "L-1020",
+      "account": "FreshCart",
+      "lead_id": "L-1020",
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "FreshCart",
+          "lead_id": "L-1020",
+          "summary": "Dhaval promised on 20 May to call Ananya 'early next week'; on 16 Jun she wrote that she never got the call.",
+          "quote": "I'll call you early next week to set things up.",
+          "file": "2026-05-18_freshcart_referral_followup.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Dhaval to call Ananya now — she decides by mid-July."
+        },
+        {
+          "type": "client_deadline",
+          "account": "FreshCart",
+          "lead_id": "L-1020",
+          "summary": "FreshCart is talking to two other vendors and will decide by mid-July.",
+          "quote": "We're now in conversations with two other vendors and want to decide by mid-July.",
+          "file": "2026-05-18_freshcart_referral_followup.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Get AtliQ's proposal in before FreshCart's mid-July decision."
+        },
+        {
+          "type": "referral",
+          "account": "FreshCart",
+          "lead_id": "L-1020",
+          "summary": "Warm referral from Priya at Acme (a happy client) for a customer portal — going cold.",
+          "quote": "Priya at Acme Retail said you'd be in touch about our customer portal project",
+          "file": "2026-05-18_freshcart_referral_followup.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Call Ananya and let Priya know the referral is being looked after."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1021",
+      "account": "SteelCore Industries",
+      "lead_id": "L-1021",
+      "signals": []
+    },
+    {
+      "bundle_id": "L-1022",
+      "account": "TravelHub",
+      "lead_id": "L-1022",
+      "signals": []
+    },
+    {
+      "bundle_id": "L-1023",
+      "account": "FinEdge Bank",
+      "lead_id": "L-1023",
+      "signals": [
+        {
+          "type": "contradiction",
+          "account": "FinEdge Bank",
+          "lead_id": "L-1023",
+          "summary": "CRM says compliance review is ongoing with last contact 30 Mar, but compliance cleared on 19 Jun and FinEdge asked for a commercial call.",
+          "quote": "compliance has cleared AtliQ. We can move to the commercial discussion now.",
+          "file": "2026-03-26_finedge_compliance_docs.md",
+          "owner": "Bhavin",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Bhavin to confirm availability for the commercial call with Suresh."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1024",
+      "account": "RetailOne",
+      "lead_id": "L-1024",
+      "signals": []
+    },
+    {
+      "bundle_id": "L-1025",
+      "account": "CloudNine SaaS",
+      "lead_id": "L-1025",
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "CloudNine SaaS",
+          "lead_id": "L-1025",
+          "summary": "Karandeep promised two reference names on 22 Jun 'in a day or two'; Dev chased on 6 Jul.",
+          "quote": "will revert with names in a day or two",
+          "file": "2026-06-21_cloudnine_rates_references.md",
+          "owner": "Karandeep",
+          "due_date": "2026-06-24",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Karandeep to confirm two SaaS references and send their names to Dev."
+        },
+        {
+          "type": "client_deadline",
+          "account": "CloudNine SaaS",
+          "lead_id": "L-1025",
+          "summary": "CloudNine is comparing AtliQ with one other vendor and wants to close by mid-July.",
+          "quote": "We're comparing you with one other vendor and want to close this out by mid-July.",
+          "file": "2026-06-21_cloudnine_rates_references.md",
+          "owner": "Karandeep",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Send the references before CloudNine decides."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1026",
+      "account": "Sunrise Foods",
+      "lead_id": "L-1026",
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "Sunrise Foods",
+          "lead_id": "L-1026",
+          "summary": "Dhaval promised Meera a call about Portal v2 after his travel (14 Jun); no date was given.",
+          "quote": "let me set up a call when I'm back",
+          "file": "2026-06-10_sunrise_foods_reactivation.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Dhaval to book the Portal v2 call with Meera."
+        },
+        {
+          "type": "promise_overdue",
+          "account": "Sunrise Foods",
+          "lead_id": "L-1026",
+          "summary": "The 2 Jul pipeline review confirms the Sunrise call was still not scheduled.",
+          "quote": "Sunrise Foods came back wanting a v2 three weeks ago. Still no call scheduled.",
+          "file": "2026-07-02_internal_pipeline_review.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Dhaval to book the Portal v2 call with Meera."
+        },
+        {
+          "type": "cross_sell",
+          "account": "Sunrise Foods",
+          "lead_id": "L-1026",
+          "summary": "Sunrise Foods (now 110 distributors) wants a Portal v2 and their CFO wants a sales dashboard on the portal data.",
+          "quote": "our CFO keeps asking if the portal data can feed into some kind of sales dashboard",
+          "file": "2026-06-10_sunrise_foods_reactivation.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Scope Portal v2 plus a sales dashboard in one proposal."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1027",
+      "account": "Meridian Health LLC",
+      "lead_id": "L-1027",
+      "signals": []
+    },
+    {
+      "bundle_id": "L-1028",
+      "account": "ApexAuto Parts",
+      "lead_id": "L-1028",
+      "signals": []
+    },
+    {
+      "bundle_id": "L-1029",
+      "account": "NovaPharma",
+      "lead_id": "L-1029",
+      "signals": [
+        {
+          "type": "client_deadline",
+          "account": "NovaPharma",
+          "lead_id": "L-1029",
+          "summary": "NovaPharma's 78-question security questionnaire is due back 24 Jul; Bhavin forwarded it to Pranav on 1 Jul and the record shows no response.",
+          "quote": "We need the completed document back by 24 July",
+          "file": "2026-06-30_novapharma_security_questionnaire.md",
+          "owner": "Bhavin",
+          "due_date": "2026-07-24",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Agree an owner today (Pranav for hosting/access sections) and start the first pass."
+        },
+        {
+          "type": "client_deadline",
+          "account": "NovaPharma",
+          "lead_id": "L-1029",
+          "summary": "Everything must be wrapped by end of July to make NovaPharma's budget this year.",
+          "quote": "Realistically we need everything wrapped by end of July to make this year's budget.",
+          "file": "2026-06-25_novapharma_stakeholders.md",
+          "owner": "Bhavin",
+          "due_date": "2026-07-31",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Plan backwards from 31 Jul: questionnaire, hosting details, references."
+        },
+        {
+          "type": "client_deadline",
+          "account": "NovaPharma",
+          "lead_id": "L-1029",
+          "summary": "Procurement also needs three healthcare/pharma references.",
+          "quote": "Emma will need three references from healthcare/pharma clients.",
+          "file": "2026-06-25_novapharma_stakeholders.md",
+          "owner": "Bhavin",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Line up three healthcare/pharma references for Emma."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1030",
+      "account": "GreenGrid Solar",
+      "lead_id": "L-1030",
+      "signals": [
+        {
+          "type": "promise_due",
+          "account": "GreenGrid Solar",
+          "lead_id": "L-1030",
+          "summary": "Pranav must sanity-check the SCADA API before the quote, by 14 Jul.",
+          "quote": "Pranav to sanity-check SCADA API feasibility before quote — by 14 Jul",
+          "file": "2026-07-09_greengrid_discovery.md",
+          "owner": "Pranav",
+          "due_date": "2026-07-14",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Pranav to check the SCADA vendor API and tell Jay."
+        },
+        {
+          "type": "promise_due",
+          "account": "GreenGrid Solar",
+          "lead_id": "L-1030",
+          "summary": "Jay owes GreenGrid a proposal by 17 Jul.",
+          "quote": "Proposal — Jay — by 17 Jul",
+          "file": "2026-07-09_greengrid_discovery.md",
+          "owner": "Jay",
+          "due_date": "2026-07-17",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Jay to draft the solar performance dashboard proposal."
+        },
+        {
+          "type": "contradiction",
+          "account": "GreenGrid Solar",
+          "lead_id": "L-1030",
+          "summary": "CRM has GreenGrid as 'New' with no value, but discovery is done and the phase-1 budget is 20–25k.",
+          "quote": "Budget: Aditya indicated 20–25k comfortable for phase 1.",
+          "file": "2026-07-09_greengrid_discovery.md",
+          "owner": "Jay",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": 20000,
+          "suggested_next_action": "Update L-1030 status and est. value (needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1031",
+      "account": "ByteBridge",
+      "lead_id": "L-1031",
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "ByteBridge",
+          "lead_id": "L-1031",
+          "summary": "Karandeep promised two case studies and a reference by Fri 15 May to counter TalentGrid's ~15% lower quote; no later contact.",
+          "quote": "I'll send both, plus a reference, by Friday.",
+          "file": "2026-05-10_bytebridge_competitor.md",
+          "owner": "Karandeep",
+          "due_date": "2026-05-15",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Karandeep to send the case studies and a reference, and apologise for the delay."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1032",
+      "account": "Trustline NBFC",
+      "lead_id": "L-1032",
+      "signals": [
+        {
+          "type": "promise_due",
+          "account": "Trustline NBFC",
+          "lead_id": "L-1032",
+          "summary": "Dhaval promised the revised annual-licence contract 'this week' (written Mon 6 Jul, so by Fri 10 Jul — today).",
+          "quote": "Revised contract will be with you this week",
+          "file": "2026-07-03_trustline_approved.md",
+          "owner": "Dhaval",
+          "due_date": "2026-07-10",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Dhaval to send the revised contract today."
+        },
+        {
+          "type": "contradiction",
+          "account": "Trustline NBFC",
+          "lead_id": "L-1032",
+          "summary": "CRM says 'Proposal Sent', but Trustline's board approved the project and they want to sign this month.",
+          "quote": "the loan document automation project is approved",
+          "file": "2026-07-03_trustline_approved.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Move L-1032 to a later stage (needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1033",
+      "account": "OceanFreight",
+      "lead_id": "L-1033",
+      "signals": [
+        {
+          "type": "contradiction",
+          "account": "OceanFreight",
+          "lead_id": "L-1033",
+          "summary": "CRM has no owner, but Jay is handling OceanFreight and has a call booked with Karl on 14 Jul.",
+          "quote": "14 July 8:00 CET / 11:30 IST confirmed — invite sent.",
+          "file": "2026-06-28_oceanfreight_timezones.md",
+          "owner": "Jay",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Confirm Jay as owner in the CRM (needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1034",
+      "account": "SmartServe Hospitality",
+      "lead_id": "L-1034",
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "SmartServe Hospitality",
+          "lead_id": "L-1034",
+          "summary": "Jay promised Arvind (burned by a previous vendor) a reference call with a past client; nothing shows it was arranged.",
+          "quote": "Reference call with a past client for Arvind — Jay",
+          "file": "2026-04-05_smartserve_intro_call.md",
+          "owner": "Jay",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Jay to arrange a reference call (e.g. Sunrise Foods) and re-open the conversation."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1035",
+      "account": "Quantia Analytics",
+      "lead_id": "L-1035",
+      "signals": [
+        {
+          "type": "revisit_due",
+          "account": "Quantia Analytics",
+          "lead_id": "L-1035",
+          "summary": "Quantia said no on timing (mid-acquisition) and asked AtliQ to check back around Q2 2026 — that window has now passed.",
+          "quote": "Please do check back with us around then.",
+          "file": "2025-09-30_quantia_lost_deal.md",
+          "owner": "Bhavin",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Bhavin to email James and ask whether the acquisition has closed."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1036",
+      "account": "LoopMart",
+      "lead_id": "L-1036",
+      "signals": [
+        {
+          "type": "contradiction",
+          "account": "LoopMart",
+          "lead_id": "L-1036",
+          "summary": "CRM has LoopMart as 'New' with no value, but Karandeep gave an 18–22k ballpark on a pricing call; the client's reply was not written down.",
+          "quote": "gave ballpark 18–22k for retail analytics dashboards, phase-able",
+          "file": "2026-06-26_loopmart_pricing_call.md",
+          "owner": "Karandeep",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": 18000,
+          "suggested_next_action": "Karandeep to note Sania's response and update L-1036 (needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1037",
+      "account": "Vertex Constructions",
+      "lead_id": "L-1037",
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "Vertex Constructions",
+          "lead_id": "L-1037",
+          "summary": "Jay told Mr. Naidu he would reconnect in February after his out-of-office; no later contact.",
+          "quote": "No problem — will reconnect in February.",
+          "file": "2026-01-15_vertex_ooo_stall.md",
+          "owner": "Jay",
+          "due_date": "2026-02-28",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Jay to re-open the site progress app conversation, or mark the deal Lost."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1038",
+      "account": "MiraHealth",
+      "lead_id": "L-1038",
+      "signals": [
+        {
+          "type": "contradiction",
+          "account": "MiraHealth",
+          "lead_id": "L-1038",
+          "summary": "CRM notes only say 'second call done' — missing the UK-first scope, the ~35k budget confirmed verbally, and a CTO who needs clinical safety docs.",
+          "quote": "They want the triage assistant scoped for UK ops first, not India.",
+          "file": "2026-07-07_mirahealth_quick_summary.md",
+          "owner": "Dhaval",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Add the second-call details to L-1038 (use Debrief; needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1039",
+      "account": "Citywide Diagnostics",
+      "lead_id": "L-1039",
+      "signals": [
+        {
+          "type": "referral",
+          "account": "Citywide Diagnostics",
+          "lead_id": "L-1039",
+          "summary": "Referral from Anita at HealthFirst: 22 diagnostic centres with lab, billing and referral data in three systems; call booked Mon 13 Jul.",
+          "quote": "Dr. Anita Rao at HealthFirst spoke highly of your team.",
+          "file": "2026-07-06_citywide_referral.md",
+          "owner": "Karandeep",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Prepare for the 13 Jul call and thank Anita after it."
+        },
+        {
+          "type": "contradiction",
+          "account": "Citywide Diagnostics",
+          "lead_id": "L-1039",
+          "summary": "CRM owner is blank, but Karandeep is handling Citywide and has a call on 13 Jul.",
+          "quote": "How about Monday 13 July, 11am?",
+          "file": "2026-07-06_citywide_referral.md",
+          "owner": "Karandeep",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Set Karandeep as owner of L-1039 (needs approval)."
+        }
+      ]
+    },
+    {
+      "bundle_id": "L-1040",
+      "account": "GlobalMart",
+      "lead_id": "L-1040",
+      "signals": []
+    },
+    {
+      "bundle_id": "unmatched:Lumino Fitness",
+      "account": "Lumino Fitness",
+      "lead_id": null,
+      "signals": [
+        {
+          "type": "promise_overdue",
+          "account": "Lumino Fitness",
+          "lead_id": null,
+          "summary": "At TechSummit Jay promised Carlos a churn-prediction case study; Carlos chased on 20 Jun and is budgeting for next quarter now.",
+          "quote": "You mentioned you'd send over the case study about the member-churn prediction work you did for a fitness chain.",
+          "file": "2026-06-20_lumino_fitness_case_study.md",
+          "owner": "Jay",
+          "due_date": null,
+          "date_clear": false,
+          "value_usd": null,
+          "suggested_next_action": "Jay to send the case study and add Lumino Fitness to the CRM."
+        }
+      ]
+    },
+    {
+      "bundle_id": "unmatched:Harbor & Finch Advisory",
+      "account": "Harbor & Finch Advisory",
+      "lead_id": null,
+      "signals": [
+        {
+          "type": "referral",
+          "account": "Harbor & Finch Advisory",
+          "lead_id": null,
+          "summary": "Suresh (FinEdge) introduced David Harbor, whose firm produces ~120 manual client reports a quarter; not in the CRM.",
+          "quote": "they're evaluating options for automating their client reporting",
+          "file": "2026-06-27_harborfinch_referral_intro.md",
+          "owner": "Bhavin",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Bhavin to reply to David with call slots and add Harbor & Finch to the CRM."
+        }
+      ]
+    },
+    {
+      "bundle_id": "unmatched:PixelWorks Agency",
+      "account": "PixelWorks Agency",
+      "lead_id": null,
+      "signals": []
+    },
+    {
+      "bundle_id": "unmatched:Ridgeline Foods",
+      "account": "Ridgeline Foods",
+      "lead_id": null,
+      "signals": [
+        {
+          "type": "referral",
+          "account": "Ridgeline Foods",
+          "lead_id": null,
+          "summary": "Ridgeline's ops head called after hearing about the Sunrise Foods portal from a shared distributor; wants a ~200-distributor portal, but no contact details were taken.",
+          "quote": "heard about the Sunrise Foods portal from a distributor they share",
+          "file": "2026-07-03_ridgeline_scribble.md",
+          "owner": null,
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Ask Meera at Sunrise Foods (or the shared distributor) for Ridgeline's contact."
+        }
+      ]
+    },
+    {
+      "bundle_id": "unmatched:Nimbus Lending",
+      "account": "Nimbus Lending",
+      "lead_id": null,
+      "signals": [
+        {
+          "type": "referral",
+          "account": "Nimbus Lending",
+          "lead_id": null,
+          "summary": "Shreya (PayTrack) introduced Rhea at Nimbus Lending, who has ~4,000 manually reviewed loan applications a month.",
+          "quote": "They're wrestling with exactly the kind of document-heavy underwriting problem you solved for us.",
+          "file": "2026-07-05_nimbus_lending_intro.md",
+          "owner": "Bhavin",
+          "due_date": null,
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Bhavin to reply to Rhea with call slots and add Nimbus Lending to the CRM."
+        },
+        {
+          "type": "client_deadline",
+          "account": "Nimbus Lending",
+          "lead_id": null,
+          "summary": "Rhea has budget conversations the week of 20 Jul and wants a call before then.",
+          "quote": "I have budget conversations happening the week of 20 July, so a call before then would be ideal.",
+          "file": "2026-07-05_nimbus_lending_intro.md",
+          "owner": "Bhavin",
+          "due_date": "2026-07-20",
+          "date_clear": true,
+          "value_usd": null,
+          "suggested_next_action": "Book a call with Rhea before 20 Jul."
+        }
+      ]
+    }
+  ]
+}

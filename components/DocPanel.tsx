@@ -5,13 +5,39 @@ import type { DocumentRecord } from "@/lib/types";
 import { formatDate } from "@/lib/format";
 
 // Side panel that shows one email / meeting note (editorial notes already removed at build time).
-export default function DocPanel({ doc, onClose }: { doc: DocumentRecord | null; onClose: () => void }) {
+// Wraps the first case-insensitive match of `highlight` in a <mark>.
+function withHighlight(text: string, highlight?: string) {
+  if (!highlight) return text;
+  const i = text.toLowerCase().indexOf(highlight.toLowerCase());
+  if (i === -1) return text;
+  return (
+    <>
+      {text.slice(0, i)}
+      <mark id="doc-highlight" className="rounded bg-yellow-200 px-0.5">{text.slice(i, i + highlight.length)}</mark>
+      {text.slice(i + highlight.length)}
+    </>
+  );
+}
+
+export default function DocPanel({
+  doc,
+  onClose,
+  highlight,
+}: {
+  doc: DocumentRecord | null;
+  onClose: () => void;
+  highlight?: string;
+}) {
   useEffect(() => {
     if (!doc) return;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [doc, onClose]);
+
+  useEffect(() => {
+    if (doc && highlight) document.getElementById("doc-highlight")?.scrollIntoView({ block: "center" });
+  }, [doc, highlight]);
 
   if (!doc) return null;
   return (
@@ -31,7 +57,7 @@ export default function DocPanel({ doc, onClose }: { doc: DocumentRecord | null;
           </button>
         </div>
         <pre className="flex-1 overflow-y-auto p-4 font-sans text-sm leading-relaxed whitespace-pre-wrap text-slate-800">
-          {doc.text}
+          {withHighlight(doc.text, highlight)}
         </pre>
       </aside>
     </div>

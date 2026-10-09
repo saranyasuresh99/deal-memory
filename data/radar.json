@@ -1,0 +1,3095 @@
+{
+  "today": "2026-07-10",
+  "mode": "demo",
+  "generated_from": [
+    "data/accounts.json",
+    "data/documents.json",
+    "data/ai_signals.json"
+  ],
+  "items": [
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1023"
+      ],
+      "owner": "Bhavin",
+      "value_usd": 95000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 21,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-03-26_finedge_compliance_docs.md",
+      "type": "waiting_on_us",
+      "account": "FinEdge Bank",
+      "summary": "Suresh Menon (FinEdge Bank) wrote on 19 Jun 2026 and the thread has no reply from AtliQ — waiting 21 days.",
+      "evidence": [
+        {
+          "file": "2026-03-26_finedge_compliance_docs.md",
+          "quote": "My assistant will find a slot the week of 29 June — please confirm your availability."
+        }
+      ],
+      "suggested_next_action": "Reply to Suresh — answer what they asked in the 19 Jun 2026 message.",
+      "score": 213.8,
+      "urgency_text": "Waiting 21 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1029"
+      ],
+      "owner": "Bhavin",
+      "value_usd": 80000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 15,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-06-25_novapharma_stakeholders.md",
+      "type": "waiting_on_us",
+      "account": "NovaPharma",
+      "summary": "Dr. Lisa Wong (NovaPharma) wrote on 25 Jun 2026 and the thread has no reply from AtliQ — waiting 15 days.",
+      "evidence": [
+        {
+          "file": "2026-06-25_novapharma_stakeholders.md",
+          "quote": "Rajesh needs your data-handling and hosting details before we proceed — he'll send a questionnaire."
+        }
+      ],
+      "suggested_next_action": "Reply to Dr. — answer what they asked in the 25 Jun 2026 message.",
+      "score": 170,
+      "urgency_text": "Waiting 15 days",
+      "merged": 1
+    },
+    {
+      "id": "client_deadline:L-1029:0",
+      "type": "client_deadline",
+      "source": "ai",
+      "account": "NovaPharma",
+      "lead_ids": [
+        "L-1029"
+      ],
+      "summary": "NovaPharma's 78-question security questionnaire is due back 24 Jul; Bhavin forwarded it to Pranav on 1 Jul and the record shows no response.",
+      "evidence": [
+        {
+          "file": "2026-06-30_novapharma_security_questionnaire.md",
+          "quote": "We need the completed document back by 24 July"
+        },
+        {
+          "file": "2026-06-25_novapharma_stakeholders.md",
+          "quote": "Emma will need three references from healthcare/pharma clients."
+        },
+        {
+          "file": "2026-06-25_novapharma_stakeholders.md",
+          "quote": "Realistically we need everything wrapped by end of July to make this year's budget."
+        }
+      ],
+      "owner": "Bhavin",
+      "value_usd": 80000,
+      "value_source": "crm",
+      "due_date": "2026-07-24",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": 14,
+      "suggested_next_action": "Agree an owner today (Pranav for hosting/access sections) and start the first pass.",
+      "score": 130,
+      "urgency_text": "Due in 14 days (24 Jul 2026)",
+      "merged": 3
+    },
+    {
+      "id": "promise_overdue:L-1005:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "Northwind Logistics",
+      "lead_ids": [
+        "L-1005"
+      ],
+      "summary": "Dhaval promised sample dashboard concepts 'next week' (written Sat 13 Jun, so by 19 Jun); nothing later shows they were sent.",
+      "evidence": [
+        {
+          "file": "2026-06-11_northwind_crosssell.md",
+          "quote": "Let me send you a few sample dashboard concepts next week to react to."
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 54000,
+      "value_source": "crm",
+      "due_date": "2026-06-19",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": 21,
+      "days_until": null,
+      "suggested_next_action": "Dhaval to send Tom the sample dashboard concepts.",
+      "score": 124.2,
+      "urgency_text": "Overdue by 21 days (was due 19 Jun 2026)",
+      "merged": 1
+    },
+    {
+      "id": "client_deadline:L-1017:0",
+      "type": "client_deadline",
+      "source": "ai",
+      "account": "ShopSwift",
+      "lead_ids": [
+        "L-1017"
+      ],
+      "summary": "Elena needs a statement of work by 15 Jul or the approved budget slips a quarter; no reply from AtliQ in the record.",
+      "evidence": [
+        {
+          "file": "2026-06-29_shopswift_budget_confirmed.md",
+          "quote": "a statement of work by 15 July"
+        }
+      ],
+      "owner": "Bhavin",
+      "value_usd": 55000,
+      "value_source": "crm",
+      "due_date": "2026-07-15",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": 5,
+      "suggested_next_action": "Bhavin to draft the recommendation-engine SOW now.",
+      "score": 116.9,
+      "urgency_text": "Due in 5 days (15 Jul 2026)",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1013"
+      ],
+      "owner": "Bhavin",
+      "value_usd": 71000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 8,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-07-02_paytrack_phase2.md",
+      "type": "waiting_on_us",
+      "account": "PayTrack",
+      "summary": "Shreya Iyer (PayTrack) wrote on 2 Jul 2026 and the thread has no reply from AtliQ — waiting 8 days.",
+      "evidence": [
+        {
+          "file": "2026-07-02_paytrack_phase2.md",
+          "quote": "Nothing formal yet, but if you sent us a one-pager on what a merchant-risk module would look like, I could circulate it before our August planning cycle."
+        }
+      ],
+      "suggested_next_action": "Reply to Shreya — answer what they asked in the 2 Jul 2026 message.",
+      "score": 113.6,
+      "urgency_text": "Waiting 8 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1023"
+      ],
+      "owner": "Bhavin",
+      "value_usd": 95000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 102,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1023",
+      "type": "stale_deal",
+      "account": "FinEdge Bank",
+      "summary": "Open deal (Proposal Sent) — CRM shows no contact for 102 days (since 30 Mar 2026).",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1023,FinEdge Bank,Suresh Menon,suresh.menon@finedge.com,Referral,Data Engineering,Proposal Sent,95000,Bhavin,2026-01-08,2026-03-30,,big one. compliance review ongoing on their side"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 108.1,
+      "urgency_text": "No contact for 102 days",
+      "merged": 1
+    },
+    {
+      "id": "promise_due:L-1032:0",
+      "type": "promise_due",
+      "source": "ai",
+      "account": "Trustline NBFC",
+      "lead_ids": [
+        "L-1032"
+      ],
+      "summary": "Dhaval promised the revised annual-licence contract 'this week' (written Mon 6 Jul, so by Fri 10 Jul — today).",
+      "evidence": [
+        {
+          "file": "2026-07-03_trustline_approved.md",
+          "quote": "Revised contract will be with you this week"
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 48000,
+      "value_source": "crm",
+      "due_date": "2026-07-10",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": 0,
+      "suggested_next_action": "Dhaval to send the revised contract today.",
+      "score": 102,
+      "urgency_text": "Due today (10 Jul 2026)",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1003"
+      ],
+      "owner": "Bhavin",
+      "value_usd": 45000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 24,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-06-16_meridian_proposal_questions.md",
+      "type": "waiting_on_us",
+      "account": "Meridian Healthcare",
+      "summary": "Dr. Sanjay Kulkarni (Meridian Healthcare) wrote on 16 Jun 2026 and the thread has no reply from AtliQ — waiting 24 days.",
+      "evidence": [
+        {
+          "file": "2026-06-16_meridian_proposal_questions.md",
+          "quote": "Can the ingestion layer handle HL7 feeds from our older lab systems, or only the FHIR APIs mentioned in section 3?"
+        }
+      ],
+      "suggested_next_action": "Reply to Dr. — answer what they asked in the 16 Jun 2026 message.",
+      "score": 101.3,
+      "urgency_text": "Waiting 24 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1017"
+      ],
+      "owner": "Bhavin",
+      "value_usd": 55000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 11,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-06-29_shopswift_budget_confirmed.md",
+      "type": "waiting_on_us",
+      "account": "ShopSwift",
+      "summary": "Elena Petrova (ShopSwift) wrote on 29 Jun 2026 and the thread has no reply from AtliQ — waiting 11 days.",
+      "evidence": [
+        {
+          "file": "2026-06-29_shopswift_budget_confirmed.md",
+          "quote": "What I need from you: a statement of work by 15 July so I can push it through procurement before our finance team closes the quarter's commitments."
+        }
+      ],
+      "suggested_next_action": "Reply to Elena — answer what they asked in the 29 Jun 2026 message.",
+      "score": 100.4,
+      "urgency_text": "Waiting 11 days",
+      "merged": 1
+    },
+    {
+      "id": "promise_overdue:L-1031:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "ByteBridge",
+      "lead_ids": [
+        "L-1031"
+      ],
+      "summary": "Karandeep promised two case studies and a reference by Fri 15 May to counter TalentGrid's ~15% lower quote; no later contact.",
+      "evidence": [
+        {
+          "file": "2026-05-10_bytebridge_competitor.md",
+          "quote": "I'll send both, plus a reference, by Friday."
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": "2026-05-15",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": 56,
+      "days_until": null,
+      "suggested_next_action": "Karandeep to send the case studies and a reference, and apologise for the delay.",
+      "score": 95,
+      "urgency_text": "Overdue by 56 days (was due 15 May 2026)",
+      "merged": 1
+    },
+    {
+      "id": "promise_overdue:L-1037:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "Vertex Constructions",
+      "lead_ids": [
+        "L-1037"
+      ],
+      "summary": "Jay told Mr. Naidu he would reconnect in February after his out-of-office; no later contact.",
+      "evidence": [
+        {
+          "file": "2026-01-15_vertex_ooo_stall.md",
+          "quote": "No problem — will reconnect in February."
+        }
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": "2026-02-28",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": 132,
+      "days_until": null,
+      "suggested_next_action": "Jay to re-open the site progress app conversation, or mark the deal Lost.",
+      "score": 95,
+      "urgency_text": "Overdue by 132 days (was due 28 Feb 2026)",
+      "merged": 1
+    },
+    {
+      "id": "promise_overdue:L-1008:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "Zenlytics",
+      "lead_ids": [
+        "L-1008"
+      ],
+      "summary": "Bhavin agreed a Wednesday 3pm intro call (10 Jun) and promised an invite; nothing later shows the invite or the call.",
+      "evidence": [
+        {
+          "file": "2026-06-03_zenlytics_intro_call.md",
+          "quote": "Wednesday 3pm it is. I'll send a calendar invite shortly."
+        }
+      ],
+      "owner": "Bhavin",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": "2026-06-10",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": 30,
+      "days_until": null,
+      "suggested_next_action": "Bhavin to apologise and offer new slots — Maya needs 2 dbt + Snowflake engineers from August.",
+      "score": 95,
+      "urgency_text": "Overdue by 30 days (was due 10 Jun 2026)",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1015"
+      ],
+      "owner": "Dhaval",
+      "value_usd": 40000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 31,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-06-09_clearpath_budget_unfrozen.md",
+      "type": "waiting_on_us",
+      "account": "ClearPath Insurance",
+      "summary": "Deepa Nair (ClearPath Insurance) wrote on 9 Jun 2026 and the thread has no reply from AtliQ — waiting 31 days.",
+      "evidence": [
+        {
+          "file": "2026-06-09_clearpath_budget_unfrozen.md",
+          "quote": "Is AtliQ still interested, and does the 40k estimate still hold?"
+        }
+      ],
+      "suggested_next_action": "Reply to Deepa — answer what they asked in the 9 Jun 2026 message.",
+      "score": 90,
+      "urgency_text": "Waiting 31 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1020"
+      ],
+      "owner": "Dhaval",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 24,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-05-18_freshcart_referral_followup.md",
+      "type": "waiting_on_us",
+      "account": "FreshCart",
+      "summary": "Ananya Desai (FreshCart) wrote on 16 Jun 2026 and the thread has no reply from AtliQ — waiting 24 days.",
+      "evidence": [
+        {
+          "file": "2026-05-18_freshcart_referral_followup.md",
+          "quote": "Dhaval — never got that call."
+        }
+      ],
+      "suggested_next_action": "Reply to Ananya — answer what they asked in the 16 Jun 2026 message.",
+      "score": 90,
+      "urgency_text": "Waiting 24 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 20,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-06-20_lumino_fitness_case_study.md",
+      "type": "waiting_on_us",
+      "account": "Lumino Fitness",
+      "summary": "Carlos Mendes (Lumino Fitness) wrote on 20 Jun 2026 and the thread has no reply from AtliQ — waiting 20 days.",
+      "evidence": [
+        {
+          "file": "2026-06-20_lumino_fitness_case_study.md",
+          "quote": "Hi Jay — good meeting you at TechSummit Mumbai last week."
+        }
+      ],
+      "suggested_next_action": "Reply to Carlos — answer what they asked in the 20 Jun 2026 message.",
+      "score": 90,
+      "urgency_text": "Waiting 20 days",
+      "merged": 1
+    },
+    {
+      "id": "promise_overdue:L-1004:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "GlobalMart",
+      "lead_ids": [
+        "L-1004"
+      ],
+      "summary": "Karandeep promised to come back on the phasing 'by Friday' — written on Friday 26 Jun, so which Friday is unclear; no later reply in the thread.",
+      "evidence": [
+        {
+          "file": "2026-06-24_globalmart_pricing.md",
+          "quote": "Will respond by Friday."
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": 62000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Karandeep to pick an option (analytics to Phase 2, or a lower figure) and reply to Neha.",
+      "score": 85.3,
+      "urgency_text": "Date unclear",
+      "merged": 1
+    },
+    {
+      "id": "client_deadline:L-1011:0",
+      "type": "client_deadline",
+      "source": "ai",
+      "account": "AgroLink",
+      "lead_ids": [
+        "L-1011"
+      ],
+      "summary": "Harpreet wants the proposal before 10 Jul (today) and goes on leave on the 14th; ~35–40k is approved.",
+      "evidence": [
+        {
+          "file": "2026-07-01_agrolink_budget_call.md",
+          "quote": "wants proposal before 10 July, he goes on leave 14th"
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 35000,
+      "value_source": "quote",
+      "due_date": "2026-07-10",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": 0,
+      "suggested_next_action": "Dhaval to send the mandi-price pipeline proposal today or call Harpreet before the 14th.",
+      "score": 83.1,
+      "urgency_text": "Due today (10 Jul 2026)",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1023:0",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "FinEdge Bank",
+      "lead_ids": [
+        "L-1023"
+      ],
+      "summary": "CRM says compliance review is ongoing with last contact 30 Mar, but compliance cleared on 19 Jun and FinEdge asked for a commercial call.",
+      "evidence": [
+        {
+          "file": "2026-03-26_finedge_compliance_docs.md",
+          "quote": "compliance has cleared AtliQ. We can move to the commercial discussion now."
+        }
+      ],
+      "owner": "Bhavin",
+      "value_usd": 95000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Bhavin to confirm availability for the commercial call with Suresh.",
+      "score": 83.1,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "promise_overdue:L-1025:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "CloudNine SaaS",
+      "lead_ids": [
+        "L-1025"
+      ],
+      "summary": "Karandeep promised two reference names on 22 Jun 'in a day or two'; Dev chased on 6 Jul.",
+      "evidence": [
+        {
+          "file": "2026-06-21_cloudnine_rates_references.md",
+          "quote": "will revert with names in a day or two"
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": "2026-06-24",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": 16,
+      "days_until": null,
+      "suggested_next_action": "Karandeep to confirm two SaaS references and send their names to Dev.",
+      "score": 82,
+      "urgency_text": "Overdue by 16 days (was due 24 Jun 2026)",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [],
+      "owner": "Bhavin",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 13,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-06-27_harborfinch_referral_intro.md",
+      "type": "waiting_on_us",
+      "account": "Harbor & Finch Advisory",
+      "summary": "David Harbor (Harbor & Finch Advisory) wrote on 27 Jun 2026 and the thread has no reply from AtliQ — waiting 13 days.",
+      "evidence": [
+        {
+          "file": "2026-06-27_harborfinch_referral_intro.md",
+          "quote": "Do you have time in the next couple of weeks?"
+        }
+      ],
+      "suggested_next_action": "Reply to David — answer what they asked in the 27 Jun 2026 message.",
+      "score": 79,
+      "urgency_text": "Waiting 13 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1015"
+      ],
+      "owner": "Dhaval",
+      "value_usd": 40000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 31,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "returning_lost:L-1015",
+      "type": "returning_lost",
+      "account": "ClearPath Insurance",
+      "summary": "Marked Lost in the CRM, but Deepa Nair came back on 9 Jun 2026.",
+      "evidence": [
+        {
+          "file": "2026-06-09_clearpath_budget_unfrozen.md",
+          "quote": "Is AtliQ still interested, and does the 40k estimate still hold?"
+        }
+      ],
+      "suggested_next_action": "Re-open the deal in the CRM and agree the next step with the client.",
+      "score": 75,
+      "urgency_text": "Came back 31 days ago",
+      "merged": 1
+    },
+    {
+      "id": "promise_due:L-1030:0",
+      "type": "promise_due",
+      "source": "ai",
+      "account": "GreenGrid Solar",
+      "lead_ids": [
+        "L-1030"
+      ],
+      "summary": "Pranav must sanity-check the SCADA API before the quote, by 14 Jul.",
+      "evidence": [
+        {
+          "file": "2026-07-09_greengrid_discovery.md",
+          "quote": "Pranav to sanity-check SCADA API feasibility before quote — by 14 Jul"
+        },
+        {
+          "file": "2026-07-09_greengrid_discovery.md",
+          "quote": "Proposal — Jay — by 17 Jul"
+        }
+      ],
+      "owner": "Pranav",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": "2026-07-14",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": 4,
+      "suggested_next_action": "Pranav to check the SCADA vendor API and tell Jay.",
+      "score": 75,
+      "urgency_text": "Due in 4 days (14 Jul 2026)",
+      "merged": 2
+    },
+    {
+      "source": "rule",
+      "lead_ids": [],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 11,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-06-29_pixelworks_partnership.md",
+      "type": "waiting_on_us",
+      "account": "PixelWorks Agency",
+      "summary": "Tara Bose (PixelWorks Agency) wrote on 29 Jun 2026 and the thread has no reply from AtliQ — waiting 11 days.",
+      "evidence": [
+        {
+          "file": "2026-06-29_pixelworks_partnership.md",
+          "quote": "Who's the right person to speak with?"
+        }
+      ],
+      "suggested_next_action": "Reply to Tara — answer what they asked in the 29 Jun 2026 message.",
+      "score": 73,
+      "urgency_text": "Waiting 11 days",
+      "merged": 1
+    },
+    {
+      "id": "promise_overdue:L-1001:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "Acme Retail Group",
+      "lead_ids": [
+        "L-1001"
+      ],
+      "summary": "Ayush owes Priya a scope note for automating Acme's monthly board pack (due 27 Jun); nothing later shows it was sent.",
+      "evidence": [
+        {
+          "file": "2026-06-24_acme_quarterly_review.md",
+          "quote": "Scope note for report automation — Ayush — by 27 Jun"
+        },
+        {
+          "file": "2026-06-18_acme_retail_monthly_reports.md",
+          "quote": "we'll send you a short scope note this week"
+        }
+      ],
+      "owner": "Ayush",
+      "value_usd": 38000,
+      "value_source": "crm",
+      "due_date": "2026-06-27",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": 13,
+      "days_until": null,
+      "suggested_next_action": "Ayush to send Priya the report-automation scope note; Dhaval to check it went out.",
+      "score": 72.2,
+      "urgency_text": "Overdue by 13 days (was due 27 Jun 2026)",
+      "merged": 2
+    },
+    {
+      "id": "cross_sell:L-1013:0",
+      "type": "cross_sell",
+      "source": "ai",
+      "account": "PayTrack",
+      "lead_ids": [
+        "L-1013"
+      ],
+      "summary": "PayTrack wants the fraud scoring extended to merchant onboarding; Shreya asked for a one-pager before their August planning cycle.",
+      "evidence": [
+        {
+          "file": "2026-07-02_paytrack_phase2.md",
+          "quote": "the ops team wants the same scoring applied to merchant onboarding, not just transactions"
+        }
+      ],
+      "owner": "Bhavin",
+      "value_usd": 71000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Bhavin and Ayush to send Shreya a one-pager on a merchant-risk module.",
+      "score": 71,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "revisit_due:L-1002:0",
+      "type": "revisit_due",
+      "source": "ai",
+      "account": "FinServe Capital",
+      "lead_ids": [
+        "L-1002"
+      ],
+      "summary": "Arjun is travelling and asked to be pinged after 15 Jul; budget has not been discussed yet.",
+      "evidence": [
+        {
+          "file": "2026-06-30_finserve_intro_call.md",
+          "quote": "arjun travelling first 2 wks of july, said ping him after 15th"
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": "2026-07-15",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": 5,
+      "suggested_next_action": "Karandeep to call Arjun on 16 Jul about thin-file credit scoring and ask about budget.",
+      "score": 70,
+      "urgency_text": "Due in 5 days (15 Jul 2026)",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1035"
+      ],
+      "owner": "Bhavin",
+      "value_usd": 60000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 283,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2025-09-30_quantia_lost_deal.md",
+      "type": "waiting_on_us",
+      "account": "Quantia Analytics",
+      "summary": "James Whitfield (Quantia Analytics) wrote on 30 Sep 2025 and the thread has no reply from AtliQ — waiting 283 days.",
+      "evidence": [
+        {
+          "file": "2025-09-30_quantia_lost_deal.md",
+          "quote": "Please do check back with us around then."
+        }
+      ],
+      "suggested_next_action": "Reply to James — answer what they asked in the 30 Sep 2025 message.",
+      "score": 67.5,
+      "urgency_text": "Waiting 283 days",
+      "merged": 1
+    },
+    {
+      "id": "revisit_due:L-1035:0",
+      "type": "revisit_due",
+      "source": "ai",
+      "account": "Quantia Analytics",
+      "lead_ids": [
+        "L-1035"
+      ],
+      "summary": "Quantia said no on timing (mid-acquisition) and asked AtliQ to check back around Q2 2026 — that window has now passed.",
+      "evidence": [
+        {
+          "file": "2025-09-30_quantia_lost_deal.md",
+          "quote": "Please do check back with us around then."
+        }
+      ],
+      "owner": "Bhavin",
+      "value_usd": 60000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Bhavin to email James and ask whether the acquisition has closed.",
+      "score": 67.5,
+      "urgency_text": "Date unclear",
+      "merged": 1
+    },
+    {
+      "id": "client_deadline:Nimbus Lending:1",
+      "type": "client_deadline",
+      "source": "ai",
+      "account": "Nimbus Lending",
+      "lead_ids": [],
+      "summary": "Rhea has budget conversations the week of 20 Jul and wants a call before then.",
+      "evidence": [
+        {
+          "file": "2026-07-05_nimbus_lending_intro.md",
+          "quote": "I have budget conversations happening the week of 20 July, so a call before then would be ideal."
+        }
+      ],
+      "owner": "Bhavin",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": "2026-07-20",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": 10,
+      "suggested_next_action": "Book a call with Rhea before 20 Jul.",
+      "score": 65,
+      "urgency_text": "Due in 10 days (20 Jul 2026)",
+      "merged": 1
+    },
+    {
+      "id": "client_deadline:L-1009:0",
+      "type": "client_deadline",
+      "source": "ai",
+      "account": "HealthFirst Clinics",
+      "lead_ids": [
+        "L-1009"
+      ],
+      "summary": "HealthFirst's board decides on the patient portal on 14 Jul; AtliQ sent re-phased pricing in April and the record shows no contact since.",
+      "evidence": [
+        {
+          "file": "2026-04-20_healthfirst_board_update.md",
+          "quote": "now scheduled for 14 July"
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": 30000,
+      "value_source": "crm",
+      "due_date": "2026-07-14",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": 4,
+      "suggested_next_action": "Karandeep to check in with Anita before 14 Jul in case the board needs anything.",
+      "score": 63.8,
+      "urgency_text": "Due in 4 days (14 Jul 2026)",
+      "merged": 1
+    },
+    {
+      "id": "cross_sell:L-1004:1",
+      "type": "cross_sell",
+      "source": "ai",
+      "account": "GlobalMart",
+      "lead_ids": [
+        "L-1004"
+      ],
+      "summary": "GlobalMart's supply-chain team asked whether AtliQ does demand forecasting; the question is unanswered.",
+      "evidence": [
+        {
+          "file": "2026-06-24_globalmart_pricing.md",
+          "quote": "my colleague in supply chain asked whether you do demand forecasting"
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": 62000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Answer Neha's forecasting question and offer a short call with supply chain.",
+      "score": 62,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "client_deadline:L-1014:0",
+      "type": "client_deadline",
+      "source": "ai",
+      "account": "VoltEnergy",
+      "lead_ids": [
+        "L-1014"
+      ],
+      "summary": "Marcus asked on Wed 1 Jul for the 3-year TCO comparison Karandeep offered, 'this week' (by 3 Jul); no reply in the thread.",
+      "evidence": [
+        {
+          "file": "2026-06-15_voltenergy_competitor.md",
+          "quote": "Can you send it this week?"
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": 28000,
+      "value_source": "crm",
+      "due_date": "2026-07-03",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": 7,
+      "days_until": null,
+      "suggested_next_action": "Karandeep to send the Power BI vs Tableau 3-year TCO comparison.",
+      "score": 59.5,
+      "urgency_text": "Overdue by 7 days (was due 3 Jul 2026)",
+      "merged": 1
+    },
+    {
+      "id": "client_deadline:L-1003:0",
+      "type": "client_deadline",
+      "source": "ai",
+      "account": "Meridian Healthcare",
+      "lead_ids": [
+        "L-1003"
+      ],
+      "summary": "Sanjay wants to close before Meridian's mid-July budget review, but his two proposal questions (HL7 feeds, UAT in the timeline) have no answer in the record.",
+      "evidence": [
+        {
+          "file": "2026-06-16_meridian_proposal_questions.md",
+          "quote": "We'd like to close this out before our Q2 budget review in mid-July."
+        }
+      ],
+      "owner": "Bhavin",
+      "value_usd": 45000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Bhavin to answer the HL7 and UAT questions this week, with Pranav's input.",
+      "score": 56.3,
+      "urgency_text": "Date unclear",
+      "merged": 1
+    },
+    {
+      "id": "promise_overdue:L-1006:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "BlueOrchid Hotels",
+      "lead_ids": [
+        "L-1006"
+      ],
+      "summary": "Jay promised Farah an approach note for guest-review analytics on 19 Jun but has no email for her (CRM email is blank).",
+      "evidence": [
+        {
+          "file": "2026-06-19_blueorchid_call.md",
+          "quote": "said I'd send an approach note"
+        }
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Jay to find Farah's business card, add her email to the CRM and send the approach note.",
+      "score": 55,
+      "urgency_text": "Date unclear",
+      "merged": 1
+    },
+    {
+      "id": "referral:L-1039:0",
+      "type": "referral",
+      "source": "ai",
+      "account": "Citywide Diagnostics",
+      "lead_ids": [
+        "L-1039"
+      ],
+      "summary": "Referral from Anita at HealthFirst: 22 diagnostic centres with lab, billing and referral data in three systems; call booked Mon 13 Jul.",
+      "evidence": [
+        {
+          "file": "2026-07-06_citywide_referral.md",
+          "quote": "Dr. Anita Rao at HealthFirst spoke highly of your team."
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Prepare for the 13 Jul call and thank Anita after it.",
+      "score": 55,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "promise_overdue:L-1020:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "FreshCart",
+      "lead_ids": [
+        "L-1020"
+      ],
+      "summary": "Dhaval promised on 20 May to call Ananya 'early next week'; on 16 Jun she wrote that she never got the call.",
+      "evidence": [
+        {
+          "file": "2026-05-18_freshcart_referral_followup.md",
+          "quote": "I'll call you early next week to set things up."
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Dhaval to call Ananya now — she decides by mid-July.",
+      "score": 55,
+      "urgency_text": "Date unclear",
+      "merged": 1
+    },
+    {
+      "id": "referral:L-1020:2",
+      "type": "referral",
+      "source": "ai",
+      "account": "FreshCart",
+      "lead_ids": [
+        "L-1020"
+      ],
+      "summary": "Warm referral from Priya at Acme (a happy client) for a customer portal — going cold.",
+      "evidence": [
+        {
+          "file": "2026-05-18_freshcart_referral_followup.md",
+          "quote": "Priya at Acme Retail said you'd be in touch about our customer portal project"
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Call Ananya and let Priya know the referral is being looked after.",
+      "score": 55,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "referral:Harbor & Finch Advisory:0",
+      "type": "referral",
+      "source": "ai",
+      "account": "Harbor & Finch Advisory",
+      "lead_ids": [],
+      "summary": "Suresh (FinEdge) introduced David Harbor, whose firm produces ~120 manual client reports a quarter; not in the CRM.",
+      "evidence": [
+        {
+          "file": "2026-06-27_harborfinch_referral_intro.md",
+          "quote": "they're evaluating options for automating their client reporting"
+        }
+      ],
+      "owner": "Bhavin",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Bhavin to reply to David with call slots and add Harbor & Finch to the CRM.",
+      "score": 55,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "promise_overdue:Lumino Fitness:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "Lumino Fitness",
+      "lead_ids": [],
+      "summary": "At TechSummit Jay promised Carlos a churn-prediction case study; Carlos chased on 20 Jun and is budgeting for next quarter now.",
+      "evidence": [
+        {
+          "file": "2026-06-20_lumino_fitness_case_study.md",
+          "quote": "You mentioned you'd send over the case study about the member-churn prediction work you did for a fitness chain."
+        }
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Jay to send the case study and add Lumino Fitness to the CRM.",
+      "score": 55,
+      "urgency_text": "Date unclear",
+      "merged": 1
+    },
+    {
+      "id": "promise_overdue:L-1016:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "MEDTRACK LABS",
+      "lead_ids": [
+        "L-1016"
+      ],
+      "summary": "At TechSummit, AtliQ promised Rohit an intro deck and healthcare case studies 'this week' (note written Sat 13 Jun — date unclear; who promised is not recorded).",
+      "evidence": [
+        {
+          "file": "2026-06-13_medtrack_scribble.md",
+          "quote": "send this week"
+        }
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Jay (CRM owner) to send the deck and case studies and confirm Rohit's actual need.",
+      "score": 55,
+      "urgency_text": "Date unclear",
+      "merged": 1
+    },
+    {
+      "id": "referral:Nimbus Lending:0",
+      "type": "referral",
+      "source": "ai",
+      "account": "Nimbus Lending",
+      "lead_ids": [],
+      "summary": "Shreya (PayTrack) introduced Rhea at Nimbus Lending, who has ~4,000 manually reviewed loan applications a month.",
+      "evidence": [
+        {
+          "file": "2026-07-05_nimbus_lending_intro.md",
+          "quote": "They're wrestling with exactly the kind of document-heavy underwriting problem you solved for us."
+        }
+      ],
+      "owner": "Bhavin",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Bhavin to reply to Rhea with call slots and add Nimbus Lending to the CRM.",
+      "score": 55,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "referral:Ridgeline Foods:0",
+      "type": "referral",
+      "source": "ai",
+      "account": "Ridgeline Foods",
+      "lead_ids": [],
+      "summary": "Ridgeline's ops head called after hearing about the Sunrise Foods portal from a shared distributor; wants a ~200-distributor portal, but no contact details were taken.",
+      "evidence": [
+        {
+          "file": "2026-07-03_ridgeline_scribble.md",
+          "quote": "heard about the Sunrise Foods portal from a distributor they share"
+        }
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Ask Meera at Sunrise Foods (or the shared distributor) for Ridgeline's contact.",
+      "score": 55,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1004",
+        "L-1040"
+      ],
+      "owner": "Karandeep",
+      "value_usd": 62000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "possible_duplicate:L-1004+L-1040",
+      "type": "possible_duplicate",
+      "account": "GlobalMart",
+      "summary": "Possible duplicate: L-1004 and L-1040. Same contact (Neha Shah, neha.shah@globalmart.com) but different service interest (Custom Web App vs Power BI Dashboards) — could be a genuine second opportunity.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1004,GlobalMart,Neha Shah,neha.shah@globalmart.com,Conference,Custom Web App,Proposal Sent,62000,Karandeep,2026-03-18,2026-05-19,,\"demo went ok, sent proposal\""
+        },
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1040,GlobalMart,Neha Shah,neha.shah@globalmart.com,Conference,Power BI Dashboards,New,,Jay,2026-06-13,,,talked at techsummit about dashboards"
+        }
+      ],
+      "suggested_next_action": "Decide: same opportunity (merge by hand) or a genuine second deal (keep both).",
+      "score": 54.3,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "cross_sell:L-1005:1",
+      "type": "cross_sell",
+      "source": "ai",
+      "account": "Northwind Logistics",
+      "lead_ids": [
+        "L-1005"
+      ],
+      "summary": "Northwind's CEO wants Power BI dashboards on top of the pipeline AtliQ built — a small, fast follow-on project.",
+      "evidence": [
+        {
+          "file": "2026-06-11_northwind_crosssell.md",
+          "quote": "Does AtliQ also do the dashboard layer on top?"
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 54000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Log a new dashboard opportunity for Northwind in the CRM.",
+      "score": 54,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1025"
+      ],
+      "owner": "Karandeep",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 4,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-06-21_cloudnine_rates_references.md",
+      "type": "waiting_on_us",
+      "account": "CloudNine SaaS",
+      "summary": "Dev Malhotra (CloudNine SaaS) wrote on 6 Jul 2026 and the thread has no reply from AtliQ — waiting 4 days.",
+      "evidence": [
+        {
+          "file": "2026-06-21_cloudnine_rates_references.md",
+          "quote": "Karandeep — any update on the references?"
+        }
+      ],
+      "suggested_next_action": "Reply to Dev — answer what they asked in the 6 Jul 2026 message.",
+      "score": 52,
+      "urgency_text": "Waiting 4 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [],
+      "owner": "Bhavin",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 4,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-07-05_nimbus_lending_intro.md",
+      "type": "waiting_on_us",
+      "account": "Nimbus Lending",
+      "summary": "Rhea Sharma (Nimbus Lending) wrote on 6 Jul 2026 and the thread has no reply from AtliQ — waiting 4 days.",
+      "evidence": [
+        {
+          "file": "2026-07-05_nimbus_lending_intro.md",
+          "quote": "I have budget conversations happening the week of 20 July, so a call before then would be ideal."
+        }
+      ],
+      "suggested_next_action": "Reply to Rhea — answer what they asked in the 6 Jul 2026 message.",
+      "score": 52,
+      "urgency_text": "Waiting 4 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1032"
+      ],
+      "owner": "Dhaval",
+      "value_usd": 48000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 91,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1032",
+      "type": "stale_deal",
+      "account": "Trustline NBFC",
+      "summary": "Open deal (Proposal Sent) — CRM shows no contact for 91 days (since 10 Apr 2026).",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1032,Trustline NBFC,Mohan Krishnan,mohan.k@trustline.in,Conference,AI/ML Solutions,Proposal Sent,48000,Dhaval,2026-02-20,2026-04-10,,loan doc automation"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 51.3,
+      "urgency_text": "No contact for 91 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1004"
+      ],
+      "owner": "Karandeep",
+      "value_usd": 62000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 52,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1004",
+      "type": "stale_deal",
+      "account": "GlobalMart",
+      "summary": "Open deal (Proposal Sent) — CRM shows no contact for 52 days (since 19 May 2026).",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1004,GlobalMart,Neha Shah,neha.shah@globalmart.com,Conference,Custom Web App,Proposal Sent,62000,Karandeep,2026-03-18,2026-05-19,,\"demo went ok, sent proposal\""
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 51.2,
+      "urgency_text": "No contact for 52 days",
+      "merged": 1
+    },
+    {
+      "id": "client_deadline:L-1025:1",
+      "type": "client_deadline",
+      "source": "ai",
+      "account": "CloudNine SaaS",
+      "lead_ids": [
+        "L-1025"
+      ],
+      "summary": "CloudNine is comparing AtliQ with one other vendor and wants to close by mid-July.",
+      "evidence": [
+        {
+          "file": "2026-06-21_cloudnine_rates_references.md",
+          "quote": "We're comparing you with one other vendor and want to close this out by mid-July."
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Send the references before CloudNine decides.",
+      "score": 50,
+      "urgency_text": "Date unclear",
+      "merged": 1
+    },
+    {
+      "id": "client_deadline:L-1010:0",
+      "type": "client_deadline",
+      "source": "ai",
+      "account": "EduSpark",
+      "lead_ids": [
+        "L-1010"
+      ],
+      "summary": "EduSpark needs a student-query assistant for admissions season; the budget window closes mid-August.",
+      "evidence": [
+        {
+          "file": "2026-07-08_eduspark_website_enquiry.md",
+          "quote": "our budget window closes mid-August"
+        }
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Assign an owner and offer Vikram a joint call with Prof. Meenakshi Iyer.",
+      "score": 50,
+      "urgency_text": "Date unclear",
+      "merged": 1
+    },
+    {
+      "id": "client_deadline:L-1020:1",
+      "type": "client_deadline",
+      "source": "ai",
+      "account": "FreshCart",
+      "lead_ids": [
+        "L-1020"
+      ],
+      "summary": "FreshCart is talking to two other vendors and will decide by mid-July.",
+      "evidence": [
+        {
+          "file": "2026-05-18_freshcart_referral_followup.md",
+          "quote": "We're now in conversations with two other vendors and want to decide by mid-July."
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Get AtliQ's proposal in before FreshCart's mid-July decision.",
+      "score": 50,
+      "urgency_text": "Date unclear",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "lead_missing:Harbor & Finch Advisory",
+      "type": "lead_missing",
+      "account": "Harbor & Finch Advisory",
+      "summary": "Harbor & Finch Advisory appears in 1 document but is not in the CRM.",
+      "evidence": [
+        {
+          "file": "2026-06-27_harborfinch_referral_intro.md",
+          "quote": "Bhavin — meet David. David runs Harbor & Finch, a boutique advisory firm; they're evaluating options for automating their client reporting and could use your help. (Your team is doing great work on our data platform, by the way.)"
+        }
+      ],
+      "suggested_next_action": "Create a CRM lead for Harbor & Finch Advisory and assign an owner.",
+      "score": 50,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "lead_missing:Lumino Fitness",
+      "type": "lead_missing",
+      "account": "Lumino Fitness",
+      "summary": "Lumino Fitness appears in 1 document but is not in the CRM.",
+      "evidence": [
+        {
+          "file": "2026-06-20_lumino_fitness_case_study.md",
+          "quote": "Email Thread: Lumino Fitness — conference follow-up"
+        }
+      ],
+      "suggested_next_action": "Create a CRM lead for Lumino Fitness and assign an owner.",
+      "score": 50,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "lead_missing:Nimbus Lending",
+      "type": "lead_missing",
+      "account": "Nimbus Lending",
+      "summary": "Nimbus Lending appears in 1 document but is not in the CRM.",
+      "evidence": [
+        {
+          "file": "2026-07-05_nimbus_lending_intro.md",
+          "quote": "Bhavin — meet Rhea, who heads risk at Nimbus Lending. They're wrestling with exactly the kind of document-heavy underwriting problem you solved for us. Rhea, Bhavin's team built our fraud detection stack — they're the real deal."
+        }
+      ],
+      "suggested_next_action": "Create a CRM lead for Nimbus Lending and assign an owner.",
+      "score": 50,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "lead_missing:PixelWorks Agency",
+      "type": "lead_missing",
+      "account": "PixelWorks Agency",
+      "summary": "PixelWorks Agency appears in 1 document but is not in the CRM.",
+      "evidence": [
+        {
+          "file": "2026-06-29_pixelworks_partnership.md",
+          "quote": "Email Thread: PixelWorks Agency — white-label partnership"
+        }
+      ],
+      "suggested_next_action": "Create a CRM lead for PixelWorks Agency and assign an owner.",
+      "score": 50,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "lead_missing:Ridgeline Foods",
+      "type": "lead_missing",
+      "account": "Ridgeline Foods",
+      "summary": "Ridgeline Foods appears in 1 document but is not in the CRM.",
+      "evidence": [
+        {
+          "file": "2026-07-03_ridgeline_scribble.md",
+          "quote": "call — Ridgeline Foods?? 3/7"
+        }
+      ],
+      "suggested_next_action": "Create a CRM lead for Ridgeline Foods and assign an owner.",
+      "score": 50,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1021"
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 146,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1021",
+      "type": "stale_deal",
+      "account": "SteelCore Industries",
+      "summary": "Open deal (Contacted) — CRM shows no contact for 146 days (since 14 Feb 2026).",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1021,SteelCore Industries,B.K. Verma,bkverma@steelcore.in,Cold Outreach,Power BI Dashboards,Contacted,,Jay,2026-01-30,2026-02-14,,"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 50,
+      "urgency_text": "No contact for 146 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1037"
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 171,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1037",
+      "type": "stale_deal",
+      "account": "Vertex Constructions",
+      "summary": "Open deal (Contacted) — CRM shows no contact for 171 days (since 20 Jan 2026).",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1037,Vertex Constructions,P. Naidu,naidu@vertexcon.in,Cold Outreach,Custom Web App,Contacted,,Jay,2025-12-10,2026-01-20,,"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 50,
+      "urgency_text": "No contact for 171 days",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1017:1",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "ShopSwift",
+      "lead_ids": [
+        "L-1017"
+      ],
+      "summary": "CRM says 'Contacted', but the 55k budget is formally approved and the client is waiting for a SOW.",
+      "evidence": [
+        {
+          "file": "2026-06-29_shopswift_budget_confirmed.md",
+          "quote": "leadership has formally approved 55k for the recommendation engine this fiscal year"
+        }
+      ],
+      "owner": "Bhavin",
+      "value_usd": 55000,
+      "value_source": "quote",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Move L-1017 to a later stage (needs approval).",
+      "score": 48.1,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1014"
+      ],
+      "owner": "Karandeep",
+      "value_usd": 28000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 9,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-06-15_voltenergy_competitor.md",
+      "type": "waiting_on_us",
+      "account": "VoltEnergy",
+      "summary": "Marcus Chen (VoltEnergy) wrote on 1 Jul 2026 and the thread has no reply from AtliQ — waiting 9 days.",
+      "evidence": [
+        {
+          "file": "2026-06-15_voltenergy_competitor.md",
+          "quote": "Can you send it this week?"
+        }
+      ],
+      "suggested_next_action": "Reply to Marcus — answer what they asked in the 1 Jul 2026 message.",
+      "score": 46.9,
+      "urgency_text": "Waiting 9 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1010"
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 2,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "waiting_on_us:2026-07-08_eduspark_website_enquiry.md",
+      "type": "waiting_on_us",
+      "account": "EduSpark",
+      "summary": "Vikram Joshi (EduSpark) wrote on 8 Jul 2026 and the thread has no reply from AtliQ — waiting 2 days.",
+      "evidence": [
+        {
+          "file": "2026-07-08_eduspark_website_enquiry.md",
+          "quote": "The immediate need is actually for our admissions season (queries spike 10x in Aug–Sep), so timing matters — our budget window closes mid-August."
+        }
+      ],
+      "suggested_next_action": "Reply to Vikram — answer what they asked in the 8 Jul 2026 message.",
+      "score": 46,
+      "urgency_text": "Waiting 2 days",
+      "merged": 1
+    },
+    {
+      "id": "promise_overdue:L-1026:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "Sunrise Foods",
+      "lead_ids": [
+        "L-1026"
+      ],
+      "summary": "Dhaval promised Meera a call about Portal v2 after his travel (14 Jun); no date was given.",
+      "evidence": [
+        {
+          "file": "2026-06-10_sunrise_foods_reactivation.md",
+          "quote": "let me set up a call when I'm back"
+        },
+        {
+          "file": "2026-07-02_internal_pipeline_review.md",
+          "quote": "Sunrise Foods came back wanting a v2 three weeks ago. Still no call scheduled."
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 33000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Dhaval to book the Portal v2 call with Meera.",
+      "score": 45.4,
+      "urgency_text": "Date unclear",
+      "merged": 2
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1028"
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "no_owner:L-1028",
+      "type": "no_owner",
+      "account": "ApexAuto Parts",
+      "summary": "Nobody owns this New lead in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1028,ApexAuto Parts,Ravi Shankar,ravi@apexauto.in,Cold Outreach,,New,,,2026-03-02,,,"
+        }
+      ],
+      "suggested_next_action": "Assign an owner in the CRM.",
+      "score": 45,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1019"
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "no_owner:L-1019",
+      "type": "no_owner",
+      "account": "CargoLine",
+      "summary": "Nobody owns this New lead in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1019,CargoLine,J. Fernandez,,Website,Data Engineering,New,,,2026-07-01,,,"
+        }
+      ],
+      "suggested_next_action": "Assign an owner in the CRM.",
+      "score": 45,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1039"
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "no_owner:L-1039",
+      "type": "no_owner",
+      "account": "Citywide Diagnostics",
+      "summary": "Nobody owns this New lead in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1039,Citywide Diagnostics,Rakesh Gupta,rakesh@citywidediag.in,Referral,Data Engineering,New,,,2026-07-05,,,Anita from HealthFirst referred"
+        }
+      ],
+      "suggested_next_action": "Assign an owner in the CRM.",
+      "score": 45,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "revisit_due:L-1015:1",
+      "type": "revisit_due",
+      "source": "ai",
+      "account": "ClearPath Insurance",
+      "lead_ids": [
+        "L-1015"
+      ],
+      "summary": "The CRM note itself said to check back later; no revisit was scheduled.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "budget freeze. said check back later"
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 40000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Re-open L-1015 and set a follow-up date (needs approval).",
+      "score": 45,
+      "urgency_text": "Date unclear",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1010"
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "no_owner:L-1010",
+      "type": "no_owner",
+      "account": "EduSpark",
+      "summary": "Nobody owns this New lead in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1010,EduSpark,Vikram Joshi,vikram@eduspark.com,Website,AI/ML Solutions,New,,,2026-06-25,,,chatbot for student queries maybe"
+        }
+      ],
+      "suggested_next_action": "Assign an owner in the CRM.",
+      "score": 45,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1033"
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "no_owner:L-1033",
+      "type": "no_owner",
+      "account": "OceanFreight",
+      "summary": "Nobody owns this New lead in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1033,OceanFreight,Karl Nilsen,karl@oceanfreight.no,Website,Data Engineering,New,,,2026-06-28,,,\"timezone tricky, Norway\""
+        }
+      ],
+      "suggested_next_action": "Assign an owner in the CRM.",
+      "score": 45,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "client_deadline:L-1007:0",
+      "type": "client_deadline",
+      "source": "ai",
+      "account": "Kaveri Textiles",
+      "lead_ids": [
+        "L-1007"
+      ],
+      "summary": "Kaveri wants a revised quote for both plants by 15 Jul and signalled budget flexibility.",
+      "evidence": [
+        {
+          "file": "2026-07-08_kaveri_demo_round2.md",
+          "quote": "Subbu asked for revised quote by 15 July."
+        }
+      ],
+      "owner": "Jay",
+      "value_usd": 15000,
+      "value_source": "crm",
+      "due_date": "2026-07-15",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": 5,
+      "suggested_next_action": "Jay to prepare the 2-plant quote, with Pranav sizing the Tally/Access extraction.",
+      "score": 42.5,
+      "urgency_text": "Due in 5 days (15 Jul 2026)",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1032:1",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "Trustline NBFC",
+      "lead_ids": [
+        "L-1032"
+      ],
+      "summary": "CRM says 'Proposal Sent', but Trustline's board approved the project and they want to sign this month.",
+      "evidence": [
+        {
+          "file": "2026-07-03_trustline_approved.md",
+          "quote": "the loan document automation project is approved"
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 48000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Move L-1032 to a later stage (needs approval).",
+      "score": 42,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1003",
+        "L-1027"
+      ],
+      "owner": "Bhavin",
+      "value_usd": 45000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "possible_duplicate:L-1003+L-1027",
+      "type": "possible_duplicate",
+      "account": "Meridian Healthcare",
+      "summary": "Duplicate: L-1003 and L-1027. Same person at meridianhealth.com entered twice with slightly different emails (sanjay.k@meridianhealth.com vs sanjayk@meridianhealth.com) by different owners (Bhavin / Jay).",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1003,Meridian Healthcare,Dr. Sanjay Kulkarni,sanjay.k@meridianhealth.com,Website,Data Engineering,Contacted,45000,Bhavin,2026-04-02,2026-06-15,,"
+        },
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1027,Meridian Health LLC,Sanjay Kulkarni,sanjayk@meridianhealth.com,Conference,Data Engineering,New,,Jay,2026-06-13,,,\"met at techsummit booth, hospital data warehouse\""
+        }
+      ],
+      "suggested_next_action": "Owners Bhavin and Jay agree which record to keep (no automatic merge).",
+      "score": 39.4,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1003:1",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "Meridian Healthcare",
+      "lead_ids": [
+        "L-1003"
+      ],
+      "summary": "CRM status says 'Contacted' but Meridian has already received and reviewed a proposal.",
+      "evidence": [
+        {
+          "file": "2026-06-16_meridian_proposal_questions.md",
+          "quote": "Thanks for the proposal. It looks solid overall."
+        }
+      ],
+      "owner": "Bhavin",
+      "value_usd": 45000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Update L-1003 status to 'Proposal Sent' (needs approval).",
+      "score": 39.4,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "cross_sell:L-1001:2",
+      "type": "cross_sell",
+      "source": "ai",
+      "account": "Acme Retail Group",
+      "lead_ids": [
+        "L-1001"
+      ],
+      "summary": "Acme's ops team struggles with seasonal inventory forecasting — a new opportunity that is not logged anywhere.",
+      "evidence": [
+        {
+          "file": "2026-06-18_acme_retail_monthly_reports.md",
+          "quote": "our ops team has been struggling with inventory forecasting for seasonal SKUs"
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 38000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Dhaval to propose an intro conversation with Acme's COO about forecasting.",
+      "score": 38,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1007"
+      ],
+      "owner": "Jay",
+      "value_usd": 15000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 17,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "returning_lost:L-1007",
+      "type": "returning_lost",
+      "account": "Kaveri Textiles",
+      "summary": "Marked Lost in the CRM, but R. Subramaniam came back on 23 Jun 2026.",
+      "evidence": [
+        {
+          "file": "2026-06-23_kaveri_vendor_failed.md",
+          "quote": "Is your quote from November still valid?"
+        }
+      ],
+      "suggested_next_action": "Re-open the deal in the CRM and agree the next step with the client.",
+      "score": 37.5,
+      "urgency_text": "Came back 17 days ago",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1012"
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 69,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1012",
+      "type": "stale_deal",
+      "account": "UrbanNest Realty",
+      "summary": "Open deal (Contacted) — CRM shows no contact for 69 days (since 2 May 2026).",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1012,UrbanNest Realty,Kunal Kapoor,kunal@urbannest.com,LinkedIn,Custom Web App,Contacted,,Jay,2026-04-30,2026-05-02,,"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 37.3,
+      "urgency_text": "No contact for 69 days",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1039:1",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "Citywide Diagnostics",
+      "lead_ids": [
+        "L-1039"
+      ],
+      "summary": "CRM owner is blank, but Karandeep is handling Citywide and has a call on 13 Jul.",
+      "evidence": [
+        {
+          "file": "2026-07-06_citywide_referral.md",
+          "quote": "How about Monday 13 July, 11am?"
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Set Karandeep as owner of L-1039 (needs approval).",
+      "score": 35,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1015:0",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "ClearPath Insurance",
+      "lead_ids": [
+        "L-1015"
+      ],
+      "summary": "CRM says Lost (budget freeze), but Deepa says the freeze lifted and the project is back for Q3 — AtliQ's proposal was the strongest of three.",
+      "evidence": [
+        {
+          "file": "2026-06-09_clearpath_budget_unfrozen.md",
+          "quote": "The freeze lifted with the new financial year and the project is back on our roadmap for Q3."
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 40000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Dhaval to reply to Deepa and confirm whether the 40k estimate holds.",
+      "score": 35,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1010:1",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "EduSpark",
+      "lead_ids": [
+        "L-1010"
+      ],
+      "summary": "CRM calls this a vague 'maybe' with no owner, but Vikram has a clear need, a timeline and has chased AtliQ directly.",
+      "evidence": [
+        {
+          "file": "2026-07-08_eduspark_website_enquiry.md",
+          "quote": "I submitted an enquiry through your website on 25 June about an AI assistant for student queries and haven't heard back"
+        }
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Update L-1010 notes and owner (needs approval).",
+      "score": 35,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1033:0",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "OceanFreight",
+      "lead_ids": [
+        "L-1033"
+      ],
+      "summary": "CRM has no owner, but Jay is handling OceanFreight and has a call booked with Karl on 14 Jul.",
+      "evidence": [
+        {
+          "file": "2026-06-28_oceanfreight_timezones.md",
+          "quote": "14 July 8:00 CET / 11:30 IST confirmed — invite sent."
+        }
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Confirm Jay as owner in the CRM (needs approval).",
+      "score": 35,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1031"
+      ],
+      "owner": "Karandeep",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 59,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1031",
+      "type": "stale_deal",
+      "account": "ByteBridge",
+      "summary": "Open deal (Contacted) — CRM shows no contact for 59 days (since 12 May 2026).",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1031,ByteBridge,Fatima Al-Rashid,fatima@bytebridge.com,Referral,Staff Augmentation,Contacted,,Karandeep,2026-05-08,2026-05-12,,"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 34.8,
+      "urgency_text": "No contact for 59 days",
+      "merged": 1
+    },
+    {
+      "id": "promise_overdue:L-1034:0",
+      "type": "promise_overdue",
+      "source": "ai",
+      "account": "SmartServe Hospitality",
+      "lead_ids": [
+        "L-1034"
+      ],
+      "summary": "Jay promised Arvind (burned by a previous vendor) a reference call with a past client; nothing shows it was arranged.",
+      "evidence": [
+        {
+          "file": "2026-04-05_smartserve_intro_call.md",
+          "quote": "Reference call with a past client for Arvind — Jay"
+        }
+      ],
+      "owner": "Jay",
+      "value_usd": 25000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": false,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Jay to arrange a reference call (e.g. Sunrise Foods) and re-open the conversation.",
+      "score": 34.4,
+      "urgency_text": "Date unclear",
+      "merged": 1
+    },
+    {
+      "id": "cross_sell:L-1026:2",
+      "type": "cross_sell",
+      "source": "ai",
+      "account": "Sunrise Foods",
+      "lead_ids": [
+        "L-1026"
+      ],
+      "summary": "Sunrise Foods (now 110 distributors) wants a Portal v2 and their CFO wants a sales dashboard on the portal data.",
+      "evidence": [
+        {
+          "file": "2026-06-10_sunrise_foods_reactivation.md",
+          "quote": "our CFO keeps asking if the portal data can feed into some kind of sales dashboard"
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 33000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Scope Portal v2 plus a sales dashboard in one proposal.",
+      "score": 33,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1020"
+      ],
+      "owner": "Dhaval",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 51,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1020",
+      "type": "stale_deal",
+      "account": "FreshCart",
+      "summary": "Open deal (Contacted) — CRM shows no contact for 51 days (since 20 May 2026).",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1020,FreshCart,Ananya Desai,ananya@freshcart.in,Referral,Custom Web App,Contacted,,Dhaval,2026-05-15,2026-05-20,,referred by Priya at Acme"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 32.8,
+      "urgency_text": "No contact for 51 days",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1011:1",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "AgroLink",
+      "lead_ids": [
+        "L-1011"
+      ],
+      "summary": "CRM has no status and no value, but AgroLink revealed ~35–40k approved for this project.",
+      "evidence": [
+        {
+          "file": "2026-07-01_agrolink_budget_call.md",
+          "quote": "BUDGET FINALLY REVEALED: ~35-40k approved for this FY"
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 35000,
+      "value_source": "quote",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Set L-1011 status and est. value (needs approval).",
+      "score": 30.6,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1038:0",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "MiraHealth",
+      "lead_ids": [
+        "L-1038"
+      ],
+      "summary": "CRM notes only say 'second call done' — missing the UK-first scope, the ~35k budget confirmed verbally, and a CTO who needs clinical safety docs.",
+      "evidence": [
+        {
+          "file": "2026-07-07_mirahealth_quick_summary.md",
+          "quote": "They want the triage assistant scoped for UK ops first, not India."
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 35000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Add the second-call details to L-1038 (use Debrief; needs approval).",
+      "score": 30.6,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1011"
+      ],
+      "owner": "Dhaval",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1011",
+      "type": "stale_deal",
+      "account": "AgroLink",
+      "summary": "Open deal (no status) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1011,AgroLink,Harpreet Gill,harpreet@agrolink.in,Conference,Data Engineering,,,Dhaval,2026-06-12,,,TechSummit. good conversation about mandi price data"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1028"
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1028",
+      "type": "stale_deal",
+      "account": "ApexAuto Parts",
+      "summary": "Open deal (New) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1028,ApexAuto Parts,Ravi Shankar,ravi@apexauto.in,Cold Outreach,,New,,,2026-03-02,,,"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1006"
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1006",
+      "type": "stale_deal",
+      "account": "BlueOrchid Hotels",
+      "summary": "Open deal (New) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1006,BlueOrchid Hotels,Farah Sayed,,Conference,,New,,Jay,2026-06-12,,,\"met at TechSummit Mumbai, wants something with reviews?\""
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1019"
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1019",
+      "type": "stale_deal",
+      "account": "CargoLine",
+      "summary": "Open deal (New) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1019,CargoLine,J. Fernandez,,Website,Data Engineering,New,,,2026-07-01,,,"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1039"
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1039",
+      "type": "stale_deal",
+      "account": "Citywide Diagnostics",
+      "summary": "Open deal (New) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1039,Citywide Diagnostics,Rakesh Gupta,rakesh@citywidediag.in,Referral,Data Engineering,New,,,2026-07-05,,,Anita from HealthFirst referred"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1010"
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1010",
+      "type": "stale_deal",
+      "account": "EduSpark",
+      "summary": "Open deal (New) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1010,EduSpark,Vikram Joshi,vikram@eduspark.com,Website,AI/ML Solutions,New,,,2026-06-25,,,chatbot for student queries maybe"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1040"
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1040",
+      "type": "stale_deal",
+      "account": "GlobalMart",
+      "summary": "Open deal (New) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1040,GlobalMart,Neha Shah,neha.shah@globalmart.com,Conference,Power BI Dashboards,New,,Jay,2026-06-13,,,talked at techsummit about dashboards"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1030"
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1030",
+      "type": "stale_deal",
+      "account": "GreenGrid Solar",
+      "summary": "Open deal (New) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1030,GreenGrid Solar,Aditya Kulkarni,aditya@greengrid.in,Website,Power BI Dashboards,New,,Jay,2026-07-03,,,"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1036"
+      ],
+      "owner": "Karandeep",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1036",
+      "type": "stale_deal",
+      "account": "LoopMart",
+      "summary": "Open deal (New) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1036,LoopMart,Sania Sheikh,sania@loopmart.com,Conference,Power BI Dashboards,New,,Karandeep,2026-06-13,,,\"techsummit, retail analytics\""
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1016"
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1016",
+      "type": "stale_deal",
+      "account": "MEDTRACK LABS",
+      "summary": "Open deal (New) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1016,MEDTRACK LABS,Rohit Bansal,rohit@medtracklabs.in,Conference,,New,,Jay,2026-06-13,,,techsummit"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1027"
+      ],
+      "owner": "Jay",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1027",
+      "type": "stale_deal",
+      "account": "Meridian Health LLC",
+      "summary": "Open deal (New) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1027,Meridian Health LLC,Sanjay Kulkarni,sanjayk@meridianhealth.com,Conference,Data Engineering,New,,Jay,2026-06-13,,,\"met at techsummit booth, hospital data warehouse\""
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1033"
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1033",
+      "type": "stale_deal",
+      "account": "OceanFreight",
+      "summary": "Open deal (New) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1033,OceanFreight,Karl Nilsen,karl@oceanfreight.no,Website,Data Engineering,New,,,2026-06-28,,,\"timezone tricky, Norway\""
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1022"
+      ],
+      "owner": "Karandeep",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1022",
+      "type": "stale_deal",
+      "account": "TravelHub",
+      "summary": "Open deal (New) with no last-contact date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1022,TravelHub,Nadia Rahman,nadia@travelhub.com,Conference,AI/ML Solutions,New,,Karandeep,2026-06-12,,,\"itinerary personalization idea, TechSummit\""
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 30,
+      "urgency_text": "Never contacted",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1002",
+        "L-1003",
+        "L-1004",
+        "L-1006",
+        "L-1008",
+        "L-1009",
+        "L-1010",
+        "L-1011",
+        "L-1012",
+        "L-1014",
+        "L-1016",
+        "L-1017",
+        "L-1019",
+        "L-1020",
+        "L-1021",
+        "L-1022",
+        "L-1023",
+        "L-1025",
+        "L-1027",
+        "L-1028",
+        "L-1029",
+        "L-1030",
+        "L-1031",
+        "L-1032",
+        "L-1033",
+        "L-1034",
+        "L-1036",
+        "L-1037",
+        "L-1038",
+        "L-1039",
+        "L-1040"
+      ],
+      "owner": null,
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "missing_next_step:all",
+      "type": "missing_next_step",
+      "account": "Whole pipeline",
+      "summary": "31 of 31 open deals have no next follow-up date in the CRM.",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "next_followup_date"
+        }
+      ],
+      "suggested_next_action": "In the weekly pipeline review, give every open deal a next step and a date.",
+      "score": 30,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1009"
+      ],
+      "owner": "Karandeep",
+      "value_usd": 30000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 79,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1009",
+      "type": "stale_deal",
+      "account": "HealthFirst Clinics",
+      "summary": "Open deal (Proposal Sent) — CRM shows no contact for 79 days (since 22 Apr 2026).",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1009,HealthFirst Clinics,Dr. Anita Rao,anita.rao@healthfirst.in,Referral,Custom Web App,Proposal Sent,30000,Karandeep,2026-02-14,2026-04-22,,waiting on their board approval"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 29.8,
+      "urgency_text": "No contact for 79 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1008"
+      ],
+      "owner": "Bhavin",
+      "value_usd": null,
+      "value_source": null,
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 35,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1008",
+      "type": "stale_deal",
+      "account": "Zenlytics",
+      "summary": "Open deal (Contacted) — CRM shows no contact for 35 days (since 5 Jun 2026).",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1008,Zenlytics,Maya Fernandes,maya@zenlytics.io,LinkedIn,Staff Augmentation,Contacted,,Bhavin,2026-06-01,2026-06-05,,"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 28.8,
+      "urgency_text": "No contact for 35 days",
+      "merged": 1
+    },
+    {
+      "source": "rule",
+      "lead_ids": [
+        "L-1034"
+      ],
+      "owner": "Jay",
+      "value_usd": 25000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": 93,
+      "days_overdue": null,
+      "days_until": null,
+      "id": "stale_deal:L-1034",
+      "type": "stale_deal",
+      "account": "SmartServe Hospitality",
+      "summary": "Open deal (Contacted) — CRM shows no contact for 93 days (since 8 Apr 2026).",
+      "evidence": [
+        {
+          "file": "crm_export.csv",
+          "quote": "L-1034,SmartServe Hospitality,Pooja Reddy,pooja@smartserve.in,LinkedIn,Custom Web App,Contacted,25000,Jay,2026-04-05,2026-04-08,,"
+        }
+      ],
+      "suggested_next_action": "Check the inbox for newer activity, then update last contact and next follow-up in the CRM.",
+      "score": 27,
+      "urgency_text": "No contact for 93 days",
+      "merged": 1
+    },
+    {
+      "id": "cross_sell:L-1018:0",
+      "type": "cross_sell",
+      "source": "ai",
+      "account": "DataNest",
+      "lead_ids": [
+        "L-1018"
+      ],
+      "summary": "DataNest raised a Series A and wants a third engineer, ideally strong on Kafka.",
+      "evidence": [
+        {
+          "file": "2026-06-30_datanest_renewal.md",
+          "quote": "want to add a third engineer, ideally someone strong on Kafka"
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": 26000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Karandeep to share a Kafka engineer profile and log the expansion in the CRM.",
+      "score": 26,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1018:2",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "DataNest",
+      "lead_ids": [
+        "L-1018"
+      ],
+      "summary": "CRM last contact is 5 Mar, but a renewal call was set for 8 Jul — the renewal and expansion are not in the CRM.",
+      "evidence": [
+        {
+          "file": "2026-06-30_datanest_renewal.md",
+          "quote": "Let's do a call Wednesday 8 July to lock the renewal and discuss the Kafka profile."
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": 26000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Update L-1018 last contact and notes (needs approval).",
+      "score": 22.8,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1030:2",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "GreenGrid Solar",
+      "lead_ids": [
+        "L-1030"
+      ],
+      "summary": "CRM has GreenGrid as 'New' with no value, but discovery is done and the phase-1 budget is 20–25k.",
+      "evidence": [
+        {
+          "file": "2026-07-09_greengrid_discovery.md",
+          "quote": "Budget: Aditya indicated 20–25k comfortable for phase 1."
+        }
+      ],
+      "owner": "Jay",
+      "value_usd": 20000,
+      "value_source": "quote",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Update L-1030 status and est. value (needs approval).",
+      "score": 17.5,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1007:1",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "Kaveri Textiles",
+      "lead_ids": [
+        "L-1007"
+      ],
+      "summary": "CRM still says 'Lost', but Kaveri re-opened the deal and attended a second demo on 8 Jul.",
+      "evidence": [
+        {
+          "file": "2026-07-08_kaveri_demo_round2.md",
+          "quote": "Update CRM — L-1007 still shows \"Lost\""
+        }
+      ],
+      "owner": "Jay",
+      "value_usd": 15000,
+      "value_source": "crm",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Change L-1007 from Lost to an open stage (needs approval).",
+      "score": 17.5,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "contradiction:L-1036:0",
+      "type": "contradiction",
+      "source": "ai",
+      "account": "LoopMart",
+      "lead_ids": [
+        "L-1036"
+      ],
+      "summary": "CRM has LoopMart as 'New' with no value, but Karandeep gave an 18–22k ballpark on a pricing call; the client's reply was not written down.",
+      "evidence": [
+        {
+          "file": "2026-06-26_loopmart_pricing_call.md",
+          "quote": "gave ballpark 18–22k for retail analytics dashboards, phase-able"
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": 18000,
+      "value_source": "quote",
+      "due_date": null,
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": null,
+      "suggested_next_action": "Karandeep to note Sania's response and update L-1036 (needs approval).",
+      "score": 17.5,
+      "urgency_text": "",
+      "merged": 1
+    },
+    {
+      "id": "client_deadline:L-1018:1",
+      "type": "client_deadline",
+      "source": "ai",
+      "account": "DataNest",
+      "lead_ids": [
+        "L-1018"
+      ],
+      "summary": "DataNest's contract runs out at the end of September and they asked to renew early.",
+      "evidence": [
+        {
+          "file": "2026-06-30_datanest_renewal.md",
+          "quote": "Our contract runs out end of September."
+        }
+      ],
+      "owner": "Karandeep",
+      "value_usd": 26000,
+      "value_source": "crm",
+      "due_date": "2026-09-30",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": 82,
+      "suggested_next_action": "Record the renewal terms agreed on the 8 Jul call.",
+      "score": 16.3,
+      "urgency_text": "Due in 82 days (30 Sep 2026)",
+      "merged": 1
+    }
+  ]
+}

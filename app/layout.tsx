@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import Link from "next/link";
 import "./globals.css";
 import Nav from "@/components/Nav";
+import ModeBadge from "@/components/ModeBadge";
 import { TODAY_LABEL } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-600">
               Today: {TODAY_LABEL}
             </span>
+            <ModeBadge />
             <Nav />
           </div>
         </header>

@@ -1,27 +1,26 @@
-import Link from "next/link";
-import { accounts, documents } from "@/lib/data";
+import RadarBoard from "@/components/RadarBoard";
+import radarJson from "@/data/radar.json";
+import { documents } from "@/lib/data";
+import { formatDate } from "@/lib/format";
+import type { RadarFile } from "@/lib/schemas";
 
-export default function Home() {
+const radar = radarJson as RadarFile;
+
+export default function RadarPage() {
+  // Only ship the documents that cards cite as evidence.
+  const cited = new Set(radar.items.flatMap((i) => i.evidence.map((e) => e.file)));
+  const docs = documents.filter((d) => cited.has(d.id));
+
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       <div>
         <h1 className="text-2xl font-semibold tracking-tight">Revenue Leak Radar</h1>
-        <p className="mt-1 text-slate-600">
-          The daily ranked list of revenue leaks arrives in the next build phase.
+        <p className="mt-1 text-sm text-slate-600">
+          Ranked by deal value × urgency, as of {formatDate(radar.today)}. Every card cites the email, note or CRM row it
+          comes from — click the file name to read it.
         </p>
       </div>
-      <div className="rounded-xl border border-slate-200 p-5 shadow-sm">
-        <p className="text-sm text-slate-600">Data loaded so far:</p>
-        <p className="mt-1 text-lg font-medium">
-          {accounts.length} CRM accounts · {documents.length} emails &amp; meeting notes
-        </p>
-        <Link
-          href="/accounts"
-          className="mt-4 inline-block rounded-lg bg-accent-600 px-4 py-2 text-sm font-medium text-white hover:bg-accent-700"
-        >
-          Browse accounts →
-        </Link>
-      </div>
+      <RadarBoard items={radar.items} docs={docs} />
     </div>
   );
 }
