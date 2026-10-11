@@ -36,7 +36,7 @@ export default function BriefPanel({ account, docs }: { account: Account; docs: 
       else if ("brief" in data) setView({ kind: "brief", brief: data.brief, mode: data.mode, removed: data.removed_claims });
       else setView({ kind: "message", message: data.message }); // no history, or Demo-mode message
     } catch {
-      setView({ kind: "error", message: "Could not reach the server. Please try again." });
+      setView({ kind: "error", message: "Something went wrong — please try again." });
     }
   }
 

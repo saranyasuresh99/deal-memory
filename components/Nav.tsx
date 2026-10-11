@@ -3,19 +3,20 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-// Pages are added here as each build phase lands.
+// Top navigation (scrolls sideways on narrow phones).
 const LINKS = [
   { href: "/", label: "Radar" },
   { href: "/debrief", label: "Debrief" },
   { href: "/promises", label: "Promises" },
   { href: "/accounts", label: "Accounts" },
   { href: "/ask", label: "Ask" },
+  { href: "/evals", label: "Evals" },
 ];
 
 export default function Nav() {
   const pathname = usePathname();
   return (
-    <nav className="flex w-full gap-1 overflow-x-auto sm:ml-auto sm:w-auto">
+    <nav className="-mx-1 flex w-full gap-1 overflow-x-auto px-1 lg:ml-auto lg:w-auto">
       {LINKS.map((l) => {
         const active = l.href === "/" ? pathname === "/" : pathname.startsWith(l.href);
         return (

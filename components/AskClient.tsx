@@ -48,7 +48,7 @@ export default function AskClient({
       else if ("result" in data) update({ status: "answer", result: data.result, mode: data.mode, removed: data.removed_claims });
       else update({ status: "demo", message: data.message });
     } catch {
-      update({ status: "error", message: "Could not reach the server. Please try again." });
+      update({ status: "error", message: "Something went wrong — please try again." });
     }
   }
 

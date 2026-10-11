@@ -49,9 +49,10 @@ export type Store = {
   newLeads: NewLead[];
   promises: ApprovedPromise[];
   audit: AuditEntry[];
+  evalMarks: Record<string, "correct" | "wrong">; // Evals precision helper: Radar item id -> judgement
 };
 
-const EMPTY: Store = { radar: {}, accountEdits: {}, newLeads: [], promises: [], audit: [] };
+const EMPTY: Store = { radar: {}, accountEdits: {}, newLeads: [], promises: [], audit: [], evalMarks: {} };
 
 let cache: Store | null = null;
 const listeners = new Set<() => void>();

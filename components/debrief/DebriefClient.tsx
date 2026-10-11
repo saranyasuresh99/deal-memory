@@ -48,7 +48,7 @@ export default function DebriefClient({
         setView({ kind: "result", result: data.result, mode: data.mode, removed: data.removed_claims, runId: runs + 1 });
       }
     } catch {
-      setView({ kind: "error", message: "Could not reach the server. Please try again." });
+      setView({ kind: "error", message: "Something went wrong — please try again." });
     }
   }
 
