@@ -314,6 +314,19 @@
           "suggested_next_action": "Dhaval to send the mandi-price pipeline proposal today or call Harpreet before the 14th."
         },
         {
+          "type": "promise_due",
+          "account": "AgroLink",
+          "lead_id": "L-1011",
+          "summary": "Dhaval's action from the 1 Jul call: send AgroLink the proposal by 10 Jul (today).",
+          "quote": "action: proposal — Dhaval — by 10 Jul",
+          "file": "2026-07-01_agrolink_budget_call.md",
+          "owner": "Dhaval",
+          "due_date": "2026-07-10",
+          "date_clear": true,
+          "value_usd": 35000,
+          "suggested_next_action": "Dhaval to send the mandi-price pipeline proposal today."
+        },
+        {
           "type": "contradiction",
           "account": "AgroLink",
           "lead_id": "L-1011",

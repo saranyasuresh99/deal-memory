@@ -21,6 +21,8 @@ const COUNTERS: Counter[] = [
   { key: "data", label: (n) => `data-quality issue${n === 1 ? "" : "s"}`, types: ["contradiction", "stale_deal", "no_owner", "missing_next_step", "lead_missing", "possible_duplicate"], tone: "text-slate-700" },
 ];
 
+const TOP_N = 10;
+
 function addDays(iso: string, n: number): string {
   const d = new Date(iso + "T00:00:00Z");
   d.setUTCDate(d.getUTCDate() + n);
@@ -38,6 +40,7 @@ export default function RadarBoard({ items, docs }: { items: RadarItem[]; docs: 
   const [typeFilter, setTypeFilter] = useState<string>("all");
   const [ownerFilter, setOwnerFilter] = useState<string>("all");
   const [showHidden, setShowHidden] = useState(false);
+  const [showAll, setShowAll] = useState(false);
   const [openDoc, setOpenDoc] = useState<{ doc: DocumentRecord; quote: string } | null>(null);
 
   const docById = useMemo(() => new Map(docs.map((d) => [d.id, d])), [docs]);
@@ -47,7 +50,11 @@ export default function RadarBoard({ items, docs }: { items: RadarItem[]; docs: 
   const visible = items.filter((i) => !isHidden(store.radar[i.id]));
   const hiddenCount = items.length - visible.length;
 
-  const shown = (showHidden ? items.filter((i) => isHidden(store.radar[i.id])) : visible).filter((i) => {
+  // Rank = position among all active items, so a card keeps its number when filters are applied.
+  const rankOf = new Map(visible.map((i, idx) => [i.id, idx + 1]));
+
+  // Filters apply across ALL items; only the display is limited to the top 10 (avoids alert fatigue).
+  const matching = (showHidden ? items.filter((i) => isHidden(store.radar[i.id])) : visible).filter((i) => {
     if (typeFilter.startsWith("group:")) {
       const c = COUNTERS.find((c) => c.key === typeFilter.slice(6));
       if (c && !c.types.includes(i.type)) return false;
@@ -56,6 +63,7 @@ export default function RadarBoard({ items, docs }: { items: RadarItem[]; docs: 
     if (ownerFilter !== "all" && ownerFilter !== "none" && i.owner !== ownerFilter) return false;
     return true;
   });
+  const shown = showAll || showHidden ? matching : matching.slice(0, TOP_N);
 
   return (
     <div className="space-y-5">
@@ -102,7 +110,8 @@ export default function RadarBoard({ items, docs }: { items: RadarItem[]; docs: 
           <option value="none">No owner</option>
         </select>
         <span className="text-slate-500">
-          Showing {shown.length} of {showHidden ? hiddenCount : visible.length}
+          Showing {shown.length} of {matching.length}
+          {matching.length !== (showHidden ? hiddenCount : visible.length) && " matching"}
         </span>
         {(hiddenCount > 0 || showHidden) && (
           <button onClick={() => setShowHidden(!showHidden)} className="ml-auto text-accent-600 hover:underline">
@@ -112,10 +121,10 @@ export default function RadarBoard({ items, docs }: { items: RadarItem[]; docs: 
       </div>
 
       <ol className="space-y-3">
-        {shown.map((item, idx) => (
+        {shown.map((item) => (
           <RadarCard
             key={item.id}
-            rank={showHidden ? null : idx + 1}
+            rank={showHidden ? null : rankOf.get(item.id) ?? null}
             item={item}
             action={store.radar[item.id]}
             docById={docById}
@@ -124,6 +133,17 @@ export default function RadarBoard({ items, docs }: { items: RadarItem[]; docs: 
         ))}
         {shown.length === 0 && <li className="py-10 text-center text-sm text-slate-500">Nothing here.</li>}
       </ol>
+
+      {!showHidden && matching.length > TOP_N && (
+        <div className="text-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50"
+          >
+            {showAll ? `Show top ${TOP_N} only` : `Show all (${matching.length})`}
+          </button>
+        </div>
+      )}
 
       <DocPanel doc={openDoc?.doc ?? null} highlight={openDoc?.quote} onClose={() => setOpenDoc(null)} />
     </div>

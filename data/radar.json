@@ -58,7 +58,7 @@
           "quote": "Rajesh needs your data-handling and hosting details before we proceed — he'll send a questionnaire."
         }
       ],
-      "suggested_next_action": "Reply to Dr. — answer what they asked in the 25 Jun 2026 message.",
+      "suggested_next_action": "Reply to Dr. Lisa Wong — answer what they asked in the 25 Jun 2026 message.",
       "score": 170,
       "urgency_text": "Waiting 15 days",
       "merged": 1
@@ -262,7 +262,7 @@
           "quote": "Can the ingestion layer handle HL7 feeds from our older lab systems, or only the FHIR APIs mentioned in section 3?"
         }
       ],
-      "suggested_next_action": "Reply to Dr. — answer what they asked in the 16 Jun 2026 message.",
+      "suggested_next_action": "Reply to Dr. Sanjay Kulkarni — answer what they asked in the 16 Jun 2026 message.",
       "score": 101.3,
       "urgency_text": "Waiting 24 days",
       "merged": 1
@@ -658,6 +658,34 @@
       "score": 75,
       "urgency_text": "Due in 4 days (14 Jul 2026)",
       "merged": 2
+    },
+    {
+      "id": "promise_due:L-1011:1",
+      "type": "promise_due",
+      "source": "ai",
+      "account": "AgroLink",
+      "lead_ids": [
+        "L-1011"
+      ],
+      "summary": "Dhaval's action from the 1 Jul call: send AgroLink the proposal by 10 Jul (today).",
+      "evidence": [
+        {
+          "file": "2026-07-01_agrolink_budget_call.md",
+          "quote": "action: proposal — Dhaval — by 10 Jul"
+        }
+      ],
+      "owner": "Dhaval",
+      "value_usd": 35000,
+      "value_source": "quote",
+      "due_date": "2026-07-10",
+      "date_clear": true,
+      "days_waiting": null,
+      "days_overdue": null,
+      "days_until": 0,
+      "suggested_next_action": "Dhaval to send the mandi-price pipeline proposal today.",
+      "score": 74.4,
+      "urgency_text": "Due today (10 Jul 2026)",
+      "merged": 1
     },
     {
       "source": "rule",
@@ -2362,7 +2390,7 @@
       "merged": 1
     },
     {
-      "id": "contradiction:L-1011:1",
+      "id": "contradiction:L-1011:2",
       "type": "contradiction",
       "source": "ai",
       "account": "AgroLink",

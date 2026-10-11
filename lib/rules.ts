@@ -87,6 +87,17 @@ function attendees(text: string): string {
   return (text.match(/(?:Attendees|Present):\**\s*([^\n]*)/i)?.[1] ?? "").toLowerCase();
 }
 
+// How to address a client in a suggested action: first name, but keep the full name when it starts with a
+// title or an initial ("Dr. Lisa Wong", "Mr. Naidu", "R. Subramaniam") so we never end up with just "Dr.".
+export function addressName(name: string | null): string {
+  if (!name) return "the client";
+  const parts = name.trim().split(/\s+/);
+  const first = parts[0];
+  const isTitle = /^(dr|mr|mrs|ms|prof)\.?$/i.test(first);
+  const isInitial = /^([A-Z]\.)+$/.test(first);
+  return isTitle || isInitial ? parts.join(" ") : first;
+}
+
 function firstName(nameAndEmail: string | null): string | null {
   if (!nameAndEmail) return null;
   const m = nameAndEmail.match(/^\s*([^<,]+?)\s*</);
@@ -143,7 +154,7 @@ export function runRules(accounts: Account[], documents: DocumentRecord[], csvTe
         owner: acc?.owner ?? firstName(last.to),
         ...valueOf(acc),
         days_waiting: days,
-        suggested_next_action: `Reply to ${who?.split(" ")[0] ?? "the client"} — answer what they asked in the ${formatDate(last.date)} message.`,
+        suggested_next_action: `Reply to ${addressName(who)} — answer what they asked in the ${formatDate(last.date)} message.`,
       }),
     );
   }
