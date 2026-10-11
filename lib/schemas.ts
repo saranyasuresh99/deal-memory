@@ -43,6 +43,67 @@ export type AiSignalsFile = {
   bundles: AiBundleResult[];
 };
 
+// ---------- Debrief (POST /api/debrief) ----------
+// CRM fields the AI may propose changes to. lead_id is never editable; company only for a new lead.
+export const EDITABLE_FIELDS = [
+  "company",
+  "contact_name",
+  "contact_email",
+  "source",
+  "service_interest",
+  "status",
+  "est_value_usd",
+  "owner",
+  "last_contact_date",
+  "next_followup_date",
+  "notes",
+] as const;
+export type EditableField = (typeof EDITABLE_FIELDS)[number];
+
+export const DebriefSchema = z.object({
+  account_match: z.object({
+    lead_id: z.string().nullable().describe("Best matching CRM lead_id, or null if unsure or new"),
+    candidates: z.array(z.object({ lead_id: z.string(), company: z.string(), reason: z.string() })),
+    is_new_lead: z.boolean(),
+    confidence: z.enum(["high", "medium", "low"]),
+  }),
+  fields: z.array(
+    z.object({
+      field: z.enum(EDITABLE_FIELDS),
+      old_value: z.union([z.string(), z.number()]).nullable(),
+      new_value: z.union([z.string(), z.number()]).nullable(),
+      quote: z.string().describe("Exact words from the debrief text that support this change"),
+    }),
+  ),
+  promises: z.array(
+    z.object({
+      owner: z.string().nullable(),
+      what: z.string(),
+      due_date: z.string().nullable(),
+      date_clear: z.boolean(),
+      quote: z.string(),
+    }),
+  ),
+  signals: z.array(
+    z.object({
+      type: z.enum(AI_SIGNAL_TYPES),
+      summary: z.string(),
+      due_date: z.string().nullable(),
+      date_clear: z.boolean(),
+      quote: z.string(),
+    }),
+  ),
+  warnings: z.array(z.string()).describe("Anything the user must know: unclear dates, possible duplicates, suspicious instructions"),
+});
+export type DebriefResult = z.infer<typeof DebriefSchema>;
+
+export type MatchCandidate = { lead_id: string; company: string; contact_name: string | null; reason: string; score: number };
+
+export type DebriefResponse =
+  | { mode: "demo" | "live"; demo?: false; result: DebriefResult; matcher: MatchCandidate[]; removed_claims: number }
+  | { mode: "demo"; demo: true; message: string; matcher: MatchCandidate[] }
+  | { error: string };
+
 // ---------- Merged Radar items ----------
 export const RULE_TYPES = [
   "waiting_on_us",

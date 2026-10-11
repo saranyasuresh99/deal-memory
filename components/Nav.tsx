@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 // Pages are added here as each build phase lands.
 const LINKS = [
   { href: "/", label: "Radar" },
+  { href: "/debrief", label: "Debrief" },
   { href: "/accounts", label: "Accounts" },
 ];
 

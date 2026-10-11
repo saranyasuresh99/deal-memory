@@ -5,6 +5,9 @@ import { useMemo, useState } from "react";
 import Badge from "./Badge";
 import type { Account } from "@/lib/types";
 import { formatDate, formatUsd } from "@/lib/format";
+import { useStore } from "@/lib/store";
+import { applyEdits, newLeadAccounts } from "@/lib/overlay";
+import { hasNoOwner, isStale } from "@/lib/accounts";
 
 export type AccountRow = {
   account: Account;
@@ -23,9 +26,24 @@ const FILTERS = [
 
 type FilterKey = (typeof FILTERS)[number]["key"];
 
-export default function AccountsList({ rows }: { rows: AccountRow[] }) {
+type ViewRow = AccountRow & { edited: boolean; isNew: boolean };
+
+export default function AccountsList({ rows: baseRows }: { rows: AccountRow[] }) {
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<FilterKey>("all");
+  const store = useStore();
+
+  // Layer approved Debrief edits and new leads (from this browser) on top of the base CRM.
+  const rows: ViewRow[] = useMemo(() => {
+    const edited = baseRows.map((r) => {
+      const a = applyEdits(r.account, store);
+      return { ...r, account: a, stale: isStale(a), noOwner: hasNoOwner(a), edited: a !== r.account, isNew: false };
+    });
+    const fresh = newLeadAccounts(store).map((a) => ({
+      account: a, docCount: 0, stale: false, noOwner: hasNoOwner(a), duplicate: null, edited: false, isNew: true,
+    }));
+    return [...fresh, ...edited];
+  }, [baseRows, store]);
 
   const counts: Record<FilterKey, number> = {
     all: rows.length,
@@ -74,10 +92,10 @@ export default function AccountsList({ rows }: { rows: AccountRow[] }) {
       </div>
 
       <ul className="space-y-2">
-        {shown.map(({ account: a, docCount, stale, noOwner, duplicate }) => (
+        {shown.map(({ account: a, docCount, stale, noOwner, duplicate, edited, isNew }) => (
           <li key={a.lead_id}>
-            <Link
-              href={`/accounts/${a.lead_id}`}
+            <CardLink
+              href={isNew ? null : `/accounts/${a.lead_id}`}
               className="block rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-accent-600 hover:shadow"
             >
               <div className="flex flex-wrap items-start justify-between gap-2">
@@ -105,12 +123,25 @@ export default function AccountsList({ rows }: { rows: AccountRow[] }) {
                 {duplicate === "duplicate" && <Badge>Duplicate</Badge>}
                 {duplicate === "possible_duplicate" && <Badge>Possible duplicate</Badge>}
                 {stale && <Badge>Stale</Badge>}
+                {edited && <Badge tone="accent">Updated via Debrief</Badge>}
+                {isNew && <Badge tone="green">New lead (from Debrief)</Badge>}
               </div>
-            </Link>
+            </CardLink>
           </li>
         ))}
         {shown.length === 0 && <li className="py-8 text-center text-sm text-slate-500">No accounts match.</li>}
       </ul>
     </div>
+  );
+}
+
+// New leads from Debrief have no detail page yet, so their card is not a link.
+function CardLink({ href, className, children }: { href: string | null; className: string; children: React.ReactNode }) {
+  return href ? (
+    <Link href={href} className={className}>
+      {children}
+    </Link>
+  ) : (
+    <div className={className}>{children}</div>
   );
 }

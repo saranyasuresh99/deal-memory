@@ -12,11 +12,46 @@ export type RadarAction = {
   at: string; // demo "today"
 };
 
-export type Store = {
-  radar: Record<string, RadarAction>;
+export type FieldValue = string | number | null;
+
+// A lead created from a debrief (not in the base CRM). id looks like "NEW-1".
+export type NewLead = { lead_id: string; fields: Record<string, FieldValue> };
+
+export type ApprovedPromise = {
+  id: string;
+  lead_id: string | null;
+  account: string;
+  owner: string | null;
+  what: string;
+  due_date: string | null;
+  date_clear: boolean;
+  quote: string;
+  source: "debrief";
+  status: "open" | "done";
+  approved_on: string;
 };
 
-const EMPTY: Store = { radar: {} };
+export type AuditEntry = {
+  who: string;
+  when: string;
+  lead_id: string;
+  account: string;
+  field: string;
+  before: FieldValue;
+  after: FieldValue;
+  quote: string;
+  edited: boolean; // true if the person changed the AI's proposed value before approving
+};
+
+export type Store = {
+  radar: Record<string, RadarAction>;
+  accountEdits: Record<string, Record<string, FieldValue>>; // lead_id -> field -> approved value
+  newLeads: NewLead[];
+  promises: ApprovedPromise[];
+  audit: AuditEntry[];
+};
+
+const EMPTY: Store = { radar: {}, accountEdits: {}, newLeads: [], promises: [], audit: [] };
 
 let cache: Store | null = null;
 const listeners = new Set<() => void>();

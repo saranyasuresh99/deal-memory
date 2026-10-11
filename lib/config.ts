@@ -14,6 +14,13 @@ export const STALE_DAYS = 30;
 // The domain AtliQ people email from. Anyone else is a client/prospect.
 export const INTERNAL_DOMAIN = "atliq.com";
 
+// Who approves changes in this prototype (shown in the audit log).
+export const DEMO_USER = "Founder (demo)";
+
+// Shown when Demo mode gets input it has no precomputed answer for.
+export const DEMO_MESSAGE =
+  "Demo mode — live AI is switched off in this prototype. Try one of the sample buttons, or add an API key to enable live AI.";
+
 // Exact refusal sentence for Ask (rule 7).
 export const REFUSAL =
   "I don't have enough information in the CRM, emails or notes to answer that.";
