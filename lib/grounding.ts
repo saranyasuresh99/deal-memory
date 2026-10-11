@@ -6,7 +6,7 @@ import { quoteInText } from "./quotes";
 import { documents } from "./data";
 import { companyAliases, mentionsAlias } from "./matching";
 import { BRIEF_SECTIONS, type AskResult, type Brief, type CitedLine } from "./schemas";
-import type { DocumentRecord } from "./types";
+import type { Account, DocumentRecord } from "./types";
 
 let crmCache: string | null = null;
 export function crmCsv(): string {
@@ -37,13 +37,24 @@ export function verifyLines(lines: CitedLine[]): { kept: CitedLine[]; removed: n
   return { kept, removed };
 }
 
-export function finalizeBrief(raw: Brief): { brief: Brief; removed: number } {
+// The CRM row's first 10 columns (lead_id … created_date), exactly as in the CSV — a verifiable quote.
+export function crmRowQuote(leadId: string): string | null {
+  const line = crmCsv().split(/\r?\n/).find((l) => l.startsWith(leadId + ","));
+  return line ? line.split(",").slice(0, 10).join(",") : null;
+}
+
+export function finalizeBrief(raw: Brief, account: Account): { brief: Brief; removed: number } {
   let removed = 0;
   const brief = {} as Brief;
   for (const { key } of BRIEF_SECTIONS) {
     const r = verifyLines(raw[key]);
     brief[key] = r.kept;
     removed += r.removed;
+  }
+  // Guarantee: an account with no owner always gets a warning, even if the AI forgot it.
+  const quote = crmRowQuote(account.lead_id);
+  if (account.owner === null && brief.warnings.length === 0 && quote) {
+    brief.warnings = [{ text: "No owner in the CRM — assign one before the call.", citations: [{ file: "crm_export.csv", quote }] }];
   }
   return { brief, removed };
 }

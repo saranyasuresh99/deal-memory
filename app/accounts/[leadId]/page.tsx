@@ -45,7 +45,7 @@ export default async function AccountPage({ params }: { params: Promise<{ leadId
         <AccountFields account={a} />
       </section>
 
-      <BriefPanel leadId={a.lead_id} docs={docs} />
+      <BriefPanel account={a} docs={docs} />
 
       <section>
         <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">

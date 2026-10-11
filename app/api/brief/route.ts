@@ -37,7 +37,7 @@ export async function POST(req: Request) {
   if (live) {
     try {
       const raw = await structuredSonnet({ system: BRIEF_SYSTEM, user: briefUserPrompt(account, docs), schema: BriefSchema });
-      const { brief, removed } = finalizeBrief(raw);
+      const { brief, removed } = finalizeBrief(raw, account);
       return json({ mode, lead_id: leadId, no_history: false, brief, removed_claims: removed });
     } catch (err) {
       return json({ error: friendlyError(err) }, 502);
@@ -48,6 +48,6 @@ export async function POST(req: Request) {
   if (!entry) return json({ mode: "demo", demo: true, message: DEMO_MESSAGE });
   const parsed = BriefSchema.safeParse(entry.brief);
   if (!parsed.success) return json({ error: "The demo brief for this account is invalid." }, 500);
-  const { brief, removed } = finalizeBrief(parsed.data);
+  const { brief, removed } = finalizeBrief(parsed.data, account);
   return json({ mode, lead_id: leadId, no_history: false, brief, removed_claims: removed });
 }

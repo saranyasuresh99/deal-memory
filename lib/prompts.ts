@@ -126,6 +126,9 @@ You write a pre-call brief for an AtliQ founder who is about to speak to a clien
 the CRM row plus every linked email and meeting note.
 
 Fill these sections (each is a list of short lines; use an empty list when there is nothing):
+- warnings: shown first. If the CRM owner is empty, say so (cite the CRM row) and mention the next scheduled interaction
+  if there is one. Suggest an AtliQ person as owner ONLY if a document shows them on the thread (sender, recipient or
+  attendee) — cite that document. Never guess an owner.
 - last_touch: the most recent interaction(s) — date, who, what happened.
 - what_they_want: the client's needs, scope, budget and decision-makers.
 - open_promises: things an AtliQ person committed to that are not shown as delivered (with owner and date if stated).

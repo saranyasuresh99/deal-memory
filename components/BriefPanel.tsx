@@ -4,7 +4,9 @@ import { useState } from "react";
 import CitedLines from "./CitedLines";
 import DocPanel from "./DocPanel";
 import { BRIEF_SECTIONS, type Brief, type BriefResponse } from "@/lib/schemas";
-import type { DocumentRecord } from "@/lib/types";
+import type { Account, DocumentRecord } from "@/lib/types";
+import { useStore } from "@/lib/store";
+import { applyEdits } from "@/lib/overlay";
 
 type View =
   | { kind: "idle" }
@@ -13,7 +15,10 @@ type View =
   | { kind: "message"; message: string }
   | { kind: "brief"; brief: Brief; mode: "demo" | "live"; removed: number };
 
-export default function BriefPanel({ leadId, docs }: { leadId: string; docs: DocumentRecord[] }) {
+export default function BriefPanel({ account, docs }: { account: Account; docs: DocumentRecord[] }) {
+  const leadId = account.lead_id;
+  // If an owner was approved via Debrief in this browser, the "no owner" warning no longer applies.
+  const ownerNow = applyEdits(account, useStore()).owner;
   const [view, setView] = useState<View>({ kind: "idle" });
   const [open, setOpen] = useState<{ doc: DocumentRecord; quote: string } | null>(null);
   const byId = new Map(docs.map((d) => [d.id, d]));
@@ -58,7 +63,16 @@ export default function BriefPanel({ leadId, docs }: { leadId: string; docs: Doc
             email, note or CRM row it comes from.
             {view.removed > 0 && ` ${view.removed} line(s) were dropped because their quote could not be found.`}
           </p>
-          {BRIEF_SECTIONS.map(({ key, label }) => (
+          {(() => {
+            const warnings = view.brief.warnings.filter((w) => !(ownerNow && w.text.startsWith("No owner")));
+            return warnings.length > 0 ? (
+              <div className="rounded-lg border border-amber-300 bg-amber-50 p-3">
+                <h3 className="mb-1.5 text-sm font-semibold text-amber-900">⚠ Before the call</h3>
+                <CitedLines lines={warnings} canOpen={(f) => byId.has(f)} onOpen={(f, quote) => setOpen({ doc: byId.get(f)!, quote })} />
+              </div>
+            ) : null;
+          })()}
+          {BRIEF_SECTIONS.filter((s) => s.key !== "warnings").map(({ key, label }) => (
             <div key={key}>
               <h3 className="mb-1.5 text-sm font-semibold text-slate-700">{label}</h3>
               {view.brief[key].length === 0 ? (

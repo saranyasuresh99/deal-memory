@@ -118,6 +118,7 @@ export type CitedLine = z.infer<typeof CitedLineSchema>;
 
 // ---------- Pre-call Brief (POST /api/brief) ----------
 export const BRIEF_SECTIONS = [
+  { key: "warnings", label: "Before the call" },
   { key: "last_touch", label: "Last touch" },
   { key: "what_they_want", label: "What they want" },
   { key: "open_promises", label: "Open promises (from AtliQ)" },
@@ -127,6 +128,7 @@ export const BRIEF_SECTIONS = [
 ] as const;
 
 export const BriefSchema = z.object({
+  warnings: z.array(CitedLineSchema).describe("Data problems to fix before the call, e.g. no owner in the CRM"),
   last_touch: z.array(CitedLineSchema),
   what_they_want: z.array(CitedLineSchema),
   open_promises: z.array(CitedLineSchema),

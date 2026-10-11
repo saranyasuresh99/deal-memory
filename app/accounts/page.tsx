@@ -1,4 +1,5 @@
 import AccountsList, { type AccountRow } from "@/components/AccountsList";
+import AccountsSubtitle from "@/components/AccountsSubtitle";
 import { accounts, documentsFor } from "@/lib/data";
 import { duplicatesFor, findDuplicates, hasNoOwner, isStale } from "@/lib/accounts";
 
@@ -23,9 +24,7 @@ export default function AccountsPage() {
     <div className="space-y-5">
       <div>
         <h1 className="text-2xl font-semibold tracking-tight">Accounts</h1>
-        <p className="mt-1 text-slate-600">
-          All {accounts.length} CRM records, with linked emails and meeting notes. Click one to see its history.
-        </p>
+        <AccountsSubtitle crmCount={accounts.length} />
       </div>
       <AccountsList rows={rows} />
     </div>

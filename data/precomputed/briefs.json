@@ -11,6 +11,7 @@
       "lead_id": "L-1001",
       "company": "Acme Retail Group",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "24 Jun quarterly review with Priya and Vikas (Dhaval, Ayush): dashboard adoption is strong.",
@@ -101,6 +102,7 @@
       "lead_id": "L-1002",
       "company": "FinServe Capital",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "30 Jun intro call (Karandeep) with Arjun and a colleague, possibly from risk.",
@@ -181,6 +183,7 @@
       "lead_id": "L-1003",
       "company": "Meridian Healthcare",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "16 Jun: Sanjay sent two proposal questions; on 6 Jul nobody at AtliQ was sure they had been answered.",
@@ -251,6 +254,7 @@
       "lead_id": "L-1004",
       "company": "GlobalMart",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "26 Jun: Karandeep told Neha he would discuss with the team and come back on the phasing.",
@@ -340,6 +344,7 @@
       "lead_id": "L-1005",
       "company": "Northwind Logistics",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "13 Jun: Dhaval replied to Tom and promised sample dashboard concepts the following week.",
@@ -401,6 +406,7 @@
       "lead_id": "L-1006",
       "company": "BlueOrchid Hotels",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "19 Jun call with Farah (Jay).",
@@ -462,6 +468,7 @@
       "lead_id": "L-1007",
       "company": "Kaveri Textiles",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "8 Jul second demo with Subbu and Senthil (Jay, Pranav); Subbu was visibly relieved compared with the old vendor.",
@@ -532,6 +539,7 @@
       "lead_id": "L-1008",
       "company": "Zenlytics",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "5 Jun: Bhavin confirmed a Wednesday 3pm intro call with Maya.",
@@ -584,6 +592,7 @@
       "lead_id": "L-1009",
       "company": "HealthFirst Clinics",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "22 Apr: Karandeep sent re-phased pricing (Phase 1 at 18k, Phase 2 at 12k).",
@@ -654,6 +663,21 @@
       "lead_id": "L-1010",
       "company": "EduSpark",
       "brief": {
+        "warnings": [
+          {
+            "text": "No owner in the CRM. Vikram's emails went to Jay, so Jay is the AtliQ person on the thread; suggest assigning him.",
+            "citations": [
+              {
+                "file": "crm_export.csv",
+                "quote": "L-1010,EduSpark,Vikram Joshi,vikram@eduspark.com,Website,AI/ML Solutions,New,,,2026-06-25"
+              },
+              {
+                "file": "2026-07-08_eduspark_website_enquiry.md",
+                "quote": "Jay <jay@atliq.com>"
+              }
+            ]
+          }
+        ],
         "last_touch": [
           {
             "text": "8 Jul: Vikram emailed Jay directly because his 25 Jun website enquiry got no reply.",
@@ -706,6 +730,7 @@
       "lead_id": "L-1011",
       "company": "AgroLink",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "1 Jul call between Dhaval and Harpreet, 2.5 weeks after TechSummit.",
@@ -771,6 +796,7 @@
       "lead_id": "L-1012",
       "company": "UrbanNest Realty",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "4 May: Jay followed up with a rough approach note; nothing later in the record.",
@@ -803,6 +829,7 @@
       "lead_id": "L-1013",
       "company": "PayTrack",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "2 Jul: Shreya shared quarterly model review notes — detection precision is holding up well.",
@@ -874,6 +901,7 @@
       "lead_id": "L-1014",
       "company": "VoltEnergy",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "1 Jul: Marcus said the TCO comparison would help — his board wants 3-year numbers.",
@@ -936,6 +964,7 @@
       "lead_id": "L-1015",
       "company": "ClearPath Insurance",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "9 Jun: Deepa wrote to restart the claims data warehouse; nothing later in the record.",
@@ -987,6 +1016,7 @@
       "lead_id": "L-1016",
       "company": "MEDTRACK LABS",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "13 Jun TechSummit conversation with Rohit.",
@@ -1033,6 +1063,7 @@
       "lead_id": "L-1017",
       "company": "ShopSwift",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "29 Jun: Elena confirmed budget after a call the day before; no reply in the record.",
@@ -1085,6 +1116,7 @@
       "lead_id": "L-1018",
       "company": "DataNest",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "2 Jul: Karandeep proposed a call on Wed 8 Jul to lock the renewal (the outcome is not recorded).",
@@ -1170,6 +1202,7 @@
       "lead_id": "L-1020",
       "company": "FreshCart",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "16 Jun: Ananya wrote that she never got Dhaval's promised call.",
@@ -1242,6 +1275,7 @@
       "lead_id": "L-1021",
       "company": "SteelCore Industries",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "14 Feb: Jay answered Mr. Verma's price objection and offered a call; nothing later in the record.",
@@ -1284,6 +1318,7 @@
       "lead_id": "L-1022",
       "company": "TravelHub",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "Met Nadia at TechSummit Mumbai (debrief of 14 Jun) — early stage.",
@@ -1316,6 +1351,7 @@
       "lead_id": "L-1023",
       "company": "FinEdge Bank",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "19 Jun: Suresh said compliance cleared AtliQ and asked Bhavin to confirm availability.",
@@ -1381,6 +1417,7 @@
       "lead_id": "L-1025",
       "company": "CloudNine SaaS",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "6 Jul: Dev chased the references.",
@@ -1447,6 +1484,7 @@
       "lead_id": "L-1026",
       "company": "Sunrise Foods",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "14 Jun: Dhaval said he'd set up a call after his travel.",
@@ -1536,6 +1574,7 @@
       "lead_id": "L-1027",
       "company": "Meridian Health LLC",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "This record is a duplicate of L-1003 (Bhavin's open proposal with the same hospital group).",
@@ -1615,6 +1654,21 @@
       "lead_id": "L-1028",
       "company": "ApexAuto Parts",
       "brief": {
+        "warnings": [
+          {
+            "text": "No owner in the CRM. Jay sent both outreach emails (last on 20 Mar); suggest assigning him or closing the lead.",
+            "citations": [
+              {
+                "file": "crm_export.csv",
+                "quote": "L-1028,ApexAuto Parts,Ravi Shankar,ravi@apexauto.in,Cold Outreach,,New,,,2026-03-02"
+              },
+              {
+                "file": "2026-03-04_apexauto_cold_outreach.md",
+                "quote": "Jay <jay@atliq.com>"
+              }
+            ]
+          }
+        ],
         "last_touch": [
           {
             "text": "20 Mar: Jay's second cold email; nothing later in the record.",
@@ -1637,6 +1691,7 @@
       "lead_id": "L-1029",
       "company": "NovaPharma",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "1 Jul: Bhavin forwarded the security questionnaire to Pranav; on 7 Jul Pranav had not responded.",
@@ -1720,6 +1775,7 @@
       "lead_id": "L-1030",
       "company": "GreenGrid Solar",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "9 Jul discovery call with Aditya and plant head Ramesh (Jay).",
@@ -1800,6 +1856,7 @@
       "lead_id": "L-1031",
       "company": "ByteBridge",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "12 May: Karandeep promised two case studies and a reference by Friday; nothing later in the record.",
@@ -1861,6 +1918,7 @@
       "lead_id": "L-1032",
       "company": "Trustline NBFC",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "6 Jul: Dhaval promised the revised contract this week and proposed a call on Thu 9 Jul.",
@@ -1917,6 +1975,25 @@
       "lead_id": "L-1033",
       "company": "OceanFreight",
       "brief": {
+        "warnings": [
+          {
+            "text": "No owner in the CRM — the call is on 14 Jul (8:00 CET / 11:30 IST). Jay is the AtliQ person on the email thread; suggest assigning him.",
+            "citations": [
+              {
+                "file": "crm_export.csv",
+                "quote": "L-1033,OceanFreight,Karl Nilsen,karl@oceanfreight.no,Website,Data Engineering,New,,,2026-06-28"
+              },
+              {
+                "file": "2026-06-28_oceanfreight_timezones.md",
+                "quote": "14 July 8:00 CET / 11:30 IST confirmed — invite sent."
+              },
+              {
+                "file": "2026-06-28_oceanfreight_timezones.md",
+                "quote": "Jay <jay@atliq.com>"
+              }
+            ]
+          }
+        ],
         "last_touch": [
           {
             "text": "3 Jul: Jay confirmed a call for 14 Jul, 8:00 CET / 11:30 IST.",
@@ -1959,6 +2036,7 @@
       "lead_id": "L-1034",
       "company": "SmartServe Hospitality",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "5 Apr intro call with Pooja and Arvind (Jay).",
@@ -2029,6 +2107,7 @@
       "lead_id": "L-1035",
       "company": "Quantia Analytics",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "30 Sep 2025: James declined on timing, not fit.",
@@ -2071,6 +2150,7 @@
       "lead_id": "L-1036",
       "company": "LoopMart",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "26 Jun pricing call (Karandeep) with Sania and her finance person; her response was not written down.",
@@ -2112,6 +2192,7 @@
       "lead_id": "L-1037",
       "company": "Vertex Constructions",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "20 Jan: Jay said he would reconnect in February after Mr. Naidu's out-of-office; nothing later.",
@@ -2154,6 +2235,7 @@
       "lead_id": "L-1038",
       "company": "MiraHealth",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "Second call with Sophie on 6 Jul (Dhaval, from the airport).",
@@ -2205,6 +2287,25 @@
       "lead_id": "L-1039",
       "company": "Citywide Diagnostics",
       "brief": {
+        "warnings": [
+          {
+            "text": "No owner in the CRM — the call is on Mon 13 Jul. Karandeep is the AtliQ person on the email thread; suggest assigning him.",
+            "citations": [
+              {
+                "file": "crm_export.csv",
+                "quote": "L-1039,Citywide Diagnostics,Rakesh Gupta,rakesh@citywidediag.in,Referral,Data Engineering,New,,,2026-07-05"
+              },
+              {
+                "file": "2026-07-06_citywide_referral.md",
+                "quote": "How about Monday 13 July, 11am?"
+              },
+              {
+                "file": "2026-07-06_citywide_referral.md",
+                "quote": "Karandeep <karandeep@atliq.com>"
+              }
+            ]
+          }
+        ],
         "last_touch": [
           {
             "text": "7 Jul: Rakesh confirmed a call for Mon 13 Jul, 11am (Karandeep).",
@@ -2257,6 +2358,7 @@
       "lead_id": "L-1040",
       "company": "GlobalMart",
       "brief": {
+        "warnings": [],
         "last_touch": [
           {
             "text": "The linked emails are about the vendor-portal proposal with the same contact — this record may duplicate L-1004.",
