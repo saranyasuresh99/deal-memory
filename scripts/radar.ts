@@ -4,9 +4,9 @@
 // Pass --no-ai to skip regeneration even when a key is present.
 import fs from "node:fs";
 import path from "node:path";
-import { zodOutputFormat } from "@anthropic-ai/sdk/helpers/zod";
 import { MODELS, TODAY } from "../lib/config";
-import { friendlyError, getClient, isLiveMode } from "../lib/ai";
+import { friendlyError, isLiveMode } from "../lib/ai";
+import { structuredSonnet } from "../lib/claude";
 import { RADAR_SYSTEM, radarUserPrompt } from "../lib/prompts";
 import { runRules } from "../lib/rules";
 import { aiSignalToItem, rank } from "../lib/ranking";
@@ -34,7 +34,6 @@ function sourceText(file: string): string | null {
 
 async function regenerateWithClaude(): Promise<void> {
   const existing = read<AiSignalsFile>("data/ai_signals.json");
-  const client = getClient();
   const bundles: AiBundleResult[] = [];
   for (const b of existing.bundles) {
     const account = b.lead_id ? accounts.find((a) => a.lead_id === b.lead_id) ?? null : null;
@@ -44,14 +43,11 @@ async function regenerateWithClaude(): Promise<void> {
       continue;
     }
     try {
-      const res = await client.messages.parse({
-        model: MODELS.reasoning,
-        max_tokens: 8000,
+      const { signals } = await structuredSonnet({
         system: RADAR_SYSTEM,
-        messages: [{ role: "user", content: radarUserPrompt({ account, company: b.account, docs }) }],
-        output_config: { format: zodOutputFormat(AiSignalListSchema) },
+        user: radarUserPrompt({ account, company: b.account, docs }),
+        schema: AiSignalListSchema,
       });
-      const signals = res.parsed_output?.signals ?? [];
       bundles.push({ ...b, signals: signals.map((s) => ({ ...s, account: b.account, lead_id: b.lead_id })) });
       console.log(`  ${b.bundle_id}: ${signals.length} signal(s)`);
     } catch (err) {

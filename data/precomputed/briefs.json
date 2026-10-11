@@ -1,0 +1,2355 @@
+{
+  "generated_by": "Claude Code (Demo mode) — written during the build by following BRIEF_SYSTEM in lib/prompts.ts",
+  "mode": "demo",
+  "today": "2026-07-10",
+  "no_history": [
+    "L-1019",
+    "L-1024"
+  ],
+  "briefs": {
+    "L-1001": {
+      "lead_id": "L-1001",
+      "company": "Acme Retail Group",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "24 Jun quarterly review with Priya and Vikas (Dhaval, Ayush): dashboard adoption is strong.",
+            "citations": [
+              {
+                "file": "2026-06-24_acme_quarterly_review.md",
+                "quote": "Dashboard adoption strong: 40+ weekly active users across category teams."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Automate the monthly board pack, currently built by hand from dashboard screenshots (~5 person-days a month).",
+            "citations": [
+              {
+                "file": "2026-06-24_acme_quarterly_review.md",
+                "quote": "monthly board pack is assembled manually from dashboard screenshots. ~5 person-days/month"
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Scope note for report automation — Ayush, due 27 Jun; nothing later shows it was sent.",
+            "citations": [
+              {
+                "file": "2026-06-24_acme_quarterly_review.md",
+                "quote": "Scope note for report automation — Ayush — by 27 Jun"
+              }
+            ]
+          },
+          {
+            "text": "Call Ananya at FreshCart (Priya's referral) — no owner assigned.",
+            "citations": [
+              {
+                "file": "2026-06-24_acme_quarterly_review.md",
+                "quote": "Call Ananya @ FreshCart — ?"
+              }
+            ]
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "Priya asked whether AtliQ can automate the board reporting pack.",
+            "citations": [
+              {
+                "file": "2026-06-18_acme_retail_monthly_reports.md",
+                "quote": "Is that something you folks could automate?"
+              }
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "Support contract renewal is due in September; Priya signalled no issues.",
+            "citations": [
+              {
+                "file": "2026-06-24_acme_quarterly_review.md",
+                "quote": "Renewal of support contract due September. Priya signalled no issues."
+              }
+            ]
+          }
+        ],
+        "cross_sell": [
+          {
+            "text": "Seasonal inventory forecasting for Acme's ops side — a separate conversation with their COO.",
+            "citations": [
+              {
+                "file": "2026-06-24_acme_quarterly_review.md",
+                "quote": "Vikas mentioned ops side struggles with seasonal inventory forecasting"
+              }
+            ]
+          },
+          {
+            "text": "Priya referred FreshCart (Ananya Desai) for a customer portal.",
+            "citations": [
+              {
+                "file": "2026-06-18_acme_retail_monthly_reports.md",
+                "quote": "I passed your details to Ananya Desai at FreshCart"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "L-1002": {
+      "lead_id": "L-1002",
+      "company": "FinServe Capital",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "30 Jun intro call (Karandeep) with Arjun and a colleague, possibly from risk.",
+            "citations": [
+              {
+                "file": "2026-06-30_finserve_intro_call.md",
+                "quote": "30/6, Arjun + colleague (didn't catch name, risk team?)"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "ML credit scoring for thin-file customers.",
+            "citations": [
+              {
+                "file": "2026-06-30_finserve_intro_call.md",
+                "quote": "want ML for credit scoring on thin-file customers"
+              }
+            ]
+          },
+          {
+            "text": "Explainability for the regulator is a big deal for them.",
+            "citations": [
+              {
+                "file": "2026-06-30_finserve_intro_call.md",
+                "quote": "regulator explainability requirement — big deal for them"
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [
+          {
+            "text": "Budget has not been discussed yet.",
+            "citations": [
+              {
+                "file": "2026-06-30_finserve_intro_call.md",
+                "quote": "budget not discussed"
+              }
+            ]
+          },
+          {
+            "text": "Confirm the CRM entry is the right one (L-1002?) with Jay.",
+            "citations": [
+              {
+                "file": "2026-06-30_finserve_intro_call.md",
+                "quote": "crm entry exists? check with jay (L-1002?)"
+              }
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "Arjun is travelling the first two weeks of July — ping him after 15 Jul.",
+            "citations": [
+              {
+                "file": "2026-06-30_finserve_intro_call.md",
+                "quote": "arjun travelling first 2 wks of july, said ping him after 15th"
+              }
+            ]
+          }
+        ],
+        "cross_sell": [
+          {
+            "text": "Their data includes bank-statement PDFs — document extraction may be part of the work.",
+            "citations": [
+              {
+                "file": "2026-06-30_finserve_intro_call.md",
+                "quote": "bank statements (PDFs!)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "L-1003": {
+      "lead_id": "L-1003",
+      "company": "Meridian Healthcare",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "16 Jun: Sanjay sent two proposal questions; on 6 Jul nobody at AtliQ was sure they had been answered.",
+            "citations": [
+              {
+                "file": "2026-07-06_meridian_check.md",
+                "quote": "Nobody sure if we replied to Sanjay's proposal questions from 16 Jun."
+              }
+            ]
+          },
+          {
+            "text": "Sanjay also met Jay at the TechSummit booth, so the client is in the CRM twice (L-1003 and L-1027).",
+            "citations": [
+              {
+                "file": "2026-06-14_techsummit_debrief.md",
+                "quote": "Now sitting in CRM twice: L-1003 and L-1027."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A clinical data platform; Sanjay says AtliQ's proposal looks solid overall.",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "Thanks for the proposal. It looks solid overall."
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [
+          {
+            "text": "Can the ingestion layer handle HL7 feeds from older lab systems, or only FHIR APIs?",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "Can the ingestion layer handle HL7 feeds from our older lab systems, or only the FHIR APIs mentioned in section 3?"
+              }
+            ]
+          },
+          {
+            "text": "Does the 14-week timeline include UAT with their clinicians, or is UAT extra?",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "does that include UAT with our clinicians, or is that on top?"
+              }
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "They want to close before their budget review in mid-July (exact date not stated).",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "We'd like to close this out before our Q2 budget review in mid-July."
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1004": {
+      "lead_id": "L-1004",
+      "company": "GlobalMart",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "26 Jun: Karandeep told Neha he would discuss with the team and come back on the phasing.",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "let me discuss with the team and come back on the phasing."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A vendor portal; procurement liked the clickable prototype Pranav showed.",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "The clickable prototype Pranav showed in the demo landed well — procurement liked seeing something real."
+              }
+            ]
+          },
+          {
+            "text": "Scope is right, but the price is about 20% above what they can clear this year.",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "The scope is right but the number is about 20% above what they will clear this year."
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Karandeep: respond on the phasing \"by Friday\" — said on Friday 26 Jun, so the date is unclear; no later reply in the thread.",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "Will respond by Friday."
+              }
+            ]
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "Which option: move the analytics module to Phase 2, or keep full scope at a lower figure?",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "trim the analytics module to Phase 2, or hold the full scope at a lower figure"
+              }
+            ]
+          },
+          {
+            "text": "Does AtliQ do demand forecasting? (asked by their supply-chain colleague)",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "my colleague in supply chain asked whether you do demand forecasting"
+              }
+            ]
+          },
+          {
+            "text": "At the demo they asked about SSO and audit logs.",
+            "citations": [
+              {
+                "file": "2026-05-19_globalmart_demo.md",
+                "quote": "questions on SSO and audit logs"
+              }
+            ]
+          }
+        ],
+        "deadlines": [],
+        "cross_sell": [
+          {
+            "text": "Demand forecasting for GlobalMart's supply-chain team.",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "my colleague in supply chain asked whether you do demand forecasting"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "L-1005": {
+      "lead_id": "L-1005",
+      "company": "Northwind Logistics",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "13 Jun: Dhaval replied to Tom and promised sample dashboard concepts the following week.",
+            "citations": [
+              {
+                "file": "2026-06-11_northwind_crosssell.md",
+                "quote": "Let me send you a few sample dashboard concepts next week to react to."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A Power BI dashboard layer on top of the pipeline — their CEO wants \"something like that\".",
+            "citations": [
+              {
+                "file": "2026-06-11_northwind_crosssell.md",
+                "quote": "Does AtliQ also do the dashboard layer on top?"
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Sample dashboard concepts (due the week of 15 Jun) — nothing later shows they were sent.",
+            "citations": [
+              {
+                "file": "2026-06-11_northwind_crosssell.md",
+                "quote": "Let me send you a few sample dashboard concepts next week to react to."
+              }
+            ]
+          }
+        ],
+        "open_questions": [],
+        "deadlines": [],
+        "cross_sell": [
+          {
+            "text": "Dashboards on the existing warehouse would be a small, fast project.",
+            "citations": [
+              {
+                "file": "2026-06-11_northwind_crosssell.md",
+                "quote": "dashboards on top of your existing warehouse would be a small, fast project"
+              }
+            ]
+          },
+          {
+            "text": "Happy client — the pipeline has run for eight months without missing a beat (good reference).",
+            "citations": [
+              {
+                "file": "2026-06-11_northwind_crosssell.md",
+                "quote": "Eight months in and the data pipeline hasn't missed a beat"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "L-1006": {
+      "lead_id": "L-1006",
+      "company": "BlueOrchid Hotels",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "19 Jun call with Farah (Jay).",
+            "citations": [
+              {
+                "file": "2026-06-19_blueorchid_call.md",
+                "quote": "BlueOrchid — call w/ Farah 19/6 (Jay)"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Guest review analytics for 12 properties.",
+            "citations": [
+              {
+                "file": "2026-06-19_blueorchid_call.md",
+                "quote": "guest review analytics — 12 properties"
+              }
+            ]
+          },
+          {
+            "text": "Sentiment and theme dashboards, maybe alerts for bad reviews.",
+            "citations": [
+              {
+                "file": "2026-06-19_blueorchid_call.md",
+                "quote": "wants sentiment + theme dashboards, maybe alerts for bad reviews"
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Jay: approach note — but Farah's email isn't recorded yet.",
+            "citations": [
+              {
+                "file": "2026-06-19_blueorchid_call.md",
+                "quote": "said I'd send an approach note — need her email first"
+              }
+            ]
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "Farah asked what a pilot would cost.",
+            "citations": [
+              {
+                "file": "2026-06-19_blueorchid_call.md",
+                "quote": "asked what a pilot would cost"
+              }
+            ]
+          }
+        ],
+        "deadlines": [],
+        "cross_sell": []
+      }
+    },
+    "L-1007": {
+      "lead_id": "L-1007",
+      "company": "Kaveri Textiles",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "8 Jul second demo with Subbu and Senthil (Jay, Pranav); Subbu was visibly relieved compared with the old vendor.",
+            "citations": [
+              {
+                "file": "2026-07-08_kaveri_demo_round2.md",
+                "quote": "Subbu visibly relieved vs. what the local vendor gave them."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Dashboards for both plants in one view — scope grew since November.",
+            "citations": [
+              {
+                "file": "2026-07-08_kaveri_demo_round2.md",
+                "quote": "they've added a second unit, want both plants in one view"
+              }
+            ]
+          },
+          {
+            "text": "Data sits in Tally plus a legacy Access DB; extraction is the risky part.",
+            "citations": [
+              {
+                "file": "2026-07-08_kaveri_demo_round2.md",
+                "quote": "Senthil confirmed data sits in Tally + a legacy Access DB."
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Jay: revised quote for the 2-plant scope by 15 Jul.",
+            "citations": [
+              {
+                "file": "2026-07-08_kaveri_demo_round2.md",
+                "quote": "Revised quote (2-plant scope) — Jay — by 15 Jul"
+              }
+            ]
+          },
+          {
+            "text": "Jay: update the CRM, which still shows the deal as Lost.",
+            "citations": [
+              {
+                "file": "2026-07-08_kaveri_demo_round2.md",
+                "quote": "Update CRM — L-1007 still shows \"Lost\""
+              }
+            ]
+          }
+        ],
+        "open_questions": [],
+        "deadlines": [
+          {
+            "text": "Revised quote by 15 Jul; Subbu signalled budget flexibility this time.",
+            "citations": [
+              {
+                "file": "2026-07-08_kaveri_demo_round2.md",
+                "quote": "Signalled budget flexibility this time"
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1008": {
+      "lead_id": "L-1008",
+      "company": "Zenlytics",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "5 Jun: Bhavin confirmed a Wednesday 3pm intro call with Maya.",
+            "citations": [
+              {
+                "file": "2026-06-03_zenlytics_intro_call.md",
+                "quote": "Wednesday 3pm it is."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "2 data engineers with dbt + Snowflake experience, ideally starting August.",
+            "citations": [
+              {
+                "file": "2026-06-03_zenlytics_intro_call.md",
+                "quote": "We're looking for 2 data engineers with dbt + Snowflake experience, ideally starting August."
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Bhavin: calendar invite — nothing later shows it was sent.",
+            "citations": [
+              {
+                "file": "2026-06-03_zenlytics_intro_call.md",
+                "quote": "I'll send a calendar invite shortly."
+              }
+            ]
+          }
+        ],
+        "open_questions": [],
+        "deadlines": [
+          {
+            "text": "Engineers needed from August.",
+            "citations": [
+              {
+                "file": "2026-06-03_zenlytics_intro_call.md",
+                "quote": "ideally starting August"
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1009": {
+      "lead_id": "L-1009",
+      "company": "HealthFirst Clinics",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "22 Apr: Karandeep sent re-phased pricing (Phase 1 at 18k, Phase 2 at 12k).",
+            "citations": [
+              {
+                "file": "2026-04-20_healthfirst_board_update.md",
+                "quote": "Phase 1 (patient registration + appointments) at 18k, Phase 2 (records + billing integration) at 12k"
+              }
+            ]
+          },
+          {
+            "text": "7 Jul: Karandeep copied Anita to thank her for the Citywide introduction.",
+            "citations": [
+              {
+                "file": "2026-07-06_citywide_referral.md",
+                "quote": "Copying Anita to say thank you for the kind introduction."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A patient portal, priced so the first board approval is under 20k.",
+            "citations": [
+              {
+                "file": "2026-04-20_healthfirst_board_update.md",
+                "quote": "Board is more comfortable clearing under 20k in one go."
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [],
+        "deadlines": [
+          {
+            "text": "Board decides on the portal on 14 Jul.",
+            "citations": [
+              {
+                "file": "2026-04-20_healthfirst_board_update.md",
+                "quote": "now scheduled for 14 July"
+              }
+            ]
+          },
+          {
+            "text": "On 7 Jul the team asked whether to ping Anita before the board meets.",
+            "citations": [
+              {
+                "file": "2026-07-07_internal_prioritization.md",
+                "quote": "HealthFirst board meets 14 Jul — should we ping Anita before?"
+              }
+            ]
+          }
+        ],
+        "cross_sell": [
+          {
+            "text": "Anita referred Citywide Diagnostics.",
+            "citations": [
+              {
+                "file": "2026-07-06_citywide_referral.md",
+                "quote": "Dr. Anita Rao at HealthFirst spoke highly of your team."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "L-1010": {
+      "lead_id": "L-1010",
+      "company": "EduSpark",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "8 Jul: Vikram emailed Jay directly because his 25 Jun website enquiry got no reply.",
+            "citations": [
+              {
+                "file": "2026-07-08_eduspark_website_enquiry.md",
+                "quote": "I submitted an enquiry through your website on 25 June about an AI assistant for student queries and haven't heard back"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "An AI assistant for student queries, needed for admissions season.",
+            "citations": [
+              {
+                "file": "2026-07-08_eduspark_website_enquiry.md",
+                "quote": "The immediate need is actually for our admissions season (queries spike 10x in Aug–Sep)"
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [
+          {
+            "text": "The decision-maker is Prof. Meenakshi Iyer; Vikram offered a joint call.",
+            "citations": [
+              {
+                "file": "2026-07-08_eduspark_website_enquiry.md",
+                "quote": "that's Prof. Meenakshi Iyer, our Dean of Digital Learning. Happy to set up a joint call."
+              }
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "Budget window closes mid-August.",
+            "citations": [
+              {
+                "file": "2026-07-08_eduspark_website_enquiry.md",
+                "quote": "our budget window closes mid-August"
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1011": {
+      "lead_id": "L-1011",
+      "company": "AgroLink",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "1 Jul call between Dhaval and Harpreet, 2.5 weeks after TechSummit.",
+            "citations": [
+              {
+                "file": "2026-07-01_agrolink_budget_call.md",
+                "quote": "finally connected after techsummit (2.5 weeks!)"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Automated pipelines from 40+ mandis plus price alerts for their trader network.",
+            "citations": [
+              {
+                "file": "2026-07-01_agrolink_budget_call.md",
+                "quote": "they aggregate from 40+ mandis manually, want automated pipelines + price alerts for their trader network"
+              }
+            ]
+          },
+          {
+            "text": "Budget ~35–40k approved this FY; decision by Harpreet and their CEO, no committee.",
+            "citations": [
+              {
+                "file": "2026-07-01_agrolink_budget_call.md",
+                "quote": "~35-40k approved for this FY"
+              },
+              {
+                "file": "2026-07-01_agrolink_budget_call.md",
+                "quote": "decision: him + their CEO, no committee"
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Dhaval: proposal by 10 Jul (today).",
+            "citations": [
+              {
+                "file": "2026-07-01_agrolink_budget_call.md",
+                "quote": "action: proposal — Dhaval — by 10 Jul"
+              }
+            ]
+          }
+        ],
+        "open_questions": [],
+        "deadlines": [
+          {
+            "text": "Harpreet wants the proposal before 10 Jul and goes on leave on the 14th.",
+            "citations": [
+              {
+                "file": "2026-07-01_agrolink_budget_call.md",
+                "quote": "wants proposal before 10 July, he goes on leave 14th"
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1012": {
+      "lead_id": "L-1012",
+      "company": "UrbanNest Realty",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "4 May: Jay followed up with a rough approach note; nothing later in the record.",
+            "citations": [
+              {
+                "file": "2026-05-04_urbannest_no_response.md",
+                "quote": "Attaching a rough approach note."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A site-visit booking app.",
+            "citations": [
+              {
+                "file": "2026-05-04_urbannest_no_response.md",
+                "quote": "site-visit booking app"
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [],
+        "deadlines": [],
+        "cross_sell": []
+      }
+    },
+    "L-1013": {
+      "lead_id": "L-1013",
+      "company": "PayTrack",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "2 Jul: Shreya shared quarterly model review notes — detection precision is holding up well.",
+            "citations": [
+              {
+                "file": "2026-07-02_paytrack_phase2.md",
+                "quote": "Detection precision is holding up well."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Extend the fraud scoring to merchant onboarding; leadership seemed warm.",
+            "citations": [
+              {
+                "file": "2026-07-02_paytrack_phase2.md",
+                "quote": "the ops team wants the same scoring applied to merchant onboarding, not just transactions"
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [
+          {
+            "text": "Shreya asked for a one-pager on a merchant-risk module.",
+            "citations": [
+              {
+                "file": "2026-07-02_paytrack_phase2.md",
+                "quote": "if you sent us a one-pager on what a merchant-risk module would look like"
+              }
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "Their August planning cycle.",
+            "citations": [
+              {
+                "file": "2026-07-02_paytrack_phase2.md",
+                "quote": "before our August planning cycle"
+              }
+            ]
+          }
+        ],
+        "cross_sell": [
+          {
+            "text": "Merchant-risk module (phase 2).",
+            "citations": [
+              {
+                "file": "2026-07-02_paytrack_phase2.md",
+                "quote": "the ops team wants the same scoring applied to merchant onboarding, not just transactions"
+              }
+            ]
+          },
+          {
+            "text": "Shreya referred Nimbus Lending (Rhea, head of risk).",
+            "citations": [
+              {
+                "file": "2026-07-05_nimbus_lending_intro.md",
+                "quote": "Bhavin — meet Rhea, who heads risk at Nimbus Lending."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "L-1014": {
+      "lead_id": "L-1014",
+      "company": "VoltEnergy",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "1 Jul: Marcus said the TCO comparison would help — his board wants 3-year numbers.",
+            "citations": [
+              {
+                "file": "2026-06-15_voltenergy_competitor.md",
+                "quote": "That TCO comparison would actually help a lot — board asks for 3-year numbers."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Energy trading dashboards; they are also evaluating a Tableau consultancy.",
+            "citations": [
+              {
+                "file": "2026-06-15_voltenergy_competitor.md",
+                "quote": "we're also evaluating a Tableau consultancy for this"
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Karandeep offered a side-by-side TCO comparison; nothing later shows it was sent.",
+            "citations": [
+              {
+                "file": "2026-06-15_voltenergy_competitor.md",
+                "quote": "Happy to put both TCOs side by side if useful."
+              }
+            ]
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "Marcus asked for the TCO comparison this week (week of 1 Jul).",
+            "citations": [
+              {
+                "file": "2026-06-15_voltenergy_competitor.md",
+                "quote": "Can you send it this week?"
+              }
+            ]
+          }
+        ],
+        "deadlines": [],
+        "cross_sell": [
+          {
+            "text": "They already have Microsoft E5 — a cost argument for Power BI.",
+            "citations": [
+              {
+                "file": "2026-06-15_voltenergy_competitor.md",
+                "quote": "you're already on Microsoft E5"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "L-1015": {
+      "lead_id": "L-1015",
+      "company": "ClearPath Insurance",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "9 Jun: Deepa wrote to restart the claims data warehouse; nothing later in the record.",
+            "citations": [
+              {
+                "file": "2026-06-09_clearpath_budget_unfrozen.md",
+                "quote": "Picking up where we left off?"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "The claims data warehouse is back on their roadmap for Q3.",
+            "citations": [
+              {
+                "file": "2026-06-09_clearpath_budget_unfrozen.md",
+                "quote": "the project is back on our roadmap for Q3"
+              }
+            ]
+          },
+          {
+            "text": "AtliQ's proposal was the strongest of three they saw.",
+            "citations": [
+              {
+                "file": "2026-06-09_clearpath_budget_unfrozen.md",
+                "quote": "Your proposal was the strongest of the three we saw."
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [
+          {
+            "text": "Is AtliQ still interested, and does the 40k estimate still hold?",
+            "citations": [
+              {
+                "file": "2026-06-09_clearpath_budget_unfrozen.md",
+                "quote": "Is AtliQ still interested, and does the 40k estimate still hold?"
+              }
+            ]
+          }
+        ],
+        "deadlines": [],
+        "cross_sell": []
+      }
+    },
+    "L-1016": {
+      "lead_id": "L-1016",
+      "company": "MEDTRACK LABS",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "13 Jun TechSummit conversation with Rohit.",
+            "citations": [
+              {
+                "file": "2026-06-13_medtrack_scribble.md",
+                "quote": "Rohit (MedTrack Labs) — lab ops dashboards?"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Unclear — lab ops dashboards, LIMS integration, or both.",
+            "citations": [
+              {
+                "file": "2026-06-13_medtrack_scribble.md",
+                "quote": "lab ops dashboards? or was it LIMS integration. both?"
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Intro deck and healthcare case studies, \"send this week\" (date unclear; who promised is not recorded).",
+            "citations": [
+              {
+                "file": "2026-06-13_medtrack_scribble.md",
+                "quote": "asked for our intro deck + healthcare case studies"
+              },
+              {
+                "file": "2026-06-13_medtrack_scribble.md",
+                "quote": "send this week"
+              }
+            ]
+          }
+        ],
+        "open_questions": [],
+        "deadlines": [],
+        "cross_sell": []
+      }
+    },
+    "L-1017": {
+      "lead_id": "L-1017",
+      "company": "ShopSwift",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "29 Jun: Elena confirmed budget after a call the day before; no reply in the record.",
+            "citations": [
+              {
+                "file": "2026-06-29_shopswift_budget_confirmed.md",
+                "quote": "Following up on yesterday's call with the good news I hinted at"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A recommendation engine — 55k formally approved this fiscal year.",
+            "citations": [
+              {
+                "file": "2026-06-29_shopswift_budget_confirmed.md",
+                "quote": "leadership has formally approved 55k for the recommendation engine this fiscal year"
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [
+          {
+            "text": "Elena needs a statement of work.",
+            "citations": [
+              {
+                "file": "2026-06-29_shopswift_budget_confirmed.md",
+                "quote": "a statement of work by 15 July"
+              }
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "SOW by 15 Jul, or it slips a quarter and the budget may not survive.",
+            "citations": [
+              {
+                "file": "2026-06-29_shopswift_budget_confirmed.md",
+                "quote": "If we miss that window it slips to next quarter and I can't guarantee the budget survives."
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1018": {
+      "lead_id": "L-1018",
+      "company": "DataNest",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "2 Jul: Karandeep proposed a call on Wed 8 Jul to lock the renewal (the outcome is not recorded).",
+            "citations": [
+              {
+                "file": "2026-06-30_datanest_renewal.md",
+                "quote": "Let's do a call Wednesday 8 July to lock the renewal and discuss the Kafka profile."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Renew early so there's no gap; both engineers have been excellent.",
+            "citations": [
+              {
+                "file": "2026-06-30_datanest_renewal.md",
+                "quote": "Can we sort the renewal early so there's no gap?"
+              },
+              {
+                "file": "2026-06-30_datanest_renewal.md",
+                "quote": "Both engineers have been excellent"
+              }
+            ]
+          },
+          {
+            "text": "A third engineer, ideally strong on Kafka.",
+            "citations": [
+              {
+                "file": "2026-06-30_datanest_renewal.md",
+                "quote": "want to add a third engineer, ideally someone strong on Kafka"
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Karandeep: invite for the 8 Jul call.",
+            "citations": [
+              {
+                "file": "2026-06-30_datanest_renewal.md",
+                "quote": "Invite coming."
+              }
+            ]
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "Same arrangement for the third engineer?",
+            "citations": [
+              {
+                "file": "2026-06-30_datanest_renewal.md",
+                "quote": "Same arrangement?"
+              }
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "Current contract ends at the end of September.",
+            "citations": [
+              {
+                "file": "2026-06-30_datanest_renewal.md",
+                "quote": "Our contract runs out end of September."
+              }
+            ]
+          }
+        ],
+        "cross_sell": [
+          {
+            "text": "They raised a Series A — the team is growing.",
+            "citations": [
+              {
+                "file": "2026-06-30_datanest_renewal.md",
+                "quote": "We've raised a Series A"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "L-1020": {
+      "lead_id": "L-1020",
+      "company": "FreshCart",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "16 Jun: Ananya wrote that she never got Dhaval's promised call.",
+            "citations": [
+              {
+                "file": "2026-05-18_freshcart_referral_followup.md",
+                "quote": "Dhaval — never got that call."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A customer account portal (orders, subscriptions, wallet) for an online grocery startup in 3 cities.",
+            "citations": [
+              {
+                "file": "2026-05-18_freshcart_referral_followup.md",
+                "quote": "need a proper customer account portal (orders, subscriptions, wallet)"
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Dhaval promised on 20 May to call \"early next week\".",
+            "citations": [
+              {
+                "file": "2026-05-18_freshcart_referral_followup.md",
+                "quote": "I'll call you early next week to set things up."
+              }
+            ]
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "When can we talk?",
+            "citations": [
+              {
+                "file": "2026-05-18_freshcart_referral_followup.md",
+                "quote": "When can we talk?"
+              }
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "Deciding by mid-July between AtliQ and two other vendors.",
+            "citations": [
+              {
+                "file": "2026-05-18_freshcart_referral_followup.md",
+                "quote": "We're now in conversations with two other vendors and want to decide by mid-July."
+              }
+            ]
+          }
+        ],
+        "cross_sell": [
+          {
+            "text": "Referred by Priya at Acme, who confirmed Ananya is expecting the call.",
+            "citations": [
+              {
+                "file": "2026-06-24_acme_quarterly_review.md",
+                "quote": "she confirmed Ananya is expecting our call"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "L-1021": {
+      "lead_id": "L-1021",
+      "company": "SteelCore Industries",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "14 Feb: Jay answered Mr. Verma's price objection and offered a call; nothing later in the record.",
+            "citations": [
+              {
+                "file": "2026-02-05_steelcore_pricing_objection.md",
+                "quote": "Happy to get on a call and walk through exactly what's included."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Power BI dashboards for production and dispatch; AtliQ's indicative estimate was 14–16k.",
+            "citations": [
+              {
+                "file": "2026-02-05_steelcore_pricing_objection.md",
+                "quote": "with an indicative estimate of 14–16k depending on data source complexity"
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [
+          {
+            "text": "Why pay AtliQ rates when a freelancer quoted under a third of the price?",
+            "citations": [
+              {
+                "file": "2026-02-05_steelcore_pricing_objection.md",
+                "quote": "Why should we pay AtliQ rates?"
+              }
+            ]
+          }
+        ],
+        "deadlines": [],
+        "cross_sell": []
+      }
+    },
+    "L-1022": {
+      "lead_id": "L-1022",
+      "company": "TravelHub",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "Met Nadia at TechSummit Mumbai (debrief of 14 Jun) — early stage.",
+            "citations": [
+              {
+                "file": "2026-06-14_techsummit_debrief.md",
+                "quote": "TravelHub (Nadia) — itinerary personalization, early stage (L-1022)"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Itinerary personalisation.",
+            "citations": [
+              {
+                "file": "2026-06-14_techsummit_debrief.md",
+                "quote": "TravelHub (Nadia) — itinerary personalization, early stage (L-1022)"
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [],
+        "deadlines": [],
+        "cross_sell": []
+      }
+    },
+    "L-1023": {
+      "lead_id": "L-1023",
+      "company": "FinEdge Bank",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "19 Jun: Suresh said compliance cleared AtliQ and asked Bhavin to confirm availability.",
+            "citations": [
+              {
+                "file": "2026-03-26_finedge_compliance_docs.md",
+                "quote": "Bhavin — good news, compliance has cleared AtliQ."
+              },
+              {
+                "file": "2026-03-26_finedge_compliance_docs.md",
+                "quote": "please confirm your availability"
+              }
+            ]
+          },
+          {
+            "text": "On 7 Jul no owner was firmly assigned — \"Bhavin took FinEdge probably\".",
+            "citations": [
+              {
+                "file": "2026-07-07_internal_prioritization.md",
+                "quote": "Bhavin took FinEdge \"probably\"."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A data platform — their largest data initiative this year.",
+            "citations": [
+              {
+                "file": "2026-03-26_finedge_compliance_docs.md",
+                "quote": "This is our largest data initiative this year"
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [
+          {
+            "text": "Confirm availability for the commercial call (slot was offered for the week of 29 Jun).",
+            "citations": [
+              {
+                "file": "2026-03-26_finedge_compliance_docs.md",
+                "quote": "My assistant will find a slot the week of 29 June"
+              }
+            ]
+          }
+        ],
+        "deadlines": [],
+        "cross_sell": [
+          {
+            "text": "Suresh referred Harbor & Finch, an advisory firm wanting client-reporting automation.",
+            "citations": [
+              {
+                "file": "2026-06-27_harborfinch_referral_intro.md",
+                "quote": "David runs Harbor & Finch, a boutique advisory firm"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "L-1025": {
+      "lead_id": "L-1025",
+      "company": "CloudNine SaaS",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "6 Jul: Dev chased the references.",
+            "citations": [
+              {
+                "file": "2026-06-21_cloudnine_rates_references.md",
+                "quote": "Karandeep — any update on the references?"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Senior backend and DevOps engineers embedded in their team (rate card already sent).",
+            "citations": [
+              {
+                "file": "2026-06-21_cloudnine_rates_references.md",
+                "quote": "your rate card for senior backend and DevOps profiles"
+              },
+              {
+                "file": "2026-06-21_cloudnine_rates_references.md",
+                "quote": "rate card attached"
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Karandeep: two reference names \"in a day or two\" (promised 22 Jun).",
+            "citations": [
+              {
+                "file": "2026-06-21_cloudnine_rates_references.md",
+                "quote": "will revert with names in a day or two"
+              }
+            ]
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "Two references, ideally SaaS companies where AtliQ engineers embedded into a team.",
+            "citations": [
+              {
+                "file": "2026-06-21_cloudnine_rates_references.md",
+                "quote": "two references we can speak to — ideally SaaS companies where your engineers embedded into an existing team"
+              }
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "They want to close by mid-July and are comparing one other vendor.",
+            "citations": [
+              {
+                "file": "2026-06-21_cloudnine_rates_references.md",
+                "quote": "We're comparing you with one other vendor and want to close this out by mid-July."
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1026": {
+      "lead_id": "L-1026",
+      "company": "Sunrise Foods",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "14 Jun: Dhaval said he'd set up a call after his travel.",
+            "citations": [
+              {
+                "file": "2026-06-10_sunrise_foods_reactivation.md",
+                "quote": "let me set up a call when I'm back"
+              }
+            ]
+          },
+          {
+            "text": "2 Jul pipeline review: still no call scheduled.",
+            "citations": [
+              {
+                "file": "2026-07-02_internal_pipeline_review.md",
+                "quote": "Sunrise Foods came back wanting a v2 three weeks ago. Still no call scheduled."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Portal v2 — they grew from 40 to 110 distributors and order reconciliation is creaking.",
+            "citations": [
+              {
+                "file": "2026-06-10_sunrise_foods_reactivation.md",
+                "quote": "We've grown from 40 to 110 distributors and it's starting to creak — mostly around order reconciliation."
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Dhaval: set up the v2 call (no date given).",
+            "citations": [
+              {
+                "file": "2026-06-10_sunrise_foods_reactivation.md",
+                "quote": "let me set up a call when I'm back"
+              }
+            ]
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "Would AtliQ want to do a v2?",
+            "citations": [
+              {
+                "file": "2026-06-10_sunrise_foods_reactivation.md",
+                "quote": "would AtliQ want to do a v2?"
+              }
+            ]
+          }
+        ],
+        "deadlines": [],
+        "cross_sell": [
+          {
+            "text": "Their CFO wants a sales dashboard fed by the portal data.",
+            "citations": [
+              {
+                "file": "2026-06-10_sunrise_foods_reactivation.md",
+                "quote": "our CFO keeps asking if the portal data can feed into some kind of sales dashboard"
+              }
+            ]
+          },
+          {
+            "text": "Ridgeline Foods heard about the portal from a shared distributor — a possible intro.",
+            "citations": [
+              {
+                "file": "2026-07-03_ridgeline_scribble.md",
+                "quote": "heard about the Sunrise Foods portal from a distributor they share"
+              }
+            ]
+          },
+          {
+            "text": "The portal works as a showcase — screenshots landed well with SmartServe.",
+            "citations": [
+              {
+                "file": "2026-04-05_smartserve_intro_call.md",
+                "quote": "Showed screenshots of the Sunrise Foods distributor portal — landed well."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "L-1027": {
+      "lead_id": "L-1027",
+      "company": "Meridian Health LLC",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "This record is a duplicate of L-1003 (Bhavin's open proposal with the same hospital group).",
+            "citations": [
+              {
+                "file": "2026-06-14_techsummit_debrief.md",
+                "quote": "Now sitting in CRM twice: L-1003 and L-1027."
+              }
+            ]
+          },
+          {
+            "text": "Sanjay talked to Jay at the TechSummit booth; Jay didn't know Bhavin already had a proposal with him.",
+            "citations": [
+              {
+                "file": "2026-06-14_techsummit_debrief.md",
+                "quote": "talked to Jay who didn't realise Bhavin already has a proposal with him"
+              }
+            ]
+          },
+          {
+            "text": "16 Jun: Sanjay's proposal questions were still unanswered as of 7 Jul.",
+            "citations": [
+              {
+                "file": "2026-07-07_internal_prioritization.md",
+                "quote": "Sanjay's proposal questions from 16 Jun still unanswered."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A clinical data platform; Sanjay says AtliQ's proposal looks solid overall.",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "Thanks for the proposal. It looks solid overall."
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [
+          {
+            "text": "Can the ingestion layer handle HL7 feeds from older lab systems, or only FHIR APIs?",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "Can the ingestion layer handle HL7 feeds from our older lab systems, or only the FHIR APIs mentioned in section 3?"
+              }
+            ]
+          },
+          {
+            "text": "Does the 14-week timeline include UAT with their clinicians, or is UAT extra?",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "does that include UAT with our clinicians, or is that on top?"
+              }
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "They want to close before their budget review in mid-July (exact date not stated).",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "We'd like to close this out before our Q2 budget review in mid-July."
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1028": {
+      "lead_id": "L-1028",
+      "company": "ApexAuto Parts",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "20 Mar: Jay's second cold email; nothing later in the record.",
+            "citations": [
+              {
+                "file": "2026-03-04_apexauto_cold_outreach.md",
+                "quote": "bumping this in case it got buried"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [],
+        "open_promises": [],
+        "open_questions": [],
+        "deadlines": [],
+        "cross_sell": []
+      }
+    },
+    "L-1029": {
+      "lead_id": "L-1029",
+      "company": "NovaPharma",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "1 Jul: Bhavin forwarded the security questionnaire to Pranav; on 7 Jul Pranav had not responded.",
+            "citations": [
+              {
+                "file": "2026-06-30_novapharma_security_questionnaire.md",
+                "quote": "Pranav — can you take a first pass at this?"
+              },
+              {
+                "file": "2026-07-07_internal_prioritization.md",
+                "quote": "Pranav hasn't responded to the forward."
+              }
+            ]
+          },
+          {
+            "text": "Ownership of the questionnaire was unresolved at the 2 Jul pipeline review.",
+            "citations": [
+              {
+                "file": "2026-07-02_internal_pipeline_review.md",
+                "quote": "Who owns it? (Unresolved in meeting.)"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Trial document processing; the science team is sold after the extraction demo.",
+            "citations": [
+              {
+                "file": "2026-06-25_novapharma_stakeholders.md",
+                "quote": "On our side the science team is sold"
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [
+          {
+            "text": "78-question vendor security questionnaire (data handling, hosting, access control, incident response).",
+            "citations": [
+              {
+                "file": "2026-06-30_novapharma_security_questionnaire.md",
+                "quote": "78 questions covering data handling, hosting, access control and incident response"
+              }
+            ]
+          },
+          {
+            "text": "Procurement needs three healthcare/pharma references.",
+            "citations": [
+              {
+                "file": "2026-06-25_novapharma_stakeholders.md",
+                "quote": "Emma will need three references from healthcare/pharma clients."
+              }
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "Questionnaire back by 24 Jul.",
+            "citations": [
+              {
+                "file": "2026-06-30_novapharma_security_questionnaire.md",
+                "quote": "We need the completed document back by 24 July"
+              }
+            ]
+          },
+          {
+            "text": "Everything wrapped by end of July to make this year's budget.",
+            "citations": [
+              {
+                "file": "2026-06-25_novapharma_stakeholders.md",
+                "quote": "Realistically we need everything wrapped by end of July to make this year's budget."
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1030": {
+      "lead_id": "L-1030",
+      "company": "GreenGrid Solar",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "9 Jul discovery call with Aditya and plant head Ramesh (Jay).",
+            "citations": [
+              {
+                "file": "2026-07-09_greengrid_discovery.md",
+                "quote": "Aditya Kulkarni, GreenGrid plant head (Ramesh), Jay"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Generation vs. forecast, inverter uptime, soiling loss tracking, one view across their farms.",
+            "citations": [
+              {
+                "file": "2026-07-09_greengrid_discovery.md",
+                "quote": "Want: generation vs. forecast, inverter uptime, soiling loss tracking, one view across farms."
+              }
+            ]
+          },
+          {
+            "text": "Phase 1 budget 20–25k.",
+            "citations": [
+              {
+                "file": "2026-07-09_greengrid_discovery.md",
+                "quote": "Budget: Aditya indicated 20–25k comfortable for phase 1."
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Jay: proposal by 17 Jul.",
+            "citations": [
+              {
+                "file": "2026-07-09_greengrid_discovery.md",
+                "quote": "Proposal — Jay — by 17 Jul"
+              }
+            ]
+          },
+          {
+            "text": "Pranav: sanity-check the SCADA API before the quote, by 14 Jul.",
+            "citations": [
+              {
+                "file": "2026-07-09_greengrid_discovery.md",
+                "quote": "Pranav to sanity-check SCADA API feasibility before quote — by 14 Jul"
+              }
+            ]
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "Data access: one SCADA vendor has an API, the other is \"CSV over email\".",
+            "citations": [
+              {
+                "file": "2026-07-09_greengrid_discovery.md",
+                "quote": "Data access is the open question"
+              }
+            ]
+          }
+        ],
+        "deadlines": [
+          {
+            "text": "Board review of plant performance in September.",
+            "citations": [
+              {
+                "file": "2026-07-09_greengrid_discovery.md",
+                "quote": "Timeline driver: board review of plant performance in September."
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1031": {
+      "lead_id": "L-1031",
+      "company": "ByteBridge",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "12 May: Karandeep promised two case studies and a reference by Friday; nothing later in the record.",
+            "citations": [
+              {
+                "file": "2026-05-10_bytebridge_competitor.md",
+                "quote": "I'll send both, plus a reference, by Friday."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Three augmented-team profiles; TalentGrid quoted about 15% lower.",
+            "citations": [
+              {
+                "file": "2026-05-10_bytebridge_competitor.md",
+                "quote": "TalentGrid has quoted us roughly 15% below your rates for the same three profiles."
+              }
+            ]
+          },
+          {
+            "text": "Fatima would still prefer a referred partner.",
+            "citations": [
+              {
+                "file": "2026-05-10_bytebridge_competitor.md",
+                "quote": "I'd still prefer to work with a referred partner"
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Karandeep: two case studies plus a reference, by Fri 15 May.",
+            "citations": [
+              {
+                "file": "2026-05-10_bytebridge_competitor.md",
+                "quote": "I'll send both, plus a reference, by Friday."
+              }
+            ]
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "Something concrete to justify the price difference to her CFO.",
+            "citations": [
+              {
+                "file": "2026-05-10_bytebridge_competitor.md",
+                "quote": "I need something to justify the difference to my CFO"
+              }
+            ]
+          }
+        ],
+        "deadlines": [],
+        "cross_sell": []
+      }
+    },
+    "L-1032": {
+      "lead_id": "L-1032",
+      "company": "Trustline NBFC",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "6 Jul: Dhaval promised the revised contract this week and proposed a call on Thu 9 Jul.",
+            "citations": [
+              {
+                "file": "2026-07-03_trustline_approved.md",
+                "quote": "let's do a short call Thursday 9 July to walk through the terms together"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Loan document automation — board-approved; the annual-licence framing won over their CFO.",
+            "citations": [
+              {
+                "file": "2026-07-03_trustline_approved.md",
+                "quote": "the loan document automation project is approved"
+              },
+              {
+                "file": "2026-07-03_trustline_approved.md",
+                "quote": "The annual-license framing did the trick with our CFO"
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Dhaval: revised contract \"this week\" (by Fri 10 Jul).",
+            "citations": [
+              {
+                "file": "2026-07-03_trustline_approved.md",
+                "quote": "Revised contract will be with you this week"
+              }
+            ]
+          }
+        ],
+        "open_questions": [],
+        "deadlines": [
+          {
+            "text": "They want to sign this month.",
+            "citations": [
+              {
+                "file": "2026-07-03_trustline_approved.md",
+                "quote": "we can sign this month"
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1033": {
+      "lead_id": "L-1033",
+      "company": "OceanFreight",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "3 Jul: Jay confirmed a call for 14 Jul, 8:00 CET / 11:30 IST.",
+            "citations": [
+              {
+                "file": "2026-06-28_oceanfreight_timezones.md",
+                "quote": "14 July 8:00 CET / 11:30 IST confirmed — invite sent."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A unified pipeline for vessel telemetry and port-call data spread across four systems.",
+            "citations": [
+              {
+                "file": "2026-06-28_oceanfreight_timezones.md",
+                "quote": "We have vessel telemetry and port-call data scattered across four systems and no unified pipeline."
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [],
+        "deadlines": [
+          {
+            "text": "Call on 14 Jul at 8:00 CET (Karl is in Oslo).",
+            "citations": [
+              {
+                "file": "2026-06-28_oceanfreight_timezones.md",
+                "quote": "I'm free the morning of 14 July, 8:00 CET."
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1034": {
+      "lead_id": "L-1034",
+      "company": "SmartServe Hospitality",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "5 Apr intro call with Pooja and Arvind (Jay).",
+            "citations": [
+              {
+                "file": "2026-04-05_smartserve_intro_call.md",
+                "quote": "Pooja Reddy, Arvind (their ops manager), Jay"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A custom web app for banquet booking, menu selection and invoicing.",
+            "citations": [
+              {
+                "file": "2026-04-05_smartserve_intro_call.md",
+                "quote": "Want a custom web app: banquet booking, menu selection, invoicing."
+              }
+            ]
+          },
+          {
+            "text": "Budget ~25k \"if the scope is right\".",
+            "citations": [
+              {
+                "file": "2026-04-05_smartserve_intro_call.md",
+                "quote": "Pooja estimated 25k budget \"if the scope is right\"."
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Jay: call recap and indicative pricing by 8 Apr (the record does not show whether it went out).",
+            "citations": [
+              {
+                "file": "2026-04-05_smartserve_intro_call.md",
+                "quote": "Send call recap + indicative pricing — Jay — by 8 Apr"
+              }
+            ]
+          },
+          {
+            "text": "Jay: reference call with a past client for Arvind.",
+            "citations": [
+              {
+                "file": "2026-04-05_smartserve_intro_call.md",
+                "quote": "Reference call with a past client for Arvind — Jay"
+              }
+            ]
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "Arvind, burned by a previous vendor, wants milestone-based payments.",
+            "citations": [
+              {
+                "file": "2026-04-05_smartserve_intro_call.md",
+                "quote": "Wants milestone-based payments."
+              }
+            ]
+          }
+        ],
+        "deadlines": [],
+        "cross_sell": []
+      }
+    },
+    "L-1035": {
+      "lead_id": "L-1035",
+      "company": "Quantia Analytics",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "30 Sep 2025: James declined on timing, not fit.",
+            "citations": [
+              {
+                "file": "2025-09-30_quantia_lost_deal.md",
+                "quote": "honestly it's a timing problem, not a fit problem"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Nothing new until their acquisition closes, likely Q2 2026.",
+            "citations": [
+              {
+                "file": "2025-09-30_quantia_lost_deal.md",
+                "quote": "nothing new gets signed until that closes, likely Q2 2026"
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [],
+        "deadlines": [
+          {
+            "text": "James asked AtliQ to check back around Q2 2026 — that window has now passed.",
+            "citations": [
+              {
+                "file": "2025-09-30_quantia_lost_deal.md",
+                "quote": "Please do check back with us around then."
+              }
+            ]
+          }
+        ],
+        "cross_sell": []
+      }
+    },
+    "L-1036": {
+      "lead_id": "L-1036",
+      "company": "LoopMart",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "26 Jun pricing call (Karandeep) with Sania and her finance person; her response was not written down.",
+            "citations": [
+              {
+                "file": "2026-06-26_loopmart_pricing_call.md",
+                "quote": "Sania + her finance person."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Retail analytics across 3 stores and an online storefront (POS + Shopify data).",
+            "citations": [
+              {
+                "file": "2026-06-26_loopmart_pricing_call.md",
+                "quote": "3 physical stores + online storefront, data in POS + Shopify"
+              }
+            ]
+          },
+          {
+            "text": "Karandeep gave an 18–22k ballpark, phase-able.",
+            "citations": [
+              {
+                "file": "2026-06-26_loopmart_pricing_call.md",
+                "quote": "gave ballpark 18–22k for retail analytics dashboards, phase-able"
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [],
+        "deadlines": [],
+        "cross_sell": []
+      }
+    },
+    "L-1037": {
+      "lead_id": "L-1037",
+      "company": "Vertex Constructions",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "20 Jan: Jay said he would reconnect in February after Mr. Naidu's out-of-office; nothing later.",
+            "citations": [
+              {
+                "file": "2026-01-15_vertex_ooo_stall.md",
+                "quote": "No problem — will reconnect in February."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A mobile app for site progress tracking across their projects.",
+            "citations": [
+              {
+                "file": "2026-01-15_vertex_ooo_stall.md",
+                "quote": "a mobile app for site progress tracking across your projects"
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Jay: reconnect in February.",
+            "citations": [
+              {
+                "file": "2026-01-15_vertex_ooo_stall.md",
+                "quote": "No problem — will reconnect in February."
+              }
+            ]
+          }
+        ],
+        "open_questions": [],
+        "deadlines": [],
+        "cross_sell": []
+      }
+    },
+    "L-1038": {
+      "lead_id": "L-1038",
+      "company": "MiraHealth",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "Second call with Sophie on 6 Jul (Dhaval, from the airport).",
+            "citations": [
+              {
+                "file": "2026-07-07_mirahealth_quick_summary.md",
+                "quote": "had the second call with Sophie at MiraHealth yesterday while at the airport"
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Triage assistant scoped for UK operations first, not India.",
+            "citations": [
+              {
+                "file": "2026-07-07_mirahealth_quick_summary.md",
+                "quote": "They want the triage assistant scoped for UK ops first, not India."
+              }
+            ]
+          },
+          {
+            "text": "Budget ~35k, confirmed verbally.",
+            "citations": [
+              {
+                "file": "2026-07-07_mirahealth_quick_summary.md",
+                "quote": "Budget ~35k confirmed verbally."
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [
+          {
+            "text": "Their CTO is ex-NHS and particular about clinical safety documentation — be ready for it.",
+            "citations": [
+              {
+                "file": "2026-07-07_mirahealth_quick_summary.md",
+                "quote": "She mentioned their CTO is ex-NHS and very particular about clinical safety docs."
+              }
+            ]
+          }
+        ],
+        "deadlines": [],
+        "cross_sell": []
+      }
+    },
+    "L-1039": {
+      "lead_id": "L-1039",
+      "company": "Citywide Diagnostics",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "7 Jul: Rakesh confirmed a call for Mon 13 Jul, 11am (Karandeep).",
+            "citations": [
+              {
+                "file": "2026-07-06_citywide_referral.md",
+                "quote": "Monday 13th, 11am works."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "Connect lab results, billing and referral data across 22 diagnostic centres.",
+            "citations": [
+              {
+                "file": "2026-07-06_citywide_referral.md",
+                "quote": "our lab results, billing and referral data live in three separate systems that don't talk to each other"
+              }
+            ]
+          }
+        ],
+        "open_promises": [],
+        "open_questions": [],
+        "deadlines": [
+          {
+            "text": "Call on Mon 13 Jul at 11am.",
+            "citations": [
+              {
+                "file": "2026-07-06_citywide_referral.md",
+                "quote": "How about Monday 13 July, 11am?"
+              }
+            ]
+          }
+        ],
+        "cross_sell": [
+          {
+            "text": "Referred by Dr. Anita Rao at HealthFirst.",
+            "citations": [
+              {
+                "file": "2026-07-06_citywide_referral.md",
+                "quote": "Dr. Anita Rao at HealthFirst spoke highly of your team."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "L-1040": {
+      "lead_id": "L-1040",
+      "company": "GlobalMart",
+      "brief": {
+        "last_touch": [
+          {
+            "text": "The linked emails are about the vendor-portal proposal with the same contact — this record may duplicate L-1004.",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "RE: Proposal — Vendor Portal"
+              }
+            ]
+          },
+          {
+            "text": "26 Jun: Karandeep told Neha he would discuss with the team and come back on the phasing.",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "let me discuss with the team and come back on the phasing."
+              }
+            ]
+          }
+        ],
+        "what_they_want": [
+          {
+            "text": "A vendor portal; procurement liked the clickable prototype Pranav showed.",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "The clickable prototype Pranav showed in the demo landed well — procurement liked seeing something real."
+              }
+            ]
+          },
+          {
+            "text": "Scope is right, but the price is about 20% above what they can clear this year.",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "The scope is right but the number is about 20% above what they will clear this year."
+              }
+            ]
+          }
+        ],
+        "open_promises": [
+          {
+            "text": "Karandeep: respond on the phasing \"by Friday\" — said on Friday 26 Jun, so the date is unclear; no later reply in the thread.",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "Will respond by Friday."
+              }
+            ]
+          }
+        ],
+        "open_questions": [
+          {
+            "text": "Which option: move the analytics module to Phase 2, or keep full scope at a lower figure?",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "trim the analytics module to Phase 2, or hold the full scope at a lower figure"
+              }
+            ]
+          },
+          {
+            "text": "Does AtliQ do demand forecasting? (asked by their supply-chain colleague)",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "my colleague in supply chain asked whether you do demand forecasting"
+              }
+            ]
+          },
+          {
+            "text": "At the demo they asked about SSO and audit logs.",
+            "citations": [
+              {
+                "file": "2026-05-19_globalmart_demo.md",
+                "quote": "questions on SSO and audit logs"
+              }
+            ]
+          }
+        ],
+        "deadlines": [],
+        "cross_sell": [
+          {
+            "text": "Demand forecasting for GlobalMart's supply-chain team.",
+            "citations": [
+              {
+                "file": "2026-06-24_globalmart_pricing.md",
+                "quote": "my colleague in supply chain asked whether you do demand forecasting"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

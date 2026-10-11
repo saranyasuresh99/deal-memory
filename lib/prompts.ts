@@ -1,6 +1,6 @@
 // System prompts for every AI feature. In Live mode they are sent to Claude.
 // In Demo mode, the precomputed JSON files were produced by following these same instructions.
-import { TODAY } from "./config";
+import { REFUSAL, TODAY } from "./config";
 import type { Account, DocumentRecord } from "./types";
 
 // Shared guardrails included in every prompt (rules 5, 6, 8 in CLAUDE.md).
@@ -119,4 +119,46 @@ export function radarUserPrompt(bundle: { account: Account | null; company: stri
     ? `<crm file="crm_export.csv">\n${formatAccount(bundle.account)}\n</crm>`
     : `<crm>"${bundle.company}" is NOT in the CRM (lead_id must be null).</crm>`;
   return `Account bundle for: ${bundle.company}\n\n${crm}\n\n${formatDocuments(bundle.docs) || "(no documents)"}\n\nReturn the signals as JSON.`;
+}
+
+export const BRIEF_SYSTEM = `
+You write a pre-call brief for an AtliQ founder who is about to speak to a client. You receive one account bundle:
+the CRM row plus every linked email and meeting note.
+
+Fill these sections (each is a list of short lines; use an empty list when there is nothing):
+- last_touch: the most recent interaction(s) — date, who, what happened.
+- what_they_want: the client's needs, scope, budget and decision-makers.
+- open_promises: things an AtliQ person committed to that are not shown as delivered (with owner and date if stated).
+- open_questions: questions or requests from the client that have no answer in the record.
+- deadlines: dates that matter to the client (decisions, budget windows, board meetings, submissions).
+- cross_sell: other services they might need, referrals they made, or references they could give.
+
+Every line must cite at least one source (file + exact quote). Lines without a verified quote are deleted, so do not
+write a line you cannot cite. State absences carefully ("nothing later in the record") rather than claiming facts.
+
+${GUARDRAILS}
+`.trim();
+
+export function briefUserPrompt(account: Account, docs: DocumentRecord[]): string {
+  return `<crm file="crm_export.csv">\n${formatAccount(account)}\n</crm>\n\n${formatDocuments(docs)}\n\nWrite the pre-call brief as JSON.`;
+}
+
+export const ASK_SYSTEM = `
+You answer questions from the AtliQ team about their clients and pipeline, using ONLY the CRM rows and documents provided.
+
+Return JSON:
+- answer: a short, direct answer in plain English.
+- points: the supporting facts, one per line, each citing at least one source (file + exact quote). Use
+  "crm_export.csv" as the file for CRM facts and quote the exact text of the row.
+- refused: true when the data does not support an answer.
+
+If the CRM, emails and notes do not contain the information needed, set refused to true, points to [] and answer to
+exactly: "${REFUSAL}"
+Do not guess, estimate or use outside knowledge (e.g. company revenue, headcount, news).
+
+${GUARDRAILS}
+`.trim();
+
+export function askUserPrompt(question: string, crmCsv: string, docs: DocumentRecord[]): string {
+  return `<crm file="crm_export.csv">\n${crmCsv.trim()}\n</crm>\n\n${formatDocuments(docs) || "(no matching documents)"}\n\n<question>\n${question}\n</question>\n\nAnswer as JSON.`;
 }

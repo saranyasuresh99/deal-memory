@@ -68,7 +68,11 @@ function clean(node: Json, debriefInput: string | null, where: string): Json {
             removed.push(`${w}: removed (no valid citations left)`);
             return;
           }
-          item = { ...item, citations: kept };
+          // Citations are already checked — clean the rest of the item without checking them twice.
+          const { citations: _checked, ...rest } = item;
+          void _checked;
+          out.push({ ...(clean(rest, debriefInput, w) as { [k: string]: Json }), citations: kept });
+          return;
         }
       }
       out.push(clean(item, debriefInput, w));

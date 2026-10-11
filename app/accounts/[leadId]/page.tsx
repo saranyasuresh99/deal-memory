@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import AccountFields, { AccountStatusBadges } from "@/components/AccountFields";
 import DocumentList from "@/components/DocumentList";
+import BriefPanel from "@/components/BriefPanel";
 import { accounts, documentsFor, getAccount } from "@/lib/data";
 import { duplicatesFor, findDuplicates } from "@/lib/accounts";
 import type { Account } from "@/lib/types";
@@ -43,6 +44,8 @@ export default async function AccountPage({ params }: { params: Promise<{ leadId
         <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">CRM record</h2>
         <AccountFields account={a} />
       </section>
+
+      <BriefPanel leadId={a.lead_id} docs={docs} />
 
       <section>
         <h2 className="mb-2 text-sm font-semibold uppercase tracking-wide text-slate-500">

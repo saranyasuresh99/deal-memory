@@ -12,8 +12,12 @@ export function getClient(): Anthropic {
   return client;
 }
 
+// The model answered but gave nothing usable (refusal or unparseable output).
+export class AiNoResultError extends Error {}
+
 // Friendly message for any API failure — the page must never crash.
 export function friendlyError(err: unknown): string {
+  if (err instanceof AiNoResultError) return "The AI could not produce an answer for this. Please rephrase and try again.";
   if (err instanceof Anthropic.AuthenticationError) return "The AI key was rejected. Check ANTHROPIC_API_KEY.";
   if (err instanceof Anthropic.RateLimitError) return "The AI is busy right now. Please try again in a minute.";
   if (err instanceof Anthropic.APIConnectionError) return "Could not reach the AI service. Check your connection.";

@@ -1,0 +1,641 @@
+{
+  "generated_by": "Claude Code (Demo mode) — written during the build by following ASK_SYSTEM in lib/prompts.ts",
+  "mode": "demo",
+  "today": "2026-07-10",
+  "questions": [
+    {
+      "id": "meridian",
+      "question": "Where does Meridian stand?",
+      "example": true,
+      "result": {
+        "answer": "Meridian has AtliQ's proposal and likes it, but Sanjay's two technical questions from 16 Jun have no reply in the record, and they want to close before their mid-July budget review. The CRM still says \"Contacted\", and the client is in the CRM twice.",
+        "points": [
+          {
+            "text": "Sanjay says the proposal looks solid overall.",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "Thanks for the proposal. It looks solid overall."
+              }
+            ]
+          },
+          {
+            "text": "Open question 1: can ingestion handle HL7 feeds from older lab systems, or only FHIR APIs?",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "Can the ingestion layer handle HL7 feeds from our older lab systems, or only the FHIR APIs mentioned in section 3?"
+              }
+            ]
+          },
+          {
+            "text": "Open question 2: does the 14-week timeline include UAT with clinicians?",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "does that include UAT with our clinicians, or is that on top?"
+              }
+            ]
+          },
+          {
+            "text": "They want to close before their budget review in mid-July.",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "We'd like to close this out before our Q2 budget review in mid-July."
+              }
+            ]
+          },
+          {
+            "text": "As of 7 Jul the questions were still unanswered.",
+            "citations": [
+              {
+                "file": "2026-07-07_internal_prioritization.md",
+                "quote": "Sanjay's proposal questions from 16 Jun still unanswered."
+              }
+            ]
+          },
+          {
+            "text": "CRM status is still \"Contacted\" (owner Bhavin, 45k).",
+            "citations": [
+              {
+                "file": "crm_export.csv",
+                "quote": "L-1003,Meridian Healthcare,Dr. Sanjay Kulkarni,sanjay.k@meridianhealth.com,Website,Data Engineering,Contacted,45000,Bhavin"
+              }
+            ]
+          },
+          {
+            "text": "The same hospital group is also L-1027 (Jay, from the TechSummit booth).",
+            "citations": [
+              {
+                "file": "2026-06-14_techsummit_debrief.md",
+                "quote": "Now sitting in CRM twice: L-1003 and L-1027."
+              }
+            ]
+          }
+        ],
+        "refused": false
+      }
+    },
+    {
+      "id": "waiting",
+      "question": "Which clients are waiting on a reply from us?",
+      "example": true,
+      "result": {
+        "answer": "15 email threads end with a message from the client and no reply from AtliQ. The most recent are listed first.",
+        "points": [
+          {
+            "text": "EduSpark — waiting 2 days (owner: Jay).",
+            "citations": [
+              {
+                "file": "2026-07-08_eduspark_website_enquiry.md",
+                "quote": "The immediate need is actually for our admissions season (queries spike 10x in Aug–Sep), so timing matters — our budget window closes mid-August."
+              }
+            ]
+          },
+          {
+            "text": "CloudNine SaaS — waiting 4 days (owner: Karandeep).",
+            "citations": [
+              {
+                "file": "2026-06-21_cloudnine_rates_references.md",
+                "quote": "Karandeep — any update on the references?"
+              }
+            ]
+          },
+          {
+            "text": "Nimbus Lending — waiting 4 days (owner: Bhavin).",
+            "citations": [
+              {
+                "file": "2026-07-05_nimbus_lending_intro.md",
+                "quote": "I have budget conversations happening the week of 20 July, so a call before then would be ideal."
+              }
+            ]
+          },
+          {
+            "text": "PayTrack — waiting 8 days (owner: Bhavin).",
+            "citations": [
+              {
+                "file": "2026-07-02_paytrack_phase2.md",
+                "quote": "Nothing formal yet, but if you sent us a one-pager on what a merchant-risk module would look like, I could circulate it before our August planning cycle."
+              }
+            ]
+          },
+          {
+            "text": "VoltEnergy — waiting 9 days (owner: Karandeep).",
+            "citations": [
+              {
+                "file": "2026-06-15_voltenergy_competitor.md",
+                "quote": "Can you send it this week?"
+              }
+            ]
+          },
+          {
+            "text": "ShopSwift — waiting 11 days (owner: Bhavin).",
+            "citations": [
+              {
+                "file": "2026-06-29_shopswift_budget_confirmed.md",
+                "quote": "What I need from you: a statement of work by 15 July so I can push it through procurement before our finance team closes the quarter's commitments."
+              }
+            ]
+          },
+          {
+            "text": "PixelWorks Agency — waiting 11 days (owner: Jay).",
+            "citations": [
+              {
+                "file": "2026-06-29_pixelworks_partnership.md",
+                "quote": "Who's the right person to speak with?"
+              }
+            ]
+          },
+          {
+            "text": "Harbor & Finch Advisory — waiting 13 days (owner: Bhavin).",
+            "citations": [
+              {
+                "file": "2026-06-27_harborfinch_referral_intro.md",
+                "quote": "Do you have time in the next couple of weeks?"
+              }
+            ]
+          },
+          {
+            "text": "NovaPharma — waiting 15 days (owner: Bhavin).",
+            "citations": [
+              {
+                "file": "2026-06-25_novapharma_stakeholders.md",
+                "quote": "Rajesh needs your data-handling and hosting details before we proceed — he'll send a questionnaire."
+              }
+            ]
+          },
+          {
+            "text": "Lumino Fitness — waiting 20 days (owner: Jay).",
+            "citations": [
+              {
+                "file": "2026-06-20_lumino_fitness_case_study.md",
+                "quote": "Hi Jay — good meeting you at TechSummit Mumbai last week."
+              }
+            ]
+          },
+          {
+            "text": "FinEdge Bank — waiting 21 days (owner: Bhavin).",
+            "citations": [
+              {
+                "file": "2026-03-26_finedge_compliance_docs.md",
+                "quote": "My assistant will find a slot the week of 29 June — please confirm your availability."
+              }
+            ]
+          },
+          {
+            "text": "Meridian Healthcare — waiting 24 days (owner: Bhavin).",
+            "citations": [
+              {
+                "file": "2026-06-16_meridian_proposal_questions.md",
+                "quote": "Can the ingestion layer handle HL7 feeds from our older lab systems, or only the FHIR APIs mentioned in section 3?"
+              }
+            ]
+          },
+          {
+            "text": "FreshCart — waiting 24 days (owner: Dhaval).",
+            "citations": [
+              {
+                "file": "2026-05-18_freshcart_referral_followup.md",
+                "quote": "Dhaval — never got that call."
+              }
+            ]
+          },
+          {
+            "text": "ClearPath Insurance — waiting 31 days (owner: Dhaval).",
+            "citations": [
+              {
+                "file": "2026-06-09_clearpath_budget_unfrozen.md",
+                "quote": "Is AtliQ still interested, and does the 40k estimate still hold?"
+              }
+            ]
+          },
+          {
+            "text": "Quantia Analytics — waiting 283 days (owner: Bhavin).",
+            "citations": [
+              {
+                "file": "2025-09-30_quantia_lost_deal.md",
+                "quote": "Please do check back with us around then."
+              }
+            ]
+          }
+        ],
+        "refused": false
+      }
+    },
+    {
+      "id": "bytebridge",
+      "question": "What did we promise ByteBridge?",
+      "example": true,
+      "result": {
+        "answer": "On 12 May Karandeep promised Fatima two case studies and a reference by Friday (15 May), to help her justify AtliQ's price against TalentGrid. Nothing later in the record shows they were sent.",
+        "points": [
+          {
+            "text": "The promise: two case studies plus a reference, by Friday.",
+            "citations": [
+              {
+                "file": "2026-05-10_bytebridge_competitor.md",
+                "quote": "I'll send both, plus a reference, by Friday."
+              }
+            ]
+          },
+          {
+            "text": "Why: TalentGrid quoted about 15% lower for the same three profiles.",
+            "citations": [
+              {
+                "file": "2026-05-10_bytebridge_competitor.md",
+                "quote": "TalentGrid has quoted us roughly 15% below your rates for the same three profiles."
+              }
+            ]
+          },
+          {
+            "text": "CRM last contact is 12 May.",
+            "citations": [
+              {
+                "file": "crm_export.csv",
+                "quote": "L-1031,ByteBridge,Fatima Al-Rashid,fatima@bytebridge.com,Referral,Staff Augmentation,Contacted,,Karandeep,2026-05-08,2026-05-12"
+              }
+            ]
+          }
+        ],
+        "refused": false
+      }
+    },
+    {
+      "id": "cloudnine",
+      "question": "What did we promise CloudNine?",
+      "example": false,
+      "result": {
+        "answer": "Karandeep sent the rate card on 22 Jun and promised two reference names \"in a day or two\". Dev chased the references on 6 Jul; CloudNine wants to decide by mid-July.",
+        "points": [
+          {
+            "text": "Rate card was sent.",
+            "citations": [
+              {
+                "file": "2026-06-21_cloudnine_rates_references.md",
+                "quote": "rate card attached"
+              }
+            ]
+          },
+          {
+            "text": "References promised in a day or two (from 22 Jun).",
+            "citations": [
+              {
+                "file": "2026-06-21_cloudnine_rates_references.md",
+                "quote": "will revert with names in a day or two"
+              }
+            ]
+          },
+          {
+            "text": "Dev chased on 6 Jul.",
+            "citations": [
+              {
+                "file": "2026-06-21_cloudnine_rates_references.md",
+                "quote": "Karandeep — any update on the references?"
+              }
+            ]
+          },
+          {
+            "text": "They are comparing one other vendor and want to close by mid-July.",
+            "citations": [
+              {
+                "file": "2026-06-21_cloudnine_rates_references.md",
+                "quote": "We're comparing you with one other vendor and want to close this out by mid-July."
+              }
+            ]
+          }
+        ],
+        "refused": false
+      }
+    },
+    {
+      "id": "no-owner",
+      "question": "Which deals are missing an owner?",
+      "example": false,
+      "result": {
+        "answer": "Five CRM records have no owner: EduSpark (L-1010), CargoLine (L-1019), ApexAuto Parts (L-1028), OceanFreight (L-1033) and Citywide Diagnostics (L-1039). For OceanFreight and Citywide, someone is already handling the client in practice.",
+        "points": [
+          {
+            "text": "EduSpark — no owner; Vikram has chased an unanswered enquiry.",
+            "citations": [
+              {
+                "file": "crm_export.csv",
+                "quote": "L-1010,EduSpark,Vikram Joshi,vikram@eduspark.com,Website,AI/ML Solutions,New,,,2026-06-25"
+              }
+            ]
+          },
+          {
+            "text": "CargoLine — no owner, no contact email.",
+            "citations": [
+              {
+                "file": "crm_export.csv",
+                "quote": "L-1019,CargoLine,J. Fernandez,,Website,Data Engineering,New,,,2026-07-01"
+              }
+            ]
+          },
+          {
+            "text": "ApexAuto Parts — no owner, no service interest.",
+            "citations": [
+              {
+                "file": "crm_export.csv",
+                "quote": "L-1028,ApexAuto Parts,Ravi Shankar,ravi@apexauto.in,Cold Outreach,,New,,,2026-03-02"
+              }
+            ]
+          },
+          {
+            "text": "OceanFreight — no owner in the CRM, but Jay has booked a call for 14 Jul.",
+            "citations": [
+              {
+                "file": "crm_export.csv",
+                "quote": "L-1033,OceanFreight,Karl Nilsen,karl@oceanfreight.no,Website,Data Engineering,New,,,2026-06-28"
+              },
+              {
+                "file": "2026-06-28_oceanfreight_timezones.md",
+                "quote": "14 July 8:00 CET / 11:30 IST confirmed — invite sent."
+              }
+            ]
+          },
+          {
+            "text": "Citywide Diagnostics — no owner in the CRM, but Karandeep has a call on 13 Jul.",
+            "citations": [
+              {
+                "file": "crm_export.csv",
+                "quote": "L-1039,Citywide Diagnostics,Rakesh Gupta,rakesh@citywidediag.in,Referral,Data Engineering,New,,,2026-07-05"
+              },
+              {
+                "file": "2026-07-06_citywide_referral.md",
+                "quote": "How about Monday 13 July, 11am?"
+              }
+            ]
+          }
+        ],
+        "refused": false
+      }
+    },
+    {
+      "id": "lost-back",
+      "question": "Which 'Lost' deals have come back?",
+      "example": false,
+      "result": {
+        "answer": "Two deals marked Lost have come back: Kaveri Textiles (their local vendor failed; second demo held 8 Jul, revised quote due 15 Jul) and ClearPath Insurance (budget freeze lifted; no reply in the record). Quantia asked to be revisited around Q2 2026 but has not come back on its own.",
+        "points": [
+          {
+            "text": "Kaveri Textiles: the vendor they chose instead has not delivered.",
+            "citations": [
+              {
+                "file": "2026-06-23_kaveri_vendor_failed.md",
+                "quote": "the local vendor we chose over AtliQ last year has not delivered"
+              }
+            ]
+          },
+          {
+            "text": "Kaveri: revised 2-plant quote requested by 15 Jul; CRM still shows Lost.",
+            "citations": [
+              {
+                "file": "2026-07-08_kaveri_demo_round2.md",
+                "quote": "Subbu asked for revised quote by 15 July."
+              },
+              {
+                "file": "2026-07-08_kaveri_demo_round2.md",
+                "quote": "Update CRM — L-1007 still shows \"Lost\""
+              }
+            ]
+          },
+          {
+            "text": "ClearPath Insurance: the budget freeze lifted and the project is back for Q3.",
+            "citations": [
+              {
+                "file": "2026-06-09_clearpath_budget_unfrozen.md",
+                "quote": "The freeze lifted with the new financial year and the project is back on our roadmap for Q3."
+              }
+            ]
+          },
+          {
+            "text": "ClearPath asked whether AtliQ is still interested and if 40k still holds.",
+            "citations": [
+              {
+                "file": "2026-06-09_clearpath_budget_unfrozen.md",
+                "quote": "Is AtliQ still interested, and does the 40k estimate still hold?"
+              }
+            ]
+          },
+          {
+            "text": "Quantia (Lost) asked AtliQ to check back around Q2 2026.",
+            "citations": [
+              {
+                "file": "2025-09-30_quantia_lost_deal.md",
+                "quote": "Please do check back with us around then."
+              }
+            ]
+          }
+        ],
+        "refused": false
+      }
+    },
+    {
+      "id": "zentrix-revenue",
+      "question": "What is Zentrix's annual revenue?",
+      "example": false,
+      "result": {
+        "answer": "I don't have enough information in the CRM, emails or notes to answer that.",
+        "points": [],
+        "refused": true
+      }
+    },
+    {
+      "id": "finedge",
+      "question": "What does FinEdge need from us?",
+      "example": false,
+      "result": {
+        "answer": "FinEdge's compliance team cleared AtliQ on 19 Jun and Suresh asked Bhavin to confirm availability for the commercial discussion. There is no confirmation in the record. It is the largest deal in the pipeline (95k).",
+        "points": [
+          {
+            "text": "Compliance has cleared AtliQ; next is the commercial discussion.",
+            "citations": [
+              {
+                "file": "2026-03-26_finedge_compliance_docs.md",
+                "quote": "compliance has cleared AtliQ. We can move to the commercial discussion now."
+              }
+            ]
+          },
+          {
+            "text": "Suresh asked Bhavin to confirm availability.",
+            "citations": [
+              {
+                "file": "2026-03-26_finedge_compliance_docs.md",
+                "quote": "please confirm your availability"
+              }
+            ]
+          },
+          {
+            "text": "Their largest data initiative this year.",
+            "citations": [
+              {
+                "file": "2026-03-26_finedge_compliance_docs.md",
+                "quote": "This is our largest data initiative this year"
+              }
+            ]
+          },
+          {
+            "text": "CRM value 95k; last contact 30 Mar.",
+            "citations": [
+              {
+                "file": "crm_export.csv",
+                "quote": "L-1023,FinEdge Bank,Suresh Menon,suresh.menon@finedge.com,Referral,Data Engineering,Proposal Sent,95000,Bhavin,2026-01-08,2026-03-30"
+              }
+            ]
+          }
+        ],
+        "refused": false
+      }
+    },
+    {
+      "id": "deadlines-2w",
+      "question": "What deadlines are coming up in the next two weeks?",
+      "example": false,
+      "result": {
+        "answer": "11 dated deadlines or promises fall between 10 Jul and 24 Jul. Items with unclear dates (e.g. \"mid-July\") are not included.",
+        "points": [
+          {
+            "text": "10 Jul — AgroLink: Harpreet wants the proposal before 10 Jul (today) and goes on leave on the 14th; ~35–40k is approved.",
+            "citations": [
+              {
+                "file": "2026-07-01_agrolink_budget_call.md",
+                "quote": "wants proposal before 10 July, he goes on leave 14th"
+              }
+            ]
+          },
+          {
+            "text": "10 Jul — AgroLink: Dhaval's action from the 1 Jul call: send AgroLink the proposal by 10 Jul (today).",
+            "citations": [
+              {
+                "file": "2026-07-01_agrolink_budget_call.md",
+                "quote": "action: proposal — Dhaval — by 10 Jul"
+              }
+            ]
+          },
+          {
+            "text": "10 Jul — Trustline NBFC: Dhaval promised the revised annual-licence contract 'this week' (written Mon 6 Jul, so by Fri 10 Jul — today).",
+            "citations": [
+              {
+                "file": "2026-07-03_trustline_approved.md",
+                "quote": "Revised contract will be with you this week"
+              }
+            ]
+          },
+          {
+            "text": "14 Jul — HealthFirst Clinics: HealthFirst's board decides on the patient portal on 14 Jul; AtliQ sent re-phased pricing in April and the record shows no contact since.",
+            "citations": [
+              {
+                "file": "2026-04-20_healthfirst_board_update.md",
+                "quote": "now scheduled for 14 July"
+              }
+            ]
+          },
+          {
+            "text": "14 Jul — GreenGrid Solar: Pranav must sanity-check the SCADA API before the quote, by 14 Jul.",
+            "citations": [
+              {
+                "file": "2026-07-09_greengrid_discovery.md",
+                "quote": "Pranav to sanity-check SCADA API feasibility before quote — by 14 Jul"
+              }
+            ]
+          },
+          {
+            "text": "15 Jul — FinServe Capital: Arjun is travelling and asked to be pinged after 15 Jul; budget has not been discussed yet.",
+            "citations": [
+              {
+                "file": "2026-06-30_finserve_intro_call.md",
+                "quote": "arjun travelling first 2 wks of july, said ping him after 15th"
+              }
+            ]
+          },
+          {
+            "text": "15 Jul — Kaveri Textiles: Kaveri wants a revised quote for both plants by 15 Jul and signalled budget flexibility.",
+            "citations": [
+              {
+                "file": "2026-07-08_kaveri_demo_round2.md",
+                "quote": "Subbu asked for revised quote by 15 July."
+              }
+            ]
+          },
+          {
+            "text": "15 Jul — ShopSwift: Elena needs a statement of work by 15 Jul or the approved budget slips a quarter; no reply from AtliQ in the record.",
+            "citations": [
+              {
+                "file": "2026-06-29_shopswift_budget_confirmed.md",
+                "quote": "a statement of work by 15 July"
+              }
+            ]
+          },
+          {
+            "text": "17 Jul — GreenGrid Solar: Jay owes GreenGrid a proposal by 17 Jul.",
+            "citations": [
+              {
+                "file": "2026-07-09_greengrid_discovery.md",
+                "quote": "Proposal — Jay — by 17 Jul"
+              }
+            ]
+          },
+          {
+            "text": "20 Jul — Nimbus Lending: Rhea has budget conversations the week of 20 Jul and wants a call before then.",
+            "citations": [
+              {
+                "file": "2026-07-05_nimbus_lending_intro.md",
+                "quote": "I have budget conversations happening the week of 20 July, so a call before then would be ideal."
+              }
+            ]
+          },
+          {
+            "text": "24 Jul — NovaPharma: NovaPharma's 78-question security questionnaire is due back 24 Jul; Bhavin forwarded it to Pranav on 1 Jul and the record shows no response.",
+            "citations": [
+              {
+                "file": "2026-06-30_novapharma_security_questionnaire.md",
+                "quote": "We need the completed document back by 24 July"
+              }
+            ]
+          }
+        ],
+        "refused": false
+      }
+    },
+    {
+      "id": "freshcart-referral",
+      "question": "Who referred FreshCart to us?",
+      "example": false,
+      "result": {
+        "answer": "Priya Raman at Acme Retail Group referred FreshCart (Ananya Desai). Priya confirmed Ananya is expecting AtliQ's call.",
+        "points": [
+          {
+            "text": "Ananya wrote that Priya at Acme said AtliQ would be in touch.",
+            "citations": [
+              {
+                "file": "2026-05-18_freshcart_referral_followup.md",
+                "quote": "Priya at Acme Retail said you'd be in touch about our customer portal project"
+              }
+            ]
+          },
+          {
+            "text": "Priya told Dhaval she passed on AtliQ's details.",
+            "citations": [
+              {
+                "file": "2026-06-18_acme_retail_monthly_reports.md",
+                "quote": "I passed your details to Ananya Desai at FreshCart"
+              }
+            ]
+          },
+          {
+            "text": "At the 24 Jun review Priya confirmed Ananya is expecting the call.",
+            "citations": [
+              {
+                "file": "2026-06-24_acme_quarterly_review.md",
+                "quote": "she confirmed Ananya is expecting our call"
+              }
+            ]
+          }
+        ],
+        "refused": false
+      }
+    }
+  ]
+}

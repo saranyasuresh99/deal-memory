@@ -104,6 +104,57 @@ export type DebriefResponse =
   | { mode: "demo"; demo: true; message: string; matcher: MatchCandidate[] }
   | { error: string };
 
+// ---------- Cited lines (Brief and Ask) ----------
+export const CitationSchema = z.object({
+  file: z.string().describe("Exact file name, or crm_export.csv"),
+  quote: z.string().describe("Words copied exactly from that file"),
+});
+
+export const CitedLineSchema = z.object({
+  text: z.string().describe("One short sentence"),
+  citations: z.array(CitationSchema).describe("At least one source; lines without a verified source are deleted"),
+});
+export type CitedLine = z.infer<typeof CitedLineSchema>;
+
+// ---------- Pre-call Brief (POST /api/brief) ----------
+export const BRIEF_SECTIONS = [
+  { key: "last_touch", label: "Last touch" },
+  { key: "what_they_want", label: "What they want" },
+  { key: "open_promises", label: "Open promises (from AtliQ)" },
+  { key: "open_questions", label: "Open client questions" },
+  { key: "deadlines", label: "Deadlines" },
+  { key: "cross_sell", label: "Cross-sell & referral hints" },
+] as const;
+
+export const BriefSchema = z.object({
+  last_touch: z.array(CitedLineSchema),
+  what_they_want: z.array(CitedLineSchema),
+  open_promises: z.array(CitedLineSchema),
+  open_questions: z.array(CitedLineSchema),
+  deadlines: z.array(CitedLineSchema),
+  cross_sell: z.array(CitedLineSchema),
+});
+export type Brief = z.infer<typeof BriefSchema>;
+
+export type BriefResponse =
+  | { mode: "demo" | "live"; lead_id: string; no_history: false; brief: Brief; removed_claims: number }
+  | { mode: "demo" | "live"; lead_id: string; no_history: true; message: string }
+  | { mode: "demo"; demo: true; message: string }
+  | { error: string };
+
+// ---------- Ask (POST /api/ask) ----------
+export const AskSchema = z.object({
+  answer: z.string().describe("Short direct answer, or exactly the refusal sentence"),
+  points: z.array(CitedLineSchema).describe("Supporting facts, each cited"),
+  refused: z.boolean().describe("true when the data does not support an answer"),
+});
+export type AskResult = z.infer<typeof AskSchema>;
+
+export type AskResponse =
+  | { mode: "demo" | "live"; result: AskResult; removed_claims: number }
+  | { mode: "demo"; demo: true; message: string }
+  | { error: string };
+
 // ---------- Merged Radar items ----------
 export const RULE_TYPES = [
   "waiting_on_us",
