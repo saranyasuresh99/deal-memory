@@ -13,7 +13,8 @@ import type { Account } from "@/lib/types";
 import type { DebriefResult } from "@/lib/schemas";
 
 type Target = { kind: "existing"; leadId: string } | { kind: "new" } | null;
-type RowState = "approved" | "rejected";
+// The decision on a row, plus the CRM value it had at that moment (kept so "Before" stays visible).
+type RowState = { decision: "approved" | "rejected"; before: FieldValue };
 
 const FIELD_LABEL: Record<string, string> = {
   company: "Company",
@@ -101,7 +102,7 @@ export default function ProposalView({
       }
       return { ...s, accountEdits: { ...s.accountEdits, [leadId]: { ...s.accountEdits[leadId], [field]: after } }, audit };
     });
-    setRows((r) => ({ ...r, [`${targetKey}:${idx}`]: "approved" }));
+    setRows((r) => ({ ...r, [`${targetKey}:${idx}`]: { decision: "approved", before } }));
     setEditing(null);
   }
 
@@ -214,14 +215,15 @@ export default function ProposalView({
                   {fields.map((f) => {
                     const idx = result.fields.indexOf(f);
                     const key = `${targetKey}:${idx}`;
-                    const state = rows[key];
-                    const before = state ? null : currentValue(f.field);
+                    const row = rows[key];
+                    const state = row?.decision;
+                    const before = row ? row.before : currentValue(f.field);
                     const unchanged = !state && before === f.new_value;
                     const isEditing = editing?.key === key;
                     return (
                       <tr key={key} className="align-top">
                         <td className="py-2 pr-3 font-medium">{FIELD_LABEL[f.field] ?? f.field}</td>
-                        <td className="py-2 pr-3 text-slate-500">{state ? "" : showValue(before)}</td>
+                        <td className="py-2 pr-3 text-slate-500">{showValue(before)}</td>
                         <td className="py-2 pr-3">
                           {isEditing ? (
                             <div>
@@ -261,7 +263,7 @@ export default function ProposalView({
                               >
                                 Edit
                               </button>
-                              <button onClick={() => setRows((r) => ({ ...r, [key]: "rejected" }))} className="rounded-md border border-slate-300 px-2 py-1 text-xs hover:bg-slate-50">
+                              <button onClick={() => setRows((r) => ({ ...r, [key]: { decision: "rejected", before: currentValue(f.field) } }))} className="rounded-md border border-slate-300 px-2 py-1 text-xs hover:bg-slate-50">
                                 Reject
                               </button>
                             </div>
