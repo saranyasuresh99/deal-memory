@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CircleDollarSign, Clock, SquareCheckBig, TrendingUp } from "lucide-react";
 import Badge from "../Badge";
 import DocPanel from "../DocPanel";
@@ -42,7 +42,9 @@ export default function RadarView({
   const [type, setType] = useState("all");
   const [view, setView] = useState<View>("list");
   const [showHidden, setShowHidden] = useState(false);
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  // The row the person clicked, tied to the view + filters it was clicked in. On load, after a back/forward restore,
+  // and whenever the view or filters change, the first row of the first group is selected instead.
+  const [picked, setPicked] = useState<{ ctx: string; id: string } | null>(null);
   const [openDoc, setOpenDoc] = useState<{ doc: DocumentRecord; quote?: string } | null>(null);
 
   const docById = useMemo(() => new Map(docs.map((d) => [d.id, d])), [docs]);
@@ -52,7 +54,7 @@ export default function RadarView({
 
   const active = items.filter((i) => !isHidden(store.radar[i.id]));
   const hiddenCount = items.length - active.length;
-  const kpis = radarKpis(active.filter((i) => ownerMatches(owner, i.owner)));
+  const kpis = radarKpis(active.filter((i) => ownerMatches(owner, i.owner)), accountById);
 
   const matching = (showHidden ? items.filter((i) => isHidden(store.radar[i.id])) : active).filter(
     (i) => ownerMatches(owner, i.owner) && (type === "all" || i.type === type),
@@ -76,9 +78,19 @@ export default function RadarView({
     return GROUPS.map((g) => ({ ...g, items: matching.filter((i) => groupOf(i) === g.key) })).filter((s) => s.items.length > 0);
   }, [view, matching, owners]);
 
-  // The first visible row is selected on load, and again if the selected item disappears (e.g. marked done).
-  const firstId = sections.find((s) => !s.collapsed)?.items[0]?.id ?? sections[0]?.items[0]?.id ?? null;
-  const selected = matching.find((i) => i.id === selectedId) ?? matching.find((i) => i.id === firstId) ?? null;
+  // Default selection: the first row of the first group (also used if the picked item disappears, e.g. marked done).
+  const ctx = `${view}|${owner}|${type}|${showHidden}`;
+  const firstId = sections[0]?.items[0]?.id ?? null;
+  const pickedId = picked?.ctx === ctx ? picked.id : null;
+  const selected = matching.find((i) => i.id === pickedId) ?? matching.find((i) => i.id === firstId) ?? null;
+  const setSelectedId = (id: string) => setPicked({ ctx, id });
+
+  // Pages restored from the browser's back/forward cache keep old React state — start again from the first row.
+  useEffect(() => {
+    const onShow = (e: PageTransitionEvent) => e.persisted && setPicked(null);
+    window.addEventListener("pageshow", onShow);
+    return () => window.removeEventListener("pageshow", onShow);
+  }, []);
 
   useRegisterExport(`radar-${TODAY}.csv`, () =>
     matching.map((i) => ({
@@ -109,7 +121,7 @@ export default function RadarView({
           icon={CircleDollarSign}
           label="At stake"
           value={kpis.atStake.text}
-          sub={`${kpis.atStake.deals} deal${kpis.atStake.deals === 1 ? "" : "s"} waiting on an overdue action`}
+          sub={`${kpis.atStake.deals.length} deal${kpis.atStake.deals.length === 1 ? "" : "s"} waiting on an overdue action`}
         />
         <KpiCard
           icon={Clock}

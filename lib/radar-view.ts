@@ -92,25 +92,58 @@ export function valueText(i: RadarItem): string | null {
   return `${i.value_source === "quote" ? "~" : ""}$${i.value_usd.toLocaleString("en-US")}`;
 }
 
-// KPI figures for the four cards (design/DESIGN.md §3.2). `items` = the active (not done/snoozed/dismissed) items.
-export function radarKpis(items: RadarItem[]) {
-  // At stake: deals where the client is waiting on an overdue AtliQ action
-  // (a reply, an overdue promise, or a client deadline that has passed). One value per deal.
-  const overdueAction = items.filter(
-    (i) => i.type === "waiting_on_us" || i.type === "promise_overdue" || ((i.type === "client_deadline" || i.type === "promise_due") && (i.days_overdue ?? 0) > 0),
-  );
-  const deals = new Map<string, number | null>();
-  for (const i of overdueAction) {
-    const k = accountKey(i);
-    const prev = deals.get(k) ?? null;
-    deals.set(k, i.value_usd === null ? prev : Math.max(prev ?? 0, i.value_usd));
-  }
-  const known = [...deals.values()].filter((v): v is number => v !== null);
-  const atStake = known.reduce((s, v) => s + v, 0);
-  const anyUnknown = known.length < deals.size;
+export type AtStakeDeal = { key: string; account: string; lead_id: string | null; value: number | null; source: "crm" | "quote" | null; reasons: string[] };
 
+// A deal is "open" unless the CRM says Won, or Lost without a returning-deal signal (design fix: Lost deals count
+// only when the client came back). Companies not in the CRM have no status and count as open.
+function isOpenDeal(leadId: string | null, accounts: Map<string, Account>, returning: Set<string>): boolean {
+  if (!leadId) return true;
+  const status = accounts.get(leadId)?.status ?? null;
+  if (status === "Won") return false;
+  if (status === "Lost") return returning.has(leadId);
+  return true;
+}
+
+// KPI figures for the four cards (design/DESIGN.md §3.2). `items` = the active (not done/snoozed/dismissed) items;
+// `accounts` = CRM rows with approved Debrief edits applied.
+export function radarKpis(items: RadarItem[], accounts: Map<string, Account>) {
+  const returning = new Set(items.filter((i) => i.type === "returning_lost").flatMap((i) => i.lead_ids));
+
+  // At stake — each account once, open deals only, where a client is waiting on us or an AtliQ promise is
+  // overdue or due today. Value = CRM est. value, else a value stated in a verified quote. Stale, data-quality and
+  // hidden-revenue-only items never qualify.
+  const qualifies = (i: RadarItem) =>
+    i.type === "waiting_on_us" ||
+    i.type === "promise_overdue" ||
+    (i.type === "promise_due" && (i.days_until === 0 || (i.days_overdue ?? 0) > 0));
+  const deals = new Map<string, AtStakeDeal>();
+  for (const i of items.filter(qualifies)) {
+    const leadId = i.lead_ids.length === 1 ? i.lead_ids[0] : null;
+    if (!isOpenDeal(leadId, accounts, returning)) continue;
+    const key = accountKey(i);
+    const d = deals.get(key) ?? { key, account: i.account, lead_id: leadId, value: null, source: null, reasons: [] };
+    d.reasons.push(i.type === "waiting_on_us" ? "client waiting on us" : i.type === "promise_overdue" ? "promise overdue" : "promise due today");
+    deals.set(key, d);
+  }
+  for (const d of deals.values()) {
+    const crm = d.lead_id ? accounts.get(d.lead_id)?.est_value_usd ?? null : null;
+    const quoted = items
+      .filter((i) => accountKey(i) === d.key && i.value_source === "quote" && i.value_usd !== null)
+      .reduce<number | null>((m, i) => Math.max(m ?? 0, i.value_usd!), null);
+    if (crm !== null) Object.assign(d, { value: crm, source: "crm" });
+    else if (quoted !== null) Object.assign(d, { value: quoted, source: "quote" });
+    d.reasons = [...new Set(d.reasons)];
+  }
+  const withValue = [...deals.values()].filter((d) => d.value !== null).sort((a, b) => b.value! - a.value!);
+  const withoutValue = [...deals.values()].filter((d) => d.value === null);
+  const total = withValue.reduce((s, d) => s + d.value!, 0);
+
+  // Oldest client waiting — waiting-on-us items on open deals only (a Lost deal that never came back is a revisit,
+  // not a client waiting for a reply).
   const waiting = items.filter((i) => i.type === "waiting_on_us");
-  const oldest = waiting.reduce<RadarItem | null>((m, i) => (!m || (i.days_waiting ?? 0) > (m.days_waiting ?? 0) ? i : m), null);
+  const oldest = waiting
+    .filter((i) => isOpenDeal(i.lead_ids.length === 1 ? i.lead_ids[0] : null, accounts, returning))
+    .reduce<RadarItem | null>((m, i) => (!m || (i.days_waiting ?? 0) > (m.days_waiting ?? 0) ? i : m), null);
 
   const overdue = items.filter((i) => i.type === "promise_overdue");
   const dueToday = items.filter((i) => i.type === "promise_due" && i.days_until === 0);
@@ -118,7 +151,8 @@ export function radarKpis(items: RadarItem[]) {
   const hidden = items.filter((i) => HIDDEN_REVENUE.includes(i.type));
 
   return {
-    atStake: { text: deals.size ? `${formatUsdShort(atStake)}${anyUnknown ? "+" : ""}` : "$0", deals: deals.size, withValue: known.length },
+    // "+" = more qualifying deals exist whose value is unknown (not counted in the sum)
+    atStake: { text: `${formatUsdShort(total)}${withoutValue.length ? "+" : ""}`, deals: withValue, unknownValue: withoutValue },
     waiting: { count: waiting.length, oldest },
     overdue: { count: overdue.length, dueToday },
     hidden: { count: hidden.length },
