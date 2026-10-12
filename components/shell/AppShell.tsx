@@ -3,10 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { Download, Menu, Plus, X } from "lucide-react";
+import { Menu, Plus, X } from "lucide-react";
 import Sidebar, { type ShellData } from "./Sidebar";
-import { ExportProvider, useExportSpec } from "./ExportContext";
-import { downloadCsv } from "@/lib/csv";
+import { ExportProvider } from "./ExportContext";
+import ExportMenu from "./ExportMenu";
 import { btn } from "../ui";
 
 function crumb(pathname: string): [string, string] {
@@ -81,7 +81,6 @@ function ShellInner({ data, todayLabel, children }: { data: ShellData; todayLabe
 }
 
 function TopBar({ section, page, todayLabel, onMenu }: { section: string; page: string; todayLabel: string; onMenu: () => void }) {
-  const spec = useExportSpec();
   return (
     <header className="sticky top-0 z-20 flex min-h-[62px] flex-wrap items-center gap-x-3 gap-y-2 border-b border-line bg-surface/95 px-4 py-2.5 backdrop-blur sm:px-6 shell:px-8">
       <button onClick={onMenu} aria-label="Open menu" className="-ml-1 rounded-control p-1.5 text-ink hover:bg-subtle shell:hidden">
@@ -92,15 +91,7 @@ function TopBar({ section, page, todayLabel, onMenu }: { section: string; page: 
         <span className="font-medium text-navy">{page}</span>
       </div>
       <span className="hidden rounded-full border border-line px-3 py-1.5 text-sm text-muted sm:inline">Today: {todayLabel}</span>
-      <button
-        onClick={() => spec && downloadCsv(spec.filename, spec.rows())}
-        disabled={!spec}
-        title={spec ? `Download ${spec.filename}` : "Nothing to export on this page"}
-        className={btn.secondary}
-      >
-        <Download size={16} className="sm:hidden" />
-        <span className="hidden sm:inline">Export</span>
-      </button>
+      <ExportMenu />
       <Link href="/debrief" className={btn.primary}>
         <Plus size={16} />
         <span className="hidden sm:inline">New debrief</span>

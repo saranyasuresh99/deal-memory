@@ -11,7 +11,11 @@
         "account_match": {
           "lead_id": "L-1038",
           "candidates": [
-            { "lead_id": "L-1038", "company": "MiraHealth", "reason": "Company MiraHealth and contact Sophie (Sophie Turner) are named." }
+            {
+              "lead_id": "L-1038",
+              "company": "MiraHealth",
+              "reason": "Company MiraHealth and contact Sophie (Sophie Turner) are named."
+            }
           ],
           "is_new_lead": false,
           "confidence": "high"
@@ -59,8 +63,16 @@
         "account_match": {
           "lead_id": null,
           "candidates": [
-            { "lead_id": "L-1003", "company": "Meridian Healthcare", "reason": "Contact Dr. Sanjay Kulkarni at Meridian; owner Bhavin; a proposal is already with this client." },
-            { "lead_id": "L-1027", "company": "Meridian Health LLC", "reason": "Contact Sanjay Kulkarni at Meridian; entered by Jay from the TechSummit booth." }
+            {
+              "lead_id": "L-1003",
+              "company": "Meridian Healthcare",
+              "reason": "Contact Dr. Sanjay Kulkarni at Meridian; owner Bhavin; a proposal is already with this client."
+            },
+            {
+              "lead_id": "L-1027",
+              "company": "Meridian Health LLC",
+              "reason": "Contact Sanjay Kulkarni at Meridian; entered by Jay from the TechSummit booth."
+            }
           ],
           "is_new_lead": false,
           "confidence": "low"
@@ -88,8 +100,16 @@
         "account_match": {
           "lead_id": "L-1004",
           "candidates": [
-            { "lead_id": "L-1004", "company": "GlobalMart", "reason": "Contact Neha Shah; status Proposal Sent — \"phasing\" fits the open vendor-portal proposal." },
-            { "lead_id": "L-1040", "company": "GlobalMart", "reason": "Same contact (Neha Shah), separate Power BI dashboards lead from TechSummit." }
+            {
+              "lead_id": "L-1004",
+              "company": "GlobalMart",
+              "reason": "Contact Neha Shah; status Proposal Sent — \"phasing\" fits the open vendor-portal proposal."
+            },
+            {
+              "lead_id": "L-1040",
+              "company": "GlobalMart",
+              "reason": "Same contact (Neha Shah), separate Power BI dashboards lead from TechSummit."
+            }
           ],
           "is_new_lead": false,
           "confidence": "medium"
@@ -118,7 +138,11 @@
         "account_match": {
           "lead_id": "L-1014",
           "candidates": [
-            { "lead_id": "L-1014", "company": "VoltEnergy", "reason": "Sender m.chen@voltenergy.com is the CRM contact email for Marcus Chen." }
+            {
+              "lead_id": "L-1014",
+              "company": "VoltEnergy",
+              "reason": "Sender m.chen@voltenergy.com is the CRM contact email for Marcus Chen."
+            }
           ],
           "is_new_lead": false,
           "confidence": "high"
@@ -157,15 +181,81 @@
           "confidence": "high"
         },
         "fields": [
-          { "field": "company", "old_value": null, "new_value": "Zentrix Labs", "quote": "Rahul from Zentrix Labs" },
-          { "field": "contact_name", "old_value": null, "new_value": "Rahul", "quote": "Call with Rahul" },
-          { "field": "service_interest", "old_value": null, "new_value": "AI/ML Solutions", "quote": "about a chatbot" },
-          { "field": "notes", "old_value": null, "new_value": "Call with Rahul about a chatbot.", "quote": "Call with Rahul from Zentrix Labs about a chatbot." }
+          {
+            "field": "company",
+            "old_value": null,
+            "new_value": "Zentrix Labs",
+            "quote": "Rahul from Zentrix Labs"
+          },
+          {
+            "field": "contact_name",
+            "old_value": null,
+            "new_value": "Rahul",
+            "quote": "Call with Rahul"
+          },
+          {
+            "field": "service_interest",
+            "old_value": null,
+            "new_value": "AI/ML Solutions",
+            "quote": "about a chatbot"
+          },
+          {
+            "field": "notes",
+            "old_value": null,
+            "new_value": "Call with Rahul about a chatbot.",
+            "quote": "Call with Rahul from Zentrix Labs about a chatbot."
+          }
         ],
         "promises": [],
         "signals": [],
         "warnings": [
           "Zentrix Labs is not in the CRM — approving creates a new lead. Contact email, owner, source and value are unknown and need input."
+        ]
+      }
+    },
+    {
+      "sample_id": "datanest-teams",
+      "input": "Meeting summary — DataNest: contract renewal\nDate: Wed 8 Jul 2026\nAttendees: Sameer Kulkarni (DataNest), Karandeep (AtliQ)\n\nRecap\n- Sameer verbally agreed to renew the contract.\n- DataNest requested a third engineer.\n\nNotes generated automatically by the meeting notetaker.",
+      "result": {
+        "account_match": {
+          "lead_id": "L-1018",
+          "candidates": [
+            {
+              "lead_id": "L-1018",
+              "company": "DataNest",
+              "reason": "Company DataNest and contact Sameer Kulkarni are named."
+            }
+          ],
+          "is_new_lead": false,
+          "confidence": "high"
+        },
+        "fields": [
+          {
+            "field": "last_contact_date",
+            "old_value": "2026-03-05",
+            "new_value": "2026-07-08",
+            "quote": "Date: Wed 8 Jul 2026"
+          },
+          {
+            "field": "notes",
+            "old_value": "2 engineers placed",
+            "new_value": "2 engineers placed. 8 Jul call: Sameer verbally agreed to renew the contract. DataNest requested a third engineer.",
+            "quote": "Sameer verbally agreed to renew the contract."
+          }
+        ],
+        "promises": [],
+        "signals": [
+          {
+            "type": "cross_sell",
+            "summary": "Expansion: DataNest requested a third engineer on top of the two already placed.",
+            "due_date": null,
+            "date_clear": true,
+            "quote": "DataNest requested a third engineer."
+          }
+        ],
+        "warnings": [
+          "No value was stated for the renewal or the third engineer, so the estimated value is not changed.",
+          "No AtliQ commitment or deadline is stated in the summary, so no promise was added."
         ]
       }
     }

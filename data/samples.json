@@ -28,5 +28,11 @@
     "label": "Unknown company (Zentrix Labs)",
     "mode": "speak",
     "text": "Call with Rahul from Zentrix Labs about a chatbot."
+  },
+  {
+    "id": "datanest-teams",
+    "label": "Teams meeting summary (DataNest)",
+    "mode": "paste",
+    "text": "Meeting summary — DataNest: contract renewal\nDate: Wed 8 Jul 2026\nAttendees: Sameer Kulkarni (DataNest), Karandeep (AtliQ)\n\nRecap\n- Sameer verbally agreed to renew the contract.\n- DataNest requested a third engineer.\n\nNotes generated automatically by the meeting notetaker."
   }
 ]

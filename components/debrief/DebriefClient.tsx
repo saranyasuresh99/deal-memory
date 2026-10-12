@@ -73,6 +73,9 @@ export default function DebriefClient({
   return (
     <Card className="mx-auto max-w-3xl p-5 sm:p-7">
       <Stepper step={step} />
+      <p className="mt-3 text-sm text-muted">
+        We don&apos;t record calls. Speak a 60-second note, paste a chat or email, or paste a Teams/Zoom meeting summary.
+      </p>
 
       {(view.kind === "capture" || view.kind === "loading" || view.kind === "error") && (
         <div className="mt-6 space-y-4">
@@ -81,7 +84,7 @@ export default function DebriefClient({
             onChange={setMode}
             options={[
               { value: "speak", label: "Speak a debrief" },
-              { value: "paste", label: "Paste message / email" },
+              { value: "paste", label: "Paste message, email or transcript" },
             ]}
           />
           <SpeechInput mode={mode} value={text} onChange={setText} />
