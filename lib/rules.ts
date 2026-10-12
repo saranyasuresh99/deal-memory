@@ -104,6 +104,15 @@ function firstName(nameAndEmail: string | null): string | null {
   return m ? m[1].split(" ")[0] : null;
 }
 
+// Did the client write again after the CRM's last contact date? (Same test as the returning "Lost" deal rule.)
+function clientCameBack(a: Account, documents: DocumentRecord[]): boolean {
+  return documents.some(
+    (d) =>
+      d.linked_lead_ids.includes(a.lead_id) &&
+      d.messages.some((m) => m.date && a.last_contact_date && m.date > a.last_contact_date && emailDomain(m.from_email) === emailDomain(a.contact_email)),
+  );
+}
+
 function accountForEmail(email: string | null, accounts: Account[]): Account | undefined {
   if (!email) return undefined;
   return (
@@ -127,6 +136,10 @@ export function runRules(accounts: Account[], documents: DocumentRecord[], csvTe
     const acc = accountForEmail(last.from_email, accounts);
     const company = acc?.company ?? doc.unmatched_companies[0];
     if (!company) continue;
+
+    // A Lost deal is only "waiting on us" if the client came back after it was marked Lost (a returning deal).
+    // Otherwise it is a revisit (Hidden revenue), not a client waiting for a reply.
+    if (acc?.status === "Lost" && !clientCameBack(acc, documents)) continue;
 
     // Skip if a later meeting WITH this client (listed as attendee), or a later AtliQ email to them, shows we responded.
     // Internal notes that merely mention the client don't count.

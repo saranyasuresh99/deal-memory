@@ -802,34 +802,6 @@
       "merged": 1
     },
     {
-      "source": "rule",
-      "lead_ids": [
-        "L-1035"
-      ],
-      "owner": "Bhavin",
-      "value_usd": 60000,
-      "value_source": "crm",
-      "due_date": null,
-      "date_clear": true,
-      "days_waiting": 283,
-      "days_overdue": null,
-      "days_until": null,
-      "id": "waiting_on_us:2025-09-30_quantia_lost_deal.md",
-      "type": "waiting_on_us",
-      "account": "Quantia Analytics",
-      "summary": "James Whitfield (Quantia Analytics) wrote on 30 Sep 2025 and the thread has no reply from AtliQ — waiting 283 days.",
-      "evidence": [
-        {
-          "file": "2025-09-30_quantia_lost_deal.md",
-          "quote": "Please do check back with us around then."
-        }
-      ],
-      "suggested_next_action": "Reply to James — answer what they asked in the 30 Sep 2025 message.",
-      "score": 67.5,
-      "urgency_text": "Waiting 283 days",
-      "merged": 1
-    },
-    {
       "id": "revisit_due:L-1035:0",
       "type": "revisit_due",
       "source": "ai",

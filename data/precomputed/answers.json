@@ -82,7 +82,7 @@
       "question": "Which clients are waiting on a reply from us?",
       "example": true,
       "result": {
-        "answer": "15 email threads end with a message from the client and no reply from AtliQ. The most recent are listed first.",
+        "answer": "14 email threads end with a message from the client and no reply from AtliQ. The most recent are listed first.",
         "points": [
           {
             "text": "EduSpark — waiting 2 days (owner: Jay).",
@@ -207,15 +207,6 @@
               {
                 "file": "2026-06-09_clearpath_budget_unfrozen.md",
                 "quote": "Is AtliQ still interested, and does the 40k estimate still hold?"
-              }
-            ]
-          },
-          {
-            "text": "Quantia Analytics — waiting 283 days (owner: Bhavin).",
-            "citations": [
-              {
-                "file": "2025-09-30_quantia_lost_deal.md",
-                "quote": "Please do check back with us around then."
               }
             ]
           }
