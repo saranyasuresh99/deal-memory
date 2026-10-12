@@ -1,29 +1,18 @@
 "use client";
 
-// CRM record for one account, with approved Debrief edits (from this browser) layered on top.
+// Account card: CRM record for one account, with approved Debrief edits (from this browser) layered on top.
 import Badge from "./Badge";
+import { Card } from "./ui";
+import { statusTone } from "./AccountsList";
 import { useStore } from "@/lib/store";
 import { applyEdits } from "@/lib/overlay";
 import { daysAgo, hasNoOwner, isStale } from "@/lib/accounts";
 import { agoText, formatDate, formatUsd } from "@/lib/format";
 import type { Account } from "@/lib/types";
 
-const NEEDS_INPUT = <span className="italic text-amber-700">needs input</span>;
+const NEEDS_INPUT = <span className="text-warn-fg">needs input</span>;
 
-export function AccountStatusBadges({ account, duplicateLabels }: { account: Account; duplicateLabels: string[] }) {
-  const a = applyEdits(account, useStore());
-  return (
-    <div className="mt-2 flex flex-wrap gap-2">
-      {hasNoOwner(a) && <Badge>No owner</Badge>}
-      {isStale(a) && <Badge>Stale</Badge>}
-      {duplicateLabels.map((l, i) => (
-        <Badge key={i}>{l}</Badge>
-      ))}
-    </div>
-  );
-}
-
-export default function AccountFields({ account }: { account: Account }) {
+export default function AccountFields({ account, duplicateLabels }: { account: Account; duplicateLabels: string[] }) {
   const store = useStore();
   const a = applyEdits(account, store);
   const edited = store.accountEdits[account.lead_id] ?? {};
@@ -31,9 +20,9 @@ export default function AccountFields({ account }: { account: Account }) {
   const fields: [keyof Account, string, React.ReactNode][] = [
     ["contact_name", "Contact", a.contact_name ?? NEEDS_INPUT],
     ["contact_email", "Email", a.contact_email ?? NEEDS_INPUT],
-    ["status", "Status", a.status ?? NEEDS_INPUT],
-    ["est_value_usd", "Est. value", formatUsd(a.est_value_usd) ?? <span className="italic text-slate-500">value unknown</span>],
-    ["owner", "Owner", a.owner ?? <span className="italic text-amber-700">No owner</span>],
+    ["owner", "Owner", a.owner ?? <span className="text-warn-fg">No owner</span>],
+    ["status", "Status", a.status ? <Badge tone={statusTone(a.status)}>{a.status}</Badge> : NEEDS_INPUT],
+    ["est_value_usd", "Est. value", formatUsd(a.est_value_usd) ?? <span className="text-muted">value unknown</span>],
     ["service_interest", "Service interest", a.service_interest ?? NEEDS_INPUT],
     ["source", "Source", a.source ?? NEEDS_INPUT],
     ["created_date", "Created", formatDate(a.created_date) ?? NEEDS_INPUT],
@@ -47,29 +36,40 @@ export default function AccountFields({ account }: { account: Account }) {
 
   const mark = (k: keyof Account) =>
     k in edited ? (
-      <span className="ml-1 text-xs text-accent-700" title={`Approved in Debrief (was: ${account[k] ?? "empty"})`}>
+      <span className="ml-1 text-xs text-brand" title={`Approved in Debrief (was: ${account[k] ?? "empty"})`}>
         · updated
       </span>
     ) : null;
 
   return (
-    <dl className="grid grid-cols-1 gap-x-6 gap-y-3 rounded-xl border border-slate-200 p-4 shadow-sm sm:grid-cols-2">
-      {fields.map(([key, label, value]) => (
-        <div key={key}>
-          <dt className="text-xs text-slate-500">
-            {label}
-            {mark(key)}
-          </dt>
-          <dd className="text-sm break-words">{value}</dd>
-        </div>
-      ))}
-      <div className="sm:col-span-2">
-        <dt className="text-xs text-slate-500">
-          CRM notes
-          {mark("notes")}
-        </dt>
-        <dd className="text-sm">{a.notes ?? <span className="italic text-slate-400">empty</span>}</dd>
+    <Card className="p-5">
+      <h1 className="text-xl font-semibold text-navy">{a.company}</h1>
+      <div className="mt-0.5 text-sm text-muted">{a.lead_id}</div>
+      <div className="mt-2 flex flex-wrap gap-1.5">
+        {hasNoOwner(a) && <Badge>No owner</Badge>}
+        {isStale(a) && <Badge>Stale</Badge>}
+        {duplicateLabels.map((l, i) => (
+          <Badge key={i}>{l}</Badge>
+        ))}
       </div>
-    </dl>
+      <dl className="mt-4 divide-y divide-line border-t border-line">
+        {fields.map(([key, label, value]) => (
+          <div key={key} className="flex items-start justify-between gap-3 py-2">
+            <dt className="shrink-0 text-xs text-muted">
+              {label}
+              {mark(key)}
+            </dt>
+            <dd className="min-w-0 text-right text-sm break-words text-ink">{value}</dd>
+          </div>
+        ))}
+        <div className="py-2">
+          <dt className="text-xs text-muted">
+            CRM notes
+            {mark("notes")}
+          </dt>
+          <dd className="mt-1 text-sm text-ink">{a.notes ?? <span className="text-muted">empty</span>}</dd>
+        </div>
+      </dl>
+    </Card>
   );
 }

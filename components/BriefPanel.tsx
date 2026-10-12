@@ -3,6 +3,8 @@
 import { useState } from "react";
 import CitedLines from "./CitedLines";
 import DocPanel from "./DocPanel";
+import { Card, btn } from "./ui";
+import { Sparkles, TriangleAlert } from "lucide-react";
 import { BRIEF_SECTIONS, type Brief, type BriefResponse } from "@/lib/schemas";
 import type { Account, DocumentRecord } from "@/lib/types";
 import { useStore } from "@/lib/store";
@@ -41,24 +43,25 @@ export default function BriefPanel({ account, docs }: { account: Account; docs: 
   }
 
   return (
-    <section className="rounded-xl border border-slate-200 p-4 shadow-sm">
+    <Card className="p-5">
       <div className="flex flex-wrap items-center justify-between gap-2">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">Pre-call brief</h2>
-        <button
-          onClick={generate}
-          disabled={view.kind === "loading"}
-          className="rounded-lg bg-accent-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-accent-700 disabled:opacity-40"
-        >
+        <h2 className="flex items-center gap-2 text-base font-semibold text-navy">
+          <Sparkles size={18} className="text-brand" /> Pre-call brief
+        </h2>
+        <button onClick={generate} disabled={view.kind === "loading"} className={btn.primary}>
           {view.kind === "loading" ? "Generating…" : view.kind === "brief" ? "Regenerate" : "Generate pre-call brief"}
         </button>
       </div>
 
-      {view.kind === "error" && <p className="mt-3 rounded-lg bg-red-50 px-3 py-2 text-sm text-red-800">{view.message}</p>}
-      {view.kind === "message" && <p className="mt-3 text-sm text-slate-600">{view.message}</p>}
+      {view.kind === "idle" && (
+        <p className="mt-2 text-sm text-muted">Last touch, what they want, open promises and questions, deadlines and cross-sell hints — every line cited.</p>
+      )}
+      {view.kind === "error" && <p className="mt-3 rounded-control bg-danger-bg px-3 py-2 text-sm text-danger-fg">{view.message}</p>}
+      {view.kind === "message" && <p className="mt-3 text-sm text-muted">{view.message}</p>}
 
       {view.kind === "brief" && (
         <div className="mt-4 space-y-5">
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-muted">
             {view.mode === "demo" ? "Pre-generated with Claude during the build." : "Generated live by Claude."} Every line cites the
             email, note or CRM row it comes from.
             {view.removed > 0 && ` ${view.removed} line(s) were dropped because their quote could not be found.`}
@@ -66,17 +69,19 @@ export default function BriefPanel({ account, docs }: { account: Account; docs: 
           {(() => {
             const warnings = view.brief.warnings.filter((w) => !(ownerNow && w.text.startsWith("No owner")));
             return warnings.length > 0 ? (
-              <div className="rounded-lg border border-amber-300 bg-amber-50 p-3">
-                <h3 className="mb-1.5 text-sm font-semibold text-amber-900">⚠ Before the call</h3>
+              <div className="rounded-card border border-[#f2cf7a] bg-warn-bg p-4">
+                <h3 className="mb-2 flex items-center gap-2 text-sm font-semibold text-warn-fg">
+                  <TriangleAlert size={16} /> Before the call
+                </h3>
                 <CitedLines lines={warnings} canOpen={(f) => byId.has(f)} onOpen={(f, quote) => setOpen({ doc: byId.get(f)!, quote })} />
               </div>
             ) : null;
           })()}
           {BRIEF_SECTIONS.filter((s) => s.key !== "warnings").map(({ key, label }) => (
             <div key={key}>
-              <h3 className="mb-1.5 text-sm font-semibold text-slate-700">{label}</h3>
+              <h3 className="mb-2 text-sm font-semibold text-navy">{label}</h3>
               {view.brief[key].length === 0 ? (
-                <p className="text-sm text-slate-400">Nothing found in the record.</p>
+                <p className="text-sm text-muted">Nothing found in the record.</p>
               ) : (
                 <CitedLines
                   lines={view.brief[key]}
@@ -90,6 +95,6 @@ export default function BriefPanel({ account, docs }: { account: Account; docs: 
       )}
 
       <DocPanel doc={open?.doc ?? null} highlight={open?.quote} onClose={() => setOpen(null)} />
-    </section>
+    </Card>
   );
 }

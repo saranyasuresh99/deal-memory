@@ -1,13 +1,17 @@
 "use client";
 
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useMemo, useState } from "react";
-import Badge from "./Badge";
+import { Briefcase, Copy, Clock, UserX } from "lucide-react";
+import Badge, { type Tone } from "./Badge";
+import { Avatar, Card, FilterSelect, KpiCard, th } from "./ui";
+import { useRegisterExport } from "./shell/ExportContext";
 import type { Account } from "@/lib/types";
-import { formatDate, formatUsd } from "@/lib/format";
-import { useStore } from "@/lib/store";
+import { formatShort, formatUsd } from "@/lib/format";
+import { ownerMatches, useOwnerFilter, useStore } from "@/lib/store";
 import { applyEdits, newLeadAccounts } from "@/lib/overlay";
 import { hasNoOwner, isStale } from "@/lib/accounts";
+import { TODAY } from "@/lib/config";
 
 export type AccountRow = {
   account: Account;
@@ -17,20 +21,31 @@ export type AccountRow = {
   duplicate: "duplicate" | "possible_duplicate" | null;
 };
 
-const FILTERS = [
-  { key: "all", label: "All" },
-  { key: "duplicate", label: "Duplicates" },
-  { key: "noOwner", label: "No owner" },
-  { key: "stale", label: "Stale" },
-] as const;
-
-type FilterKey = (typeof FILTERS)[number]["key"];
-
+type FilterKey = "all" | "duplicate" | "noOwner" | "stale";
 type ViewRow = AccountRow & { edited: boolean; isNew: boolean };
 
+export function statusTone(status: string | null): Tone {
+  switch (status) {
+    case "Won":
+      return "rev";
+    case "Lost":
+      return "dq";
+    case "Proposal Sent":
+      return "brand";
+    case "Contacted":
+      return "wait";
+    case "New":
+      return "brand";
+    default:
+      return "warn";
+  }
+}
+
 export default function AccountsList({ rows: baseRows }: { rows: AccountRow[] }) {
+  const router = useRouter();
   const [query, setQuery] = useState("");
   const [filter, setFilter] = useState<FilterKey>("all");
+  const [owner, setOwner] = useOwnerFilter();
   const store = useStore();
 
   // Layer approved Debrief edits and new leads (from this browser) on top of the base CRM.
@@ -40,108 +55,150 @@ export default function AccountsList({ rows: baseRows }: { rows: AccountRow[] })
       return { ...r, account: a, stale: isStale(a), noOwner: hasNoOwner(a), edited: a !== r.account, isNew: false };
     });
     const fresh = newLeadAccounts(store).map((a) => ({
-      account: a, docCount: 0, stale: false, noOwner: hasNoOwner(a), duplicate: null, edited: false, isNew: true,
+      account: a,
+      docCount: 0,
+      stale: false,
+      noOwner: hasNoOwner(a),
+      duplicate: null,
+      edited: false,
+      isNew: true,
     }));
     return [...fresh, ...edited];
   }, [baseRows, store]);
 
-  const counts: Record<FilterKey, number> = {
-    all: rows.length,
-    duplicate: rows.filter((r) => r.duplicate).length,
-    noOwner: rows.filter((r) => r.noOwner).length,
-    stale: rows.filter((r) => r.stale).length,
+  const owners = [...new Set(rows.map((r) => r.account.owner).filter((o): o is string => !!o))].sort();
+  const byOwner = rows.filter((r) => ownerMatches(owner, r.account.owner));
+  const counts = {
+    all: byOwner.length,
+    duplicate: byOwner.filter((r) => r.duplicate).length,
+    noOwner: byOwner.filter((r) => r.noOwner).length,
+    stale: byOwner.filter((r) => r.stale).length,
   };
 
-  const shown = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    return rows.filter((r) => {
-      if (filter === "duplicate" && !r.duplicate) return false;
-      if (filter === "noOwner" && !r.noOwner) return false;
-      if (filter === "stale" && !r.stale) return false;
-      if (!q) return true;
-      const a = r.account;
-      return [a.lead_id, a.company, a.contact_name, a.contact_email, a.owner, a.status]
-        .some((v) => v?.toLowerCase().includes(q));
-    });
-  }, [rows, query, filter]);
+  const q = query.trim().toLowerCase();
+  const shown = byOwner.filter((r) => {
+    if (filter === "duplicate" && !r.duplicate) return false;
+    if (filter === "noOwner" && !r.noOwner) return false;
+    if (filter === "stale" && !r.stale) return false;
+    if (!q) return true;
+    const a = r.account;
+    return [a.lead_id, a.company, a.contact_name, a.contact_email, a.owner, a.status].some((v) => v?.toLowerCase().includes(q));
+  });
+
+  useRegisterExport(`accounts-${TODAY}.csv`, () =>
+    shown.map(({ account: a, docCount, stale, noOwner, duplicate, isNew }) => ({
+      lead_id: a.lead_id,
+      company: a.company,
+      contact: a.contact_name ?? "",
+      email: a.contact_email ?? "",
+      status: a.status ?? "",
+      owner: a.owner ?? "",
+      est_value_usd: a.est_value_usd ?? "",
+      last_contact: a.last_contact_date ?? "",
+      docs: docCount,
+      flags: [isNew && "new lead", duplicate?.replace("_", " "), noOwner && "no owner", stale && "stale"].filter(Boolean).join("; "),
+    })),
+  );
+
+  const toggle = (k: FilterKey) => setFilter(filter === k ? "all" : k);
 
   return (
-    <div className="space-y-4">
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <input
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search company, contact, owner, lead ID…"
-          className="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-accent-600 focus:outline-none sm:max-w-xs"
-        />
-        <div className="flex flex-wrap gap-2">
-          {FILTERS.map((f) => (
-            <button
-              key={f.key}
-              onClick={() => setFilter(f.key)}
-              className={`rounded-full border px-3 py-1 text-sm ${
-                filter === f.key
-                  ? "border-accent-600 bg-accent-50 text-accent-700"
-                  : "border-slate-200 text-slate-600 hover:bg-slate-50"
-              }`}
-            >
-              {f.label} <span className="text-slate-400">{counts[f.key]}</span>
-            </button>
-          ))}
-        </div>
+    <div className="space-y-6">
+      <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
+        <KpiCard icon={Briefcase} label="Accounts" value={counts.all} active={filter === "all"} onClick={() => setFilter("all")} />
+        <KpiCard icon={Copy} label="Duplicates" value={counts.duplicate} active={filter === "duplicate"} onClick={() => toggle("duplicate")} />
+        <KpiCard icon={UserX} label="No owner" value={counts.noOwner} active={filter === "noOwner"} onClick={() => toggle("noOwner")} />
+        <KpiCard icon={Clock} label="Stale" value={counts.stale} active={filter === "stale"} onClick={() => toggle("stale")} />
       </div>
 
-      <ul className="space-y-2">
-        {shown.map(({ account: a, docCount, stale, noOwner, duplicate, edited, isNew }) => (
-          <li key={a.lead_id}>
-            <CardLink
-              href={isNew ? null : `/accounts/${a.lead_id}`}
-              className="block rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-accent-600 hover:shadow"
-            >
-              <div className="flex flex-wrap items-start justify-between gap-2">
-                <div className="min-w-0">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="font-medium">{a.company}</span>
-                    <span className="text-xs text-slate-400">{a.lead_id}</span>
-                  </div>
-                  <div className="mt-0.5 truncate text-sm text-slate-600">
-                    {a.contact_name ?? <span className="italic text-amber-700">contact needs input</span>}
-                    {a.service_interest && <span className="text-slate-400"> · {a.service_interest}</span>}
-                  </div>
-                </div>
-                <div className="text-right text-sm">
-                  <div className="font-medium">
-                    {formatUsd(a.est_value_usd) ?? <span className="font-normal text-slate-400">value unknown</span>}
-                  </div>
-                  <div className="text-slate-500">{a.status ?? <span className="italic text-amber-700">no status</span>}</div>
-                </div>
-              </div>
-              <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
-                {noOwner ? <Badge>No owner</Badge> : <span>Owner: {a.owner}</span>}
-                <span>· Last contact: {formatDate(a.last_contact_date) ?? "never"}</span>
-                <span>· {docCount} doc{docCount === 1 ? "" : "s"}</span>
-                {duplicate === "duplicate" && <Badge>Duplicate</Badge>}
-                {duplicate === "possible_duplicate" && <Badge>Possible duplicate</Badge>}
-                {stale && <Badge>Stale</Badge>}
-                {edited && <Badge tone="accent">Updated via Debrief</Badge>}
-                {isNew && <Badge tone="green">New lead (from Debrief)</Badge>}
-              </div>
-            </CardLink>
-          </li>
-        ))}
-        {shown.length === 0 && <li className="py-8 text-center text-sm text-slate-500">No accounts match.</li>}
-      </ul>
+      <Card className="overflow-hidden">
+        <div className="flex flex-wrap items-center gap-3 border-b border-line px-4 py-3">
+          <h2 className="text-base font-semibold text-navy">All accounts</h2>
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Filter by company, contact, owner, lead ID…"
+            aria-label="Filter accounts"
+            className="min-w-0 flex-1 rounded-control border border-line px-3 py-1.5 text-sm placeholder:text-muted focus:border-brand focus:outline-none sm:max-w-xs"
+          />
+          <div className="ml-auto">
+            <FilterSelect
+              label="Owner"
+              value={owner}
+              onChange={setOwner}
+              options={[{ value: "all", label: "All" }, ...owners.map((o) => ({ value: o, label: o })), { value: "none", label: "No owner" }]}
+            />
+          </div>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[820px] text-sm">
+            <thead className="border-b border-line bg-subtle">
+              <tr>
+                <th className={th}>Account</th>
+                <th className={th}>Status</th>
+                <th className={th}>Owner</th>
+                <th className={th}>Last contact</th>
+                <th className={`${th} text-right`}>Docs</th>
+                <th className={`${th} text-right`}>Value</th>
+                <th className={th}>Flags</th>
+              </tr>
+            </thead>
+            <tbody>
+              {shown.map(({ account: a, docCount, stale, noOwner, duplicate, edited, isNew }) => {
+                const open = () => !isNew && router.push(`/accounts/${a.lead_id}`);
+                return (
+                  <tr
+                    key={a.lead_id}
+                    tabIndex={isNew ? -1 : 0}
+                    onClick={open}
+                    onKeyDown={(e) => e.key === "Enter" && open()}
+                    className={`border-t border-line ${isNew ? "" : "cursor-pointer hover:bg-subtle"}`}
+                  >
+                    <td className="px-4 py-3">
+                      <div className="font-medium text-ink">{a.company}</div>
+                      <div className="text-xs text-muted">
+                        {a.lead_id} · {a.contact_name ?? <span className="text-warn-fg">contact needs input</span>}
+                      </div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <Badge tone={statusTone(a.status)}>{a.status ?? "needs input"}</Badge>
+                    </td>
+                    <td className="px-4 py-3">
+                      <Avatar name={a.owner} />
+                    </td>
+                    <td className="px-4 py-3 text-ink">{formatShort(a.last_contact_date) ?? <span className="text-muted">never</span>}</td>
+                    <td className="px-4 py-3 text-right text-ink">{docCount}</td>
+                    <td className="px-4 py-3 text-right">
+                      {a.est_value_usd !== null ? (
+                        <span className="font-semibold text-navy">{formatUsd(a.est_value_usd)}</span>
+                      ) : (
+                        <span className="text-muted">value unknown</span>
+                      )}
+                    </td>
+                    <td className="px-4 py-3">
+                      <div className="flex flex-wrap gap-1">
+                        {isNew && <Badge tone="rev">New lead (Debrief)</Badge>}
+                        {edited && <Badge tone="brand">Updated via Debrief</Badge>}
+                        {duplicate === "duplicate" && <Badge>Duplicate</Badge>}
+                        {duplicate === "possible_duplicate" && <Badge>Possible duplicate</Badge>}
+                        {noOwner && <Badge>No owner</Badge>}
+                        {stale && <Badge>Stale</Badge>}
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+              {shown.length === 0 && (
+                <tr>
+                  <td colSpan={7} className="px-4 py-10 text-center text-muted">
+                    No accounts match.
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </Card>
     </div>
-  );
-}
-
-// New leads from Debrief have no detail page yet, so their card is not a link.
-function CardLink({ href, className, children }: { href: string | null; className: string; children: React.ReactNode }) {
-  return href ? (
-    <Link href={href} className={className}>
-      {children}
-    </Link>
-  ) : (
-    <div className={className}>{children}</div>
   );
 }

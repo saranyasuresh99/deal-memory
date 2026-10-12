@@ -1,5 +1,6 @@
 import AccountsList, { type AccountRow } from "@/components/AccountsList";
 import AccountsSubtitle from "@/components/AccountsSubtitle";
+import { PageHeader } from "@/components/ui";
 import { accounts, documentsFor } from "@/lib/data";
 import { duplicatesFor, findDuplicates, hasNoOwner, isStale } from "@/lib/accounts";
 
@@ -21,11 +22,8 @@ export default function AccountsPage() {
   });
 
   return (
-    <div className="space-y-5">
-      <div>
-        <h1 className="text-2xl font-semibold tracking-tight">Accounts</h1>
-        <AccountsSubtitle crmCount={accounts.length} />
-      </div>
+    <div className="space-y-6">
+      <PageHeader title="Accounts" subtitle={<AccountsSubtitle crmCount={accounts.length} />} />
       <AccountsList rows={rows} />
     </div>
   );
