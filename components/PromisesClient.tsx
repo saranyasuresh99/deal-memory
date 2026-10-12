@@ -2,16 +2,18 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import Badge from "./Badge";
 import DocPanel from "./DocPanel";
-import { updateStore, useStore } from "@/lib/store";
+import { Avatar, Card, FilterSelect, GroupHeader, th } from "./ui";
+import { useRegisterExport } from "./shell/ExportContext";
+import { ownerMatches, updateStore, useOwnerFilter, useStore } from "@/lib/store";
 import { daysBetween } from "@/lib/accounts";
 import { TODAY } from "@/lib/config";
-import { formatDate } from "@/lib/format";
+import { formatShort, weekday } from "@/lib/format";
 import type { RadarItem } from "@/lib/schemas";
 import type { DocumentRecord } from "@/lib/types";
 
 type Status = "open" | "overdue" | "done";
+type GroupKey = "overdue" | "soon" | "unclear" | "done";
 
 type Row = {
   id: string;
@@ -30,12 +32,24 @@ type Row = {
   approvedOn?: string;
 };
 
-const STATUS_TONE = { overdue: "orange", open: "accent", done: "green" } as const;
+const GROUPS: { key: GroupKey; title: string; dot: string; collapsed: boolean }[] = [
+  { key: "overdue", title: "Overdue", dot: "bg-navy", collapsed: false },
+  { key: "soon", title: "Due soon", dot: "bg-[#e0a100]", collapsed: false },
+  { key: "unclear", title: "Date unclear", dot: "bg-[#f2cf7a]", collapsed: false },
+  { key: "done", title: "Done", dot: "bg-rev-fg", collapsed: true },
+];
+
+const TOP_N = 5;
+
+function groupOf(r: Row): GroupKey {
+  if (r.status === "done") return "done";
+  if (r.status === "overdue") return "overdue";
+  return r.dueDate ? "soon" : "unclear";
+}
 
 export default function PromisesClient({ items, docs }: { items: RadarItem[]; docs: DocumentRecord[] }) {
   const store = useStore();
-  const [statusFilter, setStatusFilter] = useState<"all" | Status>("all");
-  const [ownerFilter, setOwnerFilter] = useState("all");
+  const [owner, setOwner] = useOwnerFilter();
   const [open, setOpen] = useState<{ doc: DocumentRecord; quote: string } | null>(null);
   const byId = useMemo(() => new Map(docs.map((d) => [d.id, d])), [docs]);
 
@@ -77,21 +91,26 @@ export default function PromisesClient({ items, docs }: { items: RadarItem[]; do
         approvedOn: p.approved_on,
       };
     });
-    const order = { overdue: 0, open: 1, done: 2 };
     return [...fromDebrief, ...fromRadar].sort(
-      (a, b) =>
-        order[a.status] - order[b.status] ||
-        (b.daysOverdue ?? -1) - (a.daysOverdue ?? -1) ||
-        (a.dueDate ?? "9999").localeCompare(b.dueDate ?? "9999"),
+      (a, b) => (b.daysOverdue ?? -1) - (a.daysOverdue ?? -1) || (a.dueDate ?? "9999").localeCompare(b.dueDate ?? "9999"),
     );
   }, [items, store]);
 
   const owners = [...new Set(rows.map((r) => r.owner).filter((o): o is string => !!o))].sort();
-  const count = (s: Status) => rows.filter((r) => r.status === s).length;
-  const shown = rows.filter(
-    (r) =>
-      (statusFilter === "all" || r.status === statusFilter) &&
-      (ownerFilter === "all" || (ownerFilter === "none" ? !r.owner : r.owner === ownerFilter)),
+  const shown = rows.filter((r) => ownerMatches(owner, r.owner));
+
+  useRegisterExport(`promises-${TODAY}.csv`, () =>
+    shown.map((r) => ({
+      status: r.status,
+      promise: r.what,
+      client: r.account,
+      lead_id: r.leadId ?? "",
+      owner: r.owner ?? "",
+      due_date: r.dueDate ?? (r.dateClear ? "no date given" : "date unclear"),
+      days_overdue: r.daysOverdue ?? "",
+      source: r.source?.file ?? (r.kind === "debrief" ? "debrief" : ""),
+      quote: r.quote,
+    })),
   );
 
   function setDone(r: Row, done: boolean) {
@@ -108,88 +127,160 @@ export default function PromisesClient({ items, docs }: { items: RadarItem[]; do
   }
 
   return (
-    <div className="space-y-5">
-      <div className="grid grid-cols-3 gap-2">
-        {(["overdue", "open", "done"] as const).map((s) => (
-          <button
-            key={s}
-            onClick={() => setStatusFilter(statusFilter === s ? "all" : s)}
-            className={`rounded-xl border p-3 text-left shadow-sm ${statusFilter === s ? "border-accent-600 bg-accent-50" : "border-slate-200 bg-white hover:border-slate-300"}`}
-          >
-            <div className={`text-2xl font-semibold ${s === "overdue" ? "text-orange-700" : s === "done" ? "text-emerald-700" : "text-accent-700"}`}>{count(s)}</div>
-            <div className="text-xs text-slate-600 capitalize">{s}</div>
-          </button>
-        ))}
-      </div>
+    <>
+      <Card className="overflow-hidden">
+        <div className="flex flex-wrap items-center gap-3 border-b border-line px-4 py-3">
+          <h2 className="text-base font-semibold text-navy">Promises</h2>
+          <span className="text-sm text-muted">
+            {shown.filter((r) => r.status === "overdue").length} overdue · {shown.filter((r) => r.status === "open").length} open ·{" "}
+            {shown.filter((r) => r.status === "done").length} done
+          </span>
+          <div className="ml-auto">
+            <FilterSelect
+              label="Owner"
+              value={owner}
+              onChange={setOwner}
+              options={[{ value: "all", label: "All" }, ...owners.map((o) => ({ value: o, label: o })), { value: "none", label: "No owner" }]}
+            />
+          </div>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[860px] text-sm">
+            <thead className="border-b border-line bg-subtle">
+              <tr>
+                <th className={th}>Promise</th>
+                <th className={th}>Client</th>
+                <th className={th}>Owner</th>
+                <th className={th}>Due</th>
+                <th className={th}>Source</th>
+                <th className={th}>
+                  <span className="sr-only">Action</span>
+                </th>
+              </tr>
+            </thead>
+            {GROUPS.map((g) => {
+              const groupRows = shown.filter((r) => groupOf(r) === g.key);
+              if (groupRows.length === 0) return null;
+              return (
+                <PromiseGroup
+                  key={g.key}
+                  group={g}
+                  rows={groupRows}
+                  byId={byId}
+                  onOpen={(doc, quote) => setOpen({ doc, quote })}
+                  onDone={setDone}
+                />
+              );
+            })}
+          </table>
+          {shown.length === 0 && <p className="px-4 py-10 text-center text-sm text-muted">No promises here.</p>}
+        </div>
+      </Card>
+      <DocPanel doc={open?.doc ?? null} highlight={open?.quote} onClose={() => setOpen(null)} />
+    </>
+  );
+}
 
-      <div className="flex flex-wrap items-center gap-2 text-sm">
-        <select value={ownerFilter} onChange={(e) => setOwnerFilter(e.target.value)} className="rounded-lg border border-slate-300 bg-white px-2 py-1.5">
-          <option value="all">All owners</option>
-          {owners.map((o) => (
-            <option key={o} value={o}>
-              {o}
-            </option>
-          ))}
-          <option value="none">No owner</option>
-        </select>
-        <span className="text-slate-500">
-          Showing {shown.length} of {rows.length}
-        </span>
-      </div>
+function PromiseGroup({
+  group,
+  rows,
+  byId,
+  onOpen,
+  onDone,
+}: {
+  group: (typeof GROUPS)[number];
+  rows: Row[];
+  byId: Map<string, DocumentRecord>;
+  onOpen: (doc: DocumentRecord, quote: string) => void;
+  onDone: (r: Row, done: boolean) => void;
+}) {
+  const [open, setOpen] = useState(!group.collapsed);
+  const [expanded, setExpanded] = useState(false);
+  const visible = expanded ? rows : rows.slice(0, TOP_N);
+  const rest = rows.length - TOP_N;
 
-      <ul className="space-y-3">
-        {shown.map((r) => (
-          <li key={r.id} className={`rounded-xl border border-slate-200 bg-white p-4 shadow-sm ${r.status === "done" ? "opacity-60" : ""}`}>
-            <div className="flex flex-wrap items-center gap-2">
-              <Badge tone={STATUS_TONE[r.status]}>{r.status === "overdue" ? "Overdue" : r.status === "done" ? "Done" : "Open"}</Badge>
+  return (
+    <tbody className="border-b border-line last:border-b-0">
+      <tr>
+        <td colSpan={6} className="p-0">
+          {group.collapsed ? (
+            <button onClick={() => setOpen(!open)} aria-expanded={open} className="w-full text-left hover:bg-subtle">
+              <GroupHeader dot={group.dot} title={group.title} count={`${rows.length} · ${open ? "hide" : "show"}`} />
+            </button>
+          ) : (
+            <GroupHeader dot={group.dot} title={group.title} count={rows.length} />
+          )}
+        </td>
+      </tr>
+      {open &&
+        visible.map((r) => (
+          <tr key={r.id} className={`border-t border-line ${r.status === "done" ? "text-muted" : ""}`}>
+            <td className="max-w-[340px] px-4 py-3">
+              <div className={r.status === "done" ? "text-muted line-through" : "text-ink"}>{r.what}</div>
+              <div className="mt-0.5 line-clamp-1 text-xs text-muted">“{r.quote}”</div>
+            </td>
+            <td className="px-4 py-3">
               {r.leadId && !r.leadId.startsWith("NEW-") ? (
-                <Link href={`/accounts/${r.leadId}`} className="font-medium hover:text-accent-700 hover:underline">
+                <Link href={`/accounts/${r.leadId}`} className="font-medium text-ink hover:text-brand">
                   {r.account}
                 </Link>
               ) : (
-                <span className="font-medium">{r.account}</span>
+                <span className="font-medium text-ink">{r.account}</span>
               )}
-              <span className="ml-auto text-sm text-slate-700">
-                {r.dueDate ? (
-                  <>
-                    Due {formatDate(r.dueDate)}
-                    {r.daysOverdue ? <span className="font-medium text-orange-700"> · {r.daysOverdue} days overdue</span> : null}
-                  </>
-                ) : (
-                  <span className="font-medium text-amber-700">{r.dateClear ? "No date given" : "Date unclear"}</span>
-                )}
-              </span>
-            </div>
-            <p className="mt-2 text-sm text-slate-800">{r.what}</p>
-            <div className="mt-2 border-l-2 border-slate-200 pl-3 text-xs">
-              <span className="text-slate-500 italic">“{r.quote}”</span>{" "}
+              <div className="text-xs text-muted">{r.leadId ?? "not in CRM"}</div>
+            </td>
+            <td className="px-4 py-3">
+              <Avatar name={r.owner} />
+            </td>
+            <td className="px-4 py-3 whitespace-nowrap">
+              {r.dueDate ? (
+                <>
+                  <div className="text-ink">
+                    {weekday(r.dueDate)} {formatShort(r.dueDate)}
+                  </div>
+                  <div className={`text-xs ${r.daysOverdue ? "font-medium text-warn-fg" : "text-muted"}`}>
+                    {r.daysOverdue
+                      ? `${r.daysOverdue} days overdue`
+                      : daysBetween(TODAY, r.dueDate) === 0
+                        ? "due today"
+                        : `${daysBetween(TODAY, r.dueDate)} days left`}
+                  </div>
+                </>
+              ) : (
+                <span className="font-medium text-warn-fg">{r.dateClear ? "No date given" : "Date unclear"}</span>
+              )}
+            </td>
+            <td className="px-4 py-3 text-xs">
               {r.source && byId.has(r.source.file) ? (
-                <button onClick={() => setOpen({ doc: byId.get(r.source!.file)!, quote: r.source!.quote })} className="text-accent-600 hover:underline">
-                  {r.source.file}
+                <button onClick={() => onOpen(byId.get(r.source!.file)!, r.source!.quote)} className="text-left font-medium text-brand hover:underline">
+                  {byId.get(r.source.file)!.type === "email" ? "Email" : "Meeting note"} · {formatShort(byId.get(r.source.file)!.date)}
                 </button>
               ) : r.kind === "debrief" ? (
-                <span className="text-slate-400">Debrief, approved {formatDate(r.approvedOn ?? null)}</span>
+                <span className="text-muted">Debrief · approved {formatShort(r.approvedOn ?? null)}</span>
               ) : (
-                <span className="text-slate-400">{r.source?.file}</span>
+                <span className="text-muted">{r.source?.file}</span>
               )}
-              {r.extraSources > 0 && <span className="text-slate-400"> · +{r.extraSources} more on the Radar</span>}
-            </div>
-            <div className="mt-3 flex flex-wrap items-center gap-2 text-xs text-slate-500">
-              {r.owner ? <span>Owner: {r.owner}</span> : <Badge>No owner</Badge>}
-              <span>· {r.kind === "debrief" ? "From Debrief" : "From Radar"}</span>
+              {r.extraSources > 0 && <div className="text-muted">+{r.extraSources} more on the Radar</div>}
+            </td>
+            <td className="px-4 py-3 text-right">
               <button
-                onClick={() => setDone(r, r.status !== "done")}
-                className={`ml-auto rounded-md px-2.5 py-1 font-medium ${r.status === "done" ? "border border-slate-300 text-slate-700 hover:bg-slate-50" : "bg-accent-600 text-white hover:bg-accent-700"}`}
+                onClick={() => onDone(r, r.status !== "done")}
+                className={r.status === "done" ? "rounded-control border border-line px-2.5 py-1 text-xs font-medium text-ink hover:bg-subtle" : "rounded-control bg-brand px-2.5 py-1 text-xs font-medium whitespace-nowrap text-white hover:bg-brand-dark"}
               >
                 {r.status === "done" ? "Undo" : "Mark done"}
               </button>
-            </div>
-          </li>
+            </td>
+          </tr>
         ))}
-        {shown.length === 0 && <li className="py-10 text-center text-sm text-slate-500">No promises here.</li>}
-      </ul>
-
-      <DocPanel doc={open?.doc ?? null} highlight={open?.quote} onClose={() => setOpen(null)} />
-    </div>
+      {open && rest > 0 && (
+        <tr className="border-t border-line">
+          <td colSpan={6} className="px-4 py-2.5">
+            <button onClick={() => setExpanded(!expanded)} className="text-sm font-medium text-brand hover:underline">
+              {expanded ? "Show top 5 only" : `Show ${rest} more · ${[...new Set(rows.slice(TOP_N).map((r) => r.account))].slice(0, 4).join(", ")}${rest > 4 ? "…" : ""}`}
+            </button>
+          </td>
+        </tr>
+      )}
+    </tbody>
   );
 }
