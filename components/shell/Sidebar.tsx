@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import {
   Briefcase,
   ChartNoAxesColumn,
+  Check,
   ChevronDown,
   List,
   MessageCircle,
@@ -13,6 +14,7 @@ import {
   Radar,
   Search,
   SquareCheckBig,
+  Users,
   type LucideIcon,
 } from "lucide-react";
 import { clearStore, useOwnerFilter, useStore } from "@/lib/store";
@@ -32,8 +34,6 @@ export type ShellData = {
 };
 
 type NavItem = { href: string; label: string; icon: LucideIcon; badge?: string | number | null };
-
-const DEMO_USER_NAME = "Bhavin";
 
 export default function Sidebar({ data, onNavigate }: { data: ShellData; onNavigate?: () => void }) {
   const store = useStore();
@@ -201,11 +201,43 @@ function AccountSearch({ accounts, onNavigate }: { accounts: ShellData["accounts
   );
 }
 
-// "Bhavin · Founder" with View as (app-wide owner filter, saved in localStorage) and Reset demo.
+// Roles from data/raw/README.md.
+const ROLES: Record<string, string> = {
+  Bhavin: "Founder",
+  Dhaval: "Founder",
+  Karandeep: "CEO",
+  Jay: "Sales Executive",
+  Pranav: "CTO",
+  Ayush: "AI Product Manager",
+};
+
+// What the card shows for the current "View as" (= the app-wide owner filter, saved in localStorage).
+function viewLabel(viewAs: string): { name: string; sub: string } {
+  if (viewAs === "all") return { name: "Whole team", sub: "All owners" };
+  if (viewAs === "none") return { name: "No owner", sub: "Unassigned items" };
+  return { name: viewAs, sub: ROLES[viewAs] ?? "Team member" };
+}
+
+function ViewIcon({ viewAs, size }: { viewAs: string; size: number }) {
+  if (viewAs === "all") {
+    return (
+      <span style={{ width: size, height: size }} className="inline-flex shrink-0 items-center justify-center rounded-full bg-tint text-brand">
+        <Users size={size * 0.5} strokeWidth={2} />
+      </span>
+    );
+  }
+  return <Avatar name={viewAs === "none" ? null : viewAs} size={size} />;
+}
+
+// Shows the selected view (name, avatar, role) with the View as menu and Reset demo.
 function UserCard({ owners }: { owners: string[] }) {
   const [open, setOpen] = useState(false);
   const [armed, setArmed] = useState(false);
   const [viewAs, setViewAs] = useOwnerFilter();
+  const current = viewLabel(viewAs);
+  // Menu order: Team, then people in the dataset README's order, then anyone else.
+  const people = [...Object.keys(ROLES).filter((p) => owners.includes(p)), ...owners.filter((o) => !(o in ROLES))];
+  const options = ["all", ...people, ...(viewAs !== "all" && !people.includes(viewAs) ? [viewAs] : [])];
 
   useEffect(() => {
     if (!armed) return;
@@ -218,35 +250,48 @@ function UserCard({ owners }: { owners: string[] }) {
       <button
         onClick={() => setOpen(!open)}
         aria-expanded={open}
+        aria-haspopup="menu"
+        aria-label={`View as: ${current.name}. Change view`}
         className="flex w-full items-center gap-3 rounded-card border border-line bg-surface p-2.5 text-left hover:bg-subtle"
       >
-        <Avatar name={DEMO_USER_NAME} size={36} />
+        <ViewIcon viewAs={viewAs} size={36} />
         <span className="min-w-0 flex-1">
-          <span className="block text-sm font-semibold text-navy">{DEMO_USER_NAME}</span>
-          <span className="block truncate text-xs text-muted">Founder · viewing {viewAs === "all" ? "Team" : viewAs === "none" ? "No owner" : viewAs}</span>
+          <span className="block truncate text-sm font-semibold text-navy">{current.name}</span>
+          <span className="block truncate text-xs text-muted">{current.sub}</span>
         </span>
         <ChevronDown size={16} className="text-muted" />
       </button>
       {open && (
-        <div className="absolute bottom-full z-30 mb-2 w-full rounded-card border border-line bg-surface p-2 shadow-card">
+        <div role="menu" className="absolute bottom-full z-30 mb-2 w-full rounded-card border border-line bg-surface p-2 shadow-card">
           <div className="px-2 pt-1 pb-1.5 text-[11px] font-semibold tracking-wider text-muted uppercase">View as</div>
-          {["all", ...owners].map((o) => (
-            <button
-              key={o}
-              onClick={() => {
-                setViewAs(o);
-                setOpen(false);
-              }}
-              className={`block w-full rounded-control px-2 py-1.5 text-left text-sm ${viewAs === o ? "bg-tint text-brand" : "hover:bg-subtle"}`}
-            >
-              {o === "all" ? "Team" : o}
-            </button>
-          ))}
+          {options.map((o) => {
+            const label = viewLabel(o);
+            const selected = viewAs === o;
+            return (
+              <button
+                key={o}
+                role="menuitemradio"
+                aria-checked={selected}
+                onClick={() => {
+                  setViewAs(o);
+                  setOpen(false);
+                }}
+                className={`flex w-full items-center gap-2.5 rounded-control px-2 py-1.5 text-left text-sm ${selected ? "bg-tint text-brand" : "text-ink hover:bg-subtle"}`}
+              >
+                <ViewIcon viewAs={o} size={24} />
+                <span className="min-w-0 flex-1">
+                  <span className="block truncate font-medium">{label.name}</span>
+                  <span className="block truncate text-xs text-muted">{label.sub}</span>
+                </span>
+                {selected && <Check size={16} className="shrink-0 text-brand" aria-hidden="true" />}
+              </button>
+            );
+          })}
           <div className="my-2 border-t border-line" />
           <button
             onClick={() => {
               if (!armed) return setArmed(true);
-              clearStore();
+              clearStore(); // also clears View as, so the card shows "Whole team" again
               window.location.reload();
             }}
             title="Clear all approvals, edits, new leads, promises, dismissals, eval marks and the View as setting saved in this browser"
