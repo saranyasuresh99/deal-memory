@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Mic, Square } from "lucide-react";
 
 // Minimal typing for the browser Web Speech API (not in TypeScript's DOM lib).
 type SpeechResultEvent = {
@@ -89,27 +90,27 @@ export default function SpeechInput({
           <button
             onClick={toggle}
             aria-label={listening ? "Stop recording" : "Start recording"}
-            className={`flex h-20 w-20 items-center justify-center rounded-full text-3xl text-white shadow-md transition ${
-              listening ? "animate-pulse bg-red-600" : "bg-accent-600 hover:bg-accent-700"
+            className={`flex h-20 w-20 items-center justify-center rounded-full text-3xl text-white transition ${
+              listening ? "animate-pulse bg-danger-fg" : "bg-brand hover:bg-brand-dark"
             }`}
           >
-            {listening ? "■" : "🎙"}
+            {listening ? <Square size={26} fill="currentColor" /> : <Mic size={30} />}
           </button>
-          <span className="text-sm text-slate-500">{listening ? "Listening… tap to stop" : "Tap to speak (English – India)"}</span>
-          {micError && <span className="text-sm text-red-700">{micError}</span>}
+          <span className="text-sm text-muted">{listening ? "Listening… tap to stop" : "Tap to speak (English – India)"}</span>
+          {micError && <span className="text-sm text-danger-fg">{micError}</span>}
         </div>
       )}
       {mode === "speak" && !supported && (
-        <p className="text-sm text-slate-500">Voice input isn’t supported in this browser — type your note below.</p>
+        <p className="text-sm text-muted">Voice input isn’t supported in this browser — type your note below.</p>
       )}
       <textarea
         value={value}
         onChange={(e) => onChange(e.target.value)}
         rows={mode === "paste" ? 10 : 5}
         placeholder={mode === "paste" ? "Paste a WhatsApp message or email here…" : "Your words appear here — you can edit them."}
-        className="w-full rounded-lg border border-slate-300 p-3 text-sm focus:border-accent-600 focus:outline-none"
+        className="w-full rounded-control border border-line p-3 text-sm placeholder:text-muted focus:border-brand focus:outline-none"
       />
-      {interim && <p className="text-sm text-slate-400 italic">{interim}</p>}
+      {interim && <p className="text-sm text-muted italic">{interim}</p>}
     </div>
   );
 }

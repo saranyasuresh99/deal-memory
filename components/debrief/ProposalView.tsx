@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { ArrowRight, Check, TriangleAlert } from "lucide-react";
 import Badge from "../Badge";
+import { Avatar, btn } from "../ui";
 import { showValue } from "./AuditLog";
 import { updateStore, useStore, type FieldValue, type Store } from "@/lib/store";
 import { applyEdits } from "@/lib/overlay";
@@ -13,8 +15,10 @@ import type { Account } from "@/lib/types";
 import type { DebriefResult } from "@/lib/schemas";
 
 type Target = { kind: "existing"; leadId: string } | { kind: "new" } | null;
-// The decision on a row, plus the CRM value it had at that moment (kept so "Before" stays visible).
-type RowState = { decision: "approved" | "rejected"; before: FieldValue };
+export type Phase = "review" | "approve";
+
+// What the person decided for each proposed field (kept so the Approve step can show before → after).
+type Decision = { field: string; decision: "approved" | "rejected"; before: FieldValue; after: FieldValue; edited: boolean; quote: string };
 
 const FIELD_LABEL: Record<string, string> = {
   company: "Company",
@@ -48,10 +52,18 @@ export default function ProposalView({
   result,
   accounts,
   duplicatePairs,
+  phase,
+  setPhase,
+  onBack,
+  onNew,
 }: {
   result: DebriefResult;
   accounts: Account[];
   duplicatePairs: string[][];
+  phase: Phase;
+  setPhase: (p: Phase) => void;
+  onBack: () => void;
+  onNew: () => void;
 }) {
   const store = useStore();
   const m = result.account_match;
@@ -61,17 +73,21 @@ export default function ProposalView({
     return null; // several candidates: the person must pick
   });
   const [createdId, setCreatedId] = useState<string | null>(null);
-  const [rows, setRows] = useState<Record<string, RowState>>({});
-  const [editing, setEditing] = useState<{ key: string; text: string; error?: string } | null>(null);
+  const [checked, setChecked] = useState<Record<number, boolean>>({}); // nothing is pre-approved
+  const [edits, setEdits] = useState<Record<number, FieldValue>>({}); // values the person changed
+  const [editing, setEditing] = useState<{ idx: number; text: string; error?: string } | null>(null);
+  const [decisions, setDecisions] = useState<Decision[]>([]);
   const [promiseState, setPromiseState] = useState<Record<number, "added" | "ignored">>({});
 
-  const targetKey = target?.kind === "existing" ? target.leadId : target?.kind === "new" ? "new" : "none";
   const baseAccount = target?.kind === "existing" ? accounts.find((a) => a.lead_id === target.leadId) : undefined;
   const current = baseAccount ? applyEdits(baseAccount, store) : undefined;
   const newLead = createdId ? store.newLeads.find((n) => n.lead_id === createdId) : undefined;
   const proposedCompany = result.fields.find((f) => f.field === "company")?.new_value;
   const accountName = current?.company ?? (newLead?.fields.company as string | undefined) ?? (proposedCompany as string | undefined) ?? "(new lead)";
-  const fields = target?.kind === "new" ? result.fields : result.fields.filter((f) => f.field !== "company");
+  const fields = (target?.kind === "new" ? result.fields : result.fields.filter((f) => f.field !== "company")).map((f) => ({
+    ...f,
+    idx: result.fields.indexOf(f),
+  }));
 
   const candidateIds = m.candidates.map((c) => c.lead_id);
   const isDuplicateSet = duplicatePairs.some((p) => p.every((id) => candidateIds.includes(id)));
@@ -91,9 +107,8 @@ export default function ProposalView({
     return id;
   }
 
-  function approve(idx: number, field: string, after: FieldValue, quote: string, edited: boolean) {
-    const leadId = ensureLeadId();
-    const before = currentValue(field);
+  // Writes one approved field to the browser overlay and the audit log (the only place CRM values change).
+  function writeField(leadId: string, field: string, before: FieldValue, after: FieldValue, quote: string, edited: boolean) {
     updateStore((s): Store => {
       const audit = [...s.audit, { who: DEMO_USER, when: TODAY, lead_id: leadId, account: accountName, field, before, after, quote, edited }];
       if (leadId.startsWith("NEW-")) {
@@ -102,8 +117,28 @@ export default function ProposalView({
       }
       return { ...s, accountEdits: { ...s.accountEdits, [leadId]: { ...s.accountEdits[leadId], [field]: after } }, audit };
     });
-    setRows((r) => ({ ...r, [`${targetKey}:${idx}`]: { decision: "approved", before } }));
+  }
+
+  const actionable = fields.filter((f) => currentValue(f.field) !== (edits[f.idx] ?? f.new_value));
+  const selectedCount = actionable.filter((f) => checked[f.idx]).length;
+
+  function approveSelected() {
+    if (!target) return;
+    const chosen = actionable.filter((f) => checked[f.idx]);
+    const leadId = chosen.length ? ensureLeadId() : target.kind === "existing" ? target.leadId : createdId;
+    const out: Decision[] = actionable.map((f) => {
+      const after = f.idx in edits ? edits[f.idx] : f.new_value;
+      const before = currentValue(f.field);
+      const edited = f.idx in edits && edits[f.idx] !== f.new_value;
+      if (checked[f.idx] && leadId) {
+        writeField(leadId, f.field, before, after, f.quote, edited);
+        return { field: f.field, decision: "approved", before, after, edited, quote: f.quote };
+      }
+      return { field: f.field, decision: "rejected", before, after, edited, quote: f.quote };
+    });
+    setDecisions(out);
     setEditing(null);
+    setPhase("approve");
   }
 
   function addPromise(idx: number) {
@@ -131,228 +166,289 @@ export default function ProposalView({
     setPromiseState((st) => ({ ...st, [idx]: "added" }));
   }
 
+  // ---------- Approve step ----------
+  if (phase === "approve") {
+    const approved = decisions.filter((d) => d.decision === "approved");
+    const rejected = decisions.filter((d) => d.decision === "rejected");
+    const leadForLink = target?.kind === "existing" ? target.leadId : null;
+    return (
+      <div className="space-y-6">
+        <div className="flex items-start gap-3 rounded-card bg-tint p-4">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand text-white">
+            <Check size={18} />
+          </span>
+          <div className="text-sm">
+            <div className="font-semibold text-navy">
+              {approved.length} change{approved.length === 1 ? "" : "s"} approved for {accountName}
+              {rejected.length > 0 && `, ${rejected.length} rejected`}
+            </div>
+            <div className="text-brand-dark">
+              {approved.length > 0 ? "Saved in this browser and recorded in the audit log." : "Nothing in the CRM was changed."}
+              {createdId && ` New lead created as ${createdId} (see Accounts).`}
+            </div>
+          </div>
+        </div>
+
+        {decisions.length > 0 && (
+          <ul className="divide-y divide-line rounded-card border border-line">
+            {decisions.map((d) => (
+              <li key={d.field} className="flex flex-wrap items-center gap-2 px-4 py-2.5 text-sm">
+                <span className="w-32 shrink-0 font-medium text-ink">{FIELD_LABEL[d.field] ?? d.field}</span>
+                <span className="min-w-0 flex-1 truncate text-muted">
+                  {showValue(d.before)} → <span className="text-ink">{showValue(d.after)}</span>
+                </span>
+                {d.decision === "approved" ? (
+                  <Badge tone="rev">{d.edited ? "Approved (edited)" : "Approved"}</Badge>
+                ) : (
+                  <Badge>Rejected</Badge>
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {result.promises.length > 0 && (
+          <section>
+            <h3 className="mb-2 text-sm font-semibold text-navy">Promises made — add to the Promise Ledger?</h3>
+            <ul className="space-y-2">
+              {result.promises.map((p, i) => (
+                <li key={i} className="flex flex-wrap items-start justify-between gap-3 rounded-card border border-line p-3 text-sm">
+                  <div className="min-w-0">
+                    <div className="font-medium text-ink">{p.what}</div>
+                    <div className="text-muted">
+                      Owner: {p.owner ?? <span className="text-warn-fg">needs input</span>} · Due:{" "}
+                      {p.due_date ? formatDate(p.due_date) : <span className="font-medium text-warn-fg">{p.date_clear ? "no date given" : "date unclear"}</span>}
+                    </div>
+                    <div className="mt-1 text-xs text-muted">“{p.quote}”</div>
+                  </div>
+                  {promiseState[i] === "added" ? (
+                    <Badge tone="rev">Added to ledger</Badge>
+                  ) : promiseState[i] === "ignored" ? (
+                    <Badge>Ignored</Badge>
+                  ) : (
+                    <div className="flex gap-1.5">
+                      <button onClick={() => addPromise(i)} className={btn.smallPrimary}>
+                        Add to ledger
+                      </button>
+                      <button onClick={() => setPromiseState((st) => ({ ...st, [i]: "ignored" }))} className={btn.small}>
+                        Ignore
+                      </button>
+                    </div>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+
+        <div className="flex flex-wrap gap-2 border-t border-line pt-4">
+          <Link href="/audit" className={btn.secondary}>
+            View audit log
+          </Link>
+          {leadForLink && (
+            <Link href={`/accounts/${leadForLink}`} className={btn.secondary}>
+              Open account
+            </Link>
+          )}
+          {result.promises.length > 0 && (
+            <Link href="/promises" className={btn.secondary}>
+              Promise Ledger
+            </Link>
+          )}
+          <button onClick={onNew} className={`${btn.primary} ml-auto`}>
+            New debrief
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  // ---------- Review step ----------
   return (
-    <div className="space-y-5">
+    <div className="space-y-6">
       {result.warnings.length > 0 && (
         <div className="space-y-2">
           {result.warnings.map((w) => (
-            <div key={w} className="rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-sm text-amber-900">
-              ⚠ {w}
+            <div key={w} className="flex gap-2 rounded-control border border-[#f2cf7a] bg-warn-bg px-3 py-2 text-sm text-warn-fg">
+              <TriangleAlert size={16} className="mt-0.5 shrink-0" />
+              <span>{w}</span>
             </div>
           ))}
         </div>
       )}
 
-      {/* Step 1: which account? */}
-      <section className="rounded-xl border border-slate-200 p-4 shadow-sm">
-        <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">1 · Which account is this about?</h2>
+      <section>
+        <h3 className="text-sm font-semibold text-navy">Which account is this about?</h3>
         {m.candidates.length > 1 && (
-          <p className="mt-1 text-sm text-slate-600">
+          <p className="mt-0.5 text-sm text-muted">
             {isDuplicateSet
               ? "These records look like the same client entered twice. Pick one — we never merge records automatically."
               : "More than one account fits. Pick the right one."}
           </p>
         )}
-        <div className="mt-3 space-y-2">
+        <div className="mt-2 space-y-2">
           {m.candidates.map((c) => {
             const a = accounts.find((x) => x.lead_id === c.lead_id);
+            const on = target?.kind === "existing" && target.leadId === c.lead_id;
             return (
-              <label key={c.lead_id} className="flex cursor-pointer items-start gap-3 rounded-lg border border-slate-200 p-3 hover:bg-slate-50">
-                <input
-                  type="radio"
-                  name="target"
-                  checked={target?.kind === "existing" && target.leadId === c.lead_id}
-                  onChange={() => setTarget({ kind: "existing", leadId: c.lead_id })}
-                  className="mt-1"
-                />
-                <span className="text-sm">
-                  <span className="font-medium">{c.company}</span> <span className="text-slate-400">{c.lead_id}</span>
-                  {m.lead_id === c.lead_id && m.candidates.length > 1 && <span className="ml-2"><Badge tone="accent">AI’s best guess</Badge></span>}
-                  <span className="block text-slate-600">
+              <label
+                key={c.lead_id}
+                className={`flex cursor-pointer items-start gap-3 rounded-card border p-3 ${on ? "border-brand bg-tint/50" : "border-line hover:bg-subtle"}`}
+              >
+                <input type="radio" name="target" checked={on} onChange={() => setTarget({ kind: "existing", leadId: c.lead_id })} className="mt-1 accent-[var(--color-brand)]" />
+                <Avatar name={a?.owner ?? null} size={32} />
+                <span className="min-w-0 flex-1 text-sm">
+                  <span className="font-medium text-ink">{c.company}</span> <span className="text-muted">{c.lead_id}</span>
+                  {m.lead_id === c.lead_id && m.candidates.length > 1 && (
+                    <span className="ml-2">
+                      <Badge tone="brand">AI&apos;s best guess</Badge>
+                    </span>
+                  )}
+                  <span className="block text-muted">
                     {a?.contact_name ?? "no contact"} · {a?.status ?? "no status"} · owner {a?.owner ?? "none"}
                   </span>
-                  <span className="block text-xs text-slate-500">{c.reason}</span>
+                  <span className="block text-xs text-muted">{c.reason}</span>
                 </span>
               </label>
             );
           })}
-          <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-dashed border-slate-300 p-3 hover:bg-slate-50">
-            <input type="radio" name="target" checked={target?.kind === "new"} onChange={() => setTarget({ kind: "new" })} className="mt-1" />
+          <label
+            className={`flex cursor-pointer items-start gap-3 rounded-card border border-dashed p-3 ${target?.kind === "new" ? "border-brand bg-tint/50" : "border-line hover:bg-subtle"}`}
+          >
+            <input type="radio" name="target" checked={target?.kind === "new"} onChange={() => setTarget({ kind: "new" })} className="mt-1 accent-[var(--color-brand)]" />
             <span className="text-sm">
-              <span className="font-medium">Create a new lead</span>
-              {m.is_new_lead && <span className="block text-slate-600">No existing CRM account matches this debrief.</span>}
+              <span className="font-medium text-ink">Create a new lead</span>
+              {m.is_new_lead && <span className="block text-muted">No existing CRM account matches this debrief.</span>}
             </span>
           </label>
         </div>
-        {target?.kind === "existing" && (
-          <Link href={`/accounts/${target.leadId}`} className="mt-2 inline-block text-sm text-accent-600 hover:underline">
-            Open account →
-          </Link>
-        )}
       </section>
 
-      {/* Step 2: field-by-field approval */}
       {target && (
-        <section className="rounded-xl border border-slate-200 p-4 shadow-sm">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-            2 · Proposed CRM changes — {accountName}
-          </h2>
+        <section>
+          <h3 className="text-sm font-semibold text-navy">Proposed CRM changes — {accountName}</h3>
+          <p className="mt-0.5 text-sm text-muted">Tick each change you approve. Unticked changes are rejected. Nothing changes until you press Approve.</p>
           {fields.length === 0 ? (
-            <p className="mt-2 text-sm text-slate-600">No CRM field changes are proposed.</p>
+            <p className="mt-2 rounded-control bg-subtle px-3 py-2 text-sm text-muted">No CRM field changes are proposed.</p>
           ) : (
-            <div className="mt-3 overflow-x-auto">
-              <table className="w-full min-w-[640px] text-left text-sm">
-                <thead className="text-xs text-slate-500">
-                  <tr>
-                    <th className="py-2 pr-3">Field</th>
-                    <th className="py-2 pr-3">Before</th>
-                    <th className="py-2 pr-3">After (proposed)</th>
-                    <th className="py-2 pr-3">Why (quote)</th>
-                    <th className="py-2">Decision</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100">
-                  {fields.map((f) => {
-                    const idx = result.fields.indexOf(f);
-                    const key = `${targetKey}:${idx}`;
-                    const row = rows[key];
-                    const state = row?.decision;
-                    const before = row ? row.before : currentValue(f.field);
-                    const unchanged = !state && before === f.new_value;
-                    const isEditing = editing?.key === key;
-                    return (
-                      <tr key={key} className="align-top">
-                        <td className="py-2 pr-3 font-medium">{FIELD_LABEL[f.field] ?? f.field}</td>
-                        <td className="py-2 pr-3 text-slate-500">{showValue(before)}</td>
-                        <td className="py-2 pr-3">
+            <ul className="mt-3 space-y-2">
+              {fields.map((f) => {
+                const before = currentValue(f.field);
+                const after = f.idx in edits ? edits[f.idx] : f.new_value;
+                const upToDate = before === after;
+                const isEditing = editing?.idx === f.idx;
+                const on = !!checked[f.idx] && !upToDate;
+                return (
+                  <li key={f.idx} className={`rounded-card border p-3 ${on ? "border-brand bg-tint/40" : "border-line"}`}>
+                    <div className="flex items-start gap-3">
+                      <input
+                        type="checkbox"
+                        aria-label={`Approve ${FIELD_LABEL[f.field] ?? f.field}`}
+                        checked={on}
+                        disabled={upToDate || isEditing}
+                        onChange={(e) => setChecked((c) => ({ ...c, [f.idx]: e.target.checked }))}
+                        className="mt-1 h-4 w-4 accent-[var(--color-brand)]"
+                      />
+                      <div className="min-w-0 flex-1">
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <span className="text-sm font-semibold text-ink">{FIELD_LABEL[f.field] ?? f.field}</span>
+                          {upToDate ? (
+                            <span className="text-xs text-muted">Already up to date</span>
+                          ) : (
+                            !isEditing && (
+                              <button onClick={() => setEditing({ idx: f.idx, text: after === null ? "" : String(after) })} className={btn.small}>
+                                Edit
+                              </button>
+                            )
+                          )}
+                        </div>
+                        <div className="mt-1 flex flex-wrap items-start gap-2 text-sm">
+                          <span className="text-muted line-through decoration-line">{showValue(before)}</span>
+                          <ArrowRight size={14} className="mt-1 shrink-0 text-muted" />
                           {isEditing ? (
-                            <div>
+                            <div className="min-w-0 flex-1">
                               {f.field === "notes" ? (
                                 <textarea
                                   value={editing.text}
-                                  onChange={(e) => setEditing({ key, text: e.target.value })}
+                                  onChange={(e) => setEditing({ idx: f.idx, text: e.target.value })}
                                   rows={4}
-                                  className="w-full rounded-md border border-slate-300 p-1.5"
+                                  className="w-full rounded-control border border-line p-2"
                                 />
                               ) : (
                                 <input
                                   value={editing.text}
-                                  onChange={(e) => setEditing({ key, text: e.target.value })}
-                                  className="w-full rounded-md border border-slate-300 px-1.5 py-1"
+                                  onChange={(e) => setEditing({ idx: f.idx, text: e.target.value })}
+                                  className="w-full rounded-control border border-line px-2 py-1"
                                 />
                               )}
-                              {editing.error && <span className="text-xs text-red-700">{editing.error}</span>}
+                              {editing.error && <div className="text-xs text-danger-fg">{editing.error}</div>}
+                              <div className="mt-1.5 flex gap-1.5">
+                                <button
+                                  onClick={() => {
+                                    const parsed = parseValue(f.field, editing.text);
+                                    if ("error" in parsed) return setEditing({ ...editing, error: parsed.error });
+                                    setEdits((e) => ({ ...e, [f.idx]: parsed.value }));
+                                    setChecked((c) => ({ ...c, [f.idx]: true }));
+                                    setEditing(null);
+                                  }}
+                                  className={btn.smallPrimary}
+                                >
+                                  Save
+                                </button>
+                                <button onClick={() => setEditing(null)} className={btn.small}>
+                                  Cancel
+                                </button>
+                              </div>
                             </div>
                           ) : (
-                            showValue(f.new_value)
+                            <span className="min-w-0 flex-1 font-medium text-navy">
+                              {showValue(after)}
+                              {f.idx in edits && edits[f.idx] !== f.new_value && <span className="ml-1 text-xs font-normal text-warn-fg">(edited)</span>}
+                            </span>
                           )}
-                        </td>
-                        <td className="py-2 pr-3 text-slate-600 italic">“{f.quote}”</td>
-                        <td className="py-2 whitespace-nowrap">
-                          {state === "approved" && <Badge tone="green">Approved</Badge>}
-                          {state === "rejected" && <Badge>Rejected</Badge>}
-                          {!state && unchanged && <span className="text-xs text-slate-500">Already up to date</span>}
-                          {!state && !unchanged && !isEditing && (
-                            <div className="flex gap-1">
-                              <button onClick={() => approve(idx, f.field, f.new_value, f.quote, false)} className="rounded-md bg-accent-600 px-2 py-1 text-xs font-medium text-white hover:bg-accent-700">
-                                Approve
-                              </button>
-                              <button
-                                onClick={() => setEditing({ key, text: f.new_value === null ? "" : String(f.new_value) })}
-                                className="rounded-md border border-slate-300 px-2 py-1 text-xs hover:bg-slate-50"
-                              >
-                                Edit
-                              </button>
-                              <button onClick={() => setRows((r) => ({ ...r, [key]: { decision: "rejected", before: currentValue(f.field) } }))} className="rounded-md border border-slate-300 px-2 py-1 text-xs hover:bg-slate-50">
-                                Reject
-                              </button>
-                            </div>
-                          )}
-                          {isEditing && (
-                            <div className="flex gap-1">
-                              <button
-                                onClick={() => {
-                                  const parsed = parseValue(f.field, editing.text);
-                                  if ("error" in parsed) setEditing({ ...editing, error: parsed.error });
-                                  else approve(idx, f.field, parsed.value, f.quote, parsed.value !== f.new_value);
-                                }}
-                                className="rounded-md bg-accent-600 px-2 py-1 text-xs font-medium text-white hover:bg-accent-700"
-                              >
-                                Save &amp; approve
-                              </button>
-                              <button onClick={() => setEditing(null)} className="rounded-md border border-slate-300 px-2 py-1 text-xs hover:bg-slate-50">
-                                Cancel
-                              </button>
-                            </div>
-                          )}
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
+                        </div>
+                        <div className="mt-2 rounded-control bg-subtle px-2.5 py-1.5 text-xs text-ink">“{f.quote}”</div>
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
           )}
-          {createdId && <p className="mt-2 text-xs text-slate-500">New lead created as {createdId} (shown on the Accounts page).</p>}
         </section>
       )}
 
-      {/* Promises */}
-      {result.promises.length > 0 && (
-        <section className="rounded-xl border border-slate-200 p-4 shadow-sm">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">Promises made</h2>
-          <ul className="mt-3 space-y-3">
-            {result.promises.map((p, i) => (
-              <li key={i} className="flex flex-wrap items-start justify-between gap-3 text-sm">
-                <div className="min-w-0">
-                  <div className="font-medium">{p.what}</div>
-                  <div className="text-slate-600">
-                    Owner: {p.owner ?? <span className="italic text-amber-700">needs input</span>} · Due:{" "}
-                    {p.due_date ? formatDate(p.due_date) : <span className="font-medium text-amber-700">{p.date_clear ? "no date given" : "date unclear"}</span>}
-                  </div>
-                  <div className="text-slate-500 italic">“{p.quote}”</div>
-                </div>
-                {promiseState[i] === "added" ? (
-                  <Badge tone="green">Added to Promise Ledger</Badge>
-                ) : promiseState[i] === "ignored" ? (
-                  <Badge>Ignored</Badge>
-                ) : (
-                  <div className="flex gap-1">
-                    <button
-                      disabled={!target}
-                      title={target ? "" : "Pick the account first"}
-                      onClick={() => addPromise(i)}
-                      className="rounded-md bg-accent-600 px-2 py-1 text-xs font-medium text-white hover:bg-accent-700 disabled:opacity-40"
-                    >
-                      Add to ledger
-                    </button>
-                    <button onClick={() => setPromiseState((st) => ({ ...st, [i]: "ignored" }))} className="rounded-md border border-slate-300 px-2 py-1 text-xs hover:bg-slate-50">
-                      Ignore
-                    </button>
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      {/* Signals */}
       {result.signals.length > 0 && (
-        <section className="rounded-xl border border-slate-200 p-4 shadow-sm">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">Signals spotted</h2>
-          <ul className="mt-3 space-y-2">
+        <section>
+          <h3 className="mb-2 text-sm font-semibold text-navy">Signals spotted</h3>
+          <ul className="space-y-2">
             {result.signals.map((s, i) => (
               <li key={i} className="text-sm">
-                <Badge tone={TYPE_META[s.type].tone}>{TYPE_META[s.type].label}</Badge>{" "}
-                {s.summary}
-                {s.due_date && <span className="text-slate-500"> · {formatDate(s.due_date)}</span>}
-                <div className="text-slate-500 italic">“{s.quote}”</div>
+                <Badge tone={TYPE_META[s.type].tone}>{TYPE_META[s.type].label}</Badge> <span className="text-ink">{s.summary}</span>
+                {s.due_date && <span className="text-muted"> · {formatDate(s.due_date)}</span>}
+                <div className="mt-1 text-xs text-muted">“{s.quote}”</div>
               </li>
             ))}
           </ul>
         </section>
       )}
+
+      {result.promises.length > 0 && (
+        <p className="text-sm text-muted">
+          {result.promises.length} promise{result.promises.length === 1 ? "" : "s"} found — you can add {result.promises.length === 1 ? "it" : "them"} to the
+          Promise Ledger in the next step.
+        </p>
+      )}
+
+      <div className="flex flex-wrap items-center gap-2 border-t border-line pt-4">
+        <button onClick={onBack} className={btn.secondary}>
+          Back
+        </button>
+        <button onClick={approveSelected} disabled={!target || !!editing} className={`${btn.primary} ml-auto`}>
+          {selectedCount > 0 ? `Approve ${selectedCount} change${selectedCount === 1 ? "" : "s"}` : "Continue without changes"}
+        </button>
+      </div>
+      {!target && <p className="text-right text-xs text-muted">Pick the account first.</p>}
     </div>
   );
 }
