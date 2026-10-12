@@ -3,6 +3,9 @@
 import { useState } from "react";
 import CitedLines from "./CitedLines";
 import DocPanel from "./DocPanel";
+import { MessageCircle, Send } from "lucide-react";
+import { Card, btn } from "./ui";
+import { useRegisterExport } from "./shell/ExportContext";
 import type { AskResponse, AskResult } from "@/lib/schemas";
 import type { DocumentRecord } from "@/lib/types";
 
@@ -52,23 +55,57 @@ export default function AskClient({
     }
   }
 
+  useRegisterExport("ask-conversation.csv", () =>
+    turns.flatMap((t) =>
+      t.result
+        ? t.result.points.length
+          ? t.result.points.map((p) => ({ question: t.question, answer: t.result!.answer, point: p.text, sources: p.citations.map((c) => `${c.file}: "${c.quote}"`).join(" | ") }))
+          : [{ question: t.question, answer: t.result.answer, point: "", sources: "" }]
+        : [{ question: t.question, answer: t.message ?? "", point: "", sources: "" }],
+    ),
+  );
+
+  const chips = (qs: string[], primary: boolean) => (
+    <div className="flex flex-wrap gap-2">
+      {qs.map((q) => (
+        <button
+          key={q}
+          onClick={() => ask(q)}
+          disabled={busy}
+          className={`rounded-full border px-3 py-1 text-sm disabled:opacity-40 ${primary ? "border-tint-2 bg-tint text-brand-dark hover:border-brand" : "border-line text-ink hover:bg-subtle"}`}
+        >
+          {q}
+        </button>
+      ))}
+    </div>
+  );
+
   return (
-    <div className="space-y-5">
-      <div className="space-y-4">
+    <Card className="mx-auto flex max-w-3xl flex-col">
+      <div className="space-y-5 p-5 sm:p-6">
+        {turns.length === 0 && (
+          <div className="py-6 text-center">
+            <span className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-tint text-brand">
+              <MessageCircle size={20} />
+            </span>
+            <p className="mt-3 text-sm text-muted">Ask about any client, deal or promise. Try one of these:</p>
+            <div className="mt-3 flex justify-center">{chips(examples, true)}</div>
+          </div>
+        )}
         {turns.map((t, i) => (
           <div key={i} className="space-y-2">
-            <div className="ml-auto w-fit max-w-[85%] rounded-2xl rounded-br-sm bg-accent-600 px-3 py-2 text-sm text-white">{t.question}</div>
-            <div className="max-w-full rounded-2xl rounded-bl-sm border border-slate-200 bg-white p-3 text-sm shadow-sm sm:max-w-[85%]">
-              {t.status === "loading" && <span className="text-slate-400">Looking through the CRM, emails and notes…</span>}
-              {t.status === "error" && <span className="text-red-700">{t.message}</span>}
-              {t.status === "demo" && <span className="text-slate-600">{t.message}</span>}
+            <div className="ml-auto w-fit max-w-[85%] rounded-card rounded-br-[4px] bg-brand px-3.5 py-2 text-sm text-white">{t.question}</div>
+            <div className="max-w-full rounded-card rounded-bl-[4px] border border-line bg-surface p-4 text-sm sm:max-w-[92%]">
+              {t.status === "loading" && <span className="text-muted">Looking through the CRM, emails and notes…</span>}
+              {t.status === "error" && <span className="text-danger-fg">{t.message}</span>}
+              {t.status === "demo" && <span className="text-brand-dark">{t.message}</span>}
               {t.status === "answer" && t.result && (
                 <div className="space-y-3">
-                  <p className={t.result.refused ? "text-slate-600 italic" : "text-slate-900"}>{t.result.answer}</p>
+                  <p className={t.result.refused ? "text-muted italic" : "font-medium text-navy"}>{t.result.answer}</p>
                   {t.result.points.length > 0 && (
                     <CitedLines lines={t.result.points} canOpen={(f) => byId.has(f)} onOpen={(f, quote) => setOpen({ doc: byId.get(f)!, quote })} />
                   )}
-                  <p className="text-xs text-slate-400">
+                  <p className="text-xs text-muted">
                     {t.mode === "demo" ? "Pre-generated with Claude during the build." : "Answered live by Claude."}
                     {t.removed ? ` ${t.removed} unsupported claim(s) removed.` : ""}
                   </p>
@@ -79,52 +116,36 @@ export default function AskClient({
         ))}
       </div>
 
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          ask(question);
-        }}
-        className="flex gap-2"
-      >
-        <input
-          value={question}
-          onChange={(e) => setQuestion(e.target.value)}
-          placeholder="Ask about any client, deal or promise…"
-          className="min-w-0 flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm focus:border-accent-600 focus:outline-none"
-        />
-        <button
-          type="submit"
-          disabled={!question.trim() || busy}
-          className="rounded-lg bg-accent-600 px-4 py-2 text-sm font-medium text-white hover:bg-accent-700 disabled:opacity-40"
+      <div className="space-y-3 border-t border-line p-4 sm:p-5">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            ask(question);
+          }}
+          className="flex gap-2"
         >
-          Ask
-        </button>
-      </form>
-
-      <div>
-        <div className="mb-1.5 text-xs font-medium uppercase tracking-wide text-slate-500">Try</div>
-        <div className="flex flex-wrap gap-2">
-          {examples.map((q) => (
-            <button key={q} onClick={() => ask(q)} disabled={busy} className="rounded-full border border-accent-600 bg-accent-50 px-3 py-1 text-sm text-accent-700 hover:bg-accent-100 disabled:opacity-40">
-              {q}
-            </button>
-          ))}
-        </div>
+          <input
+            value={question}
+            onChange={(e) => setQuestion(e.target.value)}
+            placeholder="Ask about any client, deal or promise…"
+            aria-label="Your question"
+            className="min-w-0 flex-1 rounded-control border border-line px-3 py-2 text-sm placeholder:text-muted focus:border-brand focus:outline-none"
+          />
+          <button type="submit" disabled={!question.trim() || busy} className={btn.primary}>
+            <Send size={16} />
+            <span className="hidden sm:inline">Ask</span>
+          </button>
+        </form>
+        {turns.length > 0 && chips(examples, true)}
         {more.length > 0 && (
-          <details className="mt-3">
-            <summary className="cursor-pointer text-xs text-slate-500">More demo questions ({more.length})</summary>
-            <div className="mt-2 flex flex-wrap gap-2">
-              {more.map((q) => (
-                <button key={q} onClick={() => ask(q)} disabled={busy} className="rounded-full border border-slate-300 px-3 py-1 text-sm text-slate-700 hover:bg-slate-50 disabled:opacity-40">
-                  {q}
-                </button>
-              ))}
-            </div>
+          <details>
+            <summary className="cursor-pointer text-xs text-muted">More demo questions ({more.length})</summary>
+            <div className="mt-2">{chips(more, false)}</div>
           </details>
         )}
       </div>
 
       <DocPanel doc={open?.doc ?? null} highlight={open?.quote} onClose={() => setOpen(null)} />
-    </div>
+    </Card>
   );
 }
