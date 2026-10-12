@@ -7,14 +7,6 @@ const TONES = {
   brand: "bg-tint text-brand-dark",
   navy: "bg-navy text-white",
   danger: "bg-danger-bg text-danger-fg", // errors, eval misses
-  // TEMPORARY aliases for pages not yet redesigned (removed at the end of the redesign)
-  grey: "bg-dq-bg text-dq-fg",
-  red: "bg-danger-bg text-danger-fg",
-  orange: "bg-warn-bg text-warn-fg",
-  amber: "bg-warn-bg text-warn-fg",
-  green: "bg-rev-bg text-rev-fg",
-  purple: "bg-rev-bg text-rev-fg",
-  accent: "bg-tint text-brand-dark",
 } as const;
 
 export type Tone = keyof typeof TONES;

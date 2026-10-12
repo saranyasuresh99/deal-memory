@@ -9,14 +9,15 @@ Deal Memory makes the CRM a by-product of selling: it finds revenue leaks in the
 
 | Screen | What it does |
 |---|---|
-| **Radar** (`/`) | Daily ranked list of revenue leaks: clients waiting on us, overdue promises, client deadlines, stale deals, no owner, CRM contradictions, revisits, returning "Lost" deals, cross-sell, referrals, leads missing from the CRM, possible duplicates. Ranked by deal value × urgency; top 10 by default. Every card cites its source (click to read it). Done / Snooze / Dismiss (reason required). |
-| **Debrief** (`/debrief`) | Speak (browser speech recognition, English–India) or paste a note/email. The AI proposes a CRM update; you pick the account, then **Approve / Edit / Reject each field**. Every approval goes into an audit log. Five sample buttons for the demo. |
+| **Radar** (`/`) | Daily ranked list of revenue leaks: clients waiting on us, overdue promises, client deadlines, stale deals, no owner, CRM contradictions, revisits, returning "Lost" deals, cross-sell, referrals, leads missing from the CRM, possible duplicates. Ranked by deal value × urgency and grouped (needs action today, due this week, coming up, hidden revenue, data quality); top 5 per group with "Show more". List, Board and By-owner views. The selected item shows its cited evidence (click to read it), memory timeline and what AtliQ owes. Done / Snooze / Dismiss (reason required). |
+| **Debrief** (`/debrief`) | Speak (browser speech recognition, English–India) or paste a note/email. The AI proposes a CRM update; you pick the account, then **tick (approve), edit or leave unticked (reject) each field** — nothing is pre-ticked and nothing changes until you press Approve. Every approval goes into an audit log. Five sample buttons for the demo. |
 | **Promises** (`/promises`) | Ledger of every commitment AtliQ made: owner, client, due date (or "date unclear"), days overdue, status, source. Mark done. |
 | **Accounts** (`/accounts`) | All CRM records with duplicate / no-owner / stale badges and approved Debrief edits applied. Each account shows its emails and notes and a **Pre-call brief** (last touch, what they want, open promises, open questions, deadlines, cross-sell), every line cited. |
 | **Ask** (`/ask`) | Team Q&A answered only from the CRM, emails and notes, with citations. If the data doesn't support an answer it says exactly: *"I don't have enough information in the CRM, emails or notes to answer that."* |
 | **Evals** (`/evals`) | Scores the Radar against the answer key (editorial notes) — recall — and lets a person mark Radar items Correct/Wrong to compute precision. |
+| **Audit log** (`/audit`) | Every CRM change approved in Debrief: who, when, field, before, after and the source quote. |
 
-A **Reset demo** button in the header clears everything saved in your browser.
+The left sidebar has account search (Ctrl/⌘+K), live counts, and a user menu with **View as** (an app-wide owner filter) and **Reset demo**, which clears everything saved in your browser. The top bar's **Export** downloads the current list as CSV (nothing is sent anywhere). The design follows `design/DESIGN.md`.
 
 ## Run it locally
 
@@ -50,7 +51,7 @@ The generated JSON files are committed, so `npm install && npm run dev` also wor
   In Demo mode the API routes return these when the input matches a sample / prepared question / account. Anything else gets: *"Demo mode — live AI is switched off in this prototype…"* (for unknown Debrief text the rule-based account matcher still runs, no AI).
 - **Live mode.** Add `ANTHROPIC_API_KEY=...` to `.env.local` (or to the project's Environment Variables in Vercel) and the same API routes call Claude — no code changes. The key is only read on the server and `.env*` files are git-ignored. `npm run radar` then regenerates `data/ai_signals.json` with Claude first.
 
-The header shows a **Demo mode** (grey) or **Live AI** (green) badge.
+The sidebar shows a **Demo mode** card (with the number of verified quotes) or a **Live AI** card.
 
 ## How it stays grounded and safe
 
