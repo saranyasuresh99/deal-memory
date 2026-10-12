@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { X } from "lucide-react";
 import type { DocumentRecord } from "@/lib/types";
 import { formatDate } from "@/lib/format";
 
@@ -13,7 +14,7 @@ function withHighlight(text: string, highlight?: string) {
   return (
     <>
       {text.slice(0, i)}
-      <mark id="doc-highlight" className="rounded bg-yellow-200 px-0.5">{text.slice(i, i + highlight.length)}</mark>
+      <mark id="doc-highlight" className="rounded bg-warn-bg px-0.5 text-ink ring-1 ring-[#f2cf7a]">{text.slice(i, i + highlight.length)}</mark>
       {text.slice(i + highlight.length)}
     </>
   );
@@ -41,22 +42,22 @@ export default function DocPanel({
 
   if (!doc) return null;
   return (
-    <div className="fixed inset-0 z-30 flex justify-end">
-      <button aria-label="Close" className="absolute inset-0 bg-slate-900/30" onClick={onClose} />
-      <aside className="relative flex h-full w-full max-w-xl flex-col bg-white shadow-xl">
-        <div className="flex items-start justify-between gap-3 border-b border-slate-200 p-4">
+    <div className="fixed inset-0 z-50 flex justify-end" role="dialog" aria-modal="true" aria-label={doc.title}>
+      <button aria-label="Close document" className="absolute inset-0 bg-navy/30" onClick={onClose} />
+      <aside className="relative flex h-full w-full max-w-xl flex-col bg-surface shadow-card">
+        <div className="flex items-start justify-between gap-3 border-b border-line p-5">
           <div className="min-w-0">
-            <div className="text-xs uppercase tracking-wide text-slate-500">
+            <div className="text-xs font-medium tracking-wider text-muted uppercase">
               {doc.type === "email" ? "Email" : "Meeting note"} · {formatDate(doc.date)}
             </div>
-            <div className="mt-0.5 font-medium">{doc.title}</div>
-            <div className="mt-0.5 truncate text-xs text-slate-400">{doc.id}</div>
+            <div className="mt-1 font-semibold text-navy">{doc.title}</div>
+            <div className="mt-0.5 truncate text-xs text-muted">{doc.id}</div>
           </div>
-          <button onClick={onClose} className="rounded-md px-2 py-1 text-slate-500 hover:bg-slate-100">
-            ✕
+          <button onClick={onClose} aria-label="Close" className="rounded-control p-1.5 text-muted hover:bg-subtle">
+            <X size={18} />
           </button>
         </div>
-        <pre className="flex-1 overflow-y-auto p-4 font-sans text-sm leading-relaxed whitespace-pre-wrap text-slate-800">
+        <pre className="flex-1 overflow-y-auto p-5 font-sans text-sm leading-relaxed whitespace-pre-wrap text-ink">
           {withHighlight(doc.text, highlight)}
         </pre>
       </aside>
