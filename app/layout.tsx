@@ -1,10 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import Link from "next/link";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav";
-import ModeBadge from "@/components/ModeBadge";
-import ResetDemoButton from "@/components/ResetDemoButton";
-import { TODAY_LABEL } from "@/lib/config";
+import AppShell from "@/components/shell/AppShell";
+import type { ShellData } from "@/components/shell/Sidebar";
+import radarJson from "@/data/radar.json";
+import answerKey from "@/data/answer_key.json";
+import { accounts, documents } from "@/lib/data";
+import { isLiveMode } from "@/lib/ai";
+import { TODAY } from "@/lib/config";
+import { formatDate, weekday } from "@/lib/format";
+import { quoteStats } from "@/lib/verify-stats";
+import { runEvals } from "@/lib/evals";
+import type { RadarFile } from "@/lib/schemas";
+import type { EditorialNote } from "@/lib/types";
+
+const poppins = Poppins({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-poppins", display: "swap" });
 
 export const metadata: Metadata = {
   title: "AtliQ Deal Memory",
@@ -13,30 +23,31 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };
 
+const radar = radarJson as RadarFile;
+
+function shellData(): ShellData {
+  const evals = runEvals(answerKey as Record<string, EditorialNote[]>, documents, accounts, radar.items);
+  return {
+    live: isLiveMode(),
+    quotes: quoteStats(),
+    radarIds: radar.items.map((i) => i.id),
+    overduePromiseIds: radar.items
+      .filter((i) => i.type === "promise_overdue" || (i.type === "promise_due" && (i.days_overdue ?? 0) > 0))
+      .map((i) => i.id),
+    crmCount: accounts.length,
+    recallPct: evals.checks.length ? `${Math.round(evals.recall * 100)}%` : "–",
+    accounts: accounts.map((a) => ({ lead_id: a.lead_id, company: a.company })),
+    owners: [...new Set(accounts.map((a) => a.owner).filter((o): o is string => !!o))].sort(),
+  };
+}
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-white text-slate-900 antialiased">
-        <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
-          <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-3">
-            <Link href="/" className="text-lg font-semibold tracking-tight whitespace-nowrap">
-              AtliQ <span className="text-accent-600">Deal Memory</span>
-            </Link>
-            <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium whitespace-nowrap text-slate-600">
-              Today: {TODAY_LABEL}
-            </span>
-            <ModeBadge />
-            {/* On phones: Reset sits at the end of the first row; on wider screens: after the nav. */}
-            <div className="ml-auto lg:order-last lg:ml-0">
-              <ResetDemoButton />
-            </div>
-            <Nav />
-          </div>
-        </header>
-        <main className="mx-auto max-w-5xl px-4 py-6">{children}</main>
-        <footer className="mx-auto max-w-5xl px-4 pt-2 pb-8 text-xs text-slate-400">
-          Prototype with synthetic data. Nothing is ever sent to a client, and no CRM change happens without your approval.
-        </footer>
+    <html lang="en" className={poppins.variable}>
+      <body className="font-sans antialiased">
+        <AppShell data={shellData()} todayLabel={`${weekday(TODAY)} ${formatDate(TODAY)}`}>
+          {children}
+        </AppShell>
       </body>
     </html>
   );

@@ -50,9 +50,10 @@ export type Store = {
   promises: ApprovedPromise[];
   audit: AuditEntry[];
   evalMarks: Record<string, "correct" | "wrong">; // Evals precision helper: Radar item id -> judgement
+  viewAs: string | null; // app-wide owner filter: null = whole team, "none" = items with no owner, else an owner name
 };
 
-const EMPTY: Store = { radar: {}, accountEdits: {}, newLeads: [], promises: [], audit: [], evalMarks: {} };
+const EMPTY: Store = { radar: {}, accountEdits: {}, newLeads: [], promises: [], audit: [], evalMarks: {}, viewAs: null };
 
 let cache: Store | null = null;
 const listeners = new Set<() => void>();
@@ -103,4 +104,18 @@ function subscribe(l: () => void) {
 
 export function useStore(): Store {
   return useSyncExternalStore(subscribe, load, () => EMPTY);
+}
+
+// The app-wide owner filter ("View as" in the user card, "Owner" dropdowns on list pages). "all" = whole team.
+export function useOwnerFilter(): [string, (v: string) => void] {
+  const { viewAs } = useStore();
+  const set = (v: string) => updateStore((s) => ({ ...s, viewAs: v === "all" ? null : v }));
+  return [viewAs ?? "all", set];
+}
+
+// Does an owner value pass the current filter?
+export function ownerMatches(filter: string, owner: string | null): boolean {
+  if (filter === "all") return true;
+  if (filter === "none") return !owner;
+  return owner === filter;
 }

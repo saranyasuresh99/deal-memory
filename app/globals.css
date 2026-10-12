@@ -1,16 +1,56 @@
 @import "tailwindcss";
 
+/* Design tokens (design/DESIGN.md §1). Every colour in the app comes from here. */
 @theme {
-  --color-accent-50: #eef2ff;
-  --color-accent-100: #e0e7ff;
-  --color-accent-600: #4f46e5;
-  --color-accent-700: #4338ca;
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --color-brand: #2767b1; /* primary buttons, active nav, links, focus rings */
+  --color-brand-dark: #1d4f8c; /* hover on primary, text on blue tint */
+  --color-navy: #0f2a4f; /* headings, big numbers, active segmented control */
+  --color-tint: #eef4fb; /* active nav background, icon circles, info cards */
+  --color-tint-2: #dce8f6; /* borders on tinted areas */
+  --color-page: #eef2f7; /* area behind the app shell */
+  --color-surface: #ffffff; /* app shell, cards */
+  --color-sidebar: #fbfcfe;
+  --color-subtle: #f7f9fc; /* table header, quote blocks, mini stats */
+  --color-line: #e3e8ef; /* borders and dividers */
+  --color-ink: #1b2433; /* body text */
+  --color-muted: #5b6576; /* secondary text */
+
+  --color-warn-bg: #fff4dd; /* deadlines, our promises, date warnings */
+  --color-warn-fg: #8a5a00;
+  --color-rev-bg: #e9f5f2; /* hidden revenue: referral, cross-sell, revisit, returning deal */
+  --color-rev-fg: #1e6b5b;
+  --color-dq-bg: #eef1f5; /* data quality: stale, no owner, duplicate */
+  --color-dq-fg: #4a5568;
+  --color-wait-bg: #e8f0fb; /* waiting on us */
+  --color-wait-fg: #1d4f8c;
+  --color-danger-bg: #fdecec; /* errors and eval misses only */
+  --color-danger-fg: #a12a2a;
+
+  --radius-control: 8px;
+  --radius-card: 12px;
+  --radius-shell: 16px;
+  --shadow-card: 0 1px 2px rgba(15, 42, 79, 0.04);
+
+  /* TEMPORARY during the redesign: old class names mapped to the new brand blue. Removed once every page is redone. */
+  --color-accent-50: #eef4fb;
+  --color-accent-100: #dce8f6;
+  --color-accent-600: #2767b1;
+  --color-accent-700: #1d4f8c;
+
+  --breakpoint-shell: 900px; /* below: sidebar becomes a drawer */
+  --breakpoint-wide: 1100px; /* below: Radar's selected panel moves under the list */
 }
 
 body {
-  background: #ffffff;
-  color: #0f172a;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--color-page);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 2px;
 }
 
 /* Phones: 16px form text stops iOS Safari from zooming in when a field is tapped. */
